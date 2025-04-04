@@ -1,0 +1,452 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lego I",
+    "section": "",
+    "text": "1 Lego 1\n\nLego I é uma introdução à Ciência Social quantitativa. O curso apresenta os fundamentos da análise de dados, incluindo noções sobre desenho de pesquisa, probabilidade e inferência, testes de hipóteses e modelos de regressão linear. Complementarmente, o curso também introduz o uso de programação em R, um ambiente amplamente utilizado para análise de dados e Data Science dentro e fora da academia. A dinâmica do curso combinará tutoriais e sessões guiadas de monitoria nas quais resolveremos problemas aplicados de pesquisa social de forma reprodutível. [ementa]\n\nProfessor: Bruno Marques Schaefer (IESP-UERJ) [homepage]\nSemestre: 2025.1",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Lego 1</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-1.html",
+    "href": "aulas/aula-1.html",
+    "title": "2  Fundamentos da pesquisa quantitativa",
+    "section": "",
+    "text": "2.1 Anotações das leituras",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos da pesquisa quantitativa</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-1.html#anotações-das-leituras",
+    "href": "aulas/aula-1.html#anotações-das-leituras",
+    "title": "2  Fundamentos da pesquisa quantitativa",
+    "section": "",
+    "text": "2.1.1 Kellstedt, P. M., & Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 1 e 2.\nCapítulo 1: O estudo científico da política\n\nEntão, o que fazem os cientistas políticos e o que faz deles cientistas? Uma resposta simples para essa questão é que, como outros cientistas, cientistas políticos desenvolvem e testam teorias. Uma teoria é uma tentativa de conjeturar sobre as causas de um fenômeno de interesse. O desenvolvimento de teorias causais sobre o mundo político requer pensar em fenômenos familiares de modo novo. Assim, a construção de uma teoria é em parte arte e em parte ciência.\n\n\nEntão, como cientistas políticos desenvolvem teorias sobre política? Um elemento-chave desse procedimento é como eles organizam seus pensamentos sobre o mundo político em termos de conceitos que cientistas chamam de variáveis e de relações causais entre variáveis. (p. 33)\n\n\nUma vez que tenhamos descoberto nosso relacionamento hipotético, podemos coletar dados de casos do mundo real e observar como esses dados refletem nossas expectativas em relação positiva ou negativa. (p. 38)\n\n\nO ponto essencial é que modelos são simplificações. Se eles são ou não úteis para nós depende do que estamos tentando alcançar com um determinado modelo. Um dos aspectos mais marcantes dos modelos é que eles frequentemente são mais úteis para nós quando são imprecisos do que quando são precisos. O processo de pensar sobre as falhas de um modelo para explicar um ou mais casos pode gerar novas teorias causais. Encontrar imprecisões, frequentemente, nos aponta a direção do progresso teórico frutífero. (p. 41)\n\nCapítulo 2: A arte da construção de teorias\n\n[…] uma boa teoria científica não explica apenas o resultado das eleições presidenciais de 2012, mas das eleições presidenciais americanas em geral. Isto é, em vez de perguntar “Por que Obama venceu Romney em 2012?”, devemos perguntar “O que faz o partido do presidente vencer ou perder uma eleição presidencial nos EUA?” ou “O que faz com que candidatos do Partido Republicano se saiam melhor ou pior que candidatos do Partido Democrata nas eleições presidenciais americanas?”. (p. 56)\n\n\nAs teorias que temos considerado até o momento foram elaboradas após um rigoroso processo de pensamento sobre o fenômeno que queremos explicar e a dedução de possíveis explicações causais. Uma extensão desse tipo de pensamento rigoroso é conhecida por “teoria formal” ou “escolha racional”. Pesquisadores têm utilizado essa abordagem para desenvolver respostas para perguntas de pesquisas sobre como pessoas tomam decisões estratégicas. Colocando de outro modo, se a política é um jogo, como explicamos o modo como as pessoas jogam? (p. 59)\n\n\nPodemos sumarizar esses pressupostos a respeito do comportamento humano dizendo que teóricos formais assumem que todos os indivíduos são maximizadores racionais de utilidade - que eles tentam maximizar seu próprio interesse. (p. 60)\n\n\nUsamos as ferramentas da teoria formal para tentar nos colocar na posição de imaginar que estamos no lugar de outra pessoa e pensar sobre as diferentes escolhas que ele ou ela tiveram que fazer. Nas seções seguintes introduziremos as ferramentas básicas para fazer isso utilizando a abordagem de utilidade esperada […]. (p. 60)\n\n\nA utilidade para uma ação em particular é igual à soma de todos os benefícios menos a soma de todos os custos de uma ação. Sendo \\(Y\\) uma ação, podemos sumarizar a utilidade como: \\[\nU_i (Y) = \\sum B_i (Y) - \\sum C_i (Y)\n\\] Quando escolhe entre um conjunto de ações possíveis, um indivíduo racional escolherá a ação que maximiza sua utilidade. (p. 61)\n\n\nOutro aspecto potencialmente problemático do pressuposto do ator racional maximizador de utilidade que você tem que considerar é o pressuposto da informação completa. Em outras palavras, e se não soubermos exatamente quais são os custos e benefícios de uma ação específica? […]. Quando relaxamos esse pressuposto, deslocamos nossa discussão da utilidade para a utilidade esperada. (p. 62)\n\n\n\n2.1.2 Chen, Yunsong, et al. “Social prediction: a new research paradigm based on machine learning”. The Journal of Chinese Sociology 8 (2021): 1-21.\n\nThus, sociologists have considered it their duty to describe and explain social processes and phenomena, seek the meaning and interpretation of society and social actions, or verify social hypothesis and theories. Consequently, description, interpretation, and statistical testing are traditional and mainstream approaches in sociological research. (p. 1)\n\n\nHowever, scholars have already emphasized that a causal interpretation must serve as the “basis for predicting social phenomena” (Hempel and Oppenheim 1948:138). Hence, predictability is a necessary but not sufficient condicional for the causal mechanism, as although predictability does not equate with causality, a prediction could be formed if there was causality. (p. 1)\n\n\nHowever, sociology and even the broader category of social science pay much less attention to ex ante prediction than ex post facto evalutation and interpretation. A series of papers on the topic of “prediction and its limits” have been published in Science. Although these articles came from different disciplines of social sciences such as economics, sociology, and political science, scholars’ consensus was that in contrast to natural science, theories and data of social science were rarely used to make predictions. (p. 2)\n\n\nwe suggest that social prediction represents a new subparadigm of social science research from the methodological perspective rather than strict ontology. With the emergence of big data and the improvement of compution power, the application of machine learning and the redefining of social prediction will boost the paradigm breakthrough of quantitative research in sociology and even social science research. (p. 3)\n\n\nAs early as in the 1940s, scholars suggested strengthening the work of prediction in the social science and proposed the concept of social prediction (Kaplan 1940). Although Kaplan (1940) realized the dificulty of prediction, he believed that social behavior was even more predictable than natural phenomena at the microlevel. (p. 3)\n\n\nSince the data, models, and computing power required for accurate prediction were not ready, the whole social science community, especially quantitative research, has focused on the relationships among variables; that is, based on limited sample data, unbiased estimations for the pairwise relationships between variables are obtained by statistical models. (p. 4)\n\n\nAlthough sociologists are still upset and worried about the invasion of advanced econometric methods into the discipline, scholares at the forefront of the discipline have given a clear and determined answer that the covariant research of correlation analysis and causal analysis is not enough to constitute a sociological explanation in terms of science. Duncan Watts pointed out the paradigm crisis of sociological research, namely, overreliance on common sense. Many sociological explanations confuse understandability with causality, which does not meet the standard of scientific interpretation. If sociologists expect their interpretations to be scientifically legitimate, they must evaluate them according to scientific standards; that is, predictions must be made (watts 2014:313). (p. 5)\n\n\nIn summary, prediction is the main component of realizing the scientific research goal of quantitative sociology. Among correlation, causality, and prediction, correlation is the prerequisite for causality and prediction, while causality is a sufficient but unnecessary condition for prediction. (p. 5)\n\n\nSpecifically, the error of a linear fitting of the model can be divided into three parts: bias, variance, and irreducible error. These errors represent the deviation between the fitting expectation and the real value, the dispersion of the fitting value, and the inevitable system noise, respectively. (p. 8)\n\n\nBased on our understanding of sociology and some of the latest literature, we classify the disciplinary value of social prediction into three dimensions: academic significance, governance significance, and discourse significance1. (p. 10)\n\n\nThe academic significance of social prediction: (i) Latent indicators of interest can be obtained through prediction (that is, people are unwilling to disclose their own information, but they can be predicted through other information); (ii) theoretical hypotheses can be generated via prediction; (iii) prediction helps to conduct causal inference; (iv) data proliferation can be realized by prediction; (v) the prediction could promote theoretical innovation.\n\n\nThe governance significance of social prediction: (i) one can make use of prediction competitions to promote the development of social prediction; (ii) social inequality research; (iii) public health governance.\n\n\nWith the rapid development of social prediction based on machine learning, we suggest that the basic paradigm of empirical work will be split into three pieces from the original dual peaks of qualitative and quantitative work to a trilogy of qualitative work, quantitative work, and quantitative prediction. […].\nFirst, in terms of epistemology, the black box mechanism is introduced into prediction. […]. Second, in terms of the problem domain, the prediction does not focus on the correlation and causal mechanism of the cause and result, but takes the accurate estimation of the target variables as the goal. Third, in terms of the research method, the prediction reduces the dependence on theory and the focus on the counterfactual framework and instead relies on algorithms and data to train and test models.\n\n\nIn this sense, the black box mechanism will always accompany social prediction. However, in the process of dismantling the black box, the conclusions drawn from the black box mechanism can and should be interpreted from the theoretical perspective and further verified by empirical methods. (p. 18)",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos da pesquisa quantitativa</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-1.html#anotações-de-aula",
+    "href": "aulas/aula-1.html#anotações-de-aula",
+    "title": "2  Fundamentos da pesquisa quantitativa",
+    "section": "2.2 Anotações de aula",
+    "text": "2.2 Anotações de aula\nNas ciências sociais, passamos por uma série de dificuldades na produção de conhecimento científico. Em particular, nosso objeto de estudo é difícil (para não dizer impossível) de ser “isolado”, de maneira que a realização de experimentos é muito mais limitada. Outro desafio diz respeito ao fato de que as pessoas, no senso comum, têm explicações para os fenômenos sociais (sociologia espontânea, como diria Bourdieu).\nNas ciências sociais, nos diferenciamos de várias maneiras. Temos uma definição própria do que é sociedade (ou política); usamos uma linguagem “especial”; e usamos o método científico.\nMas, no fim das contas, o que é método científico? No caso Popperiano, literatura e teoria \\(\\rightarrow\\) hipótese \\(\\rightarrow\\) observação \\(\\rightarrow\\) rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência – em particular, a Antropologia, várias áreas da Sociologia etc2.\n\n2.2.1 Metodologia quantitativa\nA pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista3) de que eu consigo extrair um “pedaço” do mundo político e fazer testes, formular hipóteses etc – isto é, existem uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.\nPesquisa quantitativa e qualitativa alongam um enorme debate sobre a maneira de abordar objetos nas ciências sociais. Mas, no fim das contas, uma resposta para essa discussão é que a integração dos métodos é um bom caminho – por exemplo, a partir da triangulação de evidências.\nAtravés de alguma estratégia de identificação, tentamos, na pesquisa quantitativa, isolar potenciais explicações para um determinado fenômeno. Nesse caso, queremos entender “o efeito de \\(x\\) sobre \\(y\\)”. Naturalmente, isso acaba sendo diferente de previsão, que também é um dos objetivos da pesquisa quantitativa, embora seja um objetivo preterido e meio adormecido na ciência social moderna.\n\n\n2.2.2 Variações de objetivos\n\nDescrição\nExplicação e causalidade\nPredição\n\n\n\n2.2.3 Desenho de pesquisa\nDefinidos os conceitos (potencialmente abstratos) que desejamos operacionalizar, precisamos operacionalizá-los na forma de variáveis (dependente e independentes) mensuráveis. O conceito por si só já é uma abstração da realidade; as variáveis, portanto, são ainda mais. Mas é a partir daí que podemos efetivamente testar hipóteses.",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos da pesquisa quantitativa</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-1.html#footnotes",
+    "href": "aulas/aula-1.html#footnotes",
+    "title": "2  Fundamentos da pesquisa quantitativa",
+    "section": "",
+    "text": "Mais específico do caso chinês.↩︎\nPopper é particularmente radical na sua definição de ciência. Para ser uma ciência, a disciplina deveria ser capaz de criar hipóteses que possam ser testadas e, em princípio, refutadas.↩︎\nPensando em contraste com a pesquisa normativa. Embora o termo “positivismo” possa assumir um caráter pejorativo (Comte e coisa e tal), a ideia é que a pesquisa quantitativa se alinha a uma perspectiva de que é possível fazer generalizações a partir de dados observados.↩︎",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Fundamentos da pesquisa quantitativa</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-2.html",
+    "href": "aulas/aula-2.html",
+    "title": "3  Desenho de pesquisa e mensuração",
+    "section": "",
+    "text": "3.1 Anotações das leituras",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Desenho de pesquisa e mensuração</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-2.html#anotações-das-leituras",
+    "href": "aulas/aula-2.html#anotações-das-leituras",
+    "title": "3  Desenho de pesquisa e mensuração",
+    "section": "",
+    "text": "3.1.1 Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Caps. 3 e 4\n\n3.1.1.1 Capítulo 3: avaliando relações causais\n\nNossas teorias – que podem estar certas ou erradas – tipicamente especificam que alguma variável independente causa alguma variável dependente. Então nos esforçamos para achar evidêncais empíricas apropriadas para avaliar o quanto uma teoria é ou não suportada (p. 75-76).\n\n\n[Sobre a realidade multivariada do mundo] Então, ebora nossas teorias descrevam a relação proposta entre alguma causa e algum efeito, devemos ter sempre em nossas mentes que o fenômeno que estamos tentando explicar certamente possui outras possíveis causas. E, quando for o momento de desenharmos a pesquisa a fim de testar nossas ideias teóricas […], temos que tentar explicar, ou “controlar para” essas outras causas (p. 76).\n\n\nA noção de causalidade que está no centro dessas disciplinas [das ciências físicas] envolve, principalmente, relações determinísticas – isto é, relações em que, se uma causa ocorre, então o efeito ocorrerá com certeza. Em contrapartida, porém, o mundo das interações humanas consiste em relações probabilísticas – nesse sentido, um aumento em \\(X\\) está associado ao aumento (ou à diminuição) na probabilidade de \\(Y\\) ocorrer, mas essas probabilidades não são certezas. (p. 77).\n\n\nPara qualquer teoria sobre uma relação causal entre \\(X\\) e \\(Y\\), devemos cuidadosamente considerar as respostas para as quatro questões abaixo:\n\nExiste algum mecanismo causal crível que conecta \\(X\\) a \\(Y\\)?\nPodemos eliminar a possibilidade de que \\(Y\\) causa \\(X\\)?\nExiste covariação entre \\(X\\) e \\(Y\\)?\nControlamos por todas as variáveis colineares1 \\(Z\\) que podem tornar a associação entre \\(X\\) e \\(Y\\) espúria? (p. 78).\n\n\n\nDe fato, uma parte substancial dos desacordos entre acadêmicos tem origem no quarto obstáculo causal. A objeção mais frequente quando um acadêmico está avaliando o trabalho de outro acadêmico talvez seja que um pesquisador “falhou em controlar por” alguma variável potencialmente importante da variável dependente. (p. 85)\n\n\n\n3.1.1.2 Capítulo 4: desenho de pesquisa\n\nO objetivo de todos os tipos de desenho de pesquisas é nos ajudar a avaliar quão bem uma teoria se sai perante os quatro obstáculos causais – isto é, responder de modo mais conclusivo possível se \\(X\\) causa \\(Y\\). […] focamos duas das mais comuns e efetivas estratégias usadas por cientistas políticos: experimentos e estudos observacionais. (p. 94)\n\n\nDESENHOS DE PESQUISA EXPERIMENTAIS\nA exposição de uma propaganda com conteúdo negativo sobre um candidato (\\(X\\)) pode, ou não, afetar a probabilidade do eleitor votar no candidato-alvo da propaganda (\\(Y\\)). É importante salientar que a afirmação causal possui um componente direcional específico; isto é, a exposição a propagandas aumentará as chances de o eleitor escolher o candidato que fez a propaganda. (p. 95)\nNós, os pesquisadores, devemos não apenas controlar o valor da nossa variável independente [nesse caso, a exposição à propaganda], mas devemos também atribuir esses valores aos participantes randomicamente. No nosso anúncio de campanha, isso significa que devemos […] usar um gerador de números randômicos ou algum outro mecanismo desse tipo para dividir nossos participantes em um grupo de tratamento (os que assistirão ao anúncio negativo) e um grupo de controle (os que não assistirão ao anúncio, mas algo diferente do tratamento, que nas ciências médicas é chamado de um placebo). (p. 96)\nDe fato, desde que o número de participantes seja razoavelmente grande, a atribuição aleatória de participantes ao grupo de tratamento assegura que os grupos, no seu todo, seja idênticos. Se os dois grupos são idênticos, exceto pelo lançamento da moeda, então podemos ter certeza de que qualquer diferença que observarmos nos grupos deve se dar em razão da variável independente que atribuímos. (p 96)\nAtribuição randômica aos grupos de tratamento e controle ocorre quando os participantes de um experimento são atribuídos randomicamente a diferentes valores de \\(X\\), a variável dependente. É importante observar que a definição não diz nada a respeito de como os indivíduos são selecionados para participar do experimento. Já a amostra aleatória, essencialmente, relaciona-se a como pesquisadores selecionam casos para os seus estudos – eles são selecionados aleatoriamente, o que significa que cada membro da população em questão tem uma mesma probabilidade de ser selecionado. (p. 100)\n[Sobre a limitação de experimentos] Cientistas sociais não podem “atribuir” a pessoas uma identificação partidária ou uma renda, “atribuir” a um país um nível de democratização ou gasto miliar, […]. Essas variáveis simplesmente existem na natureza e não podemos controlar a exposição a elas e atribuir randomicamente valores para diferentes casos (isto é, pessoas ou países). E, no entanto, cientistas sociais se sentem compelidos a estudar esses fenômenos, o que significa que, nessas circunstâncias, devemos empregar um desenho não experimental de pesquisa. (p. 102)\n[Experimentos não têm boa validade externa por usarem uma amostra de conveniência] Reiterando: experimentos não requerem uma amostra que represente a população. De fato, é extremamente rato que experimentos utilizem uma amostra da população. Em experimentos para teste de medicamentos, por exemplo, é comum o uso de anúncios em jornais ou em programas de rádio para convidar pessoas a participar, usualmente envolvendo alguma forma de compensação financeira. (p. 102-103)\n\n\nESTUDOS OBSERVACIONAIS\nMas quais são as opções que estudiosos têm quando não podem controlar a exposição de diferentes valores das variáveis independentes? Em tais casos, a única escolha é recolher dados do mundo como eles são e realizar comparações entre unidades individuais – como pessoas, partidos políticos ou países – ou entre uma quantidade agregada que varia ao longo do tempo. (p. 105)\nIsso leva à definição de um estudo observacional: um estudo observacional é um desenho de pesquisa no qual o pesquisador não tem controle dos valores da variável independente, que ocorrem naturalmente. Todavia, é necessário que exista algum grau de variabilidade na variável independente entre os casos, assim como variação na variável dependente. (p. 105)\n[…] um estudo observacional transversal examina a realidade social transversalmente, focando a variação entre unidades espaciais individuais – novamente, como cidadãos, políticos eleitos, distritos eleitorais ou países – e a explicação da variação da variável dependente entre elas. (p. 109)\n[…] o estudo observacional de séries temporais que tem, em seu núcleo, a comparação ao longo do tempo de uma única unidade espacial. Diferentemente da variação transversal, na qual a relação examinada é entre unidades individuais tipicamente em um único ponto do tempo, em estudos observacionais de séries temporais cientistas políticos tipicamente examinam a variação dentro de uma unidade espacial ao longo do tempo. (p. 109)\nComo os exemplos anteriores demonstraram, quando precisamos controlar outras possíveis causas de \\(Y\\) para superar o quarto obstáculo causal, precisamos controlar por todas elas, não por apenas uma. Mas como sabemos se controlamos por todas as possíveis causas de \\(Y\\)? Em muitos casos, não sabemos com certeza. (p. 110)\n\n\n\n\n3.1.2 King, G., Keohane, R. O., Verba, S. (1994). Designing social inquiry: Scientific inference in qualitative research. Princeton university press., Cap. 1\nO capítulo começa com uma introdução ao debate entre pesquisa quantitativa, mais fortemente associada a medidas, estatísticas e matemática de maneira geral, e a pesquisa qualitativa, focada em análises contextuais e mais profundas. Na prática, o autor argumenta que as diferenças entre as duas abordagens são meramente estilísticas e, portanto, pouco importantes do ponto de vista científico.\n\nAll good research can be understood – indeed, is best understood – to derive from the same underlying log of inference. Both quantitative and qualitative research can be systematic and scientific. (p. 4-5)\n\n\nThis lesson of these efforts [Coercive Cooperation (1992) and Making Democracy Work (1993)] should be clear: neither quantitative nor qualitative research is superior to the other, regardless of the research problem being addressed. (p. 5-6)\n\n\nGood research, that is, scientific research, can be quantitative or qualitative in style. In design, however, scientific research has the following characteristics:\n\nThe goal is inference\nThe procedures are public\nThe conclusions are uncertain\nThe content is the method (p. 7-9)\n\n\nO argumento é que “boa pesquisa” (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser inferência descritiva ou inferência causal. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita – portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.\n\n\n3.1.3 Figueiredo Filho, D. B., Paranhos, R., Rocha, E. C., Silva Jr, J., e Santos, M. D. (2012). Levando Gary King a sério: desenhos de pesquisa em Ciência Política. Revista Eletrônica de Ciência Política, 3(1-2), 86-117.\nPelo menos até o ponto de escrita do artigo, o cenário da formação em métodos de pesquisa (quantitativa e qualitativa) era o “calcanhar de Aquiles” da formação em ciência política no Brasil. Em particular, o artigo começa com uma série de evidências dessa formação deficitária e discute os efeitos disso na produção científica e no mercado de trabalho.\nOs autores fazem uma série de recomendações:\n\n3.1.3.1 Substantivas\n\nExplicitar e justificar a questão de pesquisa: “De forma mais séria, quando a questão de pesquisa é nebulosa, fica difícil, inclusive, de avaliar em que medida os resultados observados respondem satisfatoriamente a indagação proposta pelo trabalho.” (p. 89)\nDescrever os métodos e as técnicas: “Uma pesquisa que não descreve exatamente como os dados foram coletados torna-se irreplicável e, consequentemente, não falsificável.” (p. 91)\nSimplificar a hipótese de trabalho: “Uma hipótese clara tem três componentes básicos: (1) uma relação esperada; (2) uma variável independente e (3) uma variável dependente.” (p. 92). Hipóteses não parcimoniosas apresentam elementos denecessários.\nProduzir inferências causais falsificáveis\nApresentar as limitações do desenho de pesquisa: “As limitações devem ser listadas de forma explícita e pormenorizadas para que a comunidade acadêmica possa avaliar a confiabilidade dos resultados apresentados.” (p. 103)\n\n\n\n3.1.3.2 Procedimentais\n\nMinimizar a complexidade da linguagem\nCompartilhar a base de dados: “Resultados de pesquisa de especialistas que compartilham bases de dados são mais facilmente replicáveis e, portanto, mais facilmente falsificáveis” (p. 106)\nEvitar gráficos nebulosos e tabelas poluídas e incompletas\nSer criticado antes de publicar: “Em síntese, o crivo da comunidade acadêmica é uma das formas mais eficientes de aprimorar desenhos de pesquisa e, posteriormente, resultados de pesquisa. Apenas depois de submeter seu trabalho às críticas, o pesquisador deve submetê-lo aos periódicos especializados.” (p. 111)\nEscolher adequadamente os meios de divulgação",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Desenho de pesquisa e mensuração</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-2.html#anotações-de-aula",
+    "href": "aulas/aula-2.html#anotações-de-aula",
+    "title": "3  Desenho de pesquisa e mensuração",
+    "section": "3.2 Anotações de aula",
+    "text": "3.2 Anotações de aula",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Desenho de pesquisa e mensuração</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-2.html#notas-de-rodapé",
+    "href": "aulas/aula-2.html#notas-de-rodapé",
+    "title": "3  Desenho de pesquisa e mensuração",
+    "section": "3.3 Notas de rodapé",
+    "text": "3.3 Notas de rodapé",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Desenho de pesquisa e mensuração</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-2.html#footnotes",
+    "href": "aulas/aula-2.html#footnotes",
+    "title": "3  Desenho de pesquisa e mensuração",
+    "section": "",
+    "text": "Variável colinear é simplesmente uma variável que está correlacionada com a variável dependente e com a independente de maneira a alterar a relação entre elas.↩︎",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Desenho de pesquisa e mensuração</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html",
+    "href": "listas/nivelamento/lista-nivelamento.html",
+    "title": "4  Lista Nivelamento",
+    "section": "",
+    "text": "5 Material de apoio\nLivro: Usando R: Uma introdução para pesquisadores em Humanidades Digitais, de Fernando Meireles e Denisson Silva\nLink: https://fmeireles.com/livro/",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-1",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-1",
+    "title": "4  Lista Nivelamento",
+    "section": "6.1 Questão 1",
+    "text": "6.1 Questão 1\nCrie um objeto chamado meu_ano_nascimento e salve nele o ano do seu nascimento. Em seguida, crie um objeto chamado ano_atual e salve nele o ano atual. Por fim, crie um objeto chamado minha_idade e atribua a ele a diferença entre ano_atual e meu_ano_nascimento. Use o console para visualizar o valor de minha_idade.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta",
+    "title": "4  Lista Nivelamento",
+    "section": "6.2 Resposta",
+    "text": "6.2 Resposta\nInstanciamos uma variável com o meu ano de nascimento e com o ano atual e, tirando a diferença entre as duas datas, obtemos a minha idade.\n\nano_nascimento &lt;- 2001\nano_atual &lt;- 2025\nminha_idade &lt;- ano_atual - ano_nascimento\nprint(paste(\"Minha idade é:\", minha_idade, \"anos\"))\n\n[1] \"Minha idade é: 24 anos\"",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-2",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-2",
+    "title": "4  Lista Nivelamento",
+    "section": "6.3 Questão 2",
+    "text": "6.3 Questão 2\nCrie um vetor chamado notas com cinco valores que representam notas que você recebeu em algum curso ou disciplina (use valores de 0 a 10). Calcule a média das notas usando a função mean() e salve o resultado em um objeto chamado media_notas.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-1",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-1",
+    "title": "4  Lista Nivelamento",
+    "section": "6.4 Resposta",
+    "text": "6.4 Resposta\nSupondo que eu tenha tirado as seguintes notas em um determinado curso, tiramos a média usando a função mean(x) do R.\n\nnotas &lt;- c(2, 4, 6, 8, 10)\nmedia_notas &lt;- mean(notas)\nprint(paste(\"Minha média foi:\", media_notas))\n\n[1] \"Minha média foi: 6\"",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-3",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-3",
+    "title": "4  Lista Nivelamento",
+    "section": "6.5 Questão 3",
+    "text": "6.5 Questão 3\nPor que o código abaixo não funciona?\nmy_variable &lt;- 10 my_varıable",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-2",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-2",
+    "title": "4  Lista Nivelamento",
+    "section": "6.6 Resposta",
+    "text": "6.6 Resposta\nO código não funciona por conta de uma diferença na escrita entre a variável atribuída na primeira linha e a variável que estamos tentando printar na segunda linha. Mais especificamente, há um typo da letra “i”.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-4",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-4",
+    "title": "4  Lista Nivelamento",
+    "section": "6.7 Questão 4",
+    "text": "6.7 Questão 4\nCrie um objeto chamado meu_nome e salve nele o seu nome como um texto (lembre-se de usar aspas). Em seguida, use a função a paste() para criar uma frase que diga “Meu nome é [meu_nome]”, substituindo [meu_nome] pelo objeto recém criado.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-3",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-3",
+    "title": "4  Lista Nivelamento",
+    "section": "6.8 Resposta",
+    "text": "6.8 Resposta\nA função paste permite combinar texto e o valor guardado em variáveis. Com isso, é possível printar elementos da seguinte maneira:\n\nmeu_nome &lt;- \"Felipe Marques Esteves Lamarca\"\nprint(paste(\"Meu nome é\", meu_nome))\n\n[1] \"Meu nome é Felipe Marques Esteves Lamarca\"",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-5",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-5",
+    "title": "4  Lista Nivelamento",
+    "section": "7.1 Questão 5",
+    "text": "7.1 Questão 5\nCarregue o arquivo governadores.csv, que contém informações de algumas pessoas fictícias, e salve seu conteúdo no objeto pessoas. Depois de carregado os dados, use a função head para pré-visualizar as primeiras linhas do data.frame. Use comentários para explicar como você descobriu a forma correta de carrergar o arquivo.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-4",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-4",
+    "title": "4  Lista Nivelamento",
+    "section": "7.2 Resposta",
+    "text": "7.2 Resposta\nPrimeiro, importamos os dados usando a função read_csv2, encontrada na internet a partir de uma rápida busca: https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html. A função é útil no caso em que desejamos der arquivos .csv separados por “;”. É claro, poderíamos ter utilizando também a função read_delim. Depois é só aplicar a função head para observar as primeiras 5 linhas.\n\n# https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html\npessoas &lt;- read_csv2(\"datasets/governadores.csv\")\nhead(pessoas)\n\n# A tibble: 6 × 5\n  uf    candidatura                  partido  pct_gastos pct_votos\n  &lt;chr&gt; &lt;chr&gt;                        &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;\n1 GO    GUSTAVO MENDANHA MELO        PATRIOTA      26.8      25.2 \n2 GO    RONALDO RAMOS CAIADO         UNIÃO         38.6      51.8 \n3 GO    WOLMIR THEREZIO AMADO        PT             4.02      6.98\n4 GO    VITOR HUGO DE ARAUJO ALMEIDA PL            28.9      14.8 \n5 MG    ALEXANDRE KALIL              PSD           33.8      35.1 \n6 MG    CARLOS ALBERTO DIAS VIANA    PL            15.6       7.23",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-6",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-6",
+    "title": "4  Lista Nivelamento",
+    "section": "7.3 Questão 6",
+    "text": "7.3 Questão 6\nÉ comum que dados de pesquisas de opinião, i.e. surveys, sejam armazenados em arquivos SPSS ou Stata, criados pelos softwares de mesmo nome. Neste exercício, sua tarefa será carregar um arquivo um Stata com dados da pesquisa do World Values Survey, principal fonte de dados sobre valores, crenças e comportamentos das populações de diferentes países. Os dados do Brasil estão no arquivo wvs.dta. Carregue o arquivo salve os resultados no objeto wvs_stata.\nLink para os dados: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-5",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-5",
+    "title": "4  Lista Nivelamento",
+    "section": "7.4 Resposta",
+    "text": "7.4 Resposta\nPara ler bancos de dados .dta, basta instalar o pacote haven e importar o arquivo usando a função abaixo:\n\nwvs_stata &lt;- haven::read_dta(\"datasets/WVS_Cross-National_Wave_7_stata_v6_0.dta\")",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-7",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-7",
+    "title": "4  Lista Nivelamento",
+    "section": "7.5 Questão 7",
+    "text": "7.5 Questão 7\nDiferentes órgãos públicos no Brasil disponibilizam seus microdados administrativos para acesso. Um deles é o INEP, que tem uma página dedicada para download de bases de dados com informações sobre os exames e pesquisas que conduz.\nNeste exercício, sua tarefa será obter e carregar no R alguns microdados do Censo da Educação Superior de 2022, levantamento anual do INEP que coleta informações sobre as instituições de ensino superior, cursos de graduação e estudantes no Brasil todo. Os dados que deverão ser baixados são os referentes ao ano de 2022, que poderão ser baixados da página do INEP. Os dados estão em formato compactado (zipado) e deverão ser descompactados no diretório local do R antes de serem carregados. Uma vez descompactados, carregue o arquivo MICRODADOS_ED_SUP_IES_2022.CSV e salve o resultado no objeto alunos. Reporte o código e o seguinte:\n\n\nO nome das colunas do data.frame alunos:\n\n\nO número de linhas e de colunas do data.frame alunos:\n\n\nLink para os dados: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-6",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-6",
+    "title": "4  Lista Nivelamento",
+    "section": "7.6 Resposta",
+    "text": "7.6 Resposta\nNeste caso usamos a função read_delim para fazer a leitura dos dados. Além disso, foi importante especificar o encoding do dataset. Os nomes das colunas podem ser obtidos pela função colnames, enquanto número de linhas e colunas podem ser obtidos usando as funções nrow e ncol, respectivamente.\n\nalunos &lt;- read_delim(\"datasets/MICRODADOS_ED_SUP_IES_2022.CSV\", \n                     delim=\";\", \n                     locale=locale(encoding = \"latin1\"))\n\n\n# resposta da letra a)\nprint(colnames(alunos))\n\n [1] \"NU_ANO_CENSO\"                   \"NO_REGIAO_IES\"                 \n [3] \"CO_REGIAO_IES\"                  \"NO_UF_IES\"                     \n [5] \"SG_UF_IES\"                      \"CO_UF_IES\"                     \n [7] \"NO_MUNICIPIO_IES\"               \"CO_MUNICIPIO_IES\"              \n [9] \"IN_CAPITAL_IES\"                 \"NO_MESORREGIAO_IES\"            \n[11] \"CO_MESORREGIAO_IES\"             \"NO_MICRORREGIAO_IES\"           \n[13] \"CO_MICRORREGIAO_IES\"            \"TP_ORGANIZACAO_ACADEMICA\"      \n[15] \"TP_CATEGORIA_ADMINISTRATIVA\"    \"NO_MANTENEDORA\"                \n[17] \"CO_MANTENEDORA\"                 \"CO_IES\"                        \n[19] \"NO_IES\"                         \"SG_IES\"                        \n[21] \"DS_ENDERECO_IES\"                \"DS_NUMERO_ENDERECO_IES\"        \n[23] \"DS_COMPLEMENTO_ENDERECO_IES\"    \"NO_BAIRRO_IES\"                 \n[25] \"NU_CEP_IES\"                     \"QT_TEC_TOTAL\"                  \n[27] \"QT_TEC_FUNDAMENTAL_INCOMP_FEM\"  \"QT_TEC_FUNDAMENTAL_INCOMP_MASC\"\n[29] \"QT_TEC_FUNDAMENTAL_COMP_FEM\"    \"QT_TEC_FUNDAMENTAL_COMP_MASC\"  \n[31] \"QT_TEC_MEDIO_FEM\"               \"QT_TEC_MEDIO_MASC\"             \n[33] \"QT_TEC_SUPERIOR_FEM\"            \"QT_TEC_SUPERIOR_MASC\"          \n[35] \"QT_TEC_ESPECIALIZACAO_FEM\"      \"QT_TEC_ESPECIALIZACAO_MASC\"    \n[37] \"QT_TEC_MESTRADO_FEM\"            \"QT_TEC_MESTRADO_MASC\"          \n[39] \"QT_TEC_DOUTORADO_FEM\"           \"QT_TEC_DOUTORADO_MASC\"         \n[41] \"IN_ACESSO_PORTAL_CAPES\"         \"IN_ACESSO_OUTRAS_BASES\"        \n[43] \"IN_ASSINA_OUTRA_BASE\"           \"IN_REPOSITORIO_INSTITUCIONAL\"  \n[45] \"IN_BUSCA_INTEGRADA\"             \"IN_SERVICO_INTERNET\"           \n[47] \"IN_PARTICIPA_REDE_SOCIAL\"       \"IN_CATALOGO_ONLINE\"            \n[49] \"QT_PERIODICO_ELETRONICO\"        \"QT_LIVRO_ELETRONICO\"           \n[51] \"QT_DOC_TOTAL\"                   \"QT_DOC_EXE\"                    \n[53] \"QT_DOC_EX_FEMI\"                 \"QT_DOC_EX_MASC\"                \n[55] \"QT_DOC_EX_SEM_GRAD\"             \"QT_DOC_EX_GRAD\"                \n[57] \"QT_DOC_EX_ESP\"                  \"QT_DOC_EX_MEST\"                \n[59] \"QT_DOC_EX_DOUT\"                 \"QT_DOC_EX_INT\"                 \n[61] \"QT_DOC_EX_INT_DE\"               \"QT_DOC_EX_INT_SEM_DE\"          \n[63] \"QT_DOC_EX_PARC\"                 \"QT_DOC_EX_HOR\"                 \n[65] \"QT_DOC_EX_0_29\"                 \"QT_DOC_EX_30_34\"               \n[67] \"QT_DOC_EX_35_39\"                \"QT_DOC_EX_40_44\"               \n[69] \"QT_DOC_EX_45_49\"                \"QT_DOC_EX_50_54\"               \n[71] \"QT_DOC_EX_55_59\"                \"QT_DOC_EX_60_MAIS\"             \n[73] \"QT_DOC_EX_BRANCA\"               \"QT_DOC_EX_PRETA\"               \n[75] \"QT_DOC_EX_PARDA\"                \"QT_DOC_EX_AMARELA\"             \n[77] \"QT_DOC_EX_INDIGENA\"             \"QT_DOC_EX_COR_ND\"              \n[79] \"QT_DOC_EX_BRA\"                  \"QT_DOC_EX_EST\"                 \n[81] \"QT_DOC_EX_COM_DEFICIENCIA\"     \n\n# resposta da letra b)\nprint(paste(\"O número de linhas é\", nrow(alunos)))\n\n[1] \"O número de linhas é 2595\"\n\nprint(paste(\"O número de colunas é\", ncol(alunos)))\n\n[1] \"O número de colunas é 81\"",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-8",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-8",
+    "title": "4  Lista Nivelamento",
+    "section": "8.1 Questão 8",
+    "text": "8.1 Questão 8\nNo Google Classroom (Aula 2 Mural - https://classroom.google.com/c/NzQ4Mzk4MTMyMDU3), há um arquivo chamado base_municipios_brasileiros.xlsx com informações dos municípios brasileiros. Este banco possui mais de 400 variáveis. Crie um novo data.frame, selecionando apenas variáveis referentes a identificação do município, ano, população e pib. Descreva o processo e justifique suas escolhas.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-7",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-7",
+    "title": "4  Lista Nivelamento",
+    "section": "8.2 Resposta",
+    "text": "8.2 Resposta\nInfelizmente o arquivo .xlsx continha algum problema de formato, o que impediu que eu conseguisse abri-lo mesmo localmente no Excel. Por isso, utilizou-se o arquivo .csv. A seleção das colunas foi feita utilizando a função select.\n\nbase_municipios_brasileiros &lt;- read_csv(\"datasets/base_municipios_brasileiros.csv\")\n\nbase_municipios_brasileiros &lt;- base_municipios_brasileiros %&gt;%\n                                  select(\"id_municipio\", \"nome_municipio\", \"ano\", \"populacao\", \"pib\")",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-9",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-9",
+    "title": "4  Lista Nivelamento",
+    "section": "8.3 Questão 9",
+    "text": "8.3 Questão 9\nUtilize o banco de dados do exercício anterior para criar um novo objeto/data.frame chamado populacao. Faça o filtro para selecionar somente informações de 2022, criando um novo data.frame. E, a partir dele, crie um novo objeto chamado maiores_populacoes contendo apenas os 50 municípios mais populados do país, ordenados de forma decrescente. Use comentários para indicar qual é o 50º município mais populoso do país.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-8",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-8",
+    "title": "4  Lista Nivelamento",
+    "section": "8.4 Resposta",
+    "text": "8.4 Resposta\nPrimeiro, filtramos apenas a população de 2022 usando a função filter. Depois, bastou ordenar os municípios em ordem decrescente compondo as funções arrange e desc, e tomar as 50 primeiras linhas. Depois utilizamos a função tail para mostrar a última linha – isto é, a linha correspondente ao 50º município mais populoso.\n\npopulacao &lt;-base_municipios_brasileiros %&gt;%\n              filter(ano == 2022)\n\nmaiores_populacoes &lt;- populacao %&gt;%\n                        arrange(by=desc(populacao)) %&gt;%\n                        head(50)\n\nprint(tail(maiores_populacoes, 1))\n\n# A tibble: 1 × 5\n  id_municipio nome_municipio   ano populacao   pib\n         &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1      1100205 Porto Velho     2022    461748    NA",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-10",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-10",
+    "title": "4  Lista Nivelamento",
+    "section": "8.5 Questão 10",
+    "text": "8.5 Questão 10\nUsando o objeto populacao, criado no exercício anterior, adicione a ele uma nova variável chamada pequeno_porte. Nesta, constará os valores: Pequeno porte, para municípios com menos de 50 mil habitantes, e Outros para os demais municípios.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-9",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-9",
+    "title": "4  Lista Nivelamento",
+    "section": "8.6 Resposta",
+    "text": "8.6 Resposta\nCombinando as funções mutate e case_when, conseguimos criar a coluna pequeno_porte.\n\npopulacao &lt;- populacao %&gt;%\n  mutate(pequeno_porte = case_when(\n    populacao &lt; 50000 ~ \"Pequeno porte\",\n    TRUE ~ \"Outros\"\n  )\n)",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-11",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-11",
+    "title": "4  Lista Nivelamento",
+    "section": "8.7 Questão 11",
+    "text": "8.7 Questão 11\nCarregue a base de dados banco_violencia.xlsx. A partir da função left_join, crie uma nova base cruzando essa base com o objeto populacao, criado anteriormente. Descreva quais as variáveis que são utilizadas para o cruzamento e por quê.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-10",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-10",
+    "title": "4  Lista Nivelamento",
+    "section": "8.8 Resposta",
+    "text": "8.8 Resposta\nPodemos facilmente cruzar os dois bancos de dados utilizando a coluna id_municipio, presente nos dois datasets. Por se tratar de uma coluna padronizada, a variável de id é muito útil para realizar conexões entre os bancos de dados.\n\nbanco_violencia &lt;- read_excel(\"datasets/banco_violencia.xlsx\")\nbanco_violencia$id_municipio &lt;- as.double(banco_violencia$id_municipio) \npopulacao_violencia &lt;- left_join(x=populacao, y=banco_violencia, by=c(\"id_municipio\"))",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-12",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-12",
+    "title": "4  Lista Nivelamento",
+    "section": "9.1 Questão 12",
+    "text": "9.1 Questão 12\nUsando o banco de dados criado no exercício anterior, crie duas visualizações:\n\num histograma da população brasileira dividida por municípios\num gráfico com duas barras comparando o número de municípios de pequeno porte e municípios de outros tamanhos\n\nO que esses dois gráficos revelam sobre o caráter geral dos municípios brasileiros?\nDica: consulte o livro Usando o R para identificar os geoms mais adequados",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-11",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-11",
+    "title": "4  Lista Nivelamento",
+    "section": "9.2 Resposta",
+    "text": "9.2 Resposta\n\nhist(populacao_violencia$populacao.x)\n\n\n\n\n\n\n\n\n\npopulacao_violencia %&gt;%\n  group_by(pequeno_porte) %&gt;%\n  summarise(n_municipios = n()) %&gt;%\n  ggplot(aes(x = pequeno_porte, y = n_municipios)) +\n  geom_col()\n\n\n\n\n\n\n\n\nOs dois gráficos plotados nos mostram que a esmagadora maioria dos municípios brasileiros são de pequeno porte – isto é, possuem menos de 50 mil habitantes.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-13",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-13",
+    "title": "4  Lista Nivelamento",
+    "section": "9.3 Questão 13",
+    "text": "9.3 Questão 13\nNovamente usando o banco violencia, crie uma visualização que mostre a evolução do número absoluto de mortes por intervenção policial no município do Rio de Janeiro ao longo dos anos.\nDica 1: para facilitar seu trabalho, você pode criar um novo banco contendo apenas as informações do município de interesse para o gráfico usando a função de manipulação filter()\nDica 2: verifique se a classe das variáveis utilizadas é numérica. Caso não seja, faça a conversão usando a função mutate()",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-12",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-12",
+    "title": "4  Lista Nivelamento",
+    "section": "9.4 Resposta",
+    "text": "9.4 Resposta\nApós filtrar os dados para o município do Rio de Janeiro, podemos usar a coluna quantidade_mortes_intervencao_policial (transformada em uma variável numérica através da função mutate) para plotar um gráfico de série temporal.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group=1)) +\n  geom_line() +\n  geom_point()",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-14",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-14",
+    "title": "4  Lista Nivelamento",
+    "section": "9.5 Questão 14",
+    "text": "9.5 Questão 14\nNovamente usando o banco do exercício 11, crie um novo banco contabilizando a população por estado. Em seguida, crie um mapa que permita visualizar o tamalho da população de cada estado.\nDica 1: para a manipulação, use as funções group_by() e sumarise(), descritas no capítulo 3 do livro Usando R.\nDica 2: para a elaboração do mapa, será necessário utilizar os pacotes geobr e sf",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-13",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-13",
+    "title": "4  Lista Nivelamento",
+    "section": "9.6 Resposta",
+    "text": "9.6 Resposta\nComeçamos lendo os dados de geometria dos estados brasileiros utilizando o geobr. Daí, basta agrupar os dados por unidade da federação, somando o total da população, e cruzar as bases pela sigla do estado. O gráfico é plotado utilizando a geometria sf.\n\nlibrary(geobr)\nlibrary(sf)\n\ncoordenadas_estados &lt;- read_state()\n\npopulacao_violencia %&gt;%\n  group_by(sigla_uf) %&gt;%\n  summarise(total_populacao = sum(populacao.x)) %&gt;%\n  left_join(coordenadas_estados, by = c(\"sigla_uf\" = \"abbrev_state\")) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = total_populacao)) + \n  geom_sf()",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#questão-15",
+    "href": "listas/nivelamento/lista-nivelamento.html#questão-15",
+    "title": "4  Lista Nivelamento",
+    "section": "9.7 Questão 15",
+    "text": "9.7 Questão 15\nSelecione um dos gráficos elaborados nos exercícios anteriores e faça customizações nele. Você pode mudar cores, temas, acrescentar títulos, mudar nomes de variáveis… deixe sua criatividade fluir, mas sempre priorizando a clareza e a melhor forma de comunicar as informações contidas no gráfico.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  },
+  {
+    "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-14",
+    "href": "listas/nivelamento/lista-nivelamento.html#resposta-14",
+    "title": "4  Lista Nivelamento",
+    "section": "9.8 Resposta",
+    "text": "9.8 Resposta\nFaço algumas modificações ao gráfico de linha anterior. Em especial, ajusto o eixo \\(y\\) para começar no 0, o que ajusta a analisar de maneira mais adequada a variação no número de mortes ao longo do tempo. Além disso, incluo também título, subtítulo e caption, além de alguns ajustes mais residuais no tamanho e estilo da fonte. Alterei também o titulo dos eixos para facilitar a compreensão das variáveis.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group = 1)) +\n  geom_line(color = \"steelblue\") +\n  geom_point(color = \"steelblue\") +\n  scale_y_continuous(expand = c(0, 0), limits = c(0, 800)) +\n  labs(\n    title = \"Mortes por Intervenção Policial no Rio de Janeiro por Ano\",\n    subtitle = \"Dados do Instituto de Segurança Pública\",\n    caption = \"Produzido por Felipe Lamarca\",\n    x = \"Ano\",\n    y = \"Quantidade de Mortes\"\n  ) +\n  theme_bw() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    axis.title.x = element_text(size = 12),\n    axis.title.y = element_text(size = 12),\n    axis.text.x = element_text(size = 10),\n    axis.text.y = element_text(size = 10)\n  )",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+    ]
+  }
+]

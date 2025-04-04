@@ -1,0 +1,27 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Lego I"
+  author: Felipe Lamarca
+  chapters:
+    - index.qmd
+    - part: Aulas
+      chapters:
+        - aulas/aula-1.qmd
+        - aulas/aula-2.qmd
+    - part: Listas
+      chapters:
+        - listas/nivelamento/lista-nivelamento.qmd
+        
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+

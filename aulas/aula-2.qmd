@@ -1,0 +1,102 @@
+# Desenho de pesquisa e mensuração
+
+## Anotações das leituras
+
+### Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Caps. 3 e 4
+
+#### Capítulo 3: avaliando relações causais
+
+> Nossas teorias -- que podem estar certas ou erradas -- tipicamente especificam que alguma variável independente causa alguma variável dependente. Então nos esforçamos para achar evidêncais empíricas apropriadas para avaliar o quanto uma teoria é ou não suportada (p. 75-76).
+
+> [Sobre a realidade multivariada do mundo] Então, ebora nossas teorias descrevam a relação proposta entre alguma causa e algum efeito, devemos ter sempre em nossas mentes que o fenômeno que estamos tentando explicar certamente possui outras possíveis causas. E, quando for o momento de desenharmos a pesquisa a fim de testar nossas ideias teóricas [...], temos que tentar explicar, ou "controlar para" essas outras causas (p. 76).
+
+> A noção de causalidade que está no centro dessas disciplinas [das ciências físicas] envolve, principalmente, **relações determinísticas** -- isto é, relações em que, se uma causa ocorre, então o efeito ocorrerá _com certeza_. Em contrapartida, porém, o mundo das interações humanas consiste em **relações probabilísticas** -- nesse sentido, um aumento em $X$ está associado ao aumento (ou à diminuição) na probabilidade de $Y$ ocorrer, mas essas probabilidades não são certezas. (p. 77).
+
+> Para qualquer teoria sobre uma relação causal entre $X$ e $Y$, devemos cuidadosamente considerar as respostas para as quatro questões abaixo:
+>
+> 1. Existe algum mecanismo causal crível que conecta $X$ a $Y$?
+>
+> 2. Podemos eliminar a possibilidade de que $Y$ causa $X$?
+>
+> 3. Existe covariação entre $X$ e $Y$?
+>
+> 4. Controlamos por todas as **variáveis colineares**[^1] $Z$ que podem tornar a associação entre $X$ e $Y$ **espúria**? (p. 78).
+
+> De fato, uma parte substancial dos desacordos entre acadêmicos tem origem no quarto obstáculo causal. A objeção mais frequente quando um acadêmico está avaliando o trabalho de outro acadêmico talvez seja que um pesquisador "falhou em controlar por" alguma variável potencialmente importante da variável dependente. (p. 85)
+
+#### Capítulo 4: desenho de pesquisa
+
+> O objetivo de todos os tipos de desenho de pesquisas é nos ajudar a avaliar quão bem uma teoria se sai perante os quatro obstáculos causais -- isto é, responder de modo mais conclusivo possível se $X$ causa $Y$. [...] focamos duas das mais comuns e efetivas estratégias usadas por cientistas políticos: **experimentos** e **estudos observacionais**. (p. 94)
+
+> **DESENHOS DE PESQUISA EXPERIMENTAIS**
+>
+> A exposição de uma propaganda com conteúdo negativo sobre um candidato ($X$) pode, ou não, afetar a probabilidade do eleitor votar no candidato-alvo da propaganda ($Y$). É importante salientar que a afirmação causal possui um componente direcional específico; isto é, a exposição a propagandas aumentará as chances de o eleitor escolher o candidato que fez a propaganda. (p. 95)
+>
+> Nós, os pesquisadores, devemos não apenas controlar o valor da nossa variável independente [nesse caso, a exposição à propaganda], mas _devemos também atribuir esses valores aos participantes randomicamente_. No nosso anúncio de campanha, isso significa que devemos [...] usar um gerador de números randômicos ou algum outro mecanismo desse tipo para dividir nossos participantes em um **grupo de tratamento** (os que assistirão ao anúncio negativo) e um **grupo de controle** (os que não assistirão ao anúncio, mas algo diferente do tratamento, que nas ciências médicas é chamado de um **placebo**). (p. 96)
+>
+> De fato, desde que o número de participantes seja razoavelmente grande, a atribuição aleatória de participantes ao grupo de tratamento assegura que os grupos, no seu todo, seja _idênticos_. Se os dois grupos são idênticos, exceto pelo lançamento da moeda, então podemos ter certeza de que qualquer diferença que observarmos nos grupos deve se dar em razão da variável independente que atribuímos. (p 96)
+>
+> **Atribuição randômica** aos grupos de tratamento e controle ocorre quando os participantes de um experimento são atribuídos randomicamente a diferentes valores de $X$, a variável dependente. É importante observar que a definição não diz nada a respeito de como os indivíduos são selecionados para participar do experimento. Já a **amostra aleatória**, essencialmente, relaciona-se a como pesquisadores selecionam casos para os seus estudos -- eles são selecionados aleatoriamente, o que significa que cada membro da **população** em questão tem uma mesma probabilidade de ser selecionado. (p. 100)
+>
+> [Sobre a limitação de experimentos] Cientistas sociais não podem "atribuir" a pessoas uma identificação partidária ou uma renda, "atribuir" a um país um nível de democratização ou gasto miliar, [...]. Essas variáveis simplesmente existem na natureza e não podemos controlar a exposição a elas e atribuir randomicamente valores para diferentes casos (isto é, pessoas ou países). E, no entanto, cientistas sociais se sentem compelidos a estudar esses fenômenos, o que significa que, nessas circunstâncias, devemos empregar um desenho não experimental de pesquisa. (p. 102)
+>
+> [Experimentos não têm boa validade externa por usarem uma **amostra de conveniência**] Reiterando: _experimentos não requerem uma amostra que represente a população_. De fato, é extremamente rato que experimentos utilizem uma amostra da população. Em experimentos para teste de medicamentos, por exemplo, é comum o uso de anúncios em jornais ou em programas de rádio para convidar pessoas a participar, usualmente envolvendo alguma forma de compensação financeira. (p. 102-103)
+
+> **ESTUDOS OBSERVACIONAIS**
+>
+> Mas quais são as opções que estudiosos têm quando não podem controlar a exposição de diferentes valores das variáveis independentes? Em tais casos, a única escolha é recolher dados do mundo como eles são e realizar comparações entre unidades individuais -- como pessoas, partidos políticos ou países -- ou entre uma quantidade **agregada** que varia ao longo do tempo. (p. 105)
+> 
+> Isso leva à definição de um estudo observacional: um estudo observacional é um desenho de pesquisa no qual o pesquisador não tem controle dos valores da variável independente, que ocorrem naturalmente. Todavia, é necessário que exista algum grau de variabilidade na variável independente entre os casos, assim como variação na variável dependente. (p. 105)
+> 
+> [...] um estudo observacional transversal examina a realidade social transversalmente, focando a variação entre unidades espaciais individuais -- novamente, como cidadãos, políticos eleitos, distritos eleitorais ou países -- e a explicação da variação da variável dependente entre elas. (p. 109)
+>
+> [...] o estudo observacional de séries temporais que tem, em seu núcleo, a comparação ao longo do tempo de uma única unidade espacial. Diferentemente da variação transversal, na qual a relação examinada é entre unidades individuais tipicamente em um único ponto do tempo, em estudos observacionais de séries temporais cientistas políticos tipicamente examinam a variação dentro de uma unidade espacial ao longo do tempo. (p. 109)
+>
+> Como os exemplos anteriores demonstraram, quando precisamos controlar outras possíveis causas de $Y$ para superar o quarto obstáculo causal, precisamos controlar por _todas elas_, não por apenas uma. Mas como sabemos se controlamos por todas as possíveis causas de $Y$? Em muitos casos, não sabemos com certeza. (p. 110)
+
+### King, G., Keohane, R. O., Verba, S. (1994). Designing social inquiry: Scientific inference in qualitative research. Princeton university press., Cap. 1
+
+O capítulo começa com uma introdução ao debate entre pesquisa quantitativa, mais fortemente associada a medidas, estatísticas e matemática de maneira geral, e a pesquisa qualitativa, focada em análises contextuais e mais profundas. Na prática, o autor argumenta que as diferenças entre as duas abordagens são meramente estilísticas e, portanto, pouco importantes do ponto de vista científico.
+
+> All good research can be understood -- indeed, is best understood -- to derive from the same underlying log of inference. Both quantitative and qualitative research can be systematic and scientific. (p. 4-5)
+
+> This lesson of these efforts [Coercive Cooperation (1992) and Making Democracy Work (1993)] should be clear: neither quantitative nor qualitative research is superior to the other, regardless of the research problem being addressed. (p. 5-6)
+
+> Good research, that is, scientific research, can be quantitative or qualitative in style. In design, however, scientific research has the following characteristics:
+> 
+> 1. The goal is inference
+> 
+> 2. The procedures are public
+> 
+> 3. The conclusions are uncertain
+>
+> 4. The content is the method (p. 7-9)
+
+O argumento é que "boa pesquisa" (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser _inferência descritiva_ ou _inferência causal_. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita -- portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.
+
+### Figueiredo Filho, D. B., Paranhos, R., Rocha, E. C., Silva Jr, J., e Santos, M. D. (2012). Levando Gary King a sério: desenhos de pesquisa em Ciência Política. Revista Eletrônica de Ciência Política, 3(1-2), 86-117.
+
+Pelo menos até o ponto de escrita do artigo, o cenário da formação em métodos de pesquisa (quantitativa e qualitativa) era o "calcanhar de Aquiles" da formação em ciência política no Brasil. Em particular, o artigo começa com uma série de evidências dessa formação deficitária e discute os efeitos disso na produção científica e no mercado de trabalho. 
+
+Os autores fazem uma série de recomendações:
+
+#### Substantivas
+1. **Explicitar e justificar a questão de pesquisa:** "De forma mais séria, quando a questão de pesquisa é nebulosa, fica difícil, inclusive, de avaliar em que medida os resultados observados respondem satisfatoriamente a indagação proposta pelo trabalho." (p. 89)
+2. **Descrever os métodos e as técnicas:** "Uma pesquisa que não descreve exatamente como os dados foram coletados torna-se irreplicável e, consequentemente, não falsificável." (p. 91)
+3. **Simplificar a hipótese de trabalho:** "Uma hipótese clara tem três componentes básicos: (1) uma relação esperada; (2) uma variável independente e (3) uma variável dependente." (p. 92). Hipóteses não parcimoniosas apresentam elementos denecessários.
+4. **Produzir inferências causais falsificáveis**
+5. Apresentar as limitações do desenho de pesquisa: "As limitações devem ser listadas de forma explícita e pormenorizadas para que a comunidade acadêmica possa avaliar a confiabilidade dos resultados apresentados." (p. 103)
+
+#### Procedimentais
+6. **Minimizar a complexidade da linguagem**
+7. **Compartilhar a base de dados:** "Resultados de pesquisa de especialistas que compartilham bases de dados são mais facilmente replicáveis e, portanto, mais facilmente falsificáveis" (p. 106)
+8. **Evitar gráficos nebulosos e tabelas poluídas e incompletas**
+9. **Ser criticado antes de publicar:** "Em síntese, o crivo da comunidade acadêmica é uma das formas mais eficientes de aprimorar desenhos de pesquisa e, posteriormente, resultados de pesquisa. Apenas depois de submeter seu trabalho às críticas, o pesquisador deve submetê-lo aos periódicos especializados." (p. 111)
+10. **Escolher adequadamente os meios de divulgação**
+
+
+## Anotações de aula
+
+## Notas de rodapé
+    
+[^1]: Variável colinear é simplesmente uma variável que está correlacionada com a variável dependente e com a independente de maneira a alterar a relação entre elas.

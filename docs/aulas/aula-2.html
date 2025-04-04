@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>3&nbsp; Desenho de pesquisa e mensuração – Lego I</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../listas/nivelamento/lista-nivelamento.html" rel="next">
+<link href="../aulas/aula-1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Lego I</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Lego 1</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Aulas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos da pesquisa quantitativa</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Listas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../listas/nivelamento/lista-nivelamento.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">3.1</span> Anotações das leituras</a>
+  <ul class="collapse">
+  <li><a href="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-caps.-3-e-4" id="toc-kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-caps.-3-e-4" class="nav-link" data-scroll-target="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-caps.-3-e-4"><span class="header-section-number">3.1.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Caps. 3 e 4</a></li>
+  <li><a href="#king-g.-keohane-r.-o.-verba-s.-1994.-designing-social-inquiry-scientific-inference-in-qualitative-research.-princeton-university-press.-cap.-1" id="toc-king-g.-keohane-r.-o.-verba-s.-1994.-designing-social-inquiry-scientific-inference-in-qualitative-research.-princeton-university-press.-cap.-1" class="nav-link" data-scroll-target="#king-g.-keohane-r.-o.-verba-s.-1994.-designing-social-inquiry-scientific-inference-in-qualitative-research.-princeton-university-press.-cap.-1"><span class="header-section-number">3.1.2</span> King, G., Keohane, R. O., Verba, S. (1994). Designing social inquiry: Scientific inference in qualitative research. Princeton university press., Cap. 1</a></li>
+  <li><a href="#figueiredo-filho-d.-b.-paranhos-r.-rocha-e.-c.-silva-jr-j.-e-santos-m.-d.-2012.-levando-gary-king-a-sério-desenhos-de-pesquisa-em-ciência-política.-revista-eletrônica-de-ciência-política-31-2-86-117." id="toc-figueiredo-filho-d.-b.-paranhos-r.-rocha-e.-c.-silva-jr-j.-e-santos-m.-d.-2012.-levando-gary-king-a-sério-desenhos-de-pesquisa-em-ciência-política.-revista-eletrônica-de-ciência-política-31-2-86-117." class="nav-link" data-scroll-target="#figueiredo-filho-d.-b.-paranhos-r.-rocha-e.-c.-silva-jr-j.-e-santos-m.-d.-2012.-levando-gary-king-a-sério-desenhos-de-pesquisa-em-ciência-política.-revista-eletrônica-de-ciência-política-31-2-86-117."><span class="header-section-number">3.1.3</span> Figueiredo Filho, D. B., Paranhos, R., Rocha, E. C., Silva Jr, J., e Santos, M. D. (2012). Levando Gary King a sério: desenhos de pesquisa em Ciência Política. Revista Eletrônica de Ciência Política, 3(1-2), 86-117.</a></li>
+  </ul></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">3.2</span> Anotações de aula</a></li>
+  <li><a href="#notas-de-rodapé" id="toc-notas-de-rodapé" class="nav-link" data-scroll-target="#notas-de-rodapé"><span class="header-section-number">3.3</span> Notas de rodapé</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-2.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="anotações-das-leituras" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">3.1</span> Anotações das leituras</h2>
+<section id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-caps.-3-e-4" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-caps.-3-e-4"><span class="header-section-number">3.1.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Caps. 3 e 4</h3>
+<section id="capítulo-3-avaliando-relações-causais" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="capítulo-3-avaliando-relações-causais"><span class="header-section-number">3.1.1.1</span> Capítulo 3: avaliando relações causais</h4>
+<blockquote class="blockquote">
+<p>Nossas teorias – que podem estar certas ou erradas – tipicamente especificam que alguma variável independente causa alguma variável dependente. Então nos esforçamos para achar evidêncais empíricas apropriadas para avaliar o quanto uma teoria é ou não suportada (p.&nbsp;75-76).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[Sobre a realidade multivariada do mundo] Então, ebora nossas teorias descrevam a relação proposta entre alguma causa e algum efeito, devemos ter sempre em nossas mentes que o fenômeno que estamos tentando explicar certamente possui outras possíveis causas. E, quando for o momento de desenharmos a pesquisa a fim de testar nossas ideias teóricas […], temos que tentar explicar, ou “controlar para” essas outras causas (p.&nbsp;76).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A noção de causalidade que está no centro dessas disciplinas [das ciências físicas] envolve, principalmente, <strong>relações determinísticas</strong> – isto é, relações em que, se uma causa ocorre, então o efeito ocorrerá <em>com certeza</em>. Em contrapartida, porém, o mundo das interações humanas consiste em <strong>relações probabilísticas</strong> – nesse sentido, um aumento em <span class="math inline">\(X\)</span> está associado ao aumento (ou à diminuição) na probabilidade de <span class="math inline">\(Y\)</span> ocorrer, mas essas probabilidades não são certezas. (p.&nbsp;77).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Para qualquer teoria sobre uma relação causal entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, devemos cuidadosamente considerar as respostas para as quatro questões abaixo:</p>
+<ol type="1">
+<li><p>Existe algum mecanismo causal crível que conecta <span class="math inline">\(X\)</span> a <span class="math inline">\(Y\)</span>?</p></li>
+<li><p>Podemos eliminar a possibilidade de que <span class="math inline">\(Y\)</span> causa <span class="math inline">\(X\)</span>?</p></li>
+<li><p>Existe covariação entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>?</p></li>
+<li><p>Controlamos por todas as <strong>variáveis colineares</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> <span class="math inline">\(Z\)</span> que podem tornar a associação entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> <strong>espúria</strong>? (p.&nbsp;78).</p></li>
+</ol>
+</blockquote>
+<blockquote class="blockquote">
+<p>De fato, uma parte substancial dos desacordos entre acadêmicos tem origem no quarto obstáculo causal. A objeção mais frequente quando um acadêmico está avaliando o trabalho de outro acadêmico talvez seja que um pesquisador “falhou em controlar por” alguma variável potencialmente importante da variável dependente. (p.&nbsp;85)</p>
+</blockquote>
+</section>
+<section id="capítulo-4-desenho-de-pesquisa" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="capítulo-4-desenho-de-pesquisa"><span class="header-section-number">3.1.1.2</span> Capítulo 4: desenho de pesquisa</h4>
+<blockquote class="blockquote">
+<p>O objetivo de todos os tipos de desenho de pesquisas é nos ajudar a avaliar quão bem uma teoria se sai perante os quatro obstáculos causais – isto é, responder de modo mais conclusivo possível se <span class="math inline">\(X\)</span> causa <span class="math inline">\(Y\)</span>. […] focamos duas das mais comuns e efetivas estratégias usadas por cientistas políticos: <strong>experimentos</strong> e <strong>estudos observacionais</strong>. (p.&nbsp;94)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>DESENHOS DE PESQUISA EXPERIMENTAIS</strong></p>
+<p>A exposição de uma propaganda com conteúdo negativo sobre um candidato (<span class="math inline">\(X\)</span>) pode, ou não, afetar a probabilidade do eleitor votar no candidato-alvo da propaganda (<span class="math inline">\(Y\)</span>). É importante salientar que a afirmação causal possui um componente direcional específico; isto é, a exposição a propagandas aumentará as chances de o eleitor escolher o candidato que fez a propaganda. (p.&nbsp;95)</p>
+<p>Nós, os pesquisadores, devemos não apenas controlar o valor da nossa variável independente [nesse caso, a exposição à propaganda], mas <em>devemos também atribuir esses valores aos participantes randomicamente</em>. No nosso anúncio de campanha, isso significa que devemos […] usar um gerador de números randômicos ou algum outro mecanismo desse tipo para dividir nossos participantes em um <strong>grupo de tratamento</strong> (os que assistirão ao anúncio negativo) e um <strong>grupo de controle</strong> (os que não assistirão ao anúncio, mas algo diferente do tratamento, que nas ciências médicas é chamado de um <strong>placebo</strong>). (p.&nbsp;96)</p>
+<p>De fato, desde que o número de participantes seja razoavelmente grande, a atribuição aleatória de participantes ao grupo de tratamento assegura que os grupos, no seu todo, seja <em>idênticos</em>. Se os dois grupos são idênticos, exceto pelo lançamento da moeda, então podemos ter certeza de que qualquer diferença que observarmos nos grupos deve se dar em razão da variável independente que atribuímos. (p 96)</p>
+<p><strong>Atribuição randômica</strong> aos grupos de tratamento e controle ocorre quando os participantes de um experimento são atribuídos randomicamente a diferentes valores de <span class="math inline">\(X\)</span>, a variável dependente. É importante observar que a definição não diz nada a respeito de como os indivíduos são selecionados para participar do experimento. Já a <strong>amostra aleatória</strong>, essencialmente, relaciona-se a como pesquisadores selecionam casos para os seus estudos – eles são selecionados aleatoriamente, o que significa que cada membro da <strong>população</strong> em questão tem uma mesma probabilidade de ser selecionado. (p.&nbsp;100)</p>
+<p>[Sobre a limitação de experimentos] Cientistas sociais não podem “atribuir” a pessoas uma identificação partidária ou uma renda, “atribuir” a um país um nível de democratização ou gasto miliar, […]. Essas variáveis simplesmente existem na natureza e não podemos controlar a exposição a elas e atribuir randomicamente valores para diferentes casos (isto é, pessoas ou países). E, no entanto, cientistas sociais se sentem compelidos a estudar esses fenômenos, o que significa que, nessas circunstâncias, devemos empregar um desenho não experimental de pesquisa. (p.&nbsp;102)</p>
+<p>[Experimentos não têm boa validade externa por usarem uma <strong>amostra de conveniência</strong>] Reiterando: <em>experimentos não requerem uma amostra que represente a população</em>. De fato, é extremamente rato que experimentos utilizem uma amostra da população. Em experimentos para teste de medicamentos, por exemplo, é comum o uso de anúncios em jornais ou em programas de rádio para convidar pessoas a participar, usualmente envolvendo alguma forma de compensação financeira. (p.&nbsp;102-103)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>ESTUDOS OBSERVACIONAIS</strong></p>
+<p>Mas quais são as opções que estudiosos têm quando não podem controlar a exposição de diferentes valores das variáveis independentes? Em tais casos, a única escolha é recolher dados do mundo como eles são e realizar comparações entre unidades individuais – como pessoas, partidos políticos ou países – ou entre uma quantidade <strong>agregada</strong> que varia ao longo do tempo. (p.&nbsp;105)</p>
+<p>Isso leva à definição de um estudo observacional: um estudo observacional é um desenho de pesquisa no qual o pesquisador não tem controle dos valores da variável independente, que ocorrem naturalmente. Todavia, é necessário que exista algum grau de variabilidade na variável independente entre os casos, assim como variação na variável dependente. (p.&nbsp;105)</p>
+<p>[…] um estudo observacional transversal examina a realidade social transversalmente, focando a variação entre unidades espaciais individuais – novamente, como cidadãos, políticos eleitos, distritos eleitorais ou países – e a explicação da variação da variável dependente entre elas. (p.&nbsp;109)</p>
+<p>[…] o estudo observacional de séries temporais que tem, em seu núcleo, a comparação ao longo do tempo de uma única unidade espacial. Diferentemente da variação transversal, na qual a relação examinada é entre unidades individuais tipicamente em um único ponto do tempo, em estudos observacionais de séries temporais cientistas políticos tipicamente examinam a variação dentro de uma unidade espacial ao longo do tempo. (p.&nbsp;109)</p>
+<p>Como os exemplos anteriores demonstraram, quando precisamos controlar outras possíveis causas de <span class="math inline">\(Y\)</span> para superar o quarto obstáculo causal, precisamos controlar por <em>todas elas</em>, não por apenas uma. Mas como sabemos se controlamos por todas as possíveis causas de <span class="math inline">\(Y\)</span>? Em muitos casos, não sabemos com certeza. (p.&nbsp;110)</p>
+</blockquote>
+</section>
+</section>
+<section id="king-g.-keohane-r.-o.-verba-s.-1994.-designing-social-inquiry-scientific-inference-in-qualitative-research.-princeton-university-press.-cap.-1" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="king-g.-keohane-r.-o.-verba-s.-1994.-designing-social-inquiry-scientific-inference-in-qualitative-research.-princeton-university-press.-cap.-1"><span class="header-section-number">3.1.2</span> King, G., Keohane, R. O., Verba, S. (1994). Designing social inquiry: Scientific inference in qualitative research. Princeton university press., Cap. 1</h3>
+<p>O capítulo começa com uma introdução ao debate entre pesquisa quantitativa, mais fortemente associada a medidas, estatísticas e matemática de maneira geral, e a pesquisa qualitativa, focada em análises contextuais e mais profundas. Na prática, o autor argumenta que as diferenças entre as duas abordagens são meramente estilísticas e, portanto, pouco importantes do ponto de vista científico.</p>
+<blockquote class="blockquote">
+<p>All good research can be understood – indeed, is best understood – to derive from the same underlying log of inference. Both quantitative and qualitative research can be systematic and scientific. (p.&nbsp;4-5)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>This lesson of these efforts [Coercive Cooperation (1992) and Making Democracy Work (1993)] should be clear: neither quantitative nor qualitative research is superior to the other, regardless of the research problem being addressed. (p.&nbsp;5-6)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Good research, that is, scientific research, can be quantitative or qualitative in style. In design, however, scientific research has the following characteristics:</p>
+<ol type="1">
+<li><p>The goal is inference</p></li>
+<li><p>The procedures are public</p></li>
+<li><p>The conclusions are uncertain</p></li>
+<li><p>The content is the method (p.&nbsp;7-9)</p></li>
+</ol>
+</blockquote>
+<p>O argumento é que “boa pesquisa” (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser <em>inferência descritiva</em> ou <em>inferência causal</em>. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita – portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.</p>
+</section>
+<section id="figueiredo-filho-d.-b.-paranhos-r.-rocha-e.-c.-silva-jr-j.-e-santos-m.-d.-2012.-levando-gary-king-a-sério-desenhos-de-pesquisa-em-ciência-política.-revista-eletrônica-de-ciência-política-31-2-86-117." class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="figueiredo-filho-d.-b.-paranhos-r.-rocha-e.-c.-silva-jr-j.-e-santos-m.-d.-2012.-levando-gary-king-a-sério-desenhos-de-pesquisa-em-ciência-política.-revista-eletrônica-de-ciência-política-31-2-86-117."><span class="header-section-number">3.1.3</span> Figueiredo Filho, D. B., Paranhos, R., Rocha, E. C., Silva Jr, J., e Santos, M. D. (2012). Levando Gary King a sério: desenhos de pesquisa em Ciência Política. Revista Eletrônica de Ciência Política, 3(1-2), 86-117.</h3>
+<p>Pelo menos até o ponto de escrita do artigo, o cenário da formação em métodos de pesquisa (quantitativa e qualitativa) era o “calcanhar de Aquiles” da formação em ciência política no Brasil. Em particular, o artigo começa com uma série de evidências dessa formação deficitária e discute os efeitos disso na produção científica e no mercado de trabalho.</p>
+<p>Os autores fazem uma série de recomendações:</p>
+<section id="substantivas" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="substantivas"><span class="header-section-number">3.1.3.1</span> Substantivas</h4>
+<ol type="1">
+<li><strong>Explicitar e justificar a questão de pesquisa:</strong> “De forma mais séria, quando a questão de pesquisa é nebulosa, fica difícil, inclusive, de avaliar em que medida os resultados observados respondem satisfatoriamente a indagação proposta pelo trabalho.” (p.&nbsp;89)</li>
+<li><strong>Descrever os métodos e as técnicas:</strong> “Uma pesquisa que não descreve exatamente como os dados foram coletados torna-se irreplicável e, consequentemente, não falsificável.” (p.&nbsp;91)</li>
+<li><strong>Simplificar a hipótese de trabalho:</strong> “Uma hipótese clara tem três componentes básicos: (1) uma relação esperada; (2) uma variável independente e (3) uma variável dependente.” (p.&nbsp;92). Hipóteses não parcimoniosas apresentam elementos denecessários.</li>
+<li><strong>Produzir inferências causais falsificáveis</strong></li>
+<li>Apresentar as limitações do desenho de pesquisa: “As limitações devem ser listadas de forma explícita e pormenorizadas para que a comunidade acadêmica possa avaliar a confiabilidade dos resultados apresentados.” (p.&nbsp;103)</li>
+</ol>
+</section>
+<section id="procedimentais" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="procedimentais"><span class="header-section-number">3.1.3.2</span> Procedimentais</h4>
+<ol start="6" type="1">
+<li><strong>Minimizar a complexidade da linguagem</strong></li>
+<li><strong>Compartilhar a base de dados:</strong> “Resultados de pesquisa de especialistas que compartilham bases de dados são mais facilmente replicáveis e, portanto, mais facilmente falsificáveis” (p.&nbsp;106)</li>
+<li><strong>Evitar gráficos nebulosos e tabelas poluídas e incompletas</strong></li>
+<li><strong>Ser criticado antes de publicar:</strong> “Em síntese, o crivo da comunidade acadêmica é uma das formas mais eficientes de aprimorar desenhos de pesquisa e, posteriormente, resultados de pesquisa. Apenas depois de submeter seu trabalho às críticas, o pesquisador deve submetê-lo aos periódicos especializados.” (p.&nbsp;111)</li>
+<li><strong>Escolher adequadamente os meios de divulgação</strong></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">3.2</span> Anotações de aula</h2>
+</section>
+<section id="notas-de-rodapé" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="notas-de-rodapé"><span class="header-section-number">3.3</span> Notas de rodapé</h2>
+
+
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>Variável colinear é simplesmente uma variável que está correlacionada com a variável dependente e com a independente de maneira a alterar a relação entre elas.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-1.html" class="pagination-link" aria-label="Fundamentos da pesquisa quantitativa">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos da pesquisa quantitativa</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../listas/nivelamento/lista-nivelamento.html" class="pagination-link" aria-label="Lista Nivelamento">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,95 @@
+# Fundamentos da pesquisa quantitativa
+
+## Anotações das leituras
+
+### Kellstedt, P. M., & Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 1 e 2.
+
+**Capítulo 1: O estudo científico da política**
+
+> Então, o que fazem os cientistas políticos e o que faz deles cientistas? Uma resposta simples para essa questão é que, como outros cientistas, cientistas políticos desenvolvem e testam teorias. Uma **teoria** é uma tentativa de conjeturar sobre as causas de um fenômeno de interesse. O desenvolvimento de teorias causais sobre o mundo político requer pensar em fenômenos familiares de modo novo. Assim, a construção de uma teoria é em parte arte e em parte ciência.
+
+> Então, como cientistas políticos desenvolvem teorias sobre política? Um elemento-chave desse procedimento é como eles organizam seus pensamentos sobre o mundo político em termos de conceitos que cientistas chamam de variáveis e de relações causais entre variáveis. (p. 33)
+
+> Uma vez que tenhamos descoberto nosso relacionamento hipotético, podemos coletar dados de casos do mundo real e observar como esses dados refletem nossas expectativas em relação positiva ou negativa. (p. 38)
+
+> O ponto essencial é que modelos são simplificações. Se eles são ou não úteis para nós depende do que estamos tentando alcançar com um determinado modelo. Um dos aspectos mais marcantes dos modelos é que eles frequentemente são mais úteis para nós quando são imprecisos do que quando são precisos. O processo de pensar sobre as falhas de um modelo para explicar um ou mais casos pode gerar novas teorias causais. Encontrar imprecisões, frequentemente, nos aponta a direção do progresso teórico frutífero. (p. 41)
+
+**Capítulo 2: A arte da construção de teorias**
+
+> [...] uma boa teoria científica não explica apenas o resultado das eleições presidenciais de 2012, mas das eleições presidenciais americanas em geral. Isto é, em vez de perguntar "Por que Obama venceu Romney em 2012?", devemos perguntar "O que faz o partido do presidente vencer ou perder uma eleição presidencial nos EUA?" ou "O que faz com que candidatos do Partido Republicano se saiam melhor ou pior que candidatos do Partido Democrata nas eleições presidenciais americanas?". (p. 56)
+
+> As teorias que temos considerado até o momento foram elaboradas após um rigoroso processo de pensamento sobre o fenômeno que queremos explicar e a dedução de possíveis explicações causais. Uma extensão desse tipo de pensamento rigoroso é conhecida por "teoria formal" ou "escolha racional". Pesquisadores têm utilizado essa abordagem para desenvolver respostas para perguntas de pesquisas sobre como pessoas tomam decisões estratégicas. Colocando de outro modo, se a política é um jogo, como explicamos o modo como as pessoas jogam? (p. 59)
+
+> Podemos sumarizar esses pressupostos a respeito do comportamento humano dizendo que teóricos formais assumem que todos os indivíduos são **maximizadores racionais de utilidade** - que eles tentam maximizar seu próprio interesse. (p. 60)
+
+> Usamos as ferramentas da teoria formal para tentar nos colocar na posição de imaginar que estamos no lugar de outra pessoa e pensar sobre as diferentes escolhas que ele ou ela tiveram que fazer. Nas seções seguintes introduziremos as ferramentas básicas para fazer isso utilizando a abordagem de **utilidade esperada** [...]. (p. 60)
+
+> A utilidade para uma ação em particular é igual à soma de todos os benefícios menos a soma de todos os custos de uma ação. Sendo $Y$ uma ação, podemos sumarizar a utilidade como:
+$$
+U_i (Y) = \sum B_i (Y) - \sum C_i (Y)
+$$
+> Quando escolhe entre um conjunto de ações possíveis, um indivíduo racional escolherá a ação que maximiza sua utilidade. (p. 61)
+
+> Outro aspecto potencialmente problemático do pressuposto do ator racional maximizador de utilidade que você tem que considerar é o pressuposto da **informação completa**. Em outras palavras, e se não soubermos exatamente quais são os custos e benefícios de uma ação específica? [...]. Quando relaxamos esse pressuposto, deslocamos nossa discussão da utilidade para a utilidade esperada. (p. 62)
+
+### Chen, Yunsong, et al. "Social prediction: a new research paradigm based on machine learning". The Journal of Chinese Sociology 8 (2021): 1-21.
+
+> Thus, sociologists have considered it their duty to describe and explain social processes and phenomena, seek the meaning and interpretation of society and social actions, or verify social hypothesis and theories. Consequently, description, interpretation, and statistical testing are traditional and mainstream approaches in sociological research. (p. 1)
+
+> However, scholars have already emphasized that a causal interpretation must serve as the "basis for predicting social phenomena" (Hempel and Oppenheim 1948:138). Hence, predictability is a necessary but not sufficient condicional for the causal mechanism, as although predictability does not equate with causality, a prediction could be formed if there was causality. (p. 1)
+
+> However, sociology and even the broader category of social science pay much less attention to ex ante prediction than ex post facto evalutation and interpretation. A series of papers on the topic of "prediction and its limits" have been published in Science. Although these articles came from different disciplines of social sciences such as economics, sociology, and political science, scholars' consensus was that in contrast to natural science, theories and data of social science were rarely used to make predictions. (p. 2)
+
+> we suggest that social prediction represents a new subparadigm of social science research from the methodological perspective rather than strict ontology. With the emergence of big data and the improvement of compution power, the application of machine learning and the redefining of social prediction will boost the paradigm breakthrough of quantitative research in sociology and even social science research. (p. 3)
+
+> As early as in the 1940s, scholars suggested strengthening the work of prediction in the social science and proposed the concept of social prediction (Kaplan 1940). Although Kaplan (1940) realized the dificulty of prediction, he believed that social behavior was even more predictable than natural phenomena at the microlevel. (p. 3)
+
+> Since the data, models, and computing power required for accurate prediction were not ready, the whole social science community, especially quantitative research, has focused on the relationships among variables; that is, based on limited sample data, unbiased estimations for the pairwise relationships between variables are obtained by statistical models. (p. 4)
+
+> Although sociologists are still upset and worried about the invasion of advanced econometric methods into the discipline, scholares at the forefront of the discipline have given a clear and determined answer that the covariant research of correlation analysis and causal analysis is not enough to constitute a sociological explanation in terms of science. Duncan Watts pointed out the paradigm crisis of sociological research, namely, overreliance on common sense. Many sociological explanations confuse understandability with causality, which does not meet the standard of scientific interpretation. If sociologists expect their interpretations to be scientifically legitimate, they must evaluate them according to scientific standards; that is, predictions must be made (watts 2014:313). (p. 5)
+
+> In summary, prediction is the main component of realizing the scientific research goal of quantitative sociology. Among correlation, causality, and prediction, correlation is the prerequisite for causality and prediction, while causality is a sufficient but unnecessary condition for prediction. (p. 5)
+
+> Specifically, the error of a linear fitting of the model can be divided into three parts: bias, variance, and irreducible error. These errors represent the deviation between the fitting expectation and the real value, the dispersion of the fitting value, and the inevitable system noise, respectively. (p. 8)
+
+> Based on our understanding of sociology and some of the latest literature, we classify the disciplinary value of social prediction into three dimensions: academic significance, governance significance, and discourse significance[^3]. (p. 10)
+
+> **The academic significance of social prediction:** (i) Latent indicators of interest can be obtained through prediction (that is, people are unwilling to disclose their own information, but they can be predicted through other information); (ii) theoretical hypotheses can be generated via prediction; (iii) prediction helps to conduct causal inference; (iv) data proliferation can be realized by prediction; (v) the prediction could promote theoretical innovation.
+
+> **The governance significance of social prediction:** (i) one can make use of prediction competitions to promote the development of social prediction; (ii) social inequality research; (iii) public health governance.
+
+> With the rapid development of social prediction based on machine learning, we suggest that the basic paradigm of empirical work will be split into three pieces from the original dual peaks of qualitative and quantitative work to a trilogy of qualitative work, quantitative work, and quantitative prediction. [...].
+>
+> First, in terms of epistemology, the black box mechanism is introduced into prediction. [...]. Second, in terms of the problem domain, the prediction does not focus on the correlation and causal mechanism of the cause and result, but takes the accurate estimation of the target variables as the goal. Third, in terms of the research method, the prediction reduces the dependence on theory and the focus on the counterfactual framework and instead relies on algorithms and data to train and test models.
+
+> In this sense, the black box mechanism will always accompany social prediction. However, in the process of dismantling the black box, the conclusions drawn from the black box mechanism can and should be interpreted from the theoretical perspective and further verified by empirical methods. (p. 18)
+
+## Anotações de aula
+
+Nas ciências sociais, passamos por uma série de dificuldades na produção de conhecimento científico. Em particular, nosso objeto de estudo é difícil (para não dizer impossível) de ser "isolado", de maneira que a realização de experimentos é muito mais limitada. Outro desafio diz respeito ao fato de que as pessoas, no senso comum, têm explicações para os fenômenos sociais (*sociologia espontânea*, como diria Bourdieu).
+
+Nas ciências sociais, nos diferenciamos de várias maneiras. Temos uma definição própria do que é sociedade (ou política); usamos uma linguagem "especial"; e usamos o método científico.
+
+Mas, no fim das contas, o que é método científico? No caso Popperiano, literatura e teoria $\rightarrow$ hipótese $\rightarrow$ observação $\rightarrow$ rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência -- em particular, a Antropologia, várias áreas da Sociologia etc[^1].
+
+### Metodologia quantitativa
+
+A pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista[^2]) de que eu consigo extrair um "pedaço" do mundo político e fazer testes, formular hipóteses etc -- isto é, existem uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.
+
+Pesquisa quantitativa e qualitativa alongam um enorme debate sobre a maneira de abordar objetos nas ciências sociais. Mas, no fim das contas, uma resposta para essa discussão é que a integração dos métodos é um bom caminho -- por exemplo, a partir da triangulação de evidências.
+
+Através de alguma estratégia de identificação, tentamos, na pesquisa quantitativa, isolar potenciais explicações para um determinado fenômeno. Nesse caso, queremos entender "o efeito de $x$ sobre $y$". Naturalmente, isso acaba sendo diferente de previsão, que também é um dos objetivos da pesquisa quantitativa, embora seja um objetivo preterido e meio adormecido na ciência social moderna.
+
+### Variações de objetivos
+
+- Descrição
+- Explicação e causalidade
+- Predição
+
+### Desenho de pesquisa
+
+Definidos os conceitos (potencialmente abstratos) que desejamos operacionalizar, precisamos operacionalizá-los na forma de variáveis (dependente e independentes) mensuráveis. O conceito por si só já é uma abstração da realidade; as variáveis, portanto, são ainda mais. Mas é a partir daí que podemos efetivamente testar hipóteses.
+
+[^1]: Popper é particularmente radical na sua definição de ciência. Para ser uma ciência, a disciplina deveria ser capaz de criar hipóteses que possam ser testadas e, em princípio, refutadas.
+[^2]: Pensando em contraste com a pesquisa normativa. Embora o termo "positivismo" possa assumir um caráter pejorativo (Comte e coisa e tal), a ideia é que a pesquisa quantitativa se alinha a uma perspectiva de que é possível fazer generalizações a partir de dados observados.
+[^3]: Mais específico do caso chinês.
