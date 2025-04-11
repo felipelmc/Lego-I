@@ -448,5 +448,214 @@
       "Listas",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html",
+    "href": "listas/lista-1/lista1.html",
+    "title": "5  Lista 1",
+    "section": "",
+    "text": "6 Materiais de apoio\nEsta lista de exercícios é baseada no conteúdo dos seguintes textos:",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#delimitação-disciplinar",
+    "href": "listas/lista-1/lista1.html#delimitação-disciplinar",
+    "title": "5  Lista 1",
+    "section": "7.1 1) Delimitação disciplinar",
+    "text": "7.1 1) Delimitação disciplinar\nDentro da sua disciplina, aponte uma área de pesquisa na qual você tem interesse, como Sociologia da Cultura, Estudos Legislativos, entre outras.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta",
+    "href": "listas/lista-1/lista1.html#resposta",
+    "title": "5  Lista 1",
+    "section": "7.2 Resposta",
+    "text": "7.2 Resposta\nDinheiro na política e machine learning.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#problema-de-pesquisa",
+    "href": "listas/lista-1/lista1.html#problema-de-pesquisa",
+    "title": "5  Lista 1",
+    "section": "7.3 2) Problema de pesquisa",
+    "text": "7.3 2) Problema de pesquisa\n(Máx: 5 linhas). Defina um problema de pesquisa – pode estar relacionado a tese, dissertação ou outro projeto que você esteja desenvolvendo.\n\n7.3.1 Instruções:\n\nMantenha-se dentro do sub-campo disciplinar definido. Lembre-se de que um problema empírico em Ciências Sociais geralmente relaciona dois fatores ou fenômenos de forma causal. Por exemplo, é possível relacionar o efeito da desigualdade de renda na participação política; ou o efeito da discriminação racial sobre o mercado de trabalho; ou o crescimento econômico sobre a democracia.\nFormule seu problema de pesquisa na forma de uma pergunta. Exemplos: “Qual é o efeito da desigualdade de renda na participação política?”; “Por que populações menos escolarizadas têm menor acesso a benefícios sociais?”. É possível contextualizar o problema, indicando a relevância do tema e ou uma lacuna na literatura.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-1",
+    "href": "listas/lista-1/lista1.html#resposta-1",
+    "title": "5  Lista 1",
+    "section": "7.4 Resposta",
+    "text": "7.4 Resposta\nNo meu pré-projeto de dissertação, a pergunta que propus responder foi: “Qual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?”; ou, de maneira mais genérica “Por que alguns candidatos são eleitos em detrimento de outros?”. A relação entre dinheiro e eleições é amplamente explorada na literatura (Mancuso 2015), mas poucos trabalhos investiram em análises inferenciais ou preditivas sobre essa relação no nível municipal (Sampaio and Filho 2019).",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#definição-de-conceitos",
+    "href": "listas/lista-1/lista1.html#definição-de-conceitos",
+    "title": "5  Lista 1",
+    "section": "7.5 3) Definição de conceitos",
+    "text": "7.5 3) Definição de conceitos\n(Máx: 5 linhas). Com um problema definido, transforme agora os fatores ou fenômenos do seu interesse em conceitos, isto é, em termos teóricos mais precisos e que sejam passíveis de mensuração.\n\n7.5.1 Instruções:\n\nPor exemplo, “pobreza” é um conceito amplo que pode ser definido como “a carência de elementos essenciais para a sobrevivência ou o bem-estar humano”, o que é algo ligeiramente mais concreto e passível de mensuração. Definições de conceitos podem ser retiradas da literatura prévia, mas é importante que você os descreva de forma compreensível.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-2",
+    "href": "listas/lista-1/lista1.html#resposta-2",
+    "title": "5  Lista 1",
+    "section": "7.6 Resposta",
+    "text": "7.6 Resposta\nEm certa medida, no caso particular deste problema de pesquisa, os conceitos e as variáveis operacionalizadas se confundem. “Sucesso eleitoral” pode representar, efetivamente, se o candidato conseguiu obter o determinado cargo legislativo em disputa1; “dinheiro” representa, do ponto de vista financeiro, quanto foi investido naquela disputa eleitoral pelo candidato.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#operacionalização-de-variáveis",
+    "href": "listas/lista-1/lista1.html#operacionalização-de-variáveis",
+    "title": "5  Lista 1",
+    "section": "7.7 4) Operacionalização de variáveis",
+    "text": "7.7 4) Operacionalização de variáveis\n(Máx: 5 linhas). Com seus conceitos definidos, nosso próximo passo é especificar como você os medirá. Essa etapa, chamada de operacionalização de variáveis, deve ser feita de forma a garantir que as medidas ou indicadores utilizados tenham aderência aos conceitos mobilizados, isto é, que realmente capturem aspectos do conceitos que você quer estudar. Este é o momento para pensar no recorte do objeto de forma a delimitar quais seriam as observações (i.e., quais seriam as linhas no seu banco de dados) e as unidades.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-3",
+    "href": "listas/lista-1/lista1.html#resposta-3",
+    "title": "5  Lista 1",
+    "section": "7.8 Resposta",
+    "text": "7.8 Resposta\nA variável de sucesso eleitoral é operacionalizada a partir do resultado nas urnas – ou (1) uma variável contínua que guarda o número de votos de um candidato nas urnas, ou (2) uma variável binária que indica se o candidato foi eleito ou não2. Opto pela segunda abordagem. Além disso, “dinheiro” é operacionalizado através das despesas de campanha do candidato, disponibilizadas pelo TSE. Também seria razoável utilizar a receita, sob o risco de superestimar o efeito do dinheiro.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#variáveis",
+    "href": "listas/lista-1/lista1.html#variáveis",
+    "title": "5  Lista 1",
+    "section": "7.9 5) Variáveis",
+    "text": "7.9 5) Variáveis\n(Máx: 2 linhas). Indique qual das duas variáveis definidas anteriormente é a sua variável dependente, aquela que será explicada, e qual delas é a sua variável independente, a que supostamente explica a primeira.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-4",
+    "href": "listas/lista-1/lista1.html#resposta-4",
+    "title": "5  Lista 1",
+    "section": "7.10 Resposta",
+    "text": "7.10 Resposta\nA despesa de campanha é a variável independente, e o sucesso eleitoral é a variável dependente.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#teoria-causal",
+    "href": "listas/lista-1/lista1.html#teoria-causal",
+    "title": "5  Lista 1",
+    "section": "8.1 6) Teoria causal",
+    "text": "8.1 6) Teoria causal\n(Máx: 7 linhas). Com o problema de pesquisa definido e variáveis operacionalizadas, elabore de forma concisa uma teoria que descreva como a sua variável independente causa a sua dependente.\n\n8.1.1 Instruções:\n\nAo formular uma teoria, pense em responder à pergunta “por que Y ocorre?” usando X como parte da sua explicação. Por exemplo: o que estaria por detrás das menores taxas de comparecimento eleitoral dos menos escolarizados? Será que essas pessoas, por terem menos acesso a determinadas informações, teriam também menos interesse em política e, por consequência, menor disposição de ir votar? Outro exemplo: pessoas mais pobres comparecem menos às urnas por conta de maiores dificuldades de transporte (em geral, moram em lugares de mais difícil acesso e dispõem de menos recursos para se locomoverem até os locais de votação).",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-5",
+    "href": "listas/lista-1/lista1.html#resposta-5",
+    "title": "5  Lista 1",
+    "section": "8.2 Resposta",
+    "text": "8.2 Resposta\nAs eleições brasileiras são caracterizadas por serem altamente competitivas em função, dentre outros aspectos, da alta oferta de candidatos. Portanto, altas despesas de campanha permitem que o candidato seja capaz de alcançar maior visibilidade e se diferenciar ao saturar o eleitor com diferentes estratégias de publicidade, financeiramente custosas, como material de campanha, presença online etc. Dito de outra maneira: ao conseguir reunir mais dinheiro para fazer campanha, o candidato tende a aumentar a viabilidade de sua candidatura na medida em que se torna capaz de alcançar o eleitor, ampliando a sua visibilidade e fortalecendo a estrutura da campanha.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#hipótese-principal",
+    "href": "listas/lista-1/lista1.html#hipótese-principal",
+    "title": "5  Lista 1",
+    "section": "8.3 7) Hipótese principal",
+    "text": "8.3 7) Hipótese principal\n(Máx: 3 linhas). Hipóteses especificam o sentido e forma de uma relação entre X e Y (positiva, negativa, nula, linear, quadrática, etc.). Por exemplo, “uma menor taxa de escolaridade diminui participação política”, “quanto maior a desigualdade fundiária, maior a taxa de migração de jovens do campo para a cidade”. Partindo dessa definição, a) formule uma hipótese principal para a sua teoria, b) e descreva como seria um gráfico de dispersão (scatterplot) que ilustrasse a relação entre X e Y de acordo com a sua hipótese.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-6",
+    "href": "listas/lista-1/lista1.html#resposta-6",
+    "title": "5  Lista 1",
+    "section": "8.4 Resposta",
+    "text": "8.4 Resposta\n\nQuanto maior o gasto em campanha despendidos pelos candidatos, maior é a probabilidade de eleição do candidato.\nEm uma relação não-linear, quanto mais “longe” no eixo \\(X\\) (isto é, quanto maior a despesa), mais “longe” no eixo \\(Y\\) (isto é, mais a probabilidade de eleição se aproxima de \\(1\\)).\n\n\nlibrary(tidyverse)\n\nset.seed(123)\n\n# candidatos simulados\nn &lt;- 1000\n\n# simulacao das despesas de campanha (distribuicao exponencial com media 30 mil)\n# documentacao da funcao \n# https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Exponential\ndespesas &lt;- rexp(n, rate = 1/30)\n\n# efeito da despesa\nalpha &lt;- -2\nefeito_despesa &lt;- 0.05\n\n# calcula prob de eleicao\nprob_eleito &lt;- 1 / (1 + exp(-(alpha + efeito_despesa * despesas)))\n\n# dataframe\ndados &lt;- data.frame(despesas, prob_eleito)\n\n# plot da relacao logistica\nggplot(dados, aes(x = despesas, y = prob_eleito)) +\n  geom_jitter(height = 0.05, alpha = 0.3) +\n  stat_smooth(method = \"glm\", \n              method.args = list(family = \"binomial\"), \n              se = FALSE, \n              color = \"darkgreen\") +\n  labs(\n    title = \"Probabilidade de eleição dada a despesa de campanha\",\n    x = \"Despesas de campanha (R$ mil)\",\n    y = \"Probabilidade de eleição\"\n  ) +\n  theme_bw()",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#implicações-testáveis-mecanismo",
+    "href": "listas/lista-1/lista1.html#implicações-testáveis-mecanismo",
+    "title": "5  Lista 1",
+    "section": "8.5 8) Implicações testáveis (mecanismo)",
+    "text": "8.5 8) Implicações testáveis (mecanismo)\n(Máx: 5 linhas). Se a sua teoria causal estiver certa, dela também devem decorrer outras implicações observáveis. Você conseguiria pensar em fenômenos empíricos secundários (associados ao principal, definido na pergunta de pesquisa) que decorreriam da sua explicação? Defina ao menos uma hipótese secundária testável que decorra da sua teoria causal.\n\n8.5.1 Instruções:\n\nUm exemplo: na teoria que relaciona menor escolaridade a menor participação política, é possível hipotetizar que pessoas menos escolarizadas devem acompanhar menos o noticiário político (este seria o mecanismo causal); nesse sentido, uma implicação empírica secundária consistente com a teoria é a de que pessoas menos escolarizadas devem consumir menos notícias políticas, o que poderia ser mensurado por meio de uma pesquisa de opinião perguntando sobre o consumo de notícias políticas (“Quantos dias na semana você costuma assistir ao noticiário na TV?”).",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#resposta-7",
+    "href": "listas/lista-1/lista1.html#resposta-7",
+    "title": "5  Lista 1",
+    "section": "8.6 Resposta",
+    "text": "8.6 Resposta\nAssumindo que a teoria causal esteja certa, poderíamos imaginar, por exemplo, que candidatos que gastam mais dinheiro também são mais conhecidos pelo eleitorado. Naturalmente, isso poderia ser testado empiricamente através de uma pesquisa de survey que estime a taxa de desconhecimento por parte dos eleitores a respeito dos candidatos na disputa, ou mesmo as intenções de voto.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#desenho-de-pesquisa",
+    "href": "listas/lista-1/lista1.html#desenho-de-pesquisa",
+    "title": "5  Lista 1",
+    "section": "9.1 9) Desenho de pesquisa",
+    "text": "9.1 9) Desenho de pesquisa\n(Máx: 1 linha para cada item). Agora que você tem uma teoria, conceitos, variáveis definidas e hipóteses, preencha de forma sucinta os itens a seguir – eles te darão uma versão compacta e descritiva do seu desenho de pesquisa quantitativo em Ciências Sociais.\n\n\nPergunta de pesquisa:\n\nQual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?\n\nConceitos mobilizados:\n\nSucesso eleitoral e dinheiro.\n\nVariável dependente:\n\nSucesso eleitoral (eleito ou não).\n\nVariável independente:\n\nDinheiro (despesas de campanha).\n\nHipótese principal:\n\nQuanto maior a despesa, maior a chance do candidato se eleger.\n\nHipótese secundária (mecanismo):\n\nCandidatos que gastam mais também são mais conhecidos.\n\nImplicações testáveis do mecanismo:\n\nEm pesquisas de intenção de voto, candidatos que gastam mais possuem menores taxas de desconhecimento atreladas a eles.\n\n\n\n\n\nMancuso, Wagner Pralon. 2015. “Investimento Eleitoral no Brasil: Balanço da Literatura (2001-2012).” Revista de Sociologia e Política 23 (54): 155–83.\n\n\nSampaio, Daniel, and Dalson Britto Figueiredo Filho. 2019. “Como o dinheiro influencia as eleições municipais no Brasil: uma revisão sistemática.” Revista Brasileira de Informação Bibliográfica Em Ciências Sociais - BIB, no. 88: 1–25.\n\n\nSpeck, Bruno Wilhelm, and Wagner Pralon Mancuso. 2014. “A Study on the Impact of Campaign Finance, Political Capital and Gender on Electoral Performance.” Brazilian Political Science Review 8 (1): 34–57.",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
+  },
+  {
+    "objectID": "listas/lista-1/lista1.html#footnotes",
+    "href": "listas/lista-1/lista1.html#footnotes",
+    "title": "5  Lista 1",
+    "section": "",
+    "text": "Há outras maneiras de operacionalizar essa variável, como sugerido na questão 4.↩︎\nAinda há pelo menos mais uma variação dessa abordagem, que modela o sucesso eleitoral como uma variável binária em função do número de votos, pensando nas limitações impostas por eleições proporcionais de lista aberta, em que o candidato mais votado não é necessariamente o eleito. Speck and Mancuso (2014), por exemplo, definem sucesso eleitoral como uma variável binária, em que os \\(n\\) candidatos mais votados assumem valor \\(1\\), enquanto os demais assumem o valor \\(0\\), sendo \\(n\\) o número de cadeiras em disputa no estado. É uma diferença sutil que, empiricamente, não difere tanto da modelagem padrão (vi no meu TCC!).↩︎",
+    "crumbs": [
+      "Listas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Lista 1</span>"
+    ]
   }
 ]
