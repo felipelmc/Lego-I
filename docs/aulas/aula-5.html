@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Felipe Lamarca">
 
-<title>Lego I</title>
+<title>4&nbsp; Indicadores e estatísticas descritivas – Lego I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,27 +23,28 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./aulas/aula-1.html" rel="next">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-9067a8314a0bb41d06527aea08a6ac86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../listas/nivelamento/lista-nivelamento.html" rel="next">
+<link href="../aulas/aula-2.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7271f29f9498218151f3120baddb7363.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-226bd0f977fa82dfae4534cac220d79a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-9067a8314a0bb41d06527aea08a6ac86.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6c5314280c86e53d2a1a2ca4c5fd5b4a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -73,8 +73,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -245,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-5.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores e estatísticas descritivas</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -260,7 +289,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Lego I</a> 
+      <a href="../">Lego I</a> 
         <div class="sidebar-tools-main">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
@@ -275,7 +304,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">index.html</span></span></a>
   </div>
 </li>
@@ -290,19 +319,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-1.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos da pesquisa quantitativa</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-2.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./aulas/aula-5.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores e estatísticas descritivas</span></span></a>
   </div>
 </li>
@@ -319,13 +348,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./listas/nivelamento/lista-nivelamento.html" class="sidebar-item-text sidebar-link">
+  <a href="../listas/nivelamento/lista-nivelamento.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./listas/lista-1/lista1.html" class="sidebar-item-text sidebar-link">
+  <a href="../listas/lista-1/lista1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lista 1</span></span></a>
   </div>
 </li>
@@ -336,28 +365,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#anotações-das-leituras" id="toc-anotações-das-leituras" class="nav-link active" data-scroll-target="#anotações-das-leituras"><span class="header-section-number">4.1</span> Anotações das leituras</a>
+  <ul class="collapse">
+  <li><a href="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-5." id="toc-kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-5." class="nav-link" data-scroll-target="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-5."><span class="header-section-number">4.1.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 5.</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-5.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores e estatísticas descritivas</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lego I</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores e estatísticas descritivas</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Felipe Lamarca </p>
-          </div>
-  </div>
     
   
     
@@ -368,13 +400,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="anotações-das-leituras" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="anotações-das-leituras"><span class="header-section-number">4.1</span> Anotações das leituras</h2>
+<section id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-5." class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-5."><span class="header-section-number">4.1.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 5.</h3>
 <blockquote class="blockquote">
-<p>Lego I é uma introdução à Ciência Social quantitativa. O curso apresenta os fundamentos da análise de dados, incluindo noções sobre desenho de pesquisa, probabilidade e inferência, testes de hipóteses e modelos de regressão linear. Complementarmente, o curso também introduz o uso de programação em <code>R</code>, um ambiente amplamente utilizado para análise de dados e Data Science dentro e fora da academia. A dinâmica do curso combinará tutoriais e sessões guiadas de monitoria nas quais resolveremos problemas aplicados de pesquisa social de forma reprodutível. <a href="ementa.pdf">[ementa]</a></p>
+<p>Uma teoria, como dissemos, é meramente uma conjectura sobre a possível relação causal entre dois ou mais conceitos. Como cientistas, devemos sempre resistir à tentação de ver nossas teorias como suportadas de alguma forma antes que tenhamos avaliado evidências do mundo real e até tenhamos feito tudo que podemos com as evidências empíricas para avaliar o quão bem nossa teoria se sai ao tentar superar os quatro obstáculos causais que identificamos no capítulo 3. (p.&nbsp;116)</p>
 </blockquote>
-<p><strong>Professor:</strong> Bruno Marques Schaefer (IESP-UERJ) <a href="https://sites.google.com/view/brunomschaefer/in%C3%ADcio?authuser=0">[homepage]</a></p>
-<p><strong>Semestre:</strong> 2025.1</p>
+<blockquote class="blockquote">
+<p>As ciências sociais [em relação às ciências físicas], pelo contrário, são ciências novas e o consenso científico sobre como mensurar importantes conceitos é raro. Talvez mais crucial, porém, é o fato de que as ciências sociais lidam com uma dificuldade inerente ao seu objeto em suas previsões: os seres humanos. (p.&nbsp;118)</p>
+</blockquote>
+<p>Problemas de mensuração podem vir de:</p>
+<ul>
+<li><strong>Falta de clareza conceitual</strong> (o que exatamente eu quero medir?)</li>
+<li><strong>Confiabilidade</strong> (a medida é replicável e consistente?)</li>
+<li><strong>Viés de mensuração e confiabilidade</strong> (sobre-estimação ou subestimação de modo sistemático dos valores para uma variável)
+<ul>
+<li>É preferível uma estatística enviesada do que uma não confiável: no primeiro caso, pelo menos, a direção da relação entre as variáveis não se altera</li>
+</ul></li>
+</ul>
+<p><a href="https://www.systemicpeace.org/polity/polity4.htm">Polity IV</a> é uma iniciativa de medir democracia. Incorpora apenas algumas variáveis definidas por Dahl – a parte de “contestação” – e não considera a parte de “participação”.</p>
+<p>Sobre o fato de que não fazemos cálculos com variáveis categóricas (ou ordinais):</p>
+<blockquote class="blockquote">
+<p>Se retornarmos para os exemplos da seção anterior, podemos ranquear as cinco categorias da variável “situação financeira familiar no passado” de 1 para a melhor situação até 5 para a pior situação. Mas não nos sentimos muito confiantes em trabalhar com esses valores como normalmente trabalhamos com números. Em outras palavras, podemos dizer que a diferença entre “um pouco pior” e “a mesma coisa” (4-3) é a mesma coisa que entre “muito pior” e “um pouco pior” (5-4)?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A única medida de tendência central apropriada para dados categóricos é a <strong>moda</strong>, definida como o valor que ocorre com mais frequência. (p.&nbsp;136)</p>
+</blockquote>
+<p>Valor médio: <span class="math inline">\(\bar{Y} = \frac{1}{N} \sum_{i=1}^{N} Y_i\)</span></p>
+<p>A média possui duas propriedades importantes:</p>
+<ul>
+<li>Propriedade da soma zero: <span class="math inline">\(\sum_{i=1}^{N} (Y_i - \bar{Y}) = 0\)</span> (a soma dos desvios em relação à média é zero)</li>
+<li>Propriedade dos “mínimos quadrados”: <span class="math inline">\(\sum_{i=1}^{N} (Y_i - \bar{Y})^2 &lt; \sum_{i=1}^{N} (Y_i - c)^2 \ \forall c \neq \bar{Y}\)</span> (a soma dos quadrados dos desvios em relação à média é minimizada)</li>
+</ul>
+<p>Por conta dessas propriedades, a média é também o <strong>valor esperado</strong> da variável. “Se alguém lhe pedisse um palpite para o valor de um caso individual oferecendo como informação apenas o valor médio, baseado nessas duas propriedades da média, o valor médio seria o melhor palpite.” (p.&nbsp;142)</p>
+<p>Variância: <span class="math inline">\(var(Y) = \frac{1}{N-1} \sum_{i=1}^{N} (Y_i - \bar{Y})^2\)</span>. Ela indica, logicamente, a amplitude dos dados ao redor da média.</p>
+<p>Uma medida mais intuitiva é o <strong>desvio padrão</strong>, que é a raiz quadrada da variância: <span class="math inline">\(sd(Y) = \sqrt{Var(Y)}\)</span>. O desvio padrão é expresso na mesma unidade de medida que a variável.</p>
+<p>Em conjunto, essas duas métricas nos dão um resumo numérico da distribuição dos casos ao redor do valor médio da variável.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -791,10 +857,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../aulas/aula-2.html" class="pagination-link" aria-label="Desenho de pesquisa e mensuração">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Desenho de pesquisa e mensuração</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./aulas/aula-1.html" class="pagination-link" aria-label="Fundamentos da pesquisa quantitativa">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Fundamentos da pesquisa quantitativa</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../listas/nivelamento/lista-nivelamento.html" class="pagination-link" aria-label="Lista Nivelamento">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

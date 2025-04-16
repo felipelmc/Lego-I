@@ -1,0 +1,39 @@
+# Indicadores e estatísticas descritivas
+
+## Anotações das leituras
+
+### Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 5.
+
+> Uma teoria, como dissemos, é meramente uma conjectura sobre a possível relação causal entre dois ou mais conceitos. Como cientistas, devemos sempre resistir à tentação de ver nossas teorias como suportadas de alguma forma antes que tenhamos avaliado evidências do mundo real e até tenhamos feito tudo que podemos com as evidências empíricas para avaliar o quão bem nossa teoria se sai ao tentar superar os quatro obstáculos causais que identificamos no capítulo 3. (p. 116)
+
+> As ciências sociais [em relação às ciências físicas], pelo contrário, são ciências novas e o consenso científico sobre como mensurar importantes conceitos é raro. Talvez mais crucial, porém, é o fato de que as ciências sociais lidam com uma dificuldade inerente ao seu objeto em suas previsões: os seres humanos. (p. 118)
+
+Problemas de mensuração podem vir de:
+
+- **Falta de clareza conceitual** (o que exatamente eu quero medir?)
+- **Confiabilidade** (a medida é replicável e consistente?)
+- **Viés de mensuração e confiabilidade** (sobre-estimação ou subestimação de modo sistemático dos valores para uma variável)
+    - É preferível uma estatística enviesada do que uma não confiável: no primeiro caso, pelo menos, a direção da relação entre as variáveis não se altera
+
+[Polity IV](https://www.systemicpeace.org/polity/polity4.htm) é uma iniciativa de medir democracia. Incorpora apenas algumas variáveis definidas por Dahl -- a parte de "contestação" -- e não considera a parte de "participação".
+
+Sobre o fato de que não fazemos cálculos com variáveis categóricas (ou ordinais):
+
+> Se retornarmos para os exemplos da seção anterior, podemos ranquear as cinco categorias da variável "situação financeira familiar no passado" de 1 para a melhor situação até 5 para a pior situação. Mas não nos sentimos muito confiantes em trabalhar com esses valores como normalmente trabalhamos com números. Em outras palavras, podemos dizer que a diferença entre "um pouco pior" e "a mesma coisa" (4-3) é a mesma coisa que entre "muito pior" e "um pouco pior" (5-4)?
+
+> A única medida de tendência central apropriada para dados categóricos é a **moda**, definida como o valor que ocorre com mais frequência. (p. 136)
+
+Valor médio: $\bar{Y} = \frac{1}{N} \sum_{i=1}^{N} Y_i$
+
+A média possui duas propriedades importantes:
+
+- Propriedade da soma zero: $\sum_{i=1}^{N} (Y_i - \bar{Y}) = 0$ (a soma dos desvios em relação à média é zero)
+- Propriedade dos "mínimos quadrados": $\sum_{i=1}^{N} (Y_i - \bar{Y})^2 < \sum_{i=1}^{N} (Y_i - c)^2 \ \forall c \neq \bar{Y}$ (a soma dos quadrados dos desvios em relação à média é minimizada)
+
+Por conta dessas propriedades, a média é também o **valor esperado** da variável. "Se alguém lhe pedisse um palpite para o valor de um caso individual oferecendo como informação apenas o valor médio, baseado nessas duas propriedades da média, o valor médio seria o melhor palpite." (p. 142)
+
+Variância: $var(Y) = \frac{1}{N-1} \sum_{i=1}^{N} (Y_i - \bar{Y})^2$. Ela indica, logicamente, a amplitude dos dados ao redor da média. 
+
+Uma medida mais intuitiva é o **desvio padrão**, que é a raiz quadrada da variância: $sd(Y) = \sqrt{Var(Y)}$. O desvio padrão é expresso na mesma unidade de medida que a variável. 
+
+Em conjunto, essas duas métricas nos dão um resumo numérico da distribuição dos casos ao redor do valor médio da variável.
