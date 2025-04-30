@@ -1,0 +1,60 @@
+# Efeitos causais em experimentos
+
+## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 2: Estimating Causal Effects with Randomized Experiments.
+
+> In mathematical notation, we represent the treatment variable as X and the outcome variable as Y. We represent the causal relationship between them visually with an arrow from X to Y. The direction of the arrow indicates that changes in X may produce changes in Y but not the other way around:
+>
+> $X \rightarrow Y$ (p. 28).
+
+> In this book, for the sake of simplicity, we focus on treatment variables that are binary, that is, that indicate whether the treatment is present or absent. We define the treatment variable for each individual $i$ as:
+>
+> $$
+> X_i = \begin{cases}
+> \text{1 if individual } i \text{ receives the treatment} \\
+> \text{0 if individual } i \text{ does not receive the treatment}
+> \end{cases}
+> $$
+> 
+> Based on whether the individual receives the treatment, we speak of two different conditions:
+> - **treatment** is the condition with the treatment ($X_i = 1$);
+> - **control** is the condition without the treatment ($X_i = 0$) (p. 28).
+
+> Note that when estimating a causal effect, we are trying to measure a change in Y, specifically the change in Y caused by a change in X. In mathematical notation, we represent change with $\Delta$, and, thus, we represent a change in the outcome variable as $\Delta Y$. (p. 30)
+
+If we could observe both potential outcomes for each individual, we could estimate the causal effect of the treatment on the outcome just by taking the difference between the two potential outcomes. That is, we could estimate the causal effect of the treatment on the outcome as:
+
+$$
+\text{Individual Effect}_i = \Delta Y_i = Y_i(X_i = 1) - Y_i(X_i = 0)
+$$
+
+> Unfortunately, this kind of analysis is not possible. In the real world, we never observe both potential outcomes for the same individual. Instead, we observe only the **factual outcome**, which is the potential outcome under whichever condition (treatment or control) was received in reality. We can never observe the **conterfactual outcome**, which is the potential outcome that would have occurred under whichever condition (treatment or control) was not received in reality. As a result, we cannot compute causal effects at the individual level. (p. 32)
+
+> **FUNDAMENTAL PROBLEM OF CAUSAL INFERENCE:** To measure causal effects, we need to compare the factual outcome with the counterfactual outcome, but we can never observe the counterfactual outcome.
+
+> To get around the fundamental problem of causal inference, we must find good approximations for the counterfactual outcomes. To accomplish this, we move away from individual-level effecs and focus on the _average_ causal effect _accross a group of individuals_.
+>
+> The **average causal effect** of the treatment X on the outcome Y, also known as the average treatment effect, is the average of all individual causal effects of X on Y within a group. Since each individual causal effects is the change in Y caused by a change in X for a particular individual, the average causal effect of X on Y is the _average_ change in Y caused by a change in X _for a group of individuals_. (p. 33)
+
+> In a **randomized experiment**, also known as a randomized controlled trial (RCT), researchers decide who receives the treatment based on a random process. (p. 35)
+
+> When treatment assignment is randomized, the only thing that distinguishes the treatment group from the control group, besides the reception of the treatment, is chance. This means that although the treatment and control groups consist of different individuals, the two groups are comparable to each other, _on average_, in all respects other than whether or not they received the treatment. (p. 36)
+
+> If the treatment and control groups were comparable before the treatment was administered, however, then we can use the factual outcome of one group as an approximation for the counterfactual outcome of the other. In other words, we can assume that the average outcome of the treatment group is a good estimate of the average outcome of the control group, had the control group received the treatment. Similarly, we can assume that the average outcome of the control group is a good estimate of the average of the treatment group, had the treatment group not received the treatment. As a result, we can approximate the average treatment effect by computing the difference in the average outcomes between the treatment and control groups. (p. 37)
+
+In fact, we can now compute:
+
+$$
+\hat{\text{average effect}} = \bar{Y}_\text{treatment group} - \bar{Y}_\text{control group}
+$$
+
+> It is worth repeating that the difference-in-means is a valid estimator of the average causal effect of a treatment on an outcome only when the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. [...]. The randomization of treatment assignment enables researchers to isolate the effect of the treatment from the effects of other factors. (p. 38)
+
+> Given that we cannot always run experiments, we need to learn how to estimate causal effects in non-experimental settings, using what is called **observational data**. Unlike **experimental data**, which refers to data collected from a randomized experiment, observational data are collected about naturally occuring events. Treatment assignment is out of the control of the researchers and is often the result of individual choices.
+
+## Other nice readings
+
+1. How research affects policy: experimental evidence from 2.150 Brazilian municipalities [[paper]](https://gautam-rao.com/pdf/HMRS.pdf) [[Nexo]](https://pp.nexojornal.com.br/academico/2020/12/10/como-evidencia-empirica-afeta-decisoes-sobre-politicas-publicas)
+
+2. Expected discrimination and job search [[paper]](https://deivisangeli.github.io/assets/pdfs/Angeli-JMP-MatavelliSecco.pdf)
+
+3. Does Artificial Intelligence help or hurt gender diversity? Evidence from two field experiments on recruitment in tech [[paper]](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4370805)
