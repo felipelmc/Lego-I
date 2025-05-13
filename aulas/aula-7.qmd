@@ -124,3 +124,104 @@ Então a taxa de aprovação do Obama, estimada a partir dos dados do survey, fi
 > Nossos dados revelam padrões importantes sobre as pesquisas eleitorais no país. Em primeiro lugar, documentamos uma crescente no uso de abordagens telefônicas no período, bem como ligeiro aumento no tamanho das amostras utilizadas ao longo do tempo em eleições nacionais e estaduais. Quanto aos seus resultados, as estimativas eleitorais indicam que o erro médio das nossas pesquisas de véspera é certa de 1.8 ponto percentual (pp), o que pode ser traduzido em uma margem de erro de 6.8 pp, maior do que o convencionalmente reportado por institutos. Isso dito, tal taxa é comparável à de outros países e, mais, há grande variação entre pesquisas: as de presidentes e de governo do estado no segundo turno cometem, em média, erros menores, assim como pesquisas com maiores amostras e em pleitos com menores taxas de eleitores indecisos. (p. 119)
 
 > Vale notar que as pesquisas eleitorais no Brasil têm alguns de seus aspectos regulados pela legislação eleitoral. Entre outros, institutos de pesquisa que queiram divulgar suas estimativas precisam fazer o registro do plano amostral a ser implementado com antecedência, reportando as datas em que a coleta dos dados será feita, a data de divulgação dos resultados, o tamanho da amostra e detalhes de metodologia como uso de quotas e discriminação dos locais onde entrevistas são aplicadas. Em razão disso, por exemplo, margens de erro divulgadas no momento do registro das pesquisas não podem contemplar o efeito do uso de pós-estratificação para corrigir desvios nas amostras, uma vez que o efeito de tais procedimentos só podem ser quantificados após o encerramento da coleta de dados -- o que contribui para subestimar possíveis erros aleatórios e não aleatórios, isto é, erros totais (Gramacho, 2013). (p. 121)
+
+---
+
+## Anotações de aula
+
+Em estatística, falamos sobre inferência como "realizar afirmações sobre dados que não conhecemos, a partir de dados conhecidos". No fim das contas, falar sobre uma população a partir de uma amostra. Isso está diretamente associado ao processo gerador dos dados, i.e., o processo subjacente que está gerando os meus dados.
+
+A população são todos os casos relevantes para a minha análise. Uma amostra, então, é um subconjunto desses casos relevantes.
+
+A seleção aleatória de elementos da população é a chave da amostragem probabilística:
+
+- Ausência de viés: amostragem probabilística garante que cada membro da população tenha uma chance de ser incluído na amostra.
+- Convergência: a variabilidade natural das amostras se equilibra à medida que $N$ aumenta, levando a média amostral a se aproximar da verdadeira média da população.
+
+### Lei dos Grandes Números
+
+LGN é um princípio da teoria da probabilidade que descreve o comportamento da média de uma amostra à medida que ela aumenta. À medida que aumento a amostra, vou me aproximando da média "verdadeira", i.e., a média da população.
+
+Em uma amostra pequena, um único sorteio pode distorcer a média amostral. Em uma amostra maior, sorteios extremos se equilibram e levam a média amostram a se aproximar da média da população. Para fins práticos, $N \geq 100$ reduz bastante a influência de outliers na estimativa da média.
+
+> Podemos pensar em 100 retiradas de 10 bolinhas, ou 1000 retiradas de 10 bolinhas. Neste caso, nossa amostra tem o mesmo tamanho, mas expandimos o número de amostras e calculamos a média de cada uma delas. Então, a amostra tem o mesmo tamanho: $n = 10$. A média dessas médias é a média amostral.
+
+### Teorema Central do Limite
+
+À medida que extraímos mais amostras, a distribuição da estimativa começa a assumir a forma de uma distribuição normal. 
+
+> A distribuição da soma (ou média) das variáveis aleatórias independentes tende a uma distribuição normal à medida que o número de amostras aumenta, independentemente da distribuição original das variáveis (binomial, por exemplo).
+
+```{r}
+library(ggplot2)
+
+# cria uma lista com 1000 amostras de 10 bolinhas, podendo elas serem azuis (1) ou vermelhas (0)
+set.seed(123)
+bolinhas <- replicate(1000, sample(c(0, 1), size = 10, replace = TRUE))
+
+# isso aqui tem 1000 amostras de 10 bolinhas
+bolinhas <- as.data.frame(bolinhas)
+
+# calcula a média de cada amostra
+medias <- apply(bolinhas, 2, mean)
+
+# plota a distribuição das médias
+ggplot(data.frame(medias), aes(x = medias)) +
+  geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", alpha = 0.5) +
+  # inclui a linha da média amostral (media das medias)
+  geom_vline(aes(xintercept = mean(medias)), color = "red", linetype = "dashed", size = 1) +
+  stat_function(fun = dnorm, args = list(mean = mean(medias), sd = sd(medias)), color = "red") +
+  labs(title = "Distribuição das Médias Amostrais",
+       x = "Média Amostral",
+       y = "Densidade")
+```
+
+Esse é o insight do teorema central do limite. Se pudéssemos imaginar um número infinito de amostras e plotássemos a média de cada uma dessas amostras, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população.
+
+De fato, outra propriedade interessante é a dispersão da média amostral. A média amostral tende a ser menos dispersa do que a média populacional. Isso é chamado de erro padrão da média (EPM). O EPM é a medida da variabilidade das médias amostrais em torno da média populacional.
+O EPM é calculado como o desvio padrão da população dividido pela raiz quadrada do tamanho da amostra:
+
+$$
+EPM = \dfrac{\sigma}{\sqrt{n}}
+$$
+
+onde $\sigma$ é o desvio padrão da população e $n$ é o tamanho da amostra.
+O EPM diminui à medida que o tamanho da amostra aumenta. Isso significa que, quanto maior a amostra, mais precisa será a estimativa da média populacional. Isso é importante porque nos permite fazer inferências sobre a população com base em uma amostra.
+
+### Intervalo de Confiança
+Um intervalo de confiança é uma faixa de valores que, com um certo nível de confiança, contém o valor verdadeiro de um parâmetro populacional. O intervalo de confiança é calculado a partir da média amostral e do erro padrão da média.
+
+O intervalo de confiança é calculado como:
+$$
+IC = \bar{X} \pm Z_{\alpha/2} \cdot EPM
+$$
+
+onde $\bar{X}$ é a média amostral, $Z_{\alpha/2}$ é o valor crítico da distribuição normal padrão correspondente ao nível de confiança desejado (por exemplo, 1,96 para um intervalo de confiança de 95%) e $EPM$ é o erro padrão da média.
+
+O intervalo de confiança fornece uma estimativa da incerteza associada à média amostral. Se o intervalo de confiança for estreito, isso indica que a média amostral é uma boa estimativa da média populacional. Se o intervalo de confiança for amplo, isso indica que a média amostral é uma estimativa menos precisa da média populacional.
+
+> O valor de 1.96 é o valor crítico da distribuição normal padrão que corresponde a um nível de confiança de 95%. Isso significa que, se repetirmos o processo de amostragem muitas vezes, aproximadamente 95% dos intervalos de confiança calculados conterão a média populacional verdadeira. Além disso, o intervalo de 95% é arbitrário: por exemplo, 68% de confiança corresponde a 1 desvio padrão, 99% de confiança corresponde a 2.58 desvios padrão, e assim por diante.
+
+Vamos supor o caso em que queremos estimar a aprovação do Lula. Pegamos 1000 amostras e estimamos uma média de aprovação de 32%. O desvio padrão, portanto, será calculado como:
+
+$$
+s = \sqrt{ 0.32 \cdot (1 - 0.32) } = 0.47,
+$$
+
+e o erro padrão da média será:
+$$
+\text{EPM} = \dfrac{0.47}{\sqrt{1000}} = 0.015
+$$
+
+O intervalo de confiança de 95% para a média amostral é dado por:
+$$
+\text{IC} = 0.32 \pm 1.96 \cdot 0.015
+$$
+
+Ou seja, o intervalo de confiança é dado por:
+$$
+\text{IC} = (0.32 - 0.03, 0.32 + 0.03) = (0.29, 0.35)
+$$
+
+
+

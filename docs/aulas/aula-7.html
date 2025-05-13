@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -391,6 +426,12 @@ window.Quarto = {
   <li><a href="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-3-inferring-population-characteristics-via-survey-research." id="toc-llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-3-inferring-population-characteristics-via-survey-research." class="nav-link active" data-scroll-target="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-3-inferring-population-characteristics-via-survey-research."><span class="header-section-number">6.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 3: Inferring Population Characteristics via Survey Research.</a></li>
   <li><a href="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-6-probabilidade-e-inferência-estatística." id="toc-kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-6-probabilidade-e-inferência-estatística." class="nav-link" data-scroll-target="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-6-probabilidade-e-inferência-estatística."><span class="header-section-number">6.2</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 6: Probabilidade e inferência estatística.</a></li>
   <li><a href="#meireles-f.-e-russo-g.-2022.-pesquisas-eleitorais-no-brasil-tendências-e-desempenho.-estudos-avançados-36-117-131." id="toc-meireles-f.-e-russo-g.-2022.-pesquisas-eleitorais-no-brasil-tendências-e-desempenho.-estudos-avançados-36-117-131." class="nav-link" data-scroll-target="#meireles-f.-e-russo-g.-2022.-pesquisas-eleitorais-no-brasil-tendências-e-desempenho.-estudos-avançados-36-117-131."><span class="header-section-number">6.3</span> Meireles, F., e Russo, G. (2022). Pesquisas eleitorais no Brasil: tendências e desempenho. Estudos Avançados, 36, 117-131.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">6.4</span> Anotações de aula</a>
+  <ul class="collapse">
+  <li><a href="#lei-dos-grandes-números" id="toc-lei-dos-grandes-números" class="nav-link" data-scroll-target="#lei-dos-grandes-números"><span class="header-section-number">6.4.1</span> Lei dos Grandes Números</a></li>
+  <li><a href="#teorema-central-do-limite" id="toc-teorema-central-do-limite" class="nav-link" data-scroll-target="#teorema-central-do-limite"><span class="header-section-number">6.4.2</span> Teorema Central do Limite</a></li>
+  <li><a href="#intervalo-de-confiança" id="toc-intervalo-de-confiança" class="nav-link" data-scroll-target="#intervalo-de-confiança"><span class="header-section-number">6.4.3</span> Intervalo de Confiança</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -543,8 +584,103 @@ s_y = \sqrt{ \dfrac{470 \times (1-0.47)^2 + 530 \times (0 - 0.47)^2}{1000-1} } =
 <blockquote class="blockquote">
 <p>Vale notar que as pesquisas eleitorais no Brasil têm alguns de seus aspectos regulados pela legislação eleitoral. Entre outros, institutos de pesquisa que queiram divulgar suas estimativas precisam fazer o registro do plano amostral a ser implementado com antecedência, reportando as datas em que a coleta dos dados será feita, a data de divulgação dos resultados, o tamanho da amostra e detalhes de metodologia como uso de quotas e discriminação dos locais onde entrevistas são aplicadas. Em razão disso, por exemplo, margens de erro divulgadas no momento do registro das pesquisas não podem contemplar o efeito do uso de pós-estratificação para corrigir desvios nas amostras, uma vez que o efeito de tais procedimentos só podem ser quantificados após o encerramento da coleta de dados – o que contribui para subestimar possíveis erros aleatórios e não aleatórios, isto é, erros totais (Gramacho, 2013). (p.&nbsp;121)</p>
 </blockquote>
+<hr>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">6.4</span> Anotações de aula</h2>
+<p>Em estatística, falamos sobre inferência como “realizar afirmações sobre dados que não conhecemos, a partir de dados conhecidos”. No fim das contas, falar sobre uma população a partir de uma amostra. Isso está diretamente associado ao processo gerador dos dados, i.e., o processo subjacente que está gerando os meus dados.</p>
+<p>A população são todos os casos relevantes para a minha análise. Uma amostra, então, é um subconjunto desses casos relevantes.</p>
+<p>A seleção aleatória de elementos da população é a chave da amostragem probabilística:</p>
+<ul>
+<li>Ausência de viés: amostragem probabilística garante que cada membro da população tenha uma chance de ser incluído na amostra.</li>
+<li>Convergência: a variabilidade natural das amostras se equilibra à medida que <span class="math inline">\(N\)</span> aumenta, levando a média amostral a se aproximar da verdadeira média da população.</li>
+</ul>
+<section id="lei-dos-grandes-números" class="level3" data-number="6.4.1">
+<h3 data-number="6.4.1" class="anchored" data-anchor-id="lei-dos-grandes-números"><span class="header-section-number">6.4.1</span> Lei dos Grandes Números</h3>
+<p>LGN é um princípio da teoria da probabilidade que descreve o comportamento da média de uma amostra à medida que ela aumenta. À medida que aumento a amostra, vou me aproximando da média “verdadeira”, i.e., a média da população.</p>
+<p>Em uma amostra pequena, um único sorteio pode distorcer a média amostral. Em uma amostra maior, sorteios extremos se equilibram e levam a média amostram a se aproximar da média da população. Para fins práticos, <span class="math inline">\(N \geq 100\)</span> reduz bastante a influência de outliers na estimativa da média.</p>
+<blockquote class="blockquote">
+<p>Podemos pensar em 100 retiradas de 10 bolinhas, ou 1000 retiradas de 10 bolinhas. Neste caso, nossa amostra tem o mesmo tamanho, mas expandimos o número de amostras e calculamos a média de cada uma delas. Então, a amostra tem o mesmo tamanho: <span class="math inline">\(n = 10\)</span>. A média dessas médias é a média amostral.</p>
+</blockquote>
+</section>
+<section id="teorema-central-do-limite" class="level3" data-number="6.4.2">
+<h3 data-number="6.4.2" class="anchored" data-anchor-id="teorema-central-do-limite"><span class="header-section-number">6.4.2</span> Teorema Central do Limite</h3>
+<p>À medida que extraímos mais amostras, a distribuição da estimativa começa a assumir a forma de uma distribuição normal.</p>
+<blockquote class="blockquote">
+<p>A distribuição da soma (ou média) das variáveis aleatórias independentes tende a uma distribuição normal à medida que o número de amostras aumenta, independentemente da distribuição original das variáveis (binomial, por exemplo).</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># cria uma lista com 1000 amostras de 10 bolinhas, podendo elas serem azuis (1) ou vermelhas (0)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>bolinhas <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), <span class="at">size =</span> <span class="dv">10</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># isso aqui tem 1000 amostras de 10 bolinhas</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>bolinhas <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(bolinhas)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># calcula a média de cada amostra</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>medias <span class="ot">&lt;-</span> <span class="fu">apply</span>(bolinhas, <span class="dv">2</span>, mean)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># plota a distribuição das médias</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">data.frame</span>(medias), <span class="fu">aes</span>(<span class="at">x =</span> medias)) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> ..density..), <span class="at">bins =</span> <span class="dv">30</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="co"># inclui a linha da média amostral (media das medias)</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(medias)), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">size =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dnorm, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="fu">mean</span>(medias), <span class="at">sd =</span> <span class="fu">sd</span>(medias)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribuição das Médias Amostrais"</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Média Amostral"</span>,</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Densidade"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(density)` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="aula-7_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Esse é o insight do teorema central do limite. Se pudéssemos imaginar um número infinito de amostras e plotássemos a média de cada uma dessas amostras, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população.</p>
+<p>De fato, outra propriedade interessante é a dispersão da média amostral. A média amostral tende a ser menos dispersa do que a média populacional. Isso é chamado de erro padrão da média (EPM). O EPM é a medida da variabilidade das médias amostrais em torno da média populacional. O EPM é calculado como o desvio padrão da população dividido pela raiz quadrada do tamanho da amostra:</p>
+<p><span class="math display">\[
+EPM = \dfrac{\sigma}{\sqrt{n}}
+\]</span></p>
+<p>onde <span class="math inline">\(\sigma\)</span> é o desvio padrão da população e <span class="math inline">\(n\)</span> é o tamanho da amostra. O EPM diminui à medida que o tamanho da amostra aumenta. Isso significa que, quanto maior a amostra, mais precisa será a estimativa da média populacional. Isso é importante porque nos permite fazer inferências sobre a população com base em uma amostra.</p>
+</section>
+<section id="intervalo-de-confiança" class="level3" data-number="6.4.3">
+<h3 data-number="6.4.3" class="anchored" data-anchor-id="intervalo-de-confiança"><span class="header-section-number">6.4.3</span> Intervalo de Confiança</h3>
+<p>Um intervalo de confiança é uma faixa de valores que, com um certo nível de confiança, contém o valor verdadeiro de um parâmetro populacional. O intervalo de confiança é calculado a partir da média amostral e do erro padrão da média.</p>
+<p>O intervalo de confiança é calculado como: <span class="math display">\[
+IC = \bar{X} \pm Z_{\alpha/2} \cdot EPM
+\]</span></p>
+<p>onde <span class="math inline">\(\bar{X}\)</span> é a média amostral, <span class="math inline">\(Z_{\alpha/2}\)</span> é o valor crítico da distribuição normal padrão correspondente ao nível de confiança desejado (por exemplo, 1,96 para um intervalo de confiança de 95%) e <span class="math inline">\(EPM\)</span> é o erro padrão da média.</p>
+<p>O intervalo de confiança fornece uma estimativa da incerteza associada à média amostral. Se o intervalo de confiança for estreito, isso indica que a média amostral é uma boa estimativa da média populacional. Se o intervalo de confiança for amplo, isso indica que a média amostral é uma estimativa menos precisa da média populacional.</p>
+<blockquote class="blockquote">
+<p>O valor de 1.96 é o valor crítico da distribuição normal padrão que corresponde a um nível de confiança de 95%. Isso significa que, se repetirmos o processo de amostragem muitas vezes, aproximadamente 95% dos intervalos de confiança calculados conterão a média populacional verdadeira. Além disso, o intervalo de 95% é arbitrário: por exemplo, 68% de confiança corresponde a 1 desvio padrão, 99% de confiança corresponde a 2.58 desvios padrão, e assim por diante.</p>
+</blockquote>
+<p>Vamos supor o caso em que queremos estimar a aprovação do Lula. Pegamos 1000 amostras e estimamos uma média de aprovação de 32%. O desvio padrão, portanto, será calculado como:</p>
+<p><span class="math display">\[
+s = \sqrt{ 0.32 \cdot (1 - 0.32) } = 0.47,
+\]</span></p>
+<p>e o erro padrão da média será: <span class="math display">\[
+\text{EPM} = \dfrac{0.47}{\sqrt{1000}} = 0.015
+\]</span></p>
+<p>O intervalo de confiança de 95% para a média amostral é dado por: <span class="math display">\[
+\text{IC} = 0.32 \pm 1.96 \cdot 0.015
+\]</span></p>
+<p>Ou seja, o intervalo de confiança é dado por: <span class="math display">\[
+\text{IC} = (0.32 - 0.03, 0.32 + 0.03) = (0.29, 0.35)
+\]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
