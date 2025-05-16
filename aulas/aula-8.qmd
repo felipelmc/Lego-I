@@ -1,0 +1,160 @@
+# Predição
+
+## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 4: Predicting outcomes using linear regression.
+
+> In the social sciences, we often are unable to observe the value of a particular variable of interest, $Y$, either because it hasn't occurred yet or because it is difficult to measure. In these situations, we typically observe the values of the other variable that, if correlated with $Y$, can be used to predict $Y$. (p. 99)
+
+> When analyzing data for predictive purposes, then, we do not assume that there is a causal relationship between $X$ and $Y$; we simply rely on a high degree of correlation between them and use one variable to estimate the value of the other. (p. 99)
+
+Primeiro usamos os dados disponíveis para ajustar (_fit_) um modelo aos dados. Depois, quando não podemos mais observar os valores da variável dependente (ou variável resposta), usamos o modelo ajustado para estimar os valores de $\hat{Y}$.
+
+O modelo linear é dado por:
+
+$$
+Y_i = \alpha + \beta X_i + \epsilon_i,
+$$
+
+onde:
+
+- $Y_i$ é a variável dependente (ou variável resposta);
+- $X_i$ é a variável independente (ou preditora);
+- $\alpha$ é o intercepto;
+- $\beta$ é o coeficiente angular (ou inclinação);
+- $\epsilon_i$ é o erro aleatório (ou resíduo) associado à observação $i$.
+- $i$ é o índice da observação.
+
+> Unfortunately, we do not know the values of $alpha$, $\beta$, and $\epsilon_i$. We need to estimate them based on data. We start by estimating the intercept ($\alpha$) and the slope ($\beta$), the two coefficients that define the line. This is equivalent to fitting a line to the data, that is, finding the line that best summarizes the relationship between $X$ and $Y$. (p. 102)
+
+A reta ajustada é dada por:
+
+$$
+\hat{Y}_i = \hat{\alpha} + \hat{\beta} X_i,
+$$
+
+onde:
+- $\hat{Y}_i$ é o valor predito da variável dependente (ou variável resposta);
+- $\hat{\alpha}$ é o valor estimado do intercepto;
+- $\hat{\beta}$ é o valor estimado do coeficiente angular (ou inclinação);
+- $X_i$ é o valor da variável independente (ou preditora);
+
+> Note that the value of $\hat{Y}$ produced by a fitted model is an _average_ predicted value; it is the average predicted value of $Y$ associated with a particular value of $X$. Indeed, predicted outcomes ($\hat{Y}$) are equivalent to average outcomes ($\bar{Y}$).
+
+O erro estimado é simplesmente a diferença entre o valor observado e o valor predito:
+
+$$
+\hat{\epsilon}_i = Y_i - \hat{Y}_i = Y_i - (\hat{\alpha} + \hat{\beta} X_i).
+$$
+
+Desejamos sempre encontrar a reta que minimiza a soma dos quadrados dos erros.
+
+### Os coeficientes
+
+- o **intercepto** especifica a posição da reta no eixo vertical. Mais especificamente, o intercepto é o valor de $Y$ quando $X = 0$;
+- o **coeficiente angular** especifica a inclinação da reta. Mais especificamente, o coeficiente angular é a variação média de $Y$ associada a uma variação unitária de $X$. Quando $\delta X = 1$, a variação média de $Y$ é $\hat{\beta}$.
+
+### OLS: Ordinary Least Squares
+
+> Formally, to choose the line of best fit, we use the "least squares" method, which identifies the line that minimizes the "sum of the squared residuals", known as SSR. 
+
+$$
+\text{SSR} = \sum_{i=1}^{n} = \hat{\epsilon}_i^2 = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 = \sum_{i=1}^{n} (Y_i - (\hat{\alpha} + \hat{\beta} X_i))^2
+$$
+
+> Why do we want to minimize the sum of the _squared_ residuals rather than the sum of the residuals? Because in the minimization process we want to avoid having positive prediction errors cancel out negative prediction errors. By squaring the residuals, we convert them all to positive numbers. (p. 107)
+
+No exemplo do livro, os autores ajustam um modelo para prever o GDP dos países a partir da emissão de luzes noturnas. Mas, antes, podemos simplesmente ajustar um modelo que estima o GDP (2005-2006) atual a partir do GDP "anterior" (1992-1993):
+
+$$
+\hat{\text{gdp}}_{i} = \hat{\alpha} + \hat{\beta} \cdot \text{prior_gdp}_{i}
+$$
+
+Estimado o modelo, teríamos os coeficientes:
+
+$$
+\hat{\text{gdp}}_{i} = 0.72 + 1.61 \cdot \text{prior_gdp}_{i}
+$$
+
+Suponha que, há alguns anos atrás, o GDP do Brasil era de 400 trihões de dólares. O GPD estimado seria:
+
+$$
+\hat{\text{gdp}}_{\text{BR}} = 0.72 + 1.61 \cdot 400 = 644.72
+$$
+
+### With natural logarithm transformations
+
+> When a variable contains a handful of either extremely large or extremely small values, the distribution of the variable will be skewed. (Recall that a distribution is considered skewed when it is not symmetric because one of its tails is longer than the other.) Under these circumstances, it is often a good idea to transform the variable by taking its natural logarithm. This transformation will make the variable of interest more normally distributed and, in turn, improve the fit of the line to the data. In the example at hand, we will transform both variables of interest by taking the natural logarithm, and then we will re-fit the line. (p. 113)
+
+> This type of model, in which both the outcome and the predictor have been log-transformed, is called the log-log linear model. While we could interpret the coefficients the same way as in the normal linear model, in practice, we use an approximation to avoid dealing with the logarithms, especially when interpreting $\hat{\beta}$. (p. 116)
+>
+> As shownn in the apprendix near the end of this chapter, we interpret $\hat{\beta}$ as the predicted percentage change in the outcome associated with an increase in the predictor of 1 percent. Since here $\hat{\beta} = 1.01$, an increase of prior GPD of 1 percent is associated with an increase in GPD of 1.01% on average. Note that in this interpretation of $\hat{\beta}$, both the change in $X$ and the change in $\hat{Y}$ are measured in percentages, instead of in units, as is the case in the standard linear model. In other words, in the log-log model, we estimate change in relative rather than in absolute terms. (p. 116)
+
+No apêndice do capítulo, os autores discutem matematicamente a interpretação de $\hat{\beta}$ no modelo log-log. A fórmula para a variação percentual de $Y$ associada a uma variação percentual de $X$ é dada por:
+
+$$
+\begin{align*}
+\hat{\log(Y_\text{final})} - \hat{\log(Y_\text{inicial})} &= [\hat{\alpha} + \hat{\beta} \cdot \log(X_\text{final})] - [\hat{\alpha} + \hat{\beta} \cdot \log(X_\text{inicial})] \\
+&= \hat{\beta} \cdot [\log(X_\text{final}) - \log(X_\text{inicial})] \\
+\end{align*}
+$$
+
+Devemos usar a seguinte aproximação:
+
+$$
+\log(Y_\text{final}) - \log(Y_\text{inicial}) \approx \frac{Y_\text{final} - Y_\text{inicial}}{Y_\text{inicial}} = \frac{\Delta Y}{Y_\text{inicial}}
+$$
+
+Isso é verdade porque, para pequenas variações, a diferença entre o logaritmo de dois números é aproximadamente igual à razão entre a diferença e o número inicial. Em particular, a seguinte afirmação é válida:
+
+$$
+\log(Y + \Delta Y) - \log(Y) \approx \frac{\Delta Y}{Y}
+$$
+
+No caso acima, estamos reescrevendo $\log(Y_\text{final})$ como $\log(Y + \Delta Y)$ Essa é uma propriedade do logaritmo natural derivada da expansão em série de Taylor:
+
+$$
+\log (1+\epsilon) \approx \epsilon - \frac{\epsilon^2}{2} + \frac{\epsilon^3}{3} - \cdots \approx \epsilon
+$$
+
+onde $\epsilon$ é um número pequeno. Portanto, podemos usar a seguinte aproximação:
+
+Entendemos, com isso, que a variação percentual de $Y$ associada a uma variação percentual de $X$ é dada por:
+
+$$
+\frac{\Delta Y}{Y_\text{inicial}} \times 100 \approx \hat{\beta} \cdot \frac{\Delta X}{X_\text{inicial}} \times 100
+$$
+
+Matematicamente, escrevemos:
+
+$$
+\begin{align*}
+[\log(X_\text{final}) - \log(X_\text{inicial})] \cdot 100 &= [\log(X_\text{inicial} + \Delta X) - \log(X_\text{inicial})] \cdot 100 \\
+&= [\log (X_\text{inicial} + X_\text{inicial} \frac{\Delta X}{X_\text{inicial}}) - \log(X_\text{inicial})] \cdot 100 \\
+&= [\log (X_\text{inicial} (1 + \frac{\Delta X}{X_\text{inicial}})) - \log(X_\text{inicial})] \cdot 100 \\
+&= [\log (1 + \frac{\Delta X}{X_\text{inicial}})] \cdot 100 \\
+&\approx \frac{\Delta X}{X_\text{inicial}} \cdot 100
+\end{align*}
+$$
+
+### Measuring how well the model fits the data with the coefficient of determination, $R^2$
+
+> The value of $R^2$ ranges from 0 to 1 and represents the proportion of the variation of Y explained by the model. [...]. Therefore, the higher the $R^2$, the better the model fits the data. (p. 120)
+
+$$
+R^2 = 1 - \frac{\text{SSR}}{\text{TSS}}
+$$
+
+onde:
+- $SSR$ é a soma dos quadrados dos resíduos;
+- $TSS$ é a soma total dos quadrados, que mede a variação total de $Y$ em relação à média de $Y$:
+
+$$
+TSS = \sum_{i=1}^{n} (Y_i - \bar{Y})^2
+$$
+
+No fim das contas, TSS é simplesmente o numerador da variância.
+
+> Given the definitions above, we can interpret SSR/TSS as the proportion of the variation of $Y$ not explained by the model. Therefore, 1-SSR/TSS is the proportion of the variation of $Y$ that is explained by the model. (p. 121)
+
+💡A interpretação de que o SSR é a variação não explicada é simples: como se trata da diferença entre o que o modelo diz e o que de fato é o valor observado, entendemos que o modelo falhou em explicar essa variação. Além disso, como o TSS representa a variação total em relação à média, podemos usá-lo como denominador.
+
+## Verhagen, M. D. (2022) A pragmatist's guide to using prediction in the social sciences. _Socius_, 8, 23780231221081702

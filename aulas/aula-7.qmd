@@ -223,5 +223,44 @@ $$
 \text{IC} = (0.32 - 0.03, 0.32 + 0.03) = (0.29, 0.35)
 $$
 
+---
 
+### A variância da Bernoulli
 
+💡Dedico essa parte das anotações a provar o motivo de a variância da Bernoulli poder ser escrita como $p(1-p)$, sendo $p$ a proporção de $X = 1$ em um conjunto.
+
+Quando estamos tratando de uma variável aleatória $X$ que segue uma distribuição Bernoulli, sabemos que os valores de $X$ só assumem valores em $\{0, 1\}$. Além disso, sabemos que $\mathbb{E}[X] = p$. A fórmula da variância é:
+
+$$
+\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
+$$
+
+No entanto, sabemos que, como as observações de $X$ só assume valores em $\{0, 1\}$, vale que $\mathbb{E}[X^2] = \mathbb{E}[X] = p$ e que $(\mathbb{E}[X])^2 = p^2$. Com efeito:
+
+$$
+\begin{align*}
+\text{Var}(X) &= \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \\
+              &= p - p^2 \\
+              &= p(1 - p)
+\end{align*}
+$$
+
+Apenas para fixar, vamos provar também o porquê de podermos escrever a variância como $\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$.
+
+A variância, por definição, é a diferença quadrática entre a média de uma variável e o valor observado. Isto é:
+
+$$
+\text{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+$$
+
+Podemos expandir essa expressão e manipulá-la usando a propriedade da linearidade da esperança:
+
+$$
+\begin{align*}
+\text{Var}(X) &= \mathbb{E}[(X - \mathbb{E}[X])^2] \\
+              &= \mathbb{E}[X^2 - 2X\mathbb{E}[X] + (\mathbb{E}[X])^2] \\ 
+              &= \mathbb{E}[X^2] - 2\mathbb{E}[X]\mathbb{E}[X] + (\mathbb{E}[X])^2 \\ % pela linearidade
+              &= \mathbb{E}[X^2] - 2(\mathbb{E}[X])^2 + (\mathbb{E}[X])^2 \\
+              &= \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \\
+\end{align*}
+$$

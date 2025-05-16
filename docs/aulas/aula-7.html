@@ -431,6 +431,7 @@ window.Quarto = {
   <li><a href="#lei-dos-grandes-números" id="toc-lei-dos-grandes-números" class="nav-link" data-scroll-target="#lei-dos-grandes-números"><span class="header-section-number">6.4.1</span> Lei dos Grandes Números</a></li>
   <li><a href="#teorema-central-do-limite" id="toc-teorema-central-do-limite" class="nav-link" data-scroll-target="#teorema-central-do-limite"><span class="header-section-number">6.4.2</span> Teorema Central do Limite</a></li>
   <li><a href="#intervalo-de-confiança" id="toc-intervalo-de-confiança" class="nav-link" data-scroll-target="#intervalo-de-confiança"><span class="header-section-number">6.4.3</span> Intervalo de Confiança</a></li>
+  <li><a href="#a-variância-da-bernoulli" id="toc-a-variância-da-bernoulli" class="nav-link" data-scroll-target="#a-variância-da-bernoulli"><span class="header-section-number">6.4.4</span> A variância da Bernoulli</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -677,6 +678,38 @@ s = \sqrt{ 0.32 \cdot (1 - 0.32) } = 0.47,
 \]</span></p>
 <p>Ou seja, o intervalo de confiança é dado por: <span class="math display">\[
 \text{IC} = (0.32 - 0.03, 0.32 + 0.03) = (0.29, 0.35)
+\]</span></p>
+<hr>
+</section>
+<section id="a-variância-da-bernoulli" class="level3" data-number="6.4.4">
+<h3 data-number="6.4.4" class="anchored" data-anchor-id="a-variância-da-bernoulli"><span class="header-section-number">6.4.4</span> A variância da Bernoulli</h3>
+<p>💡Dedico essa parte das anotações a provar o motivo de a variância da Bernoulli poder ser escrita como <span class="math inline">\(p(1-p)\)</span>, sendo <span class="math inline">\(p\)</span> a proporção de <span class="math inline">\(X = 1\)</span> em um conjunto.</p>
+<p>Quando estamos tratando de uma variável aleatória <span class="math inline">\(X\)</span> que segue uma distribuição Bernoulli, sabemos que os valores de <span class="math inline">\(X\)</span> só assumem valores em <span class="math inline">\(\{0, 1\}\)</span>. Além disso, sabemos que <span class="math inline">\(\mathbb{E}[X] = p\)</span>. A fórmula da variância é:</p>
+<p><span class="math display">\[
+\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
+\]</span></p>
+<p>No entanto, sabemos que, como as observações de <span class="math inline">\(X\)</span> só assume valores em <span class="math inline">\(\{0, 1\}\)</span>, vale que <span class="math inline">\(\mathbb{E}[X^2] = \mathbb{E}[X] = p\)</span> e que <span class="math inline">\((\mathbb{E}[X])^2 = p^2\)</span>. Com efeito:</p>
+<p><span class="math display">\[
+\begin{align*}
+\text{Var}(X) &amp;= \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \\
+              &amp;= p - p^2 \\
+              &amp;= p(1 - p)
+\end{align*}
+\]</span></p>
+<p>Apenas para fixar, vamos provar também o porquê de podermos escrever a variância como <span class="math inline">\(\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2\)</span>.</p>
+<p>A variância, por definição, é a diferença quadrática entre a média de uma variável e o valor observado. Isto é:</p>
+<p><span class="math display">\[
+\text{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+\]</span></p>
+<p>Podemos expandir essa expressão e manipulá-la usando a propriedade da linearidade da esperança:</p>
+<p><span class="math display">\[
+\begin{align*}
+\text{Var}(X) &amp;= \mathbb{E}[(X - \mathbb{E}[X])^2] \\
+              &amp;= \mathbb{E}[X^2 - 2X\mathbb{E}[X] + (\mathbb{E}[X])^2] \\
+              &amp;= \mathbb{E}[X^2] - 2\mathbb{E}[X]\mathbb{E}[X] + (\mathbb{E}[X])^2 \\ % pela linearidade
+              &amp;= \mathbb{E}[X^2] - 2(\mathbb{E}[X])^2 + (\mathbb{E}[X])^2 \\
+              &amp;= \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \\
+\end{align*}
 \]</span></p>
 
 
