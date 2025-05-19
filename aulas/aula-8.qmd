@@ -158,3 +158,15 @@ No fim das contas, TSS é simplesmente o numerador da variância.
 💡A interpretação de que o SSR é a variação não explicada é simples: como se trata da diferença entre o que o modelo diz e o que de fato é o valor observado, entendemos que o modelo falhou em explicar essa variação. Além disso, como o TSS representa a variação total em relação à média, podemos usá-lo como denominador.
 
 ## Verhagen, M. D. (2022) A pragmatist's guide to using prediction in the social sciences. _Socius_, 8, 23780231221081702
+
+> The current lack of prediction in the social sciences stems from a seeming incompatibility between wanting to explain and wanting to predict, effectively forcing researchers to choose between the two approaches. A case in point is the much-cited article by Galit Shmueli (2010), aptly titled "To Predict or to Explain", which outlines how a social scientist's empirical work flow differs in terms of data processing, modeling, and postestimation diagnostics when choosing to either predict or explain. Naturally, Shmueli assumes that a researcher would not normally attempt to do both. This is an accurate reflection of social science research. The apparent need to dogmatically choose between either approach means that, in practice, social scientists tend to stick to explanation almost exclusively. (p. 1)
+
+> When viewing prediction as a simple tool to evaluate a model's ability to approximate the outcome of interest, it can be applied without exception to most social science questions, rendering a dogmatic choice between prediction or explanation unnecessary. (p. 2)
+
+O autor faz uma discussão sobre possíveis approaches para a predição -- in-sample evaluation, k-fold cross validation, e external evaluation.
+
+Além disso, discute também a importância da predição em relação às informações que ela pode trazer sobre os modelos ajustados. Em particular, há 3 virtudes principais:
+
+1. A predição dá informações sobre o ajuste do modelo aos dados;
+2. A predição permite o estabelecimento de _benchmarks_ para a avaliação de modelos em diferentes domínios;
+3. A predição pode ser usada para entender melhor modelos complicados.

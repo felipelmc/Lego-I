@@ -14,12 +14,12 @@ book:
         - aulas/aula-5.qmd
         - aulas/aula-6.qmd
         - aulas/aula-7.qmd
+        - aulas/aula-8.qmd
     - part: Listas
       chapters:
         - listas/nivelamento/lista-nivelamento.qmd
         - listas/lista-1/lista1.qmd
         - listas/lista-2/lista2.qmd
-        
 format:
   html:
     theme: 
