@@ -252,630 +252,663 @@
     ]
   },
   {
+    "objectID": "aulas/aula-9.html",
+    "href": "aulas/aula-9.html",
+    "title": "8  Efeitos causais em dados observacionais",
+    "section": "",
+    "text": "8.1 Llaudet, E. and Imai, K. (2022). Data analysis for social science: A friendly and practical introduction. Princeton University Press. Chapter 5: Estimating Causal Effects with Observational Data.\nPara controlar por outras variáveis, usamos regressões múltiplas:\n\\[\nY_i = \\alpha + \\beta_1 X_{i \\ 1} + \\cdots + \\beta_p X_{i \\ p} + \\epsilon_i\n\\]\nAgora, ao invés de o ajuste do modelo aos dados resultar em uma reta, o ajuste do modelo aos dados resulta em um plano que minimiza a soma dos quadrados das distâncias entre os pontos e o plano. O modelo de regressão múltipla é uma extensão do modelo de regressão simples, onde temos mais de uma variável independente.\nDo ponto de vista de interpretação dos coeficientes, \\(\\hat{\\alpha}\\) é a média de \\(Y\\) quando todas as variáveis independentes são zero. O coeficiente \\(\\hat{\\beta}_j\\) é a variação esperada em \\(Y\\) quando \\(X_j\\) aumenta uma unidade, mantendo todas as outras variáveis independentes constantes (ceteris paribus, como costumam dizer em economia).",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Efeitos causais em dados observacionais</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-9.html#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data.",
+    "href": "aulas/aula-9.html#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data.",
+    "title": "8  Efeitos causais em dados observacionais",
+    "section": "",
+    "text": "[…] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affectt the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p. 130)\n\n\nTo estimate causal effects using observational data, we have to first identify any relevant differences between treatment and control groups – known as confounding variables or confounders – and then statistically control for them so that we can make the two groups as comparable to each other as possible. (p. 130)\n\n\nThe confounding variable, also known as a confounder, is a variable that affects both (i) the likelihood of receiving the treatment and (ii) the outcome \\(Y\\). (p. 130)\n\n\nIn the extreme, by affecting both \\(X\\) and \\(Y\\) at the same time, confounding variables might create a completely spurious relationship between \\(X\\) and \\(Y\\), misleading us into thinking that \\(X\\) and \\(Y\\) are causally related to each other when, in fact, there is no direct causal link between the two. (p. 132)\n\n\nIn short, when there is a confounding variable \\(Z\\) affecting \\(X\\) and \\(Y\\), we should not trust correlation as a measure of causation, and thus, we cannot use the difference-in-means estimator to estimate average causal effects. (p. 132)\n\n\nWhy don’t we have to worry about confounders in randomized experiments? Randomization of treatment assignment eliminates all potential confounders. It ensures that treatment and control groups are comparable by breaking the link between any potential confounder and the treatment. (p. 133)\n\n\n\n\n\n\nIn other words, the difference in the average outcomes between the treatment and control groups that remain after holding all confounding variables constant can now be directly attributed to their difference with respect to the treatment (treated vs. untreated); no other differences between the two groups are in play. (p. 145)",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Efeitos causais em dados observacionais</span>"
+    ]
+  },
+  {
+    "objectID": "aulas/aula-9.html#cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs.",
+    "href": "aulas/aula-9.html#cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs.",
+    "title": "8  Efeitos causais em dados observacionais",
+    "section": "8.2 Cunningham, S. (2022). Causal Inference: the mixtape. Yale University Press. Chapter 3: Directed Acyclic Graphs.",
+    "text": "8.2 Cunningham, S. (2022). Causal Inference: the mixtape. Yale University Press. Chapter 3: Directed Acyclic Graphs.\n\nUsing directed acyclic graphical (DAG) notation requires some up-front statements. The first thing to notice is that a DAG notation, causality runs in one direction. […]. There are no cycles in a DAG. […]. Third, DAGs explain causality in terms of counterfactuals. That is, a causal effect is defined as a comparison between two states of the world – one state that actually happened when some intervention took on some value and another state that didn’t happen (the “counterfactual”) under some other intervention.\n\n\nNodes represent random variables, and those random variables are assumed to be created by some data-generating process. Arrows represent a causal effect between two random variables moving in the intuitive direction of the arrow. The direction of the arrow captures the direction of causality.\n\n\nA DAG is meant to describe all causal relationships relevant to the effect of \\(D\\) on \\(Y\\). What makes the DAG distinctive is both the explicit commitment to a causal effect pathway and the complete commitment to the lack of a causal pathway represented by missing arrows. […]. In other words, a DAG will contain both arrows connecting variables and choices to exclude arrows. And the lack of an arrow necessarily means that you think there is no such relationship in the data – this is one of the strongest beliefs you can hold. A complete DAG will have all direct causal effects among the variables in the graph as well as all common causes of any pair of variables in the graph.\n\n\nTwo, through concepts such as the backdoor criterion and collider bias, a well-designed DAG can help you develop a credible research design for identifying the causal effects of some intervention.\n\n\nIn this DAG, we have three random variables: \\(X\\), \\(D\\), and \\(Y\\). There is a direct path from \\(D\\) to \\(Y\\), which represents a causal effect. That path is represented by \\(D \\rightarrow Y\\). But there is also a second path from \\(D\\) to \\(Y\\) called the backdoor path. While the direct path is \\(D \\leftarrow X \\rightarrow Y\\). While the direct path is a causal effect, the backdoor path is not causal. Rather, it is a process that creates spurious correlations between \\(D\\) and \\(Y\\) that are driven solely by fluctuations in the \\(X\\) random variable. […]. We therefore call \\(X\\) a confounder because it jointly determines \\(D\\) and \\(Y\\), and so confounds our ability to discern the effect of \\(D\\) on \\(Y\\) in naive comparisons.\n\nUm caso particular é quando a variável \\(X\\) não é observada pelo pesquisador. Nesse caso, “the backdoor path is open” e, do ponto de vista de notação, as setas são “dashed”.\n\nThis is a simple story to tell, and the DAG tells it well, but I want to alert your attention to some subtle points contained in this DAG. The DAG is actually telling two stories. It is telling what is happening, and it is telling what is not happening. For instance, notice that has no direct effect on the child’s earnings except through its effect on schooling. Is this realistic, though? Economists have long maintained that unobserved ability both determines how much schooling a child gets and directly affects the child’s future earnings, insofar as intelligence and motivation can influence careers. But in this DAG, there is no relationship between background and earnings, which is itself an assumption. And you are free to call foul on this assumption if you think that background factors affect both schooling and the child’s own productivity, which itself should affect wages. So what if you think there should be an arrow from \\(B\\) to \\(Y\\)? Then you would draw one and rewrite all the backdoor paths between \\(D\\) and \\(Y\\).\n\n\nWhen two variables cause a third variable along some path, we call that third variable a “collider”. Put differently, \\(X\\) is a collider along this backdoor path because \\(D\\) and the causal effects of \\(Y\\) collide at \\(X\\). But so what? What makes a collider so special? Colliders are special in part because when they appear along a backdoor path, that backdoor path is closed simply because of their presence. Colliders, when they are left alone, always close a specific backdoor path.\n\n\nWe care about open backdoor paths because they create systematic, noncausal correlations between the causal variable of interest and the outcome you are trying to study. In regression terms, open backdoor paths introduce omitted variable bias, and for all you know, the bias is so bad that it flips the sign entirely. Our goal, then, is to close these backdoor paths. And if we can close all of the otherwise open backdoor paths, then we can isolate the causal effect of \\(D\\) on \\(Y\\) using one of the research designs and identification strategies discussed in this book. So how do we close a backdoor path?\nThere are two ways to close a backdoor path. First, if you have a confounder that has created an open backdoor path, then you can close that path by conditioning on the confounder. Conditioning requires holding the variable fixed using something like subclassification, matching, regression, or another method. It is equivalent to “controlling for” the variable in a regression. The second way to close a backdoor path is the appearance of a collider along that backdoor path. Since colliders always close backdoor paths, and conditioning on a collider always opens a backdoor path, choosing to ignore the colliders is part of your overall strategy to estimate the causal effect itself. By not conditioning on a collider, you will have closed that backdoor path and that takes you closer to your larger ambition to isolate some causal effect.\nWhen all backdoor paths have been closed, we say that you have come up with a research design that satisfies the backdoor criterion. And if you have satisfied the backdoor criterion, then you have in effect isolated some causal effect. But let’s formalize this: a set of variables \\(X\\) satisfies the backdoor criterion in a DAG if and only if \\(X\\) blocks every path between confounders that contain an arrow from \\(D\\) do \\(Y\\).\n\n\nThe issue of conditioning on a collider is important, so how do we know if we have that problem or not? No data set comes with a flag saying “collider” and “confounder.” Rather, the only way to know whether you have satisfied the backdoor criterion is with a DAG, and a DAG requires a model. It requires in-depth knowledge of the data-generating process for the variables in your DAG, but it also requires ruling out pathways. And the only way to rule out pathways is through logic and models. There is no way to avoid it—all empirical work requires theory to guide it. Otherwise, how do you know if you’ve conditioned on a collider or a noncollider? Put differently, you cannot identify treatment effects without making assumptions.\n\n\nlibrary(ggdag)\n\nWarning: pacote 'ggdag' foi compilado no R versão 4.4.3\n\n\n\nAnexando pacote: 'ggdag'\n\n\nO seguinte objeto é mascarado por 'package:stats':\n\n    filter\n\nlibrary(ggplot2)\ntheme_set(theme_dag())\n\ndag &lt;- dagify(Y ~ D,\n              Y ~ A,\n              O ~ A,\n              D ~ F,\n              O ~ D,\n              Y ~ O,\n              labels = c(\n                  \"D\" = \"discrimination\",\n                  \"Y\" = \"earnings\",\n                  \"O\" = \"occupation\",\n                  \"F\" = \"female\",\n                  \"A\" = \"ability\"),\n  latent = \"A\")\n\nggdag(dag, text = FALSE, use_labels = \"label\")\n\n\n\n\n\n\n\n\n\nBut in this example, we aren’t interested in estimating the causal effect of being female on earnings; we are interested in estimating the effect of discrimination itself. New, you can see several noticeable paths between discrimination and earnings. They are as follows:\n\n\\(D \\rightarrow O \\rightarrow Y\\)\n\\(D \\rightarrow O \\leftarrow A \\rightarrow Y\\)\n\nThe first path is not a backdoor path; rather, it is a path whereby discrimination is mediated by occupation before discrimination has an effect on earnings. This would imply that women are discriminated against, which in turn affects which jobs they hold, and as a result of holding marginally worse jobs, women are paid less. The second path relates to that channel but is slightly more complicated. In this path, unorbserved ability affects both which jobs people get and their earnings.\nSo let’s say we regress \\(Y\\) onto \\(D\\), our discrimination variable. This yields the total effect of discrimination as the weighted sum of both the direct effect of discrimination on earnings and the mediated effect of discrimination on earnings through occupational sorting. But say that we want to control for occupation because we want to compare men and women in similar jobs. Well, controlling for occupation in the regression closes down the mediation channel, but it then opens up the second channel. Why? Because \\(D \\rightarrow O \\leftarrow A \\rightarrow Y\\) has a collider \\(O\\). So when we control for occupation, we open up this second path. It had been closed because colliders close backdoor paths, but since we conditioned on it, we actually opened it instead. This is the reason we cannot merely control for occupation. Such a control ironically introduces new patterns of bias.\nWhat is needed is to control for occupation and ability, but since ability is unobserved, we cannot do that, and therefore we do not possess an identification strategy that satisfies the backdoor criterion. Let’s now look at code to illustrate this DAG.\n\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks ggdag::filter(), stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(stargazer)\n\n\nPlease cite as: \n\n Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.\n R package version 5.2.3. https://CRAN.R-project.org/package=stargazer \n\ntb &lt;- tibble(\n  female = ifelse(runif(10000)&gt;=0.5,1,0),\n  ability = rnorm(10000),\n  discrimination = female,\n  occupation = 1 + 2*ability + 0*female - 2*discrimination + rnorm(10000),\n  wage = 1 - 1*discrimination + 1*occupation + 2*ability + rnorm(10000) \n)\n\nlm_1 &lt;- lm(wage ~ female, tb)\nlm_2 &lt;- lm(wage ~ female + occupation, tb)\nlm_3 &lt;- lm(wage ~ female + occupation + ability, tb)\n\nstargazer(lm_1,lm_2,lm_3, type = \"text\", \n          column.labels = c(\"Biased Unconditional\", \n                            \"Biased\",\n                            \"Unbiased Conditional\"))\n\n\n=========================================================================================================\n                                                     Dependent variable:                                 \n                    -------------------------------------------------------------------------------------\n                                                            wage                                         \n                       Biased Unconditional                Biased                Unbiased Conditional    \n                                (1)                         (2)                          (3)             \n---------------------------------------------------------------------------------------------------------\nfemale                       -3.152***                    0.591***                    -1.008***          \n                              (0.083)                     (0.030)                      (0.028)           \n                                                                                                         \noccupation                                                1.791***                     0.994***          \n                                                          (0.006)                      (0.010)           \n                                                                                                         \nability                                                                                2.009***          \n                                                                                       (0.023)           \n                                                                                                         \nConstant                     2.085***                     0.200***                     0.999***          \n                              (0.059)                     (0.020)                      (0.017)           \n                                                                                                         \n---------------------------------------------------------------------------------------------------------\nObservations                  10,000                       10,000                       10,000           \nR2                             0.125                       0.910                        0.950            \nAdjusted R2                    0.125                       0.910                        0.950            \nResidual Std. Error      4.172 (df = 9998)           1.337 (df = 9997)            0.999 (df = 9996)      \nF Statistic         1,426.770*** (df = 1; 9998) 50,601.170*** (df = 2; 9997) 63,141.040*** (df = 3; 9996)\n=========================================================================================================\nNote:                                                                         *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01\n\n\n\n[…] if we run the regression that Google and others recommend wherein we control for occupation, the sign on gender changes. It becomes positive! We know this is wrong because we hard-coded the effect of gender to be \\(-1\\)! The problem is that occupation is a collider. It is caused by ability and discrimination. If we control for occupation, we open up a backdoor path between discrimination and earnings that is spurious and so strong that it perverts the entire relationship. So only when we control for occupation and ability can we isolate the direct causal effect of gender on wages.\n\n\n8.2.1 Other materials\n\nAn introduction to DAGs and ggdag by Malcolm Barrett [link]\nPapers published by Carolina Caetano, an Assistant Professor of Economics at the University of Georgia [link]",
+    "crumbs": [
+      "Aulas",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Efeitos causais em dados observacionais</span>"
+    ]
+  },
+  {
     "objectID": "listas/nivelamento/lista-nivelamento.html",
     "href": "listas/nivelamento/lista-nivelamento.html",
-    "title": "8  Lista Nivelamento",
+    "title": "9  Lista Nivelamento",
     "section": "",
-    "text": "9 Material de apoio\nLivro: Usando R: Uma introdução para pesquisadores em Humanidades Digitais, de Fernando Meireles e Denisson Silva\nLink: https://fmeireles.com/livro/",
+    "text": "10 Material de apoio\nLivro: Usando R: Uma introdução para pesquisadores em Humanidades Digitais, de Fernando Meireles e Denisson Silva\nLink: https://fmeireles.com/livro/",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-1",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-1",
-    "title": "8  Lista Nivelamento",
-    "section": "10.1 Questão 1",
-    "text": "10.1 Questão 1\nCrie um objeto chamado meu_ano_nascimento e salve nele o ano do seu nascimento. Em seguida, crie um objeto chamado ano_atual e salve nele o ano atual. Por fim, crie um objeto chamado minha_idade e atribua a ele a diferença entre ano_atual e meu_ano_nascimento. Use o console para visualizar o valor de minha_idade.",
+    "title": "9  Lista Nivelamento",
+    "section": "11.1 Questão 1",
+    "text": "11.1 Questão 1\nCrie um objeto chamado meu_ano_nascimento e salve nele o ano do seu nascimento. Em seguida, crie um objeto chamado ano_atual e salve nele o ano atual. Por fim, crie um objeto chamado minha_idade e atribua a ele a diferença entre ano_atual e meu_ano_nascimento. Use o console para visualizar o valor de minha_idade.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta",
-    "title": "8  Lista Nivelamento",
-    "section": "10.2 Resposta",
-    "text": "10.2 Resposta\nInstanciamos uma variável com o meu ano de nascimento e com o ano atual e, tirando a diferença entre as duas datas, obtemos a minha idade.\n\nano_nascimento &lt;- 2001\nano_atual &lt;- 2025\nminha_idade &lt;- ano_atual - ano_nascimento\nprint(paste(\"Minha idade é:\", minha_idade, \"anos\"))\n\n[1] \"Minha idade é: 24 anos\"",
+    "title": "9  Lista Nivelamento",
+    "section": "11.2 Resposta",
+    "text": "11.2 Resposta\nInstanciamos uma variável com o meu ano de nascimento e com o ano atual e, tirando a diferença entre as duas datas, obtemos a minha idade.\n\nano_nascimento &lt;- 2001\nano_atual &lt;- 2025\nminha_idade &lt;- ano_atual - ano_nascimento\nprint(paste(\"Minha idade é:\", minha_idade, \"anos\"))\n\n[1] \"Minha idade é: 24 anos\"",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-2",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-2",
-    "title": "8  Lista Nivelamento",
-    "section": "10.3 Questão 2",
-    "text": "10.3 Questão 2\nCrie um vetor chamado notas com cinco valores que representam notas que você recebeu em algum curso ou disciplina (use valores de 0 a 10). Calcule a média das notas usando a função mean() e salve o resultado em um objeto chamado media_notas.",
+    "title": "9  Lista Nivelamento",
+    "section": "11.3 Questão 2",
+    "text": "11.3 Questão 2\nCrie um vetor chamado notas com cinco valores que representam notas que você recebeu em algum curso ou disciplina (use valores de 0 a 10). Calcule a média das notas usando a função mean() e salve o resultado em um objeto chamado media_notas.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-1",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-1",
-    "title": "8  Lista Nivelamento",
-    "section": "10.4 Resposta",
-    "text": "10.4 Resposta\nSupondo que eu tenha tirado as seguintes notas em um determinado curso, tiramos a média usando a função mean(x) do R.\n\nnotas &lt;- c(2, 4, 6, 8, 10)\nmedia_notas &lt;- mean(notas)\nprint(paste(\"Minha média foi:\", media_notas))\n\n[1] \"Minha média foi: 6\"",
+    "title": "9  Lista Nivelamento",
+    "section": "11.4 Resposta",
+    "text": "11.4 Resposta\nSupondo que eu tenha tirado as seguintes notas em um determinado curso, tiramos a média usando a função mean(x) do R.\n\nnotas &lt;- c(2, 4, 6, 8, 10)\nmedia_notas &lt;- mean(notas)\nprint(paste(\"Minha média foi:\", media_notas))\n\n[1] \"Minha média foi: 6\"",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-3",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-3",
-    "title": "8  Lista Nivelamento",
-    "section": "10.5 Questão 3",
-    "text": "10.5 Questão 3\nPor que o código abaixo não funciona?\nmy_variable &lt;- 10 my_varıable",
+    "title": "9  Lista Nivelamento",
+    "section": "11.5 Questão 3",
+    "text": "11.5 Questão 3\nPor que o código abaixo não funciona?\nmy_variable &lt;- 10 my_varıable",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-2",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-2",
-    "title": "8  Lista Nivelamento",
-    "section": "10.6 Resposta",
-    "text": "10.6 Resposta\nO código não funciona por conta de uma diferença na escrita entre a variável atribuída na primeira linha e a variável que estamos tentando printar na segunda linha. Mais especificamente, há um typo da letra “i”.",
+    "title": "9  Lista Nivelamento",
+    "section": "11.6 Resposta",
+    "text": "11.6 Resposta\nO código não funciona por conta de uma diferença na escrita entre a variável atribuída na primeira linha e a variável que estamos tentando printar na segunda linha. Mais especificamente, há um typo da letra “i”.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-4",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-4",
-    "title": "8  Lista Nivelamento",
-    "section": "10.7 Questão 4",
-    "text": "10.7 Questão 4\nCrie um objeto chamado meu_nome e salve nele o seu nome como um texto (lembre-se de usar aspas). Em seguida, use a função a paste() para criar uma frase que diga “Meu nome é [meu_nome]”, substituindo [meu_nome] pelo objeto recém criado.",
+    "title": "9  Lista Nivelamento",
+    "section": "11.7 Questão 4",
+    "text": "11.7 Questão 4\nCrie um objeto chamado meu_nome e salve nele o seu nome como um texto (lembre-se de usar aspas). Em seguida, use a função a paste() para criar uma frase que diga “Meu nome é [meu_nome]”, substituindo [meu_nome] pelo objeto recém criado.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-3",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-3",
-    "title": "8  Lista Nivelamento",
-    "section": "10.8 Resposta",
-    "text": "10.8 Resposta\nA função paste permite combinar texto e o valor guardado em variáveis. Com isso, é possível printar elementos da seguinte maneira:\n\nmeu_nome &lt;- \"Felipe Marques Esteves Lamarca\"\nprint(paste(\"Meu nome é\", meu_nome))\n\n[1] \"Meu nome é Felipe Marques Esteves Lamarca\"",
+    "title": "9  Lista Nivelamento",
+    "section": "11.8 Resposta",
+    "text": "11.8 Resposta\nA função paste permite combinar texto e o valor guardado em variáveis. Com isso, é possível printar elementos da seguinte maneira:\n\nmeu_nome &lt;- \"Felipe Marques Esteves Lamarca\"\nprint(paste(\"Meu nome é\", meu_nome))\n\n[1] \"Meu nome é Felipe Marques Esteves Lamarca\"",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-5",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-5",
-    "title": "8  Lista Nivelamento",
-    "section": "11.1 Questão 5",
-    "text": "11.1 Questão 5\nCarregue o arquivo governadores.csv, que contém informações de algumas pessoas fictícias, e salve seu conteúdo no objeto pessoas. Depois de carregado os dados, use a função head para pré-visualizar as primeiras linhas do data.frame. Use comentários para explicar como você descobriu a forma correta de carrergar o arquivo.",
+    "title": "9  Lista Nivelamento",
+    "section": "12.1 Questão 5",
+    "text": "12.1 Questão 5\nCarregue o arquivo governadores.csv, que contém informações de algumas pessoas fictícias, e salve seu conteúdo no objeto pessoas. Depois de carregado os dados, use a função head para pré-visualizar as primeiras linhas do data.frame. Use comentários para explicar como você descobriu a forma correta de carrergar o arquivo.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-4",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-4",
-    "title": "8  Lista Nivelamento",
-    "section": "11.2 Resposta",
-    "text": "11.2 Resposta\nPrimeiro, importamos os dados usando a função read_csv2, encontrada na internet a partir de uma rápida busca: https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html. A função é útil no caso em que desejamos der arquivos .csv separados por “;”. É claro, poderíamos ter utilizando também a função read_delim. Depois é só aplicar a função head para observar as primeiras 5 linhas.\n\n# https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html\npessoas &lt;- read_csv2(\"datasets/governadores.csv\")\nhead(pessoas)\n\n# A tibble: 6 × 5\n  uf    candidatura                  partido  pct_gastos pct_votos\n  &lt;chr&gt; &lt;chr&gt;                        &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;\n1 GO    GUSTAVO MENDANHA MELO        PATRIOTA      26.8      25.2 \n2 GO    RONALDO RAMOS CAIADO         UNIÃO         38.6      51.8 \n3 GO    WOLMIR THEREZIO AMADO        PT             4.02      6.98\n4 GO    VITOR HUGO DE ARAUJO ALMEIDA PL            28.9      14.8 \n5 MG    ALEXANDRE KALIL              PSD           33.8      35.1 \n6 MG    CARLOS ALBERTO DIAS VIANA    PL            15.6       7.23",
+    "title": "9  Lista Nivelamento",
+    "section": "12.2 Resposta",
+    "text": "12.2 Resposta\nPrimeiro, importamos os dados usando a função read_csv2, encontrada na internet a partir de uma rápida busca: https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html. A função é útil no caso em que desejamos der arquivos .csv separados por “;”. É claro, poderíamos ter utilizando também a função read_delim. Depois é só aplicar a função head para observar as primeiras 5 linhas.\n\n# https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html\npessoas &lt;- read_csv2(\"datasets/governadores.csv\")\nhead(pessoas)\n\n# A tibble: 6 × 5\n  uf    candidatura                  partido  pct_gastos pct_votos\n  &lt;chr&gt; &lt;chr&gt;                        &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;\n1 GO    GUSTAVO MENDANHA MELO        PATRIOTA      26.8      25.2 \n2 GO    RONALDO RAMOS CAIADO         UNIÃO         38.6      51.8 \n3 GO    WOLMIR THEREZIO AMADO        PT             4.02      6.98\n4 GO    VITOR HUGO DE ARAUJO ALMEIDA PL            28.9      14.8 \n5 MG    ALEXANDRE KALIL              PSD           33.8      35.1 \n6 MG    CARLOS ALBERTO DIAS VIANA    PL            15.6       7.23",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-6",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-6",
-    "title": "8  Lista Nivelamento",
-    "section": "11.3 Questão 6",
-    "text": "11.3 Questão 6\nÉ comum que dados de pesquisas de opinião, i.e. surveys, sejam armazenados em arquivos SPSS ou Stata, criados pelos softwares de mesmo nome. Neste exercício, sua tarefa será carregar um arquivo um Stata com dados da pesquisa do World Values Survey, principal fonte de dados sobre valores, crenças e comportamentos das populações de diferentes países. Os dados do Brasil estão no arquivo wvs.dta. Carregue o arquivo salve os resultados no objeto wvs_stata.\nLink para os dados: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+    "title": "9  Lista Nivelamento",
+    "section": "12.3 Questão 6",
+    "text": "12.3 Questão 6\nÉ comum que dados de pesquisas de opinião, i.e. surveys, sejam armazenados em arquivos SPSS ou Stata, criados pelos softwares de mesmo nome. Neste exercício, sua tarefa será carregar um arquivo um Stata com dados da pesquisa do World Values Survey, principal fonte de dados sobre valores, crenças e comportamentos das populações de diferentes países. Os dados do Brasil estão no arquivo wvs.dta. Carregue o arquivo salve os resultados no objeto wvs_stata.\nLink para os dados: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-5",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-5",
-    "title": "8  Lista Nivelamento",
-    "section": "11.4 Resposta",
-    "text": "11.4 Resposta\nPara ler bancos de dados .dta, basta instalar o pacote haven e importar o arquivo usando a função abaixo:\n\nwvs_stata &lt;- haven::read_dta(\"datasets/WVS_Cross-National_Wave_7_stata_v6_0.dta\")",
+    "title": "9  Lista Nivelamento",
+    "section": "12.4 Resposta",
+    "text": "12.4 Resposta\nPara ler bancos de dados .dta, basta instalar o pacote haven e importar o arquivo usando a função abaixo:\n\nwvs_stata &lt;- haven::read_dta(\"datasets/WVS_Cross-National_Wave_7_stata_v6_0.dta\")",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-7",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-7",
-    "title": "8  Lista Nivelamento",
-    "section": "11.5 Questão 7",
-    "text": "11.5 Questão 7\nDiferentes órgãos públicos no Brasil disponibilizam seus microdados administrativos para acesso. Um deles é o INEP, que tem uma página dedicada para download de bases de dados com informações sobre os exames e pesquisas que conduz.\nNeste exercício, sua tarefa será obter e carregar no R alguns microdados do Censo da Educação Superior de 2022, levantamento anual do INEP que coleta informações sobre as instituições de ensino superior, cursos de graduação e estudantes no Brasil todo. Os dados que deverão ser baixados são os referentes ao ano de 2022, que poderão ser baixados da página do INEP. Os dados estão em formato compactado (zipado) e deverão ser descompactados no diretório local do R antes de serem carregados. Uma vez descompactados, carregue o arquivo MICRODADOS_ED_SUP_IES_2022.CSV e salve o resultado no objeto alunos. Reporte o código e o seguinte:\n\n\nO nome das colunas do data.frame alunos:\n\n\nO número de linhas e de colunas do data.frame alunos:\n\n\nLink para os dados: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior",
+    "title": "9  Lista Nivelamento",
+    "section": "12.5 Questão 7",
+    "text": "12.5 Questão 7\nDiferentes órgãos públicos no Brasil disponibilizam seus microdados administrativos para acesso. Um deles é o INEP, que tem uma página dedicada para download de bases de dados com informações sobre os exames e pesquisas que conduz.\nNeste exercício, sua tarefa será obter e carregar no R alguns microdados do Censo da Educação Superior de 2022, levantamento anual do INEP que coleta informações sobre as instituições de ensino superior, cursos de graduação e estudantes no Brasil todo. Os dados que deverão ser baixados são os referentes ao ano de 2022, que poderão ser baixados da página do INEP. Os dados estão em formato compactado (zipado) e deverão ser descompactados no diretório local do R antes de serem carregados. Uma vez descompactados, carregue o arquivo MICRODADOS_ED_SUP_IES_2022.CSV e salve o resultado no objeto alunos. Reporte o código e o seguinte:\n\n\nO nome das colunas do data.frame alunos:\n\n\nO número de linhas e de colunas do data.frame alunos:\n\n\nLink para os dados: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-da-educacao-superior",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-6",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-6",
-    "title": "8  Lista Nivelamento",
-    "section": "11.6 Resposta",
-    "text": "11.6 Resposta\nNeste caso usamos a função read_delim para fazer a leitura dos dados. Além disso, foi importante especificar o encoding do dataset. Os nomes das colunas podem ser obtidos pela função colnames, enquanto número de linhas e colunas podem ser obtidos usando as funções nrow e ncol, respectivamente.\n\nalunos &lt;- read_delim(\"datasets/MICRODADOS_ED_SUP_IES_2022.CSV\", \n                     delim=\";\", \n                     locale=locale(encoding = \"latin1\"))\n\n\n# resposta da letra a)\nprint(colnames(alunos))\n\n [1] \"NU_ANO_CENSO\"                   \"NO_REGIAO_IES\"                 \n [3] \"CO_REGIAO_IES\"                  \"NO_UF_IES\"                     \n [5] \"SG_UF_IES\"                      \"CO_UF_IES\"                     \n [7] \"NO_MUNICIPIO_IES\"               \"CO_MUNICIPIO_IES\"              \n [9] \"IN_CAPITAL_IES\"                 \"NO_MESORREGIAO_IES\"            \n[11] \"CO_MESORREGIAO_IES\"             \"NO_MICRORREGIAO_IES\"           \n[13] \"CO_MICRORREGIAO_IES\"            \"TP_ORGANIZACAO_ACADEMICA\"      \n[15] \"TP_CATEGORIA_ADMINISTRATIVA\"    \"NO_MANTENEDORA\"                \n[17] \"CO_MANTENEDORA\"                 \"CO_IES\"                        \n[19] \"NO_IES\"                         \"SG_IES\"                        \n[21] \"DS_ENDERECO_IES\"                \"DS_NUMERO_ENDERECO_IES\"        \n[23] \"DS_COMPLEMENTO_ENDERECO_IES\"    \"NO_BAIRRO_IES\"                 \n[25] \"NU_CEP_IES\"                     \"QT_TEC_TOTAL\"                  \n[27] \"QT_TEC_FUNDAMENTAL_INCOMP_FEM\"  \"QT_TEC_FUNDAMENTAL_INCOMP_MASC\"\n[29] \"QT_TEC_FUNDAMENTAL_COMP_FEM\"    \"QT_TEC_FUNDAMENTAL_COMP_MASC\"  \n[31] \"QT_TEC_MEDIO_FEM\"               \"QT_TEC_MEDIO_MASC\"             \n[33] \"QT_TEC_SUPERIOR_FEM\"            \"QT_TEC_SUPERIOR_MASC\"          \n[35] \"QT_TEC_ESPECIALIZACAO_FEM\"      \"QT_TEC_ESPECIALIZACAO_MASC\"    \n[37] \"QT_TEC_MESTRADO_FEM\"            \"QT_TEC_MESTRADO_MASC\"          \n[39] \"QT_TEC_DOUTORADO_FEM\"           \"QT_TEC_DOUTORADO_MASC\"         \n[41] \"IN_ACESSO_PORTAL_CAPES\"         \"IN_ACESSO_OUTRAS_BASES\"        \n[43] \"IN_ASSINA_OUTRA_BASE\"           \"IN_REPOSITORIO_INSTITUCIONAL\"  \n[45] \"IN_BUSCA_INTEGRADA\"             \"IN_SERVICO_INTERNET\"           \n[47] \"IN_PARTICIPA_REDE_SOCIAL\"       \"IN_CATALOGO_ONLINE\"            \n[49] \"QT_PERIODICO_ELETRONICO\"        \"QT_LIVRO_ELETRONICO\"           \n[51] \"QT_DOC_TOTAL\"                   \"QT_DOC_EXE\"                    \n[53] \"QT_DOC_EX_FEMI\"                 \"QT_DOC_EX_MASC\"                \n[55] \"QT_DOC_EX_SEM_GRAD\"             \"QT_DOC_EX_GRAD\"                \n[57] \"QT_DOC_EX_ESP\"                  \"QT_DOC_EX_MEST\"                \n[59] \"QT_DOC_EX_DOUT\"                 \"QT_DOC_EX_INT\"                 \n[61] \"QT_DOC_EX_INT_DE\"               \"QT_DOC_EX_INT_SEM_DE\"          \n[63] \"QT_DOC_EX_PARC\"                 \"QT_DOC_EX_HOR\"                 \n[65] \"QT_DOC_EX_0_29\"                 \"QT_DOC_EX_30_34\"               \n[67] \"QT_DOC_EX_35_39\"                \"QT_DOC_EX_40_44\"               \n[69] \"QT_DOC_EX_45_49\"                \"QT_DOC_EX_50_54\"               \n[71] \"QT_DOC_EX_55_59\"                \"QT_DOC_EX_60_MAIS\"             \n[73] \"QT_DOC_EX_BRANCA\"               \"QT_DOC_EX_PRETA\"               \n[75] \"QT_DOC_EX_PARDA\"                \"QT_DOC_EX_AMARELA\"             \n[77] \"QT_DOC_EX_INDIGENA\"             \"QT_DOC_EX_COR_ND\"              \n[79] \"QT_DOC_EX_BRA\"                  \"QT_DOC_EX_EST\"                 \n[81] \"QT_DOC_EX_COM_DEFICIENCIA\"     \n\n# resposta da letra b)\nprint(paste(\"O número de linhas é\", nrow(alunos)))\n\n[1] \"O número de linhas é 2595\"\n\nprint(paste(\"O número de colunas é\", ncol(alunos)))\n\n[1] \"O número de colunas é 81\"",
+    "title": "9  Lista Nivelamento",
+    "section": "12.6 Resposta",
+    "text": "12.6 Resposta\nNeste caso usamos a função read_delim para fazer a leitura dos dados. Além disso, foi importante especificar o encoding do dataset. Os nomes das colunas podem ser obtidos pela função colnames, enquanto número de linhas e colunas podem ser obtidos usando as funções nrow e ncol, respectivamente.\n\nalunos &lt;- read_delim(\"datasets/MICRODADOS_ED_SUP_IES_2022.CSV\", \n                     delim=\";\", \n                     locale=locale(encoding = \"latin1\"))\n\n\n# resposta da letra a)\nprint(colnames(alunos))\n\n [1] \"NU_ANO_CENSO\"                   \"NO_REGIAO_IES\"                 \n [3] \"CO_REGIAO_IES\"                  \"NO_UF_IES\"                     \n [5] \"SG_UF_IES\"                      \"CO_UF_IES\"                     \n [7] \"NO_MUNICIPIO_IES\"               \"CO_MUNICIPIO_IES\"              \n [9] \"IN_CAPITAL_IES\"                 \"NO_MESORREGIAO_IES\"            \n[11] \"CO_MESORREGIAO_IES\"             \"NO_MICRORREGIAO_IES\"           \n[13] \"CO_MICRORREGIAO_IES\"            \"TP_ORGANIZACAO_ACADEMICA\"      \n[15] \"TP_CATEGORIA_ADMINISTRATIVA\"    \"NO_MANTENEDORA\"                \n[17] \"CO_MANTENEDORA\"                 \"CO_IES\"                        \n[19] \"NO_IES\"                         \"SG_IES\"                        \n[21] \"DS_ENDERECO_IES\"                \"DS_NUMERO_ENDERECO_IES\"        \n[23] \"DS_COMPLEMENTO_ENDERECO_IES\"    \"NO_BAIRRO_IES\"                 \n[25] \"NU_CEP_IES\"                     \"QT_TEC_TOTAL\"                  \n[27] \"QT_TEC_FUNDAMENTAL_INCOMP_FEM\"  \"QT_TEC_FUNDAMENTAL_INCOMP_MASC\"\n[29] \"QT_TEC_FUNDAMENTAL_COMP_FEM\"    \"QT_TEC_FUNDAMENTAL_COMP_MASC\"  \n[31] \"QT_TEC_MEDIO_FEM\"               \"QT_TEC_MEDIO_MASC\"             \n[33] \"QT_TEC_SUPERIOR_FEM\"            \"QT_TEC_SUPERIOR_MASC\"          \n[35] \"QT_TEC_ESPECIALIZACAO_FEM\"      \"QT_TEC_ESPECIALIZACAO_MASC\"    \n[37] \"QT_TEC_MESTRADO_FEM\"            \"QT_TEC_MESTRADO_MASC\"          \n[39] \"QT_TEC_DOUTORADO_FEM\"           \"QT_TEC_DOUTORADO_MASC\"         \n[41] \"IN_ACESSO_PORTAL_CAPES\"         \"IN_ACESSO_OUTRAS_BASES\"        \n[43] \"IN_ASSINA_OUTRA_BASE\"           \"IN_REPOSITORIO_INSTITUCIONAL\"  \n[45] \"IN_BUSCA_INTEGRADA\"             \"IN_SERVICO_INTERNET\"           \n[47] \"IN_PARTICIPA_REDE_SOCIAL\"       \"IN_CATALOGO_ONLINE\"            \n[49] \"QT_PERIODICO_ELETRONICO\"        \"QT_LIVRO_ELETRONICO\"           \n[51] \"QT_DOC_TOTAL\"                   \"QT_DOC_EXE\"                    \n[53] \"QT_DOC_EX_FEMI\"                 \"QT_DOC_EX_MASC\"                \n[55] \"QT_DOC_EX_SEM_GRAD\"             \"QT_DOC_EX_GRAD\"                \n[57] \"QT_DOC_EX_ESP\"                  \"QT_DOC_EX_MEST\"                \n[59] \"QT_DOC_EX_DOUT\"                 \"QT_DOC_EX_INT\"                 \n[61] \"QT_DOC_EX_INT_DE\"               \"QT_DOC_EX_INT_SEM_DE\"          \n[63] \"QT_DOC_EX_PARC\"                 \"QT_DOC_EX_HOR\"                 \n[65] \"QT_DOC_EX_0_29\"                 \"QT_DOC_EX_30_34\"               \n[67] \"QT_DOC_EX_35_39\"                \"QT_DOC_EX_40_44\"               \n[69] \"QT_DOC_EX_45_49\"                \"QT_DOC_EX_50_54\"               \n[71] \"QT_DOC_EX_55_59\"                \"QT_DOC_EX_60_MAIS\"             \n[73] \"QT_DOC_EX_BRANCA\"               \"QT_DOC_EX_PRETA\"               \n[75] \"QT_DOC_EX_PARDA\"                \"QT_DOC_EX_AMARELA\"             \n[77] \"QT_DOC_EX_INDIGENA\"             \"QT_DOC_EX_COR_ND\"              \n[79] \"QT_DOC_EX_BRA\"                  \"QT_DOC_EX_EST\"                 \n[81] \"QT_DOC_EX_COM_DEFICIENCIA\"     \n\n# resposta da letra b)\nprint(paste(\"O número de linhas é\", nrow(alunos)))\n\n[1] \"O número de linhas é 2595\"\n\nprint(paste(\"O número de colunas é\", ncol(alunos)))\n\n[1] \"O número de colunas é 81\"",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-8",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-8",
-    "title": "8  Lista Nivelamento",
-    "section": "12.1 Questão 8",
-    "text": "12.1 Questão 8\nNo Google Classroom (Aula 2 Mural - https://classroom.google.com/c/NzQ4Mzk4MTMyMDU3), há um arquivo chamado base_municipios_brasileiros.xlsx com informações dos municípios brasileiros. Este banco possui mais de 400 variáveis. Crie um novo data.frame, selecionando apenas variáveis referentes a identificação do município, ano, população e pib. Descreva o processo e justifique suas escolhas.",
+    "title": "9  Lista Nivelamento",
+    "section": "13.1 Questão 8",
+    "text": "13.1 Questão 8\nNo Google Classroom (Aula 2 Mural - https://classroom.google.com/c/NzQ4Mzk4MTMyMDU3), há um arquivo chamado base_municipios_brasileiros.xlsx com informações dos municípios brasileiros. Este banco possui mais de 400 variáveis. Crie um novo data.frame, selecionando apenas variáveis referentes a identificação do município, ano, população e pib. Descreva o processo e justifique suas escolhas.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-7",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-7",
-    "title": "8  Lista Nivelamento",
-    "section": "12.2 Resposta",
-    "text": "12.2 Resposta\nInfelizmente o arquivo .xlsx continha algum problema de formato, o que impediu que eu conseguisse abri-lo mesmo localmente no Excel. Por isso, utilizou-se o arquivo .csv. A seleção das colunas foi feita utilizando a função select.\n\nbase_municipios_brasileiros &lt;- read_csv(\"datasets/base_municipios_brasileiros.csv\")\n\nbase_municipios_brasileiros &lt;- base_municipios_brasileiros %&gt;%\n                                  select(\"id_municipio\", \"nome_municipio\", \"ano\", \"populacao\", \"pib\")",
+    "title": "9  Lista Nivelamento",
+    "section": "13.2 Resposta",
+    "text": "13.2 Resposta\nInfelizmente o arquivo .xlsx continha algum problema de formato, o que impediu que eu conseguisse abri-lo mesmo localmente no Excel. Por isso, utilizou-se o arquivo .csv. A seleção das colunas foi feita utilizando a função select.\n\nbase_municipios_brasileiros &lt;- read_csv(\"datasets/base_municipios_brasileiros.csv\")\n\nbase_municipios_brasileiros &lt;- base_municipios_brasileiros %&gt;%\n                                  select(\"id_municipio\", \"nome_municipio\", \"ano\", \"populacao\", \"pib\")",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-9",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-9",
-    "title": "8  Lista Nivelamento",
-    "section": "12.3 Questão 9",
-    "text": "12.3 Questão 9\nUtilize o banco de dados do exercício anterior para criar um novo objeto/data.frame chamado populacao. Faça o filtro para selecionar somente informações de 2022, criando um novo data.frame. E, a partir dele, crie um novo objeto chamado maiores_populacoes contendo apenas os 50 municípios mais populados do país, ordenados de forma decrescente. Use comentários para indicar qual é o 50º município mais populoso do país.",
+    "title": "9  Lista Nivelamento",
+    "section": "13.3 Questão 9",
+    "text": "13.3 Questão 9\nUtilize o banco de dados do exercício anterior para criar um novo objeto/data.frame chamado populacao. Faça o filtro para selecionar somente informações de 2022, criando um novo data.frame. E, a partir dele, crie um novo objeto chamado maiores_populacoes contendo apenas os 50 municípios mais populados do país, ordenados de forma decrescente. Use comentários para indicar qual é o 50º município mais populoso do país.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-8",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-8",
-    "title": "8  Lista Nivelamento",
-    "section": "12.4 Resposta",
-    "text": "12.4 Resposta\nPrimeiro, filtramos apenas a população de 2022 usando a função filter. Depois, bastou ordenar os municípios em ordem decrescente compondo as funções arrange e desc, e tomar as 50 primeiras linhas. Depois utilizamos a função tail para mostrar a última linha – isto é, a linha correspondente ao 50º município mais populoso.\n\npopulacao &lt;-base_municipios_brasileiros %&gt;%\n              filter(ano == 2022)\n\nmaiores_populacoes &lt;- populacao %&gt;%\n                        arrange(by=desc(populacao)) %&gt;%\n                        head(50)\n\nprint(tail(maiores_populacoes, 1))\n\n# A tibble: 1 × 5\n  id_municipio nome_municipio   ano populacao   pib\n         &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1      1100205 Porto Velho     2022    461748    NA",
+    "title": "9  Lista Nivelamento",
+    "section": "13.4 Resposta",
+    "text": "13.4 Resposta\nPrimeiro, filtramos apenas a população de 2022 usando a função filter. Depois, bastou ordenar os municípios em ordem decrescente compondo as funções arrange e desc, e tomar as 50 primeiras linhas. Depois utilizamos a função tail para mostrar a última linha – isto é, a linha correspondente ao 50º município mais populoso.\n\npopulacao &lt;-base_municipios_brasileiros %&gt;%\n              filter(ano == 2022)\n\nmaiores_populacoes &lt;- populacao %&gt;%\n                        arrange(by=desc(populacao)) %&gt;%\n                        head(50)\n\nprint(tail(maiores_populacoes, 1))\n\n# A tibble: 1 × 5\n  id_municipio nome_municipio   ano populacao   pib\n         &lt;dbl&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;\n1      1100205 Porto Velho     2022    461748    NA",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-10",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-10",
-    "title": "8  Lista Nivelamento",
-    "section": "12.5 Questão 10",
-    "text": "12.5 Questão 10\nUsando o objeto populacao, criado no exercício anterior, adicione a ele uma nova variável chamada pequeno_porte. Nesta, constará os valores: Pequeno porte, para municípios com menos de 50 mil habitantes, e Outros para os demais municípios.",
+    "title": "9  Lista Nivelamento",
+    "section": "13.5 Questão 10",
+    "text": "13.5 Questão 10\nUsando o objeto populacao, criado no exercício anterior, adicione a ele uma nova variável chamada pequeno_porte. Nesta, constará os valores: Pequeno porte, para municípios com menos de 50 mil habitantes, e Outros para os demais municípios.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-9",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-9",
-    "title": "8  Lista Nivelamento",
-    "section": "12.6 Resposta",
-    "text": "12.6 Resposta\nCombinando as funções mutate e case_when, conseguimos criar a coluna pequeno_porte.\n\npopulacao &lt;- populacao %&gt;%\n  mutate(pequeno_porte = case_when(\n    populacao &lt; 50000 ~ \"Pequeno porte\",\n    TRUE ~ \"Outros\"\n  )\n)",
+    "title": "9  Lista Nivelamento",
+    "section": "13.6 Resposta",
+    "text": "13.6 Resposta\nCombinando as funções mutate e case_when, conseguimos criar a coluna pequeno_porte.\n\npopulacao &lt;- populacao %&gt;%\n  mutate(pequeno_porte = case_when(\n    populacao &lt; 50000 ~ \"Pequeno porte\",\n    TRUE ~ \"Outros\"\n  )\n)",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-11",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-11",
-    "title": "8  Lista Nivelamento",
-    "section": "12.7 Questão 11",
-    "text": "12.7 Questão 11\nCarregue a base de dados banco_violencia.xlsx. A partir da função left_join, crie uma nova base cruzando essa base com o objeto populacao, criado anteriormente. Descreva quais as variáveis que são utilizadas para o cruzamento e por quê.",
+    "title": "9  Lista Nivelamento",
+    "section": "13.7 Questão 11",
+    "text": "13.7 Questão 11\nCarregue a base de dados banco_violencia.xlsx. A partir da função left_join, crie uma nova base cruzando essa base com o objeto populacao, criado anteriormente. Descreva quais as variáveis que são utilizadas para o cruzamento e por quê.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-10",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-10",
-    "title": "8  Lista Nivelamento",
-    "section": "12.8 Resposta",
-    "text": "12.8 Resposta\nPodemos facilmente cruzar os dois bancos de dados utilizando a coluna id_municipio, presente nos dois datasets. Por se tratar de uma coluna padronizada, a variável de id é muito útil para realizar conexões entre os bancos de dados.\n\nbanco_violencia &lt;- read_excel(\"datasets/banco_violencia.xlsx\")\nbanco_violencia$id_municipio &lt;- as.double(banco_violencia$id_municipio) \npopulacao_violencia &lt;- left_join(x=populacao, y=banco_violencia, by=c(\"id_municipio\"))",
+    "title": "9  Lista Nivelamento",
+    "section": "13.8 Resposta",
+    "text": "13.8 Resposta\nPodemos facilmente cruzar os dois bancos de dados utilizando a coluna id_municipio, presente nos dois datasets. Por se tratar de uma coluna padronizada, a variável de id é muito útil para realizar conexões entre os bancos de dados.\n\nbanco_violencia &lt;- read_excel(\"datasets/banco_violencia.xlsx\")\nbanco_violencia$id_municipio &lt;- as.double(banco_violencia$id_municipio) \npopulacao_violencia &lt;- left_join(x=populacao, y=banco_violencia, by=c(\"id_municipio\"))",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-12",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-12",
-    "title": "8  Lista Nivelamento",
-    "section": "13.1 Questão 12",
-    "text": "13.1 Questão 12\nUsando o banco de dados criado no exercício anterior, crie duas visualizações:\n\num histograma da população brasileira dividida por municípios\num gráfico com duas barras comparando o número de municípios de pequeno porte e municípios de outros tamanhos\n\nO que esses dois gráficos revelam sobre o caráter geral dos municípios brasileiros?\nDica: consulte o livro Usando o R para identificar os geoms mais adequados",
+    "title": "9  Lista Nivelamento",
+    "section": "14.1 Questão 12",
+    "text": "14.1 Questão 12\nUsando o banco de dados criado no exercício anterior, crie duas visualizações:\n\num histograma da população brasileira dividida por municípios\num gráfico com duas barras comparando o número de municípios de pequeno porte e municípios de outros tamanhos\n\nO que esses dois gráficos revelam sobre o caráter geral dos municípios brasileiros?\nDica: consulte o livro Usando o R para identificar os geoms mais adequados",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-11",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-11",
-    "title": "8  Lista Nivelamento",
-    "section": "13.2 Resposta",
-    "text": "13.2 Resposta\n\nhist(populacao_violencia$populacao.x)\n\n\n\n\n\n\n\n\n\npopulacao_violencia %&gt;%\n  group_by(pequeno_porte) %&gt;%\n  summarise(n_municipios = n()) %&gt;%\n  ggplot(aes(x = pequeno_porte, y = n_municipios)) +\n  geom_col()\n\n\n\n\n\n\n\n\nOs dois gráficos plotados nos mostram que a esmagadora maioria dos municípios brasileiros são de pequeno porte – isto é, possuem menos de 50 mil habitantes.",
+    "title": "9  Lista Nivelamento",
+    "section": "14.2 Resposta",
+    "text": "14.2 Resposta\n\nhist(populacao_violencia$populacao.x)\n\n\n\n\n\n\n\n\n\npopulacao_violencia %&gt;%\n  group_by(pequeno_porte) %&gt;%\n  summarise(n_municipios = n()) %&gt;%\n  ggplot(aes(x = pequeno_porte, y = n_municipios)) +\n  geom_col()\n\n\n\n\n\n\n\n\nOs dois gráficos plotados nos mostram que a esmagadora maioria dos municípios brasileiros são de pequeno porte – isto é, possuem menos de 50 mil habitantes.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-13",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-13",
-    "title": "8  Lista Nivelamento",
-    "section": "13.3 Questão 13",
-    "text": "13.3 Questão 13\nNovamente usando o banco violencia, crie uma visualização que mostre a evolução do número absoluto de mortes por intervenção policial no município do Rio de Janeiro ao longo dos anos.\nDica 1: para facilitar seu trabalho, você pode criar um novo banco contendo apenas as informações do município de interesse para o gráfico usando a função de manipulação filter()\nDica 2: verifique se a classe das variáveis utilizadas é numérica. Caso não seja, faça a conversão usando a função mutate()",
+    "title": "9  Lista Nivelamento",
+    "section": "14.3 Questão 13",
+    "text": "14.3 Questão 13\nNovamente usando o banco violencia, crie uma visualização que mostre a evolução do número absoluto de mortes por intervenção policial no município do Rio de Janeiro ao longo dos anos.\nDica 1: para facilitar seu trabalho, você pode criar um novo banco contendo apenas as informações do município de interesse para o gráfico usando a função de manipulação filter()\nDica 2: verifique se a classe das variáveis utilizadas é numérica. Caso não seja, faça a conversão usando a função mutate()",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-12",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-12",
-    "title": "8  Lista Nivelamento",
-    "section": "13.4 Resposta",
-    "text": "13.4 Resposta\nApós filtrar os dados para o município do Rio de Janeiro, podemos usar a coluna quantidade_mortes_intervencao_policial (transformada em uma variável numérica através da função mutate) para plotar um gráfico de série temporal.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group=1)) +\n  geom_line() +\n  geom_point()",
+    "title": "9  Lista Nivelamento",
+    "section": "14.4 Resposta",
+    "text": "14.4 Resposta\nApós filtrar os dados para o município do Rio de Janeiro, podemos usar a coluna quantidade_mortes_intervencao_policial (transformada em uma variável numérica através da função mutate) para plotar um gráfico de série temporal.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group=1)) +\n  geom_line() +\n  geom_point()",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-14",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-14",
-    "title": "8  Lista Nivelamento",
-    "section": "13.5 Questão 14",
-    "text": "13.5 Questão 14\nNovamente usando o banco do exercício 11, crie um novo banco contabilizando a população por estado. Em seguida, crie um mapa que permita visualizar o tamalho da população de cada estado.\nDica 1: para a manipulação, use as funções group_by() e sumarise(), descritas no capítulo 3 do livro Usando R.\nDica 2: para a elaboração do mapa, será necessário utilizar os pacotes geobr e sf",
+    "title": "9  Lista Nivelamento",
+    "section": "14.5 Questão 14",
+    "text": "14.5 Questão 14\nNovamente usando o banco do exercício 11, crie um novo banco contabilizando a população por estado. Em seguida, crie um mapa que permita visualizar o tamalho da população de cada estado.\nDica 1: para a manipulação, use as funções group_by() e sumarise(), descritas no capítulo 3 do livro Usando R.\nDica 2: para a elaboração do mapa, será necessário utilizar os pacotes geobr e sf",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-13",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-13",
-    "title": "8  Lista Nivelamento",
-    "section": "13.6 Resposta",
-    "text": "13.6 Resposta\nComeçamos lendo os dados de geometria dos estados brasileiros utilizando o geobr. Daí, basta agrupar os dados por unidade da federação, somando o total da população, e cruzar as bases pela sigla do estado. O gráfico é plotado utilizando a geometria sf.\n\nlibrary(geobr)\nlibrary(sf)\n\ncoordenadas_estados &lt;- read_state()\n\npopulacao_violencia %&gt;%\n  group_by(sigla_uf) %&gt;%\n  summarise(total_populacao = sum(populacao.x)) %&gt;%\n  left_join(coordenadas_estados, by = c(\"sigla_uf\" = \"abbrev_state\")) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = total_populacao)) + \n  geom_sf()",
+    "title": "9  Lista Nivelamento",
+    "section": "14.6 Resposta",
+    "text": "14.6 Resposta\nComeçamos lendo os dados de geometria dos estados brasileiros utilizando o geobr. Daí, basta agrupar os dados por unidade da federação, somando o total da população, e cruzar as bases pela sigla do estado. O gráfico é plotado utilizando a geometria sf.\n\nlibrary(geobr)\nlibrary(sf)\n\ncoordenadas_estados &lt;- read_state()\n\npopulacao_violencia %&gt;%\n  group_by(sigla_uf) %&gt;%\n  summarise(total_populacao = sum(populacao.x)) %&gt;%\n  left_join(coordenadas_estados, by = c(\"sigla_uf\" = \"abbrev_state\")) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = total_populacao)) + \n  geom_sf()",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#questão-15",
     "href": "listas/nivelamento/lista-nivelamento.html#questão-15",
-    "title": "8  Lista Nivelamento",
-    "section": "13.7 Questão 15",
-    "text": "13.7 Questão 15\nSelecione um dos gráficos elaborados nos exercícios anteriores e faça customizações nele. Você pode mudar cores, temas, acrescentar títulos, mudar nomes de variáveis… deixe sua criatividade fluir, mas sempre priorizando a clareza e a melhor forma de comunicar as informações contidas no gráfico.",
+    "title": "9  Lista Nivelamento",
+    "section": "14.7 Questão 15",
+    "text": "14.7 Questão 15\nSelecione um dos gráficos elaborados nos exercícios anteriores e faça customizações nele. Você pode mudar cores, temas, acrescentar títulos, mudar nomes de variáveis… deixe sua criatividade fluir, mas sempre priorizando a clareza e a melhor forma de comunicar as informações contidas no gráfico.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/nivelamento/lista-nivelamento.html#resposta-14",
     "href": "listas/nivelamento/lista-nivelamento.html#resposta-14",
-    "title": "8  Lista Nivelamento",
-    "section": "13.8 Resposta",
-    "text": "13.8 Resposta\nFaço algumas modificações ao gráfico de linha anterior. Em especial, ajusto o eixo \\(y\\) para começar no 0, o que ajusta a analisar de maneira mais adequada a variação no número de mortes ao longo do tempo. Além disso, incluo também título, subtítulo e caption, além de alguns ajustes mais residuais no tamanho e estilo da fonte. Alterei também o titulo dos eixos para facilitar a compreensão das variáveis.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group = 1)) +\n  geom_line(color = \"steelblue\") +\n  geom_point(color = \"steelblue\") +\n  scale_y_continuous(expand = c(0, 0), limits = c(0, 800)) +\n  labs(\n    title = \"Mortes por Intervenção Policial no Rio de Janeiro por Ano\",\n    subtitle = \"Dados do Instituto de Segurança Pública\",\n    caption = \"Produzido por Felipe Lamarca\",\n    x = \"Ano\",\n    y = \"Quantidade de Mortes\"\n  ) +\n  theme_bw() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    axis.title.x = element_text(size = 12),\n    axis.title.y = element_text(size = 12),\n    axis.text.x = element_text(size = 10),\n    axis.text.y = element_text(size = 10)\n  )",
+    "title": "9  Lista Nivelamento",
+    "section": "14.8 Resposta",
+    "text": "14.8 Resposta\nFaço algumas modificações ao gráfico de linha anterior. Em especial, ajusto o eixo \\(y\\) para começar no 0, o que ajusta a analisar de maneira mais adequada a variação no número de mortes ao longo do tempo. Além disso, incluo também título, subtítulo e caption, além de alguns ajustes mais residuais no tamanho e estilo da fonte. Alterei também o titulo dos eixos para facilitar a compreensão das variáveis.\n\nbanco_violencia %&gt;%\n  filter(id_municipio_nome == 'Rio de Janeiro') %&gt;%\n  mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %&gt;%\n  ggplot(aes(x = ano, y = quantidade_mortes_intervencao_policial, group = 1)) +\n  geom_line(color = \"steelblue\") +\n  geom_point(color = \"steelblue\") +\n  scale_y_continuous(expand = c(0, 0), limits = c(0, 800)) +\n  labs(\n    title = \"Mortes por Intervenção Policial no Rio de Janeiro por Ano\",\n    subtitle = \"Dados do Instituto de Segurança Pública\",\n    caption = \"Produzido por Felipe Lamarca\",\n    x = \"Ano\",\n    y = \"Quantidade de Mortes\"\n  ) +\n  theme_bw() +\n  theme(\n    plot.title = element_text(size = 14, face = \"bold\"),\n    axis.title.x = element_text(size = 12),\n    axis.title.y = element_text(size = 12),\n    axis.text.x = element_text(size = 10),\n    axis.text.y = element_text(size = 10)\n  )",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Lista Nivelamento</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista Nivelamento</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html",
     "href": "listas/lista-1/lista1.html",
-    "title": "9  Lista 1",
+    "title": "10  Lista 1",
     "section": "",
-    "text": "10 Materiais de apoio\nEsta lista de exercícios é baseada no conteúdo dos seguintes textos:",
+    "text": "11 Materiais de apoio\nEsta lista de exercícios é baseada no conteúdo dos seguintes textos:",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#delimitação-disciplinar",
     "href": "listas/lista-1/lista1.html#delimitação-disciplinar",
-    "title": "9  Lista 1",
-    "section": "11.1 1) Delimitação disciplinar",
-    "text": "11.1 1) Delimitação disciplinar\nDentro da sua disciplina, aponte uma área de pesquisa na qual você tem interesse, como Sociologia da Cultura, Estudos Legislativos, entre outras.",
+    "title": "10  Lista 1",
+    "section": "12.1 1) Delimitação disciplinar",
+    "text": "12.1 1) Delimitação disciplinar\nDentro da sua disciplina, aponte uma área de pesquisa na qual você tem interesse, como Sociologia da Cultura, Estudos Legislativos, entre outras.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta",
     "href": "listas/lista-1/lista1.html#resposta",
-    "title": "9  Lista 1",
-    "section": "11.2 Resposta",
-    "text": "11.2 Resposta\nDinheiro na política e machine learning.",
+    "title": "10  Lista 1",
+    "section": "12.2 Resposta",
+    "text": "12.2 Resposta\nDinheiro na política e machine learning.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#problema-de-pesquisa",
     "href": "listas/lista-1/lista1.html#problema-de-pesquisa",
-    "title": "9  Lista 1",
-    "section": "11.3 2) Problema de pesquisa",
-    "text": "11.3 2) Problema de pesquisa\n(Máx: 5 linhas). Defina um problema de pesquisa – pode estar relacionado a tese, dissertação ou outro projeto que você esteja desenvolvendo.\n\n11.3.1 Instruções:\n\nMantenha-se dentro do sub-campo disciplinar definido. Lembre-se de que um problema empírico em Ciências Sociais geralmente relaciona dois fatores ou fenômenos de forma causal. Por exemplo, é possível relacionar o efeito da desigualdade de renda na participação política; ou o efeito da discriminação racial sobre o mercado de trabalho; ou o crescimento econômico sobre a democracia.\nFormule seu problema de pesquisa na forma de uma pergunta. Exemplos: “Qual é o efeito da desigualdade de renda na participação política?”; “Por que populações menos escolarizadas têm menor acesso a benefícios sociais?”. É possível contextualizar o problema, indicando a relevância do tema e ou uma lacuna na literatura.",
+    "title": "10  Lista 1",
+    "section": "12.3 2) Problema de pesquisa",
+    "text": "12.3 2) Problema de pesquisa\n(Máx: 5 linhas). Defina um problema de pesquisa – pode estar relacionado a tese, dissertação ou outro projeto que você esteja desenvolvendo.\n\n12.3.1 Instruções:\n\nMantenha-se dentro do sub-campo disciplinar definido. Lembre-se de que um problema empírico em Ciências Sociais geralmente relaciona dois fatores ou fenômenos de forma causal. Por exemplo, é possível relacionar o efeito da desigualdade de renda na participação política; ou o efeito da discriminação racial sobre o mercado de trabalho; ou o crescimento econômico sobre a democracia.\nFormule seu problema de pesquisa na forma de uma pergunta. Exemplos: “Qual é o efeito da desigualdade de renda na participação política?”; “Por que populações menos escolarizadas têm menor acesso a benefícios sociais?”. É possível contextualizar o problema, indicando a relevância do tema e ou uma lacuna na literatura.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-1",
     "href": "listas/lista-1/lista1.html#resposta-1",
-    "title": "9  Lista 1",
-    "section": "11.4 Resposta",
-    "text": "11.4 Resposta\nNo meu pré-projeto de dissertação, a pergunta que propus responder foi: “Qual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?”; ou, de maneira mais genérica “Por que alguns candidatos são eleitos em detrimento de outros?”. A relação entre dinheiro e eleições é amplamente explorada na literatura (Mancuso 2015), mas poucos trabalhos investiram em análises inferenciais ou preditivas sobre essa relação no nível municipal (Sampaio and Filho 2019).",
+    "title": "10  Lista 1",
+    "section": "12.4 Resposta",
+    "text": "12.4 Resposta\nNo meu pré-projeto de dissertação, a pergunta que propus responder foi: “Qual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?”; ou, de maneira mais genérica “Por que alguns candidatos são eleitos em detrimento de outros?”. A relação entre dinheiro e eleições é amplamente explorada na literatura (Mancuso 2015), mas poucos trabalhos investiram em análises inferenciais ou preditivas sobre essa relação no nível municipal (Sampaio and Filho 2019).",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#definição-de-conceitos",
     "href": "listas/lista-1/lista1.html#definição-de-conceitos",
-    "title": "9  Lista 1",
-    "section": "11.5 3) Definição de conceitos",
-    "text": "11.5 3) Definição de conceitos\n(Máx: 5 linhas). Com um problema definido, transforme agora os fatores ou fenômenos do seu interesse em conceitos, isto é, em termos teóricos mais precisos e que sejam passíveis de mensuração.\n\n11.5.1 Instruções:\n\nPor exemplo, “pobreza” é um conceito amplo que pode ser definido como “a carência de elementos essenciais para a sobrevivência ou o bem-estar humano”, o que é algo ligeiramente mais concreto e passível de mensuração. Definições de conceitos podem ser retiradas da literatura prévia, mas é importante que você os descreva de forma compreensível.",
+    "title": "10  Lista 1",
+    "section": "12.5 3) Definição de conceitos",
+    "text": "12.5 3) Definição de conceitos\n(Máx: 5 linhas). Com um problema definido, transforme agora os fatores ou fenômenos do seu interesse em conceitos, isto é, em termos teóricos mais precisos e que sejam passíveis de mensuração.\n\n12.5.1 Instruções:\n\nPor exemplo, “pobreza” é um conceito amplo que pode ser definido como “a carência de elementos essenciais para a sobrevivência ou o bem-estar humano”, o que é algo ligeiramente mais concreto e passível de mensuração. Definições de conceitos podem ser retiradas da literatura prévia, mas é importante que você os descreva de forma compreensível.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-2",
     "href": "listas/lista-1/lista1.html#resposta-2",
-    "title": "9  Lista 1",
-    "section": "11.6 Resposta",
-    "text": "11.6 Resposta\nEm certa medida, no caso particular deste problema de pesquisa, os conceitos e as variáveis operacionalizadas se confundem. “Sucesso eleitoral” pode representar, efetivamente, se o candidato conseguiu obter o determinado cargo legislativo em disputa1; “dinheiro” representa, do ponto de vista financeiro, quanto foi investido naquela disputa eleitoral pelo candidato.",
+    "title": "10  Lista 1",
+    "section": "12.6 Resposta",
+    "text": "12.6 Resposta\nEm certa medida, no caso particular deste problema de pesquisa, os conceitos e as variáveis operacionalizadas se confundem. “Sucesso eleitoral” pode representar, efetivamente, se o candidato conseguiu obter o determinado cargo legislativo em disputa1; “dinheiro” representa, do ponto de vista financeiro, quanto foi investido naquela disputa eleitoral pelo candidato.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#operacionalização-de-variáveis",
     "href": "listas/lista-1/lista1.html#operacionalização-de-variáveis",
-    "title": "9  Lista 1",
-    "section": "11.7 4) Operacionalização de variáveis",
-    "text": "11.7 4) Operacionalização de variáveis\n(Máx: 5 linhas). Com seus conceitos definidos, nosso próximo passo é especificar como você os medirá. Essa etapa, chamada de operacionalização de variáveis, deve ser feita de forma a garantir que as medidas ou indicadores utilizados tenham aderência aos conceitos mobilizados, isto é, que realmente capturem aspectos do conceitos que você quer estudar. Este é o momento para pensar no recorte do objeto de forma a delimitar quais seriam as observações (i.e., quais seriam as linhas no seu banco de dados) e as unidades.",
+    "title": "10  Lista 1",
+    "section": "12.7 4) Operacionalização de variáveis",
+    "text": "12.7 4) Operacionalização de variáveis\n(Máx: 5 linhas). Com seus conceitos definidos, nosso próximo passo é especificar como você os medirá. Essa etapa, chamada de operacionalização de variáveis, deve ser feita de forma a garantir que as medidas ou indicadores utilizados tenham aderência aos conceitos mobilizados, isto é, que realmente capturem aspectos do conceitos que você quer estudar. Este é o momento para pensar no recorte do objeto de forma a delimitar quais seriam as observações (i.e., quais seriam as linhas no seu banco de dados) e as unidades.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-3",
     "href": "listas/lista-1/lista1.html#resposta-3",
-    "title": "9  Lista 1",
-    "section": "11.8 Resposta",
-    "text": "11.8 Resposta\nA variável de sucesso eleitoral é operacionalizada a partir do resultado nas urnas – ou (1) uma variável contínua que guarda o número de votos de um candidato nas urnas, ou (2) uma variável binária que indica se o candidato foi eleito ou não2. Opto pela segunda abordagem. Além disso, “dinheiro” é operacionalizado através das despesas de campanha do candidato, disponibilizadas pelo TSE. Também seria razoável utilizar a receita, sob o risco de superestimar o efeito do dinheiro.",
+    "title": "10  Lista 1",
+    "section": "12.8 Resposta",
+    "text": "12.8 Resposta\nA variável de sucesso eleitoral é operacionalizada a partir do resultado nas urnas – ou (1) uma variável contínua que guarda o número de votos de um candidato nas urnas, ou (2) uma variável binária que indica se o candidato foi eleito ou não2. Opto pela segunda abordagem. Além disso, “dinheiro” é operacionalizado através das despesas de campanha do candidato, disponibilizadas pelo TSE. Também seria razoável utilizar a receita, sob o risco de superestimar o efeito do dinheiro.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#variáveis",
     "href": "listas/lista-1/lista1.html#variáveis",
-    "title": "9  Lista 1",
-    "section": "11.9 5) Variáveis",
-    "text": "11.9 5) Variáveis\n(Máx: 2 linhas). Indique qual das duas variáveis definidas anteriormente é a sua variável dependente, aquela que será explicada, e qual delas é a sua variável independente, a que supostamente explica a primeira.",
+    "title": "10  Lista 1",
+    "section": "12.9 5) Variáveis",
+    "text": "12.9 5) Variáveis\n(Máx: 2 linhas). Indique qual das duas variáveis definidas anteriormente é a sua variável dependente, aquela que será explicada, e qual delas é a sua variável independente, a que supostamente explica a primeira.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-4",
     "href": "listas/lista-1/lista1.html#resposta-4",
-    "title": "9  Lista 1",
-    "section": "11.10 Resposta",
-    "text": "11.10 Resposta\nA despesa de campanha é a variável independente, e o sucesso eleitoral é a variável dependente.",
+    "title": "10  Lista 1",
+    "section": "12.10 Resposta",
+    "text": "12.10 Resposta\nA despesa de campanha é a variável independente, e o sucesso eleitoral é a variável dependente.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#teoria-causal",
     "href": "listas/lista-1/lista1.html#teoria-causal",
-    "title": "9  Lista 1",
-    "section": "12.1 6) Teoria causal",
-    "text": "12.1 6) Teoria causal\n(Máx: 7 linhas). Com o problema de pesquisa definido e variáveis operacionalizadas, elabore de forma concisa uma teoria que descreva como a sua variável independente causa a sua dependente.\n\n12.1.1 Instruções:\n\nAo formular uma teoria, pense em responder à pergunta “por que Y ocorre?” usando X como parte da sua explicação. Por exemplo: o que estaria por detrás das menores taxas de comparecimento eleitoral dos menos escolarizados? Será que essas pessoas, por terem menos acesso a determinadas informações, teriam também menos interesse em política e, por consequência, menor disposição de ir votar? Outro exemplo: pessoas mais pobres comparecem menos às urnas por conta de maiores dificuldades de transporte (em geral, moram em lugares de mais difícil acesso e dispõem de menos recursos para se locomoverem até os locais de votação).",
+    "title": "10  Lista 1",
+    "section": "13.1 6) Teoria causal",
+    "text": "13.1 6) Teoria causal\n(Máx: 7 linhas). Com o problema de pesquisa definido e variáveis operacionalizadas, elabore de forma concisa uma teoria que descreva como a sua variável independente causa a sua dependente.\n\n13.1.1 Instruções:\n\nAo formular uma teoria, pense em responder à pergunta “por que Y ocorre?” usando X como parte da sua explicação. Por exemplo: o que estaria por detrás das menores taxas de comparecimento eleitoral dos menos escolarizados? Será que essas pessoas, por terem menos acesso a determinadas informações, teriam também menos interesse em política e, por consequência, menor disposição de ir votar? Outro exemplo: pessoas mais pobres comparecem menos às urnas por conta de maiores dificuldades de transporte (em geral, moram em lugares de mais difícil acesso e dispõem de menos recursos para se locomoverem até os locais de votação).",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-5",
     "href": "listas/lista-1/lista1.html#resposta-5",
-    "title": "9  Lista 1",
-    "section": "12.2 Resposta",
-    "text": "12.2 Resposta\nAs eleições brasileiras são caracterizadas por serem altamente competitivas em função, dentre outros aspectos, da alta oferta de candidatos. Portanto, altas despesas de campanha permitem que o candidato seja capaz de alcançar maior visibilidade e se diferenciar ao saturar o eleitor com diferentes estratégias de publicidade, financeiramente custosas, como material de campanha, presença online etc. Dito de outra maneira: ao conseguir reunir mais dinheiro para fazer campanha, o candidato tende a aumentar a viabilidade de sua candidatura na medida em que se torna capaz de alcançar o eleitor, ampliando a sua visibilidade e fortalecendo a estrutura da campanha.",
+    "title": "10  Lista 1",
+    "section": "13.2 Resposta",
+    "text": "13.2 Resposta\nAs eleições brasileiras são caracterizadas por serem altamente competitivas em função, dentre outros aspectos, da alta oferta de candidatos. Portanto, altas despesas de campanha permitem que o candidato seja capaz de alcançar maior visibilidade e se diferenciar ao saturar o eleitor com diferentes estratégias de publicidade, financeiramente custosas, como material de campanha, presença online etc. Dito de outra maneira: ao conseguir reunir mais dinheiro para fazer campanha, o candidato tende a aumentar a viabilidade de sua candidatura na medida em que se torna capaz de alcançar o eleitor, ampliando a sua visibilidade e fortalecendo a estrutura da campanha.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#hipótese-principal",
     "href": "listas/lista-1/lista1.html#hipótese-principal",
-    "title": "9  Lista 1",
-    "section": "12.3 7) Hipótese principal",
-    "text": "12.3 7) Hipótese principal\n(Máx: 3 linhas). Hipóteses especificam o sentido e forma de uma relação entre X e Y (positiva, negativa, nula, linear, quadrática, etc.). Por exemplo, “uma menor taxa de escolaridade diminui participação política”, “quanto maior a desigualdade fundiária, maior a taxa de migração de jovens do campo para a cidade”. Partindo dessa definição, a) formule uma hipótese principal para a sua teoria, b) e descreva como seria um gráfico de dispersão (scatterplot) que ilustrasse a relação entre X e Y de acordo com a sua hipótese.",
+    "title": "10  Lista 1",
+    "section": "13.3 7) Hipótese principal",
+    "text": "13.3 7) Hipótese principal\n(Máx: 3 linhas). Hipóteses especificam o sentido e forma de uma relação entre X e Y (positiva, negativa, nula, linear, quadrática, etc.). Por exemplo, “uma menor taxa de escolaridade diminui participação política”, “quanto maior a desigualdade fundiária, maior a taxa de migração de jovens do campo para a cidade”. Partindo dessa definição, a) formule uma hipótese principal para a sua teoria, b) e descreva como seria um gráfico de dispersão (scatterplot) que ilustrasse a relação entre X e Y de acordo com a sua hipótese.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-6",
     "href": "listas/lista-1/lista1.html#resposta-6",
-    "title": "9  Lista 1",
-    "section": "12.4 Resposta",
-    "text": "12.4 Resposta\n\nQuanto maior o gasto em campanha despendidos pelos candidatos, maior é a probabilidade de eleição do candidato.\nEm uma relação não-linear, quanto mais “longe” no eixo \\(X\\) (isto é, quanto maior a despesa), mais “longe” no eixo \\(Y\\) (isto é, mais a probabilidade de eleição se aproxima de \\(1\\)).\n\n\nlibrary(tidyverse)\n\nset.seed(123)\n\n# candidatos simulados\nn &lt;- 1000\n\n# simulacao das despesas de campanha (distribuicao exponencial com media 30 mil)\n# documentacao da funcao \n# https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Exponential\ndespesas &lt;- rexp(n, rate = 1/30)\n\n# efeito da despesa\nalpha &lt;- -2\nefeito_despesa &lt;- 0.05\n\n# calcula prob de eleicao\nprob_eleito &lt;- 1 / (1 + exp(-(alpha + efeito_despesa * despesas)))\n\n# dataframe\ndados &lt;- data.frame(despesas, prob_eleito)\n\n# plot da relacao logistica\nggplot(dados, aes(x = despesas, y = prob_eleito)) +\n  geom_jitter(height = 0.05, alpha = 0.3) +\n  stat_smooth(method = \"glm\", \n              method.args = list(family = \"binomial\"), \n              se = FALSE, \n              color = \"darkgreen\") +\n  labs(\n    title = \"Probabilidade de eleição dada a despesa de campanha\",\n    x = \"Despesas de campanha (R$ mil)\",\n    y = \"Probabilidade de eleição\"\n  ) +\n  theme_bw()",
+    "title": "10  Lista 1",
+    "section": "13.4 Resposta",
+    "text": "13.4 Resposta\n\nQuanto maior o gasto em campanha despendidos pelos candidatos, maior é a probabilidade de eleição do candidato.\nEm uma relação não-linear, quanto mais “longe” no eixo \\(X\\) (isto é, quanto maior a despesa), mais “longe” no eixo \\(Y\\) (isto é, mais a probabilidade de eleição se aproxima de \\(1\\)).\n\n\nlibrary(tidyverse)\n\nset.seed(123)\n\n# candidatos simulados\nn &lt;- 1000\n\n# simulacao das despesas de campanha (distribuicao exponencial com media 30 mil)\n# documentacao da funcao \n# https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/Exponential\ndespesas &lt;- rexp(n, rate = 1/30)\n\n# efeito da despesa\nalpha &lt;- -2\nefeito_despesa &lt;- 0.05\n\n# calcula prob de eleicao\nprob_eleito &lt;- 1 / (1 + exp(-(alpha + efeito_despesa * despesas)))\n\n# dataframe\ndados &lt;- data.frame(despesas, prob_eleito)\n\n# plot da relacao logistica\nggplot(dados, aes(x = despesas, y = prob_eleito)) +\n  geom_jitter(height = 0.05, alpha = 0.3) +\n  stat_smooth(method = \"glm\", \n              method.args = list(family = \"binomial\"), \n              se = FALSE, \n              color = \"darkgreen\") +\n  labs(\n    title = \"Probabilidade de eleição dada a despesa de campanha\",\n    x = \"Despesas de campanha (R$ mil)\",\n    y = \"Probabilidade de eleição\"\n  ) +\n  theme_bw()",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#implicações-testáveis-mecanismo",
     "href": "listas/lista-1/lista1.html#implicações-testáveis-mecanismo",
-    "title": "9  Lista 1",
-    "section": "12.5 8) Implicações testáveis (mecanismo)",
-    "text": "12.5 8) Implicações testáveis (mecanismo)\n(Máx: 5 linhas). Se a sua teoria causal estiver certa, dela também devem decorrer outras implicações observáveis. Você conseguiria pensar em fenômenos empíricos secundários (associados ao principal, definido na pergunta de pesquisa) que decorreriam da sua explicação? Defina ao menos uma hipótese secundária testável que decorra da sua teoria causal.\n\n12.5.1 Instruções:\n\nUm exemplo: na teoria que relaciona menor escolaridade a menor participação política, é possível hipotetizar que pessoas menos escolarizadas devem acompanhar menos o noticiário político (este seria o mecanismo causal); nesse sentido, uma implicação empírica secundária consistente com a teoria é a de que pessoas menos escolarizadas devem consumir menos notícias políticas, o que poderia ser mensurado por meio de uma pesquisa de opinião perguntando sobre o consumo de notícias políticas (“Quantos dias na semana você costuma assistir ao noticiário na TV?”).",
+    "title": "10  Lista 1",
+    "section": "13.5 8) Implicações testáveis (mecanismo)",
+    "text": "13.5 8) Implicações testáveis (mecanismo)\n(Máx: 5 linhas). Se a sua teoria causal estiver certa, dela também devem decorrer outras implicações observáveis. Você conseguiria pensar em fenômenos empíricos secundários (associados ao principal, definido na pergunta de pesquisa) que decorreriam da sua explicação? Defina ao menos uma hipótese secundária testável que decorra da sua teoria causal.\n\n13.5.1 Instruções:\n\nUm exemplo: na teoria que relaciona menor escolaridade a menor participação política, é possível hipotetizar que pessoas menos escolarizadas devem acompanhar menos o noticiário político (este seria o mecanismo causal); nesse sentido, uma implicação empírica secundária consistente com a teoria é a de que pessoas menos escolarizadas devem consumir menos notícias políticas, o que poderia ser mensurado por meio de uma pesquisa de opinião perguntando sobre o consumo de notícias políticas (“Quantos dias na semana você costuma assistir ao noticiário na TV?”).",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#resposta-7",
     "href": "listas/lista-1/lista1.html#resposta-7",
-    "title": "9  Lista 1",
-    "section": "12.6 Resposta",
-    "text": "12.6 Resposta\nAssumindo que a teoria causal esteja certa, poderíamos imaginar, por exemplo, que candidatos que gastam mais dinheiro também são mais conhecidos pelo eleitorado. Naturalmente, isso poderia ser testado empiricamente através de uma pesquisa de survey que estime a taxa de desconhecimento por parte dos eleitores a respeito dos candidatos na disputa, ou mesmo as intenções de voto.",
+    "title": "10  Lista 1",
+    "section": "13.6 Resposta",
+    "text": "13.6 Resposta\nAssumindo que a teoria causal esteja certa, poderíamos imaginar, por exemplo, que candidatos que gastam mais dinheiro também são mais conhecidos pelo eleitorado. Naturalmente, isso poderia ser testado empiricamente através de uma pesquisa de survey que estime a taxa de desconhecimento por parte dos eleitores a respeito dos candidatos na disputa, ou mesmo as intenções de voto.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#desenho-de-pesquisa",
     "href": "listas/lista-1/lista1.html#desenho-de-pesquisa",
-    "title": "9  Lista 1",
-    "section": "13.1 9) Desenho de pesquisa",
-    "text": "13.1 9) Desenho de pesquisa\n(Máx: 1 linha para cada item). Agora que você tem uma teoria, conceitos, variáveis definidas e hipóteses, preencha de forma sucinta os itens a seguir – eles te darão uma versão compacta e descritiva do seu desenho de pesquisa quantitativo em Ciências Sociais.\n\n\nPergunta de pesquisa:\n\nQual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?\n\nConceitos mobilizados:\n\nSucesso eleitoral e dinheiro.\n\nVariável dependente:\n\nSucesso eleitoral (eleito ou não).\n\nVariável independente:\n\nDinheiro (despesas de campanha).\n\nHipótese principal:\n\nQuanto maior a despesa, maior a chance do candidato se eleger.\n\nHipótese secundária (mecanismo):\n\nCandidatos que gastam mais também são mais conhecidos.\n\nImplicações testáveis do mecanismo:\n\nEm pesquisas de intenção de voto, candidatos que gastam mais possuem menores taxas de desconhecimento atreladas a eles.\n\n\n\n\n\nMancuso, Wagner Pralon. 2015. “Investimento Eleitoral no Brasil: Balanço da Literatura (2001-2012).” Revista de Sociologia e Política 23 (54): 155–83.\n\n\nSampaio, Daniel, and Dalson Britto Figueiredo Filho. 2019. “Como o dinheiro influencia as eleições municipais no Brasil: uma revisão sistemática.” Revista Brasileira de Informação Bibliográfica Em Ciências Sociais - BIB, no. 88: 1–25.\n\n\nSpeck, Bruno Wilhelm, and Wagner Pralon Mancuso. 2014. “A Study on the Impact of Campaign Finance, Political Capital and Gender on Electoral Performance.” Brazilian Political Science Review 8 (1): 34–57.",
+    "title": "10  Lista 1",
+    "section": "14.1 9) Desenho de pesquisa",
+    "text": "14.1 9) Desenho de pesquisa\n(Máx: 1 linha para cada item). Agora que você tem uma teoria, conceitos, variáveis definidas e hipóteses, preencha de forma sucinta os itens a seguir – eles te darão uma versão compacta e descritiva do seu desenho de pesquisa quantitativo em Ciências Sociais.\n\n\nPergunta de pesquisa:\n\nQual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?\n\nConceitos mobilizados:\n\nSucesso eleitoral e dinheiro.\n\nVariável dependente:\n\nSucesso eleitoral (eleito ou não).\n\nVariável independente:\n\nDinheiro (despesas de campanha).\n\nHipótese principal:\n\nQuanto maior a despesa, maior a chance do candidato se eleger.\n\nHipótese secundária (mecanismo):\n\nCandidatos que gastam mais também são mais conhecidos.\n\nImplicações testáveis do mecanismo:\n\nEm pesquisas de intenção de voto, candidatos que gastam mais possuem menores taxas de desconhecimento atreladas a eles.\n\n\n\n\n\nMancuso, Wagner Pralon. 2015. “Investimento Eleitoral no Brasil: Balanço da Literatura (2001-2012).” Revista de Sociologia e Política 23 (54): 155–83.\n\n\nSampaio, Daniel, and Dalson Britto Figueiredo Filho. 2019. “Como o dinheiro influencia as eleições municipais no Brasil: uma revisão sistemática.” Revista Brasileira de Informação Bibliográfica Em Ciências Sociais - BIB, no. 88: 1–25.\n\n\nSpeck, Bruno Wilhelm, and Wagner Pralon Mancuso. 2014. “A Study on the Impact of Campaign Finance, Political Capital and Gender on Electoral Performance.” Brazilian Political Science Review 8 (1): 34–57.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-1/lista1.html#footnotes",
     "href": "listas/lista-1/lista1.html#footnotes",
-    "title": "9  Lista 1",
+    "title": "10  Lista 1",
     "section": "",
     "text": "Há outras maneiras de operacionalizar essa variável, como sugerido na questão 4.↩︎\nAinda há pelo menos mais uma variação dessa abordagem, que modela o sucesso eleitoral como uma variável binária em função do número de votos, pensando nas limitações impostas por eleições proporcionais de lista aberta, em que o candidato mais votado não é necessariamente o eleito. Speck and Mancuso (2014), por exemplo, definem sucesso eleitoral como uma variável binária, em que os \\(n\\) candidatos mais votados assumem valor \\(1\\), enquanto os demais assumem o valor \\(0\\), sendo \\(n\\) o número de cadeiras em disputa no estado. É uma diferença sutil que, empiricamente, não difere tanto da modelagem padrão (vi no meu TCC!).↩︎",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Lista 1</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista 1</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html",
     "href": "listas/lista-2/lista2.html",
-    "title": "10  Lista II",
+    "title": "11  Lista II",
     "section": "",
-    "text": "10.1 1. Importação\nVamos começar importando os dados. Mais especificamente, primeiro vamos ler os arquivos com as teses e dissertações (divididas em 6 tabelas diferentes) para, depois, ler os dados dos programas (uma única tabela). Utilizando a função list.files, podemos nos valer do argumento pattern na função para acessar apenas os arquivos que respeitam alguma regra específica – no nosso caso, aqueles que começam com “capes”:\n# listando os arquivos\nlist.files(path=\"data\", patter=\"^capes\")\n\n[1] \"capes_1987-1992.csv\" \"capes_1993-1998.csv\" \"capes_1999-2004.csv\"\n[4] \"capes_2005-2010.csv\" \"capes_2011-2016.csv\" \"capes_2017-2022.csv\"\npaths_list &lt;- list.files(path=\"data\", pattern=\"^capes\")\ndatasets &lt;- list()\n\nfor (i in 1:length(paths_list)) {\n  datasets[[i]] &lt;- read.csv(file = file.path(\"data\", paths_list[i]))\n}\n\nteses_dissertacoes &lt;- datasets %&gt;%\n  bind_rows()\nAgora, vamos ler o arquivo programas.csv:\nprogramas &lt;- read.csv(\"data/programas.csv\")\nhead(programas)\n\n    CD_PROGRAMA UF CONCEITO\n1 10001018041P7 RO        3\n2 10001018009P6 RO        4\n3 10001018016P2 RO        4\n4 10001018039P2 RO        4\n5 10001018017P9 RO        3\n6 10001018006P7 RO        3\nFelizmente, as bases compartilham a coluna CD_PROGRAMA (ou codigo_programa), identificando o código do programa de pós-graduação. Isso facilita bastante a junção das bases.\nteses_dissertacoes &lt;- left_join(\n  x=teses_dissertacoes, \n  y=programas, \n  join_by(codigo_programa == CD_PROGRAMA)\n  )\nSabemos que alguns trabalhos na base foram defendidos em programas de pós-graduação posteriormente descontinuados ou transformados, o que significa que suas notas de avaliação têm missing.\ncolSums(is.na(teses_dissertacoes)) / nrow(teses_dissertacoes)\n\n              ano   codigo_programa         sigla_ies          nome_ies \n       0.00000000        0.00000000        0.00000000        0.00000000 \n    nome_programa       grande_area area_conhecimento    area_avaliacao \n       0.00000000        0.00000000        0.00000000        0.00000000 \n            autor            titulo             nivel    palavras_chave \n       0.00000000        0.00000000        0.00000000        0.00000000 \n           resumo                UF          CONCEITO \n       0.00000000        0.06421002        0.06421002\nTrata-se de aproximadamente ~6,5% da base. Não trataremos os casos por ora, já que, no fim das contas, as teses e dissertações foram defendidas e as temáticas abordadas podem ser importantes para algumas agendas de pesquisa. De fato, caso eventualmente precisemos fazer gráficos que utilizem as colunas UF ou CONCEITO, essas entradas serão “dropadas”.",
+    "text": "11.1 1. Importação\nVamos começar importando os dados. Mais especificamente, primeiro vamos ler os arquivos com as teses e dissertações (divididas em 6 tabelas diferentes) para, depois, ler os dados dos programas (uma única tabela). Utilizando a função list.files, podemos nos valer do argumento pattern na função para acessar apenas os arquivos que respeitam alguma regra específica – no nosso caso, aqueles que começam com “capes”:\n# listando os arquivos\nlist.files(path=\"data\", patter=\"^capes\")\n\n[1] \"capes_1987-1992.csv\" \"capes_1993-1998.csv\" \"capes_1999-2004.csv\"\n[4] \"capes_2005-2010.csv\" \"capes_2011-2016.csv\" \"capes_2017-2022.csv\"\npaths_list &lt;- list.files(path=\"data\", pattern=\"^capes\")\ndatasets &lt;- list()\n\nfor (i in 1:length(paths_list)) {\n  datasets[[i]] &lt;- read.csv(file = file.path(\"data\", paths_list[i]))\n}\n\nteses_dissertacoes &lt;- datasets %&gt;%\n  bind_rows()\nAgora, vamos ler o arquivo programas.csv:\nprogramas &lt;- read.csv(\"data/programas.csv\")\nhead(programas)\n\n    CD_PROGRAMA UF CONCEITO\n1 10001018041P7 RO        3\n2 10001018009P6 RO        4\n3 10001018016P2 RO        4\n4 10001018039P2 RO        4\n5 10001018017P9 RO        3\n6 10001018006P7 RO        3\nFelizmente, as bases compartilham a coluna CD_PROGRAMA (ou codigo_programa), identificando o código do programa de pós-graduação. Isso facilita bastante a junção das bases.\nteses_dissertacoes &lt;- left_join(\n  x=teses_dissertacoes, \n  y=programas, \n  join_by(codigo_programa == CD_PROGRAMA)\n  )\nSabemos que alguns trabalhos na base foram defendidos em programas de pós-graduação posteriormente descontinuados ou transformados, o que significa que suas notas de avaliação têm missing.\ncolSums(is.na(teses_dissertacoes)) / nrow(teses_dissertacoes)\n\n              ano   codigo_programa         sigla_ies          nome_ies \n       0.00000000        0.00000000        0.00000000        0.00000000 \n    nome_programa       grande_area area_conhecimento    area_avaliacao \n       0.00000000        0.00000000        0.00000000        0.00000000 \n            autor            titulo             nivel    palavras_chave \n       0.00000000        0.00000000        0.00000000        0.00000000 \n           resumo                UF          CONCEITO \n       0.00000000        0.06421002        0.06421002\nTrata-se de aproximadamente ~6,5% da base. Não trataremos os casos por ora, já que, no fim das contas, as teses e dissertações foram defendidas e as temáticas abordadas podem ser importantes para algumas agendas de pesquisa. De fato, caso eventualmente precisemos fazer gráficos que utilizem as colunas UF ou CONCEITO, essas entradas serão “dropadas”.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#seleção-de-palavras-chave",
     "href": "listas/lista-2/lista2.html#seleção-de-palavras-chave",
-    "title": "10  Lista II",
-    "section": "10.2 2. Seleção de palavras-chave",
-    "text": "10.2 2. Seleção de palavras-chave\nVamos filtrar os resumos de todas as teses e dissertações na base, garantindo que mantenhamos apenas as dissertações cujo resumo apresenta, pelo menos uma vez, alguma das palavras ou termos a seguir: “proposições legislativas”, “text as data” e “polarização”. O primeiro passo é padronizar a coluna dos resumos para que todos estejam em lower case.\n\nteses_dissertacoes$resumo &lt;- str_to_lower(teses_dissertacoes$resumo)\n\nAgora, vamos filtrar as palavras especificadas:\n\nteses_dissertacoes$proposicoes_legislativas &lt;- str_detect(\n  teses_dissertacoes$resumo,\n  \"proposições legislativas\"\n  )\n\nteses_dissertacoes$text_as_data &lt;- str_detect(\n  teses_dissertacoes$resumo, \n  \"text as data\"\n  )\n\nteses_dissertacoes$polarizacao &lt;- str_detect(\n  teses_dissertacoes$resumo, \n  \"polarização\"\n  )\n\nteses_dissertacoes_flt &lt;- teses_dissertacoes %&gt;%\n  filter(\n    text_as_data == TRUE | proposicoes_legislativas == TRUE | polarizacao == TRUE\n    )\n\ncat(\"A partir de agora vamos trabalhar com\", \n    nrow(teses_dissertacoes_flt), \n    \"teses/dissertações.\")\n\nA partir de agora vamos trabalhar com 187 teses/dissertações.",
+    "title": "11  Lista II",
+    "section": "11.2 2. Seleção de palavras-chave",
+    "text": "11.2 2. Seleção de palavras-chave\nVamos filtrar os resumos de todas as teses e dissertações na base, garantindo que mantenhamos apenas as dissertações cujo resumo apresenta, pelo menos uma vez, alguma das palavras ou termos a seguir: “proposições legislativas”, “text as data” e “polarização”. O primeiro passo é padronizar a coluna dos resumos para que todos estejam em lower case.\n\nteses_dissertacoes$resumo &lt;- str_to_lower(teses_dissertacoes$resumo)\n\nAgora, vamos filtrar as palavras especificadas:\n\nteses_dissertacoes$proposicoes_legislativas &lt;- str_detect(\n  teses_dissertacoes$resumo,\n  \"proposições legislativas\"\n  )\n\nteses_dissertacoes$text_as_data &lt;- str_detect(\n  teses_dissertacoes$resumo, \n  \"text as data\"\n  )\n\nteses_dissertacoes$polarizacao &lt;- str_detect(\n  teses_dissertacoes$resumo, \n  \"polarização\"\n  )\n\nteses_dissertacoes_flt &lt;- teses_dissertacoes %&gt;%\n  filter(\n    text_as_data == TRUE | proposicoes_legislativas == TRUE | polarizacao == TRUE\n    )\n\ncat(\"A partir de agora vamos trabalhar com\", \n    nrow(teses_dissertacoes_flt), \n    \"teses/dissertações.\")\n\nA partir de agora vamos trabalhar com 187 teses/dissertações.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#evolução-ao-longo-do-tempo",
     "href": "listas/lista-2/lista2.html#evolução-ao-longo-do-tempo",
-    "title": "10  Lista II",
-    "section": "10.3 3. Evolução ao longo do tempo",
-    "text": "10.3 3. Evolução ao longo do tempo\nA melhor maneira de visualizar dados ao longo do tempo é utilizando séries temporais. No nosso caso, observamos que o número de teses e dissertações defendidas (e, claro, que citam no resumo os termos de interesse) vem crescendo ao longo do tempo. Isso se justifica pelo crescente interesse da literatura pela polarização, termo que domina os demais termos com \\(141\\) ocorrências.\n\nteses_dissertacoes_flt %&gt;%\n  group_by(ano) %&gt;%\n  summarise(n = n()) %&gt;%\n  ggplot(aes(x = ano, y = n)) +\n  geom_line(color = \"steelblue\", linewidth = 1) +\n  geom_point(color = \"steelblue\", size = 2) +\n  labs(\n    title = \"Evolução anual de teses e dissertações\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n 'text as data' e 'proposições legislativas'\",\n    x = \"Ano\",\n    y = \"Número de Trabalhos\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    axis.text.x = element_text(angle = 45, hjust = 1),\n    panel.grid.minor = element_blank()\n  ) +\n  scale_x_continuous(breaks = seq(min(teses_dissertacoes_flt$ano), \n                                  max(teses_dissertacoes_flt$ano), by = 1))",
+    "title": "11  Lista II",
+    "section": "11.3 3. Evolução ao longo do tempo",
+    "text": "11.3 3. Evolução ao longo do tempo\nA melhor maneira de visualizar dados ao longo do tempo é utilizando séries temporais. No nosso caso, observamos que o número de teses e dissertações defendidas (e, claro, que citam no resumo os termos de interesse) vem crescendo ao longo do tempo. Isso se justifica pelo crescente interesse da literatura pela polarização, termo que domina os demais termos com \\(141\\) ocorrências.\n\nteses_dissertacoes_flt %&gt;%\n  group_by(ano) %&gt;%\n  summarise(n = n()) %&gt;%\n  ggplot(aes(x = ano, y = n)) +\n  geom_line(color = \"steelblue\", linewidth = 1) +\n  geom_point(color = \"steelblue\", size = 2) +\n  labs(\n    title = \"Evolução anual de teses e dissertações\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n 'text as data' e 'proposições legislativas'\",\n    x = \"Ano\",\n    y = \"Número de Trabalhos\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    axis.text.x = element_text(angle = 45, hjust = 1),\n    panel.grid.minor = element_blank()\n  ) +\n  scale_x_continuous(breaks = seq(min(teses_dissertacoes_flt$ano), \n                                  max(teses_dissertacoes_flt$ano), by = 1))",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#diferenças-regionais",
     "href": "listas/lista-2/lista2.html#diferenças-regionais",
-    "title": "10  Lista II",
-    "section": "10.4 4. Diferenças regionais",
-    "text": "10.4 4. Diferenças regionais\nAgora vamos criar gráficos por estado e região, e, para isso excluiremos as linhas em que UF é missing. Essa não seria necessariamente a única abordagem possível: poderíamos, por exemplo, intuir (ou, quando possível, extrair usando regex) a unidade federativa a partir do nome da universidade. Optaremos pela primeira abordagem, bem mais simples – mesmo porque o percentual de missing é, apesar de relevante, pequeno.\n\ncolSums(is.na(teses_dissertacoes_flt)) / nrow(teses_dissertacoes_flt)\n\n                     ano          codigo_programa                sigla_ies \n              0.00000000               0.00000000               0.00000000 \n                nome_ies            nome_programa              grande_area \n              0.00000000               0.00000000               0.00000000 \n       area_conhecimento           area_avaliacao                    autor \n              0.00000000               0.00000000               0.00000000 \n                  titulo                    nivel           palavras_chave \n              0.00000000               0.00000000               0.00000000 \n                  resumo                       UF                 CONCEITO \n              0.00000000               0.05882353               0.05882353 \nproposicoes_legislativas             text_as_data              polarizacao \n              0.00000000               0.00000000               0.00000000 \n\n\nPrimeiro, vamos ler as informações de geometria, necessários para a geração dos mapas:\n\ncoordenadas_estados &lt;- read_state()\ncoordenadas_regiao &lt;- read_region()\n\nAgora vamos gerar o gráfico por região, manipulando a coluna UF usando a função mutate para criar essa nova coluna:\n\n# frequencia por regiao\nteses_dissertacoes_flt %&gt;%\n  drop_na() %&gt;%\n  mutate(\n    regiao = case_when(\n      UF %in% c(\"PA\", \"RN\") ~ \"Norte\",\n      UF %in% c(\"BA\", \"CE\", \"MA\", \"PB\", \"PE\") ~ \"Nordeste\",\n      UF %in% c(\"DF\", \"GO\") ~ \"Centro Oeste\",\n      UF %in% c(\"MG\", \"RJ\", \"SP\") ~ \"Sudeste\",\n      UF %in% c(\"PR\", \"RS\", \"SC\") ~ \"Sul\",\n      TRUE ~ NA_character_\n    )\n  ) %&gt;%\n  group_by(regiao) %&gt;%\n  summarise(n = n()) %&gt;%\n  full_join(coordenadas_regiao, join_by(regiao == name_region)) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = n)) +\n  geom_sf(color = \"white\", size = 0.3) +\n  scale_fill_gradient(\n    name = \"Nº de Trabalhos\",\n    low = \"#deebf7\", high = \"#08519c\"\n  ) +\n  labs(\n    title = \"Distribuição de teses e dissertações por região\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n 'text as data' e 'proposições legislativas'\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_void(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    legend.position = \"right\",\n    panel.grid = element_blank()\n  )\n\n\n\n\n\n\n\n\nE, por fim, vamos gerar o mapa por UF:\n\n# frequencia por UF\nteses_dissertacoes_flt %&gt;%\n  drop_na() %&gt;%\n  group_by(UF) %&gt;%\n  summarise(\n    n = n()\n  ) %&gt;%\n  full_join(coordenadas_estados, join_by(UF == abbrev_state)) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = n)) +\n  geom_sf(color = \"white\", size = 0.3) +\n  scale_fill_gradient(\n    name = \"Nº de Trabalhos\",\n    low = \"#deebf7\", high = \"#08519c\"\n  ) +\n  labs(\n    title = \"Distribuição de teses e dissertações por estado\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n'text as data' e 'proposições legislativas'. \\nEstados em cinza não possuem teses e dissertações no tema.\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES.\"\n  ) +\n  theme_void(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    legend.position = \"right\",\n    panel.grid = element_blank()\n  )\n\n\n\n\n\n\n\n\nNão é nenhuma surpresa que o número de teses e dissertações defendidas se concentre nos estados do Sul e Sudeste – em São Paulo, em particular. De fato, esse resultado deve se repetir para uma série de outros temas e palavras-chave. Essa análise provavelmente é, por si só, enviesada pela potencial concentração de programas de pós-graduação no Sudeste, assim como pela longevidade dos programas na região.\nEssa é apenas uma hipótese que, pelo menos nessa ocasião, não será testada. Mas poderíamos, por exemplo, calcular algum tipo de índice que considere o número de trabalhos e o número de programas (taxa de trabalhos por programa, por exemplo), e avaliar se esse padrão ainda permanece.\nNota: eu poderia ter utilizado a coluna de região que já vem no resultado da função read_state() – o que provavelmente teria diminuído o código pela metade –, mas infelizmente só notei isso à posteriori.",
+    "title": "11  Lista II",
+    "section": "11.4 4. Diferenças regionais",
+    "text": "11.4 4. Diferenças regionais\nAgora vamos criar gráficos por estado e região, e, para isso excluiremos as linhas em que UF é missing. Essa não seria necessariamente a única abordagem possível: poderíamos, por exemplo, intuir (ou, quando possível, extrair usando regex) a unidade federativa a partir do nome da universidade. Optaremos pela primeira abordagem, bem mais simples – mesmo porque o percentual de missing é, apesar de relevante, pequeno.\n\ncolSums(is.na(teses_dissertacoes_flt)) / nrow(teses_dissertacoes_flt)\n\n                     ano          codigo_programa                sigla_ies \n              0.00000000               0.00000000               0.00000000 \n                nome_ies            nome_programa              grande_area \n              0.00000000               0.00000000               0.00000000 \n       area_conhecimento           area_avaliacao                    autor \n              0.00000000               0.00000000               0.00000000 \n                  titulo                    nivel           palavras_chave \n              0.00000000               0.00000000               0.00000000 \n                  resumo                       UF                 CONCEITO \n              0.00000000               0.05882353               0.05882353 \nproposicoes_legislativas             text_as_data              polarizacao \n              0.00000000               0.00000000               0.00000000 \n\n\nPrimeiro, vamos ler as informações de geometria, necessários para a geração dos mapas:\n\ncoordenadas_estados &lt;- read_state()\ncoordenadas_regiao &lt;- read_region()\n\nAgora vamos gerar o gráfico por região, manipulando a coluna UF usando a função mutate para criar essa nova coluna:\n\n# frequencia por regiao\nteses_dissertacoes_flt %&gt;%\n  drop_na() %&gt;%\n  mutate(\n    regiao = case_when(\n      UF %in% c(\"PA\", \"RN\") ~ \"Norte\",\n      UF %in% c(\"BA\", \"CE\", \"MA\", \"PB\", \"PE\") ~ \"Nordeste\",\n      UF %in% c(\"DF\", \"GO\") ~ \"Centro Oeste\",\n      UF %in% c(\"MG\", \"RJ\", \"SP\") ~ \"Sudeste\",\n      UF %in% c(\"PR\", \"RS\", \"SC\") ~ \"Sul\",\n      TRUE ~ NA_character_\n    )\n  ) %&gt;%\n  group_by(regiao) %&gt;%\n  summarise(n = n()) %&gt;%\n  full_join(coordenadas_regiao, join_by(regiao == name_region)) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = n)) +\n  geom_sf(color = \"white\", size = 0.3) +\n  scale_fill_gradient(\n    name = \"Nº de Trabalhos\",\n    low = \"#deebf7\", high = \"#08519c\"\n  ) +\n  labs(\n    title = \"Distribuição de teses e dissertações por região\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n 'text as data' e 'proposições legislativas'\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_void(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    legend.position = \"right\",\n    panel.grid = element_blank()\n  )\n\n\n\n\n\n\n\n\nE, por fim, vamos gerar o mapa por UF:\n\n# frequencia por UF\nteses_dissertacoes_flt %&gt;%\n  drop_na() %&gt;%\n  group_by(UF) %&gt;%\n  summarise(\n    n = n()\n  ) %&gt;%\n  full_join(coordenadas_estados, join_by(UF == abbrev_state)) %&gt;%\n  st_as_sf() %&gt;%\n  ggplot(aes(fill = n)) +\n  geom_sf(color = \"white\", size = 0.3) +\n  scale_fill_gradient(\n    name = \"Nº de Trabalhos\",\n    low = \"#deebf7\", high = \"#08519c\"\n  ) +\n  labs(\n    title = \"Distribuição de teses e dissertações por estado\",\n    subtitle = \"Teses e dissertações que citam pelo menos uma das expressões 'polarização',\\n'text as data' e 'proposições legislativas'. \\nEstados em cinza não possuem teses e dissertações no tema.\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES.\"\n  ) +\n  theme_void(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    plot.subtitle = element_text(size = 12),\n    legend.position = \"right\",\n    panel.grid = element_blank()\n  )\n\n\n\n\n\n\n\n\nNão é nenhuma surpresa que o número de teses e dissertações defendidas se concentre nos estados do Sul e Sudeste – em São Paulo, em particular. De fato, esse resultado deve se repetir para uma série de outros temas e palavras-chave. Essa análise provavelmente é, por si só, enviesada pela potencial concentração de programas de pós-graduação no Sudeste, assim como pela longevidade dos programas na região.\nEssa é apenas uma hipótese que, pelo menos nessa ocasião, não será testada. Mas poderíamos, por exemplo, calcular algum tipo de índice que considere o número de trabalhos e o número de programas (taxa de trabalhos por programa, por exemplo), e avaliar se esse padrão ainda permanece.\nNota: eu poderia ter utilizado a coluna de região que já vem no resultado da função read_state() – o que provavelmente teria diminuído o código pela metade –, mas infelizmente só notei isso à posteriori.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#produção-por-programa",
     "href": "listas/lista-2/lista2.html#produção-por-programa",
-    "title": "10  Lista II",
-    "section": "10.5 5. Produção por programa",
-    "text": "10.5 5. Produção por programa\nAgora vamos analisar a produção por programa, isto é, o número de teses e dissertações defendidas. Primeiro, vamos lembrar de verificar se o tipo do programa (mestrado ou doutorado) está padronizado:\n\ntable(teses_dissertacoes_flt$nivel)\n\n\n            Doutorado             DOUTORADO              Mestrado \n                   18                    43                    29 \n             MESTRADO MESTRADO PROFISSIONAL    Profissionalizante \n                   84                    10                     3 \n\n\nÉ, infelizmente não é bem o caso. Vamos padronizar deixando tudo em lower case e transformar “MESTRADO PROFISSIONAL” simplesmente em “mestrado”, ignorando eventuais diferenças.\nTambém vamos fazer algumas modificações nome do programa: na verdade, apenas buscarei torná-lo mais informativo juntando-o ao nome da instituição de ensino. Veja: os nomes dos programas se diferenciam pouco e são inconsistentes – por exemplo, “ciencia politica”, “ciência política” e assim por diante. Vamos tratar essas inconsistências e juntá-las ao nome da universidade que coordena o programa.\n\nteses_dissertacoes_flt &lt;- teses_dissertacoes_flt %&gt;%\n  mutate(\n    nivel = str_to_lower(nivel),\n    nivel = case_when(\n      str_detect(nivel, \"mestrado\") ~ \"mestrado\",\n      str_detect(nivel, \"doutorado\") ~ \"doutorado\",\n      TRUE ~ nivel\n    ),\n    # essa parte foi co-authored com o chatgpt\n    nome_programa = nome_programa %&gt;%\n      str_to_lower() %&gt;% # minúsculas\n      str_trim() %&gt;% # remove espaços nas bordas\n      str_squish() %&gt;% # remove espaços duplicados no meio\n      stri_trans_general(\"Latin-ASCII\"), # remove acentos\n    nome_programa_ies = str_c(sigla_ies, \" - \", nome_programa)\n  )\n\n# dissertacoes\ndissertacoes_por_programa &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel == \"mestrado\") %&gt;%\n  group_by(nome_programa_ies) %&gt;%\n  summarise(\n    n_dissertacoes = n()\n  )\n\n# teses\nteses_por_programa &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel == \"doutorado\") %&gt;%\n  group_by(nome_programa_ies) %&gt;%\n  summarise(\n    n_teses = n()\n  )\n\n# tabela agrupada\nteses_dissertacoes_por_programa &lt;- full_join(\n  x=dissertacoes_por_programa,\n  y=teses_por_programa,\n  by=\"nome_programa_ies\"\n  )\n\n# apresentacao da tabela final bonitinha\nteses_dissertacoes_por_programa %&gt;%\n  arrange(desc(n_teses)) %&gt;%\n  head(10) %&gt;%\n  gt() %&gt;%\n  cols_label(\n    nome_programa_ies = \"Programa\",\n    n_dissertacoes = \"Dissertações\",\n    n_teses = \"Teses\"\n  ) %&gt;%\n  tab_header(\n    title = \"Produção Acadêmica por Programa\",\n    subtitle = \"Número de dissertações e teses por programa\"\n  ) %&gt;%\n  tab_options(\n    table.font.size = \"small\",\n    row.striping.include_table_body = TRUE\n  )\n\n\n\n\n\n\n\nProdução Acadêmica por Programa\n\n\nNúmero de dissertações e teses por programa\n\n\nPrograma\nDissertações\nTeses\n\n\n\n\nUFRGS - ciencia politica\n2\n7\n\n\nUFMG - ciencia politica\n4\n5\n\n\nUFSCAR - ciencia politica\n2\n5\n\n\nPUC/SP - ciencias sociais\n3\n3\n\n\nUNB - ciencia politica\n5\n3\n\n\nUSP - ciencia politica\n6\n3\n\n\nPUC-RIO - ciencias sociais\n2\n2\n\n\nPUC-RIO - relacoes internacionais\n1\n2\n\n\nUERJ - ciencia politica\n2\n2\n\n\nUFPE - sociologia\n1\n2\n\n\n\n\n\n\n\nObservamos, aqui, que os três principais programas (em termos de número de teses publicadas) que citam esses termos são os de Ciência Política da UFRGS, UFMG e UFSCAR.",
+    "title": "11  Lista II",
+    "section": "11.5 5. Produção por programa",
+    "text": "11.5 5. Produção por programa\nAgora vamos analisar a produção por programa, isto é, o número de teses e dissertações defendidas. Primeiro, vamos lembrar de verificar se o tipo do programa (mestrado ou doutorado) está padronizado:\n\ntable(teses_dissertacoes_flt$nivel)\n\n\n            Doutorado             DOUTORADO              Mestrado \n                   18                    43                    29 \n             MESTRADO MESTRADO PROFISSIONAL    Profissionalizante \n                   84                    10                     3 \n\n\nÉ, infelizmente não é bem o caso. Vamos padronizar deixando tudo em lower case e transformar “MESTRADO PROFISSIONAL” simplesmente em “mestrado”, ignorando eventuais diferenças.\nTambém vamos fazer algumas modificações nome do programa: na verdade, apenas buscarei torná-lo mais informativo juntando-o ao nome da instituição de ensino. Veja: os nomes dos programas se diferenciam pouco e são inconsistentes – por exemplo, “ciencia politica”, “ciência política” e assim por diante. Vamos tratar essas inconsistências e juntá-las ao nome da universidade que coordena o programa.\n\nteses_dissertacoes_flt &lt;- teses_dissertacoes_flt %&gt;%\n  mutate(\n    nivel = str_to_lower(nivel),\n    nivel = case_when(\n      str_detect(nivel, \"mestrado\") ~ \"mestrado\",\n      str_detect(nivel, \"doutorado\") ~ \"doutorado\",\n      TRUE ~ nivel\n    ),\n    # essa parte foi co-authored com o chatgpt\n    nome_programa = nome_programa %&gt;%\n      str_to_lower() %&gt;% # minúsculas\n      str_trim() %&gt;% # remove espaços nas bordas\n      str_squish() %&gt;% # remove espaços duplicados no meio\n      stri_trans_general(\"Latin-ASCII\"), # remove acentos\n    nome_programa_ies = str_c(sigla_ies, \" - \", nome_programa)\n  )\n\n# dissertacoes\ndissertacoes_por_programa &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel == \"mestrado\") %&gt;%\n  group_by(nome_programa_ies) %&gt;%\n  summarise(\n    n_dissertacoes = n()\n  )\n\n# teses\nteses_por_programa &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel == \"doutorado\") %&gt;%\n  group_by(nome_programa_ies) %&gt;%\n  summarise(\n    n_teses = n()\n  )\n\n# tabela agrupada\nteses_dissertacoes_por_programa &lt;- full_join(\n  x=dissertacoes_por_programa,\n  y=teses_por_programa,\n  by=\"nome_programa_ies\"\n  )\n\n# apresentacao da tabela final bonitinha\nteses_dissertacoes_por_programa %&gt;%\n  arrange(desc(n_teses)) %&gt;%\n  head(10) %&gt;%\n  gt() %&gt;%\n  cols_label(\n    nome_programa_ies = \"Programa\",\n    n_dissertacoes = \"Dissertações\",\n    n_teses = \"Teses\"\n  ) %&gt;%\n  tab_header(\n    title = \"Produção Acadêmica por Programa\",\n    subtitle = \"Número de dissertações e teses por programa\"\n  ) %&gt;%\n  tab_options(\n    table.font.size = \"small\",\n    row.striping.include_table_body = TRUE\n  )\n\n\n\n\n\n\n\nProdução Acadêmica por Programa\n\n\nNúmero de dissertações e teses por programa\n\n\nPrograma\nDissertações\nTeses\n\n\n\n\nUFRGS - ciencia politica\n2\n7\n\n\nUFMG - ciencia politica\n4\n5\n\n\nUFSCAR - ciencia politica\n2\n5\n\n\nPUC/SP - ciencias sociais\n3\n3\n\n\nUNB - ciencia politica\n5\n3\n\n\nUSP - ciencia politica\n6\n3\n\n\nPUC-RIO - ciencias sociais\n2\n2\n\n\nPUC-RIO - relacoes internacionais\n1\n2\n\n\nUERJ - ciencia politica\n2\n2\n\n\nUFPE - sociologia\n1\n2\n\n\n\n\n\n\n\nObservamos, aqui, que os três principais programas (em termos de número de teses publicadas) que citam esses termos são os de Ciência Política da UFRGS, UFMG e UFSCAR.",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#visualização-da-produção",
     "href": "listas/lista-2/lista2.html#visualização-da-produção",
-    "title": "10  Lista II",
-    "section": "10.6 6. Visualização da produção",
-    "text": "10.6 6. Visualização da produção\nPor fim, vamos visualizar a produção dos programas. Basta agruparmos por ano, nome do programa, nível e conceito (que é o mesmo para todas as entradas agrupadas, então entra no agrupamento apenas para aparecer no dataset final), e, depois, pivotar a tabela para obter o número de dissertações e teses nas colunas.\n\nproducao &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel %in% c(\"mestrado\", \"doutorado\")) %&gt;%\n  group_by(ano, nome_programa_ies, nivel, CONCEITO) %&gt;%\n  summarise(n = n(), .groups = \"drop\") %&gt;%\n  pivot_wider(\n    names_from = nivel,\n    values_from = n,\n    values_fill = 0\n  )\n\nApresento abaixo um scatterplot com jitter que, na verdade, acaba sendo uma visualização sub-ótima na medida em que, quando agrupamos por ano, o \\(n\\) de teses defendidas fica muito pequeno.\n\nproducao %&gt;%\n  drop_na() %&gt;%\n  ggplot(aes(x = as.factor(doutorado), y = CONCEITO)) +\n  geom_jitter(width = 0.15, height = 0.1, color = \"steelblue\", size = 3, alpha = 0.7) +\n  labs(\n    title = \"Relação entre teses defendidas e conceito CAPES\",\n    x = \"Teses defendidas\",\n    y = \"Conceito CAPES\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    axis.title = element_text(face = \"bold\"),\n    panel.grid.minor = element_blank()\n  )\n\n\n\n\n\n\n\n\nIgnorando o ano e agrupando pelos conceitos, vemos que a maior parte das teses cujos resumos citam as palavras-chave indicadas foram defendidas por programas de pós-graduação com conceito 5.\n\nproducao %&gt;%\n  drop_na() %&gt;%\n  group_by(CONCEITO) %&gt;%\n  summarise(n_teses = sum(doutorado), .groups = \"drop\") %&gt;%\n  ggplot(aes(x = as.factor(CONCEITO), y = n_teses)) +\n  geom_col(fill = \"steelblue\") +\n  labs(\n    title = \"Teses defendidas por conceito CAPES\",\n    x = \"Conceito CAPES\",\n    y = \"Número de Teses\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    axis.title = element_text(face = \"bold\"),\n    axis.text.x = element_text(size = 11),\n    panel.grid.minor = element_blank()\n  )",
+    "title": "11  Lista II",
+    "section": "11.6 6. Visualização da produção",
+    "text": "11.6 6. Visualização da produção\nPor fim, vamos visualizar a produção dos programas. Basta agruparmos por ano, nome do programa, nível e conceito (que é o mesmo para todas as entradas agrupadas, então entra no agrupamento apenas para aparecer no dataset final), e, depois, pivotar a tabela para obter o número de dissertações e teses nas colunas.\n\nproducao &lt;- teses_dissertacoes_flt %&gt;%\n  filter(nivel %in% c(\"mestrado\", \"doutorado\")) %&gt;%\n  group_by(ano, nome_programa_ies, nivel, CONCEITO) %&gt;%\n  summarise(n = n(), .groups = \"drop\") %&gt;%\n  pivot_wider(\n    names_from = nivel,\n    values_from = n,\n    values_fill = 0\n  )\n\nApresento abaixo um scatterplot com jitter que, na verdade, acaba sendo uma visualização sub-ótima na medida em que, quando agrupamos por ano, o \\(n\\) de teses defendidas fica muito pequeno.\n\nproducao %&gt;%\n  drop_na() %&gt;%\n  ggplot(aes(x = as.factor(doutorado), y = CONCEITO)) +\n  geom_jitter(width = 0.15, height = 0.1, color = \"steelblue\", size = 3, alpha = 0.7) +\n  labs(\n    title = \"Relação entre teses defendidas e conceito CAPES\",\n    x = \"Teses defendidas\",\n    y = \"Conceito CAPES\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    axis.title = element_text(face = \"bold\"),\n    panel.grid.minor = element_blank()\n  )\n\n\n\n\n\n\n\n\nIgnorando o ano e agrupando pelos conceitos, vemos que a maior parte das teses cujos resumos citam as palavras-chave indicadas foram defendidas por programas de pós-graduação com conceito 5.\n\nproducao %&gt;%\n  drop_na() %&gt;%\n  group_by(CONCEITO) %&gt;%\n  summarise(n_teses = sum(doutorado), .groups = \"drop\") %&gt;%\n  ggplot(aes(x = as.factor(CONCEITO), y = n_teses)) +\n  geom_col(fill = \"steelblue\") +\n  labs(\n    title = \"Teses defendidas por conceito CAPES\",\n    x = \"Conceito CAPES\",\n    y = \"Número de Teses\",\n    caption = \"Feito por Felipe Lamarca usando dados da CAPES\"\n  ) +\n  theme_bw(base_size = 12) +\n  theme(\n    plot.title = element_text(face = \"bold\", size = 16),\n    axis.title = element_text(face = \"bold\"),\n    axis.text.x = element_text(size = 11),\n    panel.grid.minor = element_blank()\n  )",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   },
   {
     "objectID": "listas/lista-2/lista2.html#exportação",
     "href": "listas/lista-2/lista2.html#exportação",
-    "title": "10  Lista II",
-    "section": "10.7 7. Exportação",
-    "text": "10.7 7. Exportação\nFinalmente, exportamos a base para análises futuras.\n\nteses_dissertacoes_flt %&gt;%\n  select(ano, UF, codigo_programa, nome_programa_ies, titulo, resumo, autor) %&gt;%\n  writexl::write_xlsx(\"data/teses_dissertacoes_flt.xlsx\")",
+    "title": "11  Lista II",
+    "section": "11.7 7. Exportação",
+    "text": "11.7 7. Exportação\nFinalmente, exportamos a base para análises futuras.\n\nteses_dissertacoes_flt %&gt;%\n  select(ano, UF, codigo_programa, nome_programa_ies, titulo, resumo, autor) %&gt;%\n  writexl::write_xlsx(\"data/teses_dissertacoes_flt.xlsx\")",
     "crumbs": [
       "Listas",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Lista II</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Lista II</span>"
     ]
   }
 ]
