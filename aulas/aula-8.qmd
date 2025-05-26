@@ -100,7 +100,7 @@ $$
 Devemos usar a seguinte aproximação:
 
 $$
-\log(Y_\text{final}) - \log(Y_\text{inicial}) \approx \frac{Y_\text{final} - Y_\text{inicial}}{Y_\text{inicial}} = \frac{\Delta Y}{Y_\text{inicial}}
+\log(Y_\text{final}) - \log(Y_\text{inicial}) = \log \left( \frac{Y_\text{final} - Y_\text{inicial}}{Y_\text{inicial}} \right) \approx \frac{\Delta Y}{Y_\text{inicial}}
 $$
 
 Isso é verdade porque, para pequenas variações, a diferença entre o logaritmo de dois números é aproximadamente igual à razão entre a diferença e o número inicial. Em particular, a seguinte afirmação é válida:

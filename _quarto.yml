@@ -16,6 +16,7 @@ book:
         - aulas/aula-7.qmd
         - aulas/aula-8.qmd
         - aulas/aula-9.qmd
+        - aulas/aula-10.qmd
     - part: Listas
       chapters:
         - listas/nivelamento/lista-nivelamento.qmd

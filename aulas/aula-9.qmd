@@ -2,7 +2,7 @@
 
 ## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 5: Estimating Causal Effects with Observational Data.
 
-> [...] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affectt the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p. 130)
+> [...] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p. 130)
 
 > To estimate causal effects using observational data, we have to first identify any relevant differences between treatment and control groups -- known as confounding variables or confounders -- and then statistically control for them so that we can make the two groups as comparable to each other as possible. (p. 130)
 
@@ -115,7 +115,7 @@ stargazer(lm_1,lm_2,lm_3, type = "text",
 
 > [...] if we run the regression that Google and others recommend wherein we control for occupation, the sign on gender changes. It becomes positive! We know this is wrong because we hard-coded the effect of gender to be $-1$! The problem is that occupation is a collider. It is caused by ability and discrimination. If we control for occupation, we open up a backdoor path between discrimination and earnings that is spurious and so strong that it perverts the entire relationship. So only when we control for occupation and ability can we isolate the direct causal effect of gender on wages.
 
-### Other materials
+## Other materials
 
 - An introduction to DAGs and `ggdag` by Malcolm Barrett [[link]](https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html)
 - Papers published by Carolina Caetano, an Assistant Professor of Economics at the University of Georgia [[link]](http://www.carolinacaetano.net/)
