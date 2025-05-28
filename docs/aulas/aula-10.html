@@ -65,7 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../listas/nivelamento/lista-nivelamento.html" rel="next">
+<link href="../aulas/aula-11.html" rel="next">
 <link href="../aulas/aula-9.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -400,6 +400,12 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Probabilidade</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../aulas/aula-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -414,19 +420,19 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../listas/nivelamento/lista-nivelamento.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../listas/lista-1/lista1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lista 1</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lista 1</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../listas/lista-2/lista2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lista II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Lista II</span></span></a>
   </div>
 </li>
       </ul>
@@ -451,6 +457,7 @@ window.Quarto = {
   <li><a href="#the-central-limit-theorem" id="toc-the-central-limit-theorem" class="nav-link" data-scroll-target="#the-central-limit-theorem"><span class="header-section-number">9.1.6</span> The Central Limit Theorem</a></li>
   </ul></li>
   <li><a href="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-chapter.-6-probabilidade-e-inferência-estatística." id="toc-kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-chapter.-6-probabilidade-e-inferência-estatística." class="nav-link" data-scroll-target="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-chapter.-6-probabilidade-e-inferência-estatística."><span class="header-section-number">9.2</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Chapter. 6 – Probabilidade e inferência estatística.</a></li>
+  <li><a href="#anotações-de-aula" id="toc-anotações-de-aula" class="nav-link" data-scroll-target="#anotações-de-aula"><span class="header-section-number">9.3</span> Anotações de aula</a></li>
   </ul>
 </nav>
     </div>
@@ -532,7 +539,7 @@ window.Quarto = {
 <div class="cell-output cell-output-stdout">
 <pre><code>flip
        0        1 
-0.499253 0.500747 </code></pre>
+0.500197 0.499803 </code></pre>
 </div>
 </div>
 </section>
@@ -570,11 +577,11 @@ window.Quarto = {
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3.002742</code></pre>
+<pre><code>[1] 2.998985</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4.004214</code></pre>
+<pre><code>[1] 4.005521</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
@@ -700,15 +707,15 @@ X \sim \mathcal{N}(\mu, \sigma^2), \dfrac{X - \mu}{\sigma} \sim \mathcal{N}(0, 1
 <span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(support_sample_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.6</code></pre>
+<pre><code>[1] 0.4</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(support_sample_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.583</code></pre>
+<pre><code>[1] 0.616</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(support_sample_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.600049</code></pre>
+<pre><code>[1] 0.598849</code></pre>
 </div>
 </div>
 <p>À medida que aumentamos o tamanho da amostra (o que nem sempre é viável, naturalmente), a estimativa da variável de interesse melhora. Em particular, chegamos cada vez mais perto do valor “verdadeiro” do parâmetro.</p>
@@ -793,6 +800,13 @@ X \sim \mathcal{N}(\mu, \sigma^2), \dfrac{X - \mu}{\sigma} \sim \mathcal{N}(0, 1
 </blockquote>
 <p>Com o erro-padrão, podemos calcular intervalos de confiança adicionando dois erros-padrão (para um intervalo de confiança de 95%) para cada lado a partir do valor da média da amostra.</p>
 <p>Vale notar, além disso, que essas propriedades se aplicam apenas aos casos em que estamos utilizando uma amostra completamente aleatória. Esse nem sempre (aliás, quase nunca) é o caso, o que implica a necessidade de integrar técnicas estatísticas mais avançadas para mitigar potenciais vieses da coleta de dados.</p>
+</section>
+<section id="anotações-de-aula" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="anotações-de-aula"><span class="header-section-number">9.3</span> Anotações de aula</h2>
+<p>Podemos utilizar <em>bootstrap</em> para, usando a própria amostra, nos aproximar do parâmetro populacional. Amostramos várias vezes um subset da amostra coletada, com reposição, e computamos a estatística amostral. Com isso, podemos ter uma ideia de como a média varia se pudéssemos ter várias amostras.</p>
+<blockquote class="blockquote">
+<p>Do ponto de vista frequentista, dizemos que, com 100 amostras e sob um intervalo de confiança de 95%, o parâmetro populacional estará no intervalo em 95% das vezes. Mas, na prática, não conseguimos obter 100 amostras, então isso não é particularmente intuitivo. Então, o <em>bootstrap</em> nos permite produzir uma distribuição amostral da nossa quantidade de interesse.</p>
+</blockquote>
 
 
 </section>
@@ -1217,8 +1231,8 @@ X \sim \mathcal{N}(\mu, \sigma^2), \dfrac{X - \mu}{\sigma} \sim \mathcal{N}(0, 1
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../listas/nivelamento/lista-nivelamento.html" class="pagination-link" aria-label="Lista Nivelamento">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../aulas/aula-11.html" class="pagination-link" aria-label="Quantificação de incerteza">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

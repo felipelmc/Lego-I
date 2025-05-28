@@ -1,0 +1,153 @@
+# Quantificação de incerteza
+
+## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 7: Quantifying Uncertainty.
+
+> We call the unknown quantity of interest the **parameter**. We call the statistic we compute using the sample data the **estimate**, and the formula that produces it, an **estimator**. Formally, an estimator is a function of observed data used to produce an estimate of a parameter. (p. 196)
+
+> In technical terms, our estimates have some uncertainty due to sampling variability. (p. 197)
+
+> To quantify the variation around the population-level parameter, we need to measure the spread of the sampling distribution of the estimator. [...]. Unfortunately, in most cases we cannot compute the standard deviation of the sampling distribution of an estimator directly. Doing so would require drawing multiple samples from the target population, but we rarely have access to more than one sample. Instead, we estimate the standard deviation based on the one sample we draw. We refer to the estimated standard deviation of the sampling distribution of an estimator as the **standard error** of the estimator. (p. 198)
+
+> It [the standard error of the sampling distribution of an estimator] measures the amount of variation of the estimator around the true value of the population-level parameter. (p. 198)
+
+> The estimation error is the difference between the estimate and the true value of the parameter. The average estimation error, also known as bias, is the average difference between the estimate and the true value of the parameter over multiple hypothetical samples. An estimator is said to be unbiased if the average estimation error over multiple hypothetical samples is zero. The standard error is an estimate of the average size of the estimation error over multiple hypothetical samples. (p. 199)
+
+In mathematical notation, the average estimation error (bias) is:
+
+$$
+\text{average estimation error} = \mathbb{E}(\text{estimate}_i - \text{true value})
+$$
+
+The standard error (or the average size of the estimation error over multiple samples) is calculated as:
+
+$$
+\begin{align*}
+\text{standard error} &= \sqrt{\mathbb{V}(\text{estimator})} \\
+&= \sqrt{\mathbb{E}[(\text{estimate}_i - \mathbb{E}(\text{estimator}))^2]} \\
+&= \sqrt{\mathbb{E}[(\text{estimate}_i - \text{true value})^2]} \\
+\end{align*}
+$$
+
+> For each of the estimators, then, if we drew multiple samples from the same target population and computed the standardized estimate for each sample, the resulting statistic would approximately follow the standard normal distribution. (p. 201)
+
+Com isso, podemos:
+
+1. Computar intervalos de confiança
+2. Fazer testes de hipótese, que indicam o quão provável é que o parâmetro populacional assuma um determinado valor sob determinada distribuição
+
+### Intervalos de confiança
+
+> Three levels of confidence are conventionally used in the social sciences to construct confidence intervals: 90%, 95%, and 99%. The level of confidence indicates the probability, over multiple samples, that the true value lies within the interval. With higher levels of confidence, the degree of uncertainty decreases, but the width of the confidence level increases. (p. 202)
+
+> As we say in chapter 6, about 95% of the observations in the standard normal random variable fall between -1.96 and 1.96. In mathematical notation, if $Z$ is the standard normal random variable, then:
+>
+> $$ P(-1.96 \leq Z \leq 1.96) \approx 0.95 $$
+
+O estimador padronizado segue uma distribuição normal padrão. Então, para múltiplas amostras, os estimadores padronizados ficam, 95% das vezes, entre -1.96 e 1.96. 
+
+💡Na prática, para resumir: estamos utilizando a distribuição amostral dos estimadores para calcular intervalos de confiança sobre o parâmetro populacional. Em primeiro lugar, derivamos o erro médio do estimador; depois, sua variabilidade. Com isso, conseguimos padronizar essa distribuição para fazer inferências utilizando uma $\mathcal{N}(0, 1)$. Em particular, vemos que:
+
+$$
+P \left( -1.96 \leq \dfrac{\text{estimator} - \text{true value}}{\text{standard error}} \leq 1.96 \right) \approx 0.95
+$$
+
+Apenas movendo os termos para isolar o $\text{true value}$, concluímos:
+
+$$
+P \left( \text{estimator} -1.96 \times \text{standard error} \leq \text{true value} \leq \text{estimator} + 1.96 \times \text{standard error}  \right) \approx 0.95
+$$
+
+> Thanks to the central limit theorem, we know that in 5% of the samples, the 95% confidence interval will _not_ contain the true value of the parameter. Unfortunately, we have no way of knowing whether we happen to be analyzing one of those fringe samples. This is why it is so important to replicate scientific studies, that is, to arrive at similar conclusions when analyzing a different sample of the data from the same target population. (p. 203)
+
+1. Intervalo de confiança para a média amostral
+
+$$
+\left[ \ \bar{Y} - 1.96 \times \sqrt{\dfrac{\text{Var(Y)}}{n}}, \bar{Y} + 1.96 \times \sqrt{\dfrac{\text{Var(Y)}}{n}} \ \right]
+$$
+
+2. Intervalo de confiança para o estimador _difference-in-means_
+
+Pelas propriedades da variânca, sabemos que $\text{Var}(A - B) = \text{Var}(A) + \text{Var}(B) - 2 \cdot \text{cov}(A, B)$. Como os grupos de tratamento e controle são independentes em desenhos experimentais, a covariância é zero. Com isso, é muito razoável que o intervalo de confiança para o estimador seja:
+
+$$
+\bar{Y}_\text{treatment} - \bar{Y}_\text{control} \pm 1.96 \times \sqrt{ \dfrac{\text{var}(Y_\text{treatment})}{n_\text{treatment}} + \dfrac{\text{var}(Y_\text{control})}{n_\text{control}} }
+$$
+
+### Teste de hipótese
+
+> Hypothesis testing is a methodology that we use to determine whether the parameter is likely to equal a particular value. For example, we can use hypothesis testing to determine whether or not an average treatment effect is different from zero in the target population. 
+>
+> Hypothesis testing is based on the idea of proof by contradiction. We start by assuming the contrary of what we would like to prove and show how its assumption leads to a logical contradiction. (p. 211)
+
+> The null hypothesis, $H_0$, is the hypothesis we would like to eventually refute [...]. The alternative hypothesis, $H_1$, is the hypothesis we test the null hypothesis against. (p. 211)
+
+Assumindo que a hipótese nula é verdadeira e que o valor do parâmetro é $\theta$, chegamos a:
+
+$$
+\text{z-statistic} = \dfrac{\text{estimator} - \theta}{\text{standard error}} \sim \mathcal{N}(0, 1)
+$$
+
+> This random variable is known as the **z-statistic**. The z-statistic is an example of a **test statistic**, which is a function of observed data that can be used to test the null hypothesis.
+
+> Suppose we were to draw multiple samples from the same target population and compute the z-statistic for each sample. Then, thanks to the central limit theorem, we know that if the null hypothesis were true, the z-statistics would approximately follow the standard normal distribution. In reality, however, we usually draw only one sample. As a result, we can observe only one realization of the z-statistic. We denote the observed value of the z-statistic as z$^\text{obs}$.
+>
+> Now we can gauge the degree of consistency between what we observe and the null hypothesis. Here is the general idea: if the observed value of the test statistic is extreme relative to the distribution of the test statistic under the null hypothesis [...], then what we observe would be highly unlikely if the null hypothesis were true. We would, thus, conclude that the null hypothesis is likely to be false. In statistical terms, we would reject the null hypothesis. (p. 213)
+
+O contrário de rejeitar é _falhar em rejeitar_.
+
+> Because we know the distribution of the test statistic under the null hypothesis, we can compute the probability that we observe a value at least as extreme as the one we observe if indeed the null hypothesis is true. This probability is called the **p-value**. Here, because our alternative hypothesis is two-sided, we calculate what is known as the two-sided p-value.
+
+> In general, a smaller p-value provides stronger evidence against the null hypothesis. A very small p-value indicates that the observed value of the test statistic would be highly unlikely if the null hypothesis were true. Thus, when the p-value is very small, there are two possible scenarios: either (a) the null hypothesis is true and we observe something highly unlikely, or (b) the null hypothesis is not true. (p. 214)
+
+> A result is said to be Statistically significant at the 5% level when we can reject the null hypothesis using the 5% rejection threshold and conclude that the corresponding parameter is distinguishable from zero. (p. 215)
+
+> A p-value of 5% does not rule out the possibility that the parameter is zero. In fact, thanks to the central limit theorem, we know that if the null hypothesis is true, in 5% of the samples drawn from the target population, we will wrongly reject the null hypothesis when using a significance level of 5%. Indeed, the significance level of a test characterizes the probability of false rejection of the null hypothesis (known as type I error). (p. 215)
+
+> RELATIONSHIP BETWEEN CONFIDENCE INTERVALS AND HYPOTHESIS TESTING: if the 95% confidence interval of an estimator does not include zero, we will reject the null hypothesis that the corresponding parameter equals zero at the 5% level. By the same logic, if it does include zero, we will fail to reject the null hypothesis. (p. 220)
+
+> Compared to the standard normal distribution, the t-distribution [used in R] is also symmetric and bell-shaped, but has fatter tails. The p-values computed by R here are slightly larger and, as a result, lead to somewhat more conservative inferences. As long as the sample is not very small, however, the difference is typically negligible. (p. 223)
+
+Para terminar, vale sempre lembrar que significância estatística não tem absolutamente nada a ver com "significância científica". Isto é, não é porque um efeito é estatisticamente diferente de zero que ele é relevante.
+
+---
+
+### O erro-padrão da média
+
+💡Frequentemente me pergunto de onde vem o $\sqrt{n}$ na fórmula do erro padrão. Vamos lá: suponha que queremos calcular a variância da soma de $n$ variáveis aleatórias, todas com variância $\sigma^2$. 
+
+$$
+\text{Var}(X_1 + X_2 + \cdots + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2
+$$
+
+A média é dada por $\bar{X} = \dfrac{1}{n} \sum^n_{i=1} X_i$. Pelas propriedades da variância, $\text{Var} \left(\dfrac{1}{n} \sum^n_{i=1} X_i \right) = \dfrac{1}{n^2} \cdot \text{Var} \left( \sum^n_{i=1} X_i \right)$.
+
+Com efeito:
+
+$$
+\text{Var}(\bar{X}) = \dfrac{1}{n^2} \cdot n \cdot \sigma^2 = \dfrac{\sigma^2}{n}
+$$
+
+Segue daí que o erro padrão da média amostral é $\dfrac{\sigma}{\sqrt{n}}$.
+
+**Importante:** note que a variância que aparece aqui, $\text{Var}(\bar{X}) = \sigma^2 / n$, **não é a mesma que a variância das variáveis originais** $X_i$, que é $\sigma^2 $. Enquanto $\sigma^2$ mede a dispersão dos dados individuais na população, $\text{Var}(\bar{X})$ mede o quanto a \textbf{média amostral} $\bar{X}$ tende a variar de uma amostra para outra. Ou seja, estamos falando da variância \textit{de um estimador}, e não de uma variável aleatória individual.
+
+| Conceito                      | O que mede                             | Fórmula                        |
+|------------------------------|----------------------------------------|--------------------------------|
+| Variância de $X_i$       | Variabilidade dos dados                | $\sigma^2$                 |
+| Variância de $\bar{X}$   | Variabilidade da média amostral        | $\dfrac{\sigma^2}{n}$      |
+| Erro padrão de $\bar{X}$ | Desvio padrão da média amostral        | $\dfrac{\sigma}{\sqrt{n}}$ |
+
+---
+
+## Shmueli, G. (2010). To explain or to predict?
+
+> The above decomposition [bias-variance tradeoff] reveals a source of the difference between explanatory and predictive modeling: In explanatory modeling the focus is on minimizing bias to obtain the most accurate representation of the underlying theory. In contrast, predictive modeling seeks to minimize the combination of bias and estimation variance, occasionally sacrificing theoretical accuracy for improved empirical precision. (p. 293)
+
+> In explanatory modeling, where variables are seen as operationalized constructs, variable choice is based on the role of the construct in the theoretical causal structure and on the operationalization itself. (p. 297)
+
+> In predictive modeling, the focus on association rather than causation, the lack of $\mathcal{F}$, and the prospective context, mean that there is no need to delve into the exact role of each variable in terms of an underlying causal structure. Instead, criteria for choosing predictors are quality of the association between the predictors and the response, data quality, and availability of the predictors at the time of prediction, known as ex-ante availability. (p. 298)
+
+> Explanatory modeling requires interpretable statistical models $f$ that are easily linked to the underlying theoretical model $\mathcal{F}$. Hence the popularity of statistical models, and especially regression-type methods, in many disciplines. Algorithmic methods such as neural networks or k-nearest-neighbors, and uninterpretable nonparametric models, are considered ill-suited for explanatory modeling.
+>
+> In predictive modeling, where the top priority is generating accurate predictions of new observations and f is often unknown, the range of plausible methods includes not only statistical models (interpretable and uninterpretable) but also data mining algorithms. (p. 298)
+

@@ -271,3 +271,9 @@ Com o erro-padrão, podemos calcular intervalos de confiança adicionando dois e
 
 Vale notar, além disso, que essas propriedades se aplicam apenas aos casos em que estamos utilizando uma amostra completamente aleatória. Esse nem sempre (aliás, quase nunca) é o caso, o que implica a necessidade de integrar técnicas estatísticas mais avançadas para mitigar potenciais vieses da coleta de dados.
 
+## Anotações de aula
+
+Podemos utilizar _bootstrap_ para, usando a própria amostra, nos aproximar do parâmetro populacional. Amostramos várias vezes um subset da amostra coletada, com reposição, e computamos a estatística amostral. Com isso, podemos ter uma ideia de como a média varia se pudéssemos ter várias amostras. 
+
+> Do ponto de vista frequentista, dizemos que, com 100 amostras e sob um intervalo de confiança de 95%, o parâmetro populacional estará no intervalo em 95% das vezes. Mas, na prática, não conseguimos obter 100 amostras, então isso não é particularmente intuitivo. Então, o _bootstrap_ nos permite produzir uma distribuição amostral da nossa quantidade de interesse.
+

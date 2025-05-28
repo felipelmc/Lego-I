@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Efeitos causais em experimentos – Lego I</title>
+<title>10&nbsp; Quantificação de incerteza – Lego I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../aulas/aula-7.html" rel="next">
-<link href="../aulas/aula-5.html" rel="prev">
+<link href="../listas/nivelamento/lista-nivelamento.html" rel="next">
+<link href="../aulas/aula-10.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -274,7 +274,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Efeitos causais em experimentos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-11.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -337,7 +337,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-6.html" class="sidebar-item-text sidebar-link active">
+  <a href="../aulas/aula-6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Efeitos causais em experimentos</span></span></a>
   </div>
 </li>
@@ -367,7 +367,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-11.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></span></a>
   </div>
 </li>
@@ -412,8 +412,13 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-2-estimating-causal-effects-with-randomized-experiments." id="toc-llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-2-estimating-causal-effects-with-randomized-experiments." class="nav-link active" data-scroll-target="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-2-estimating-causal-effects-with-randomized-experiments."><span class="header-section-number">5.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 2: Estimating Causal Effects with Randomized Experiments.</a></li>
-  <li><a href="#other-nice-readings" id="toc-other-nice-readings" class="nav-link" data-scroll-target="#other-nice-readings"><span class="header-section-number">5.2</span> Other nice readings</a></li>
+  <li><a href="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-7-quantifying-uncertainty." id="toc-llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-7-quantifying-uncertainty." class="nav-link active" data-scroll-target="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-7-quantifying-uncertainty."><span class="header-section-number">10.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 7: Quantifying Uncertainty.</a>
+  <ul class="collapse">
+  <li><a href="#intervalos-de-confiança" id="toc-intervalos-de-confiança" class="nav-link" data-scroll-target="#intervalos-de-confiança"><span class="header-section-number">10.1.1</span> Intervalos de confiança</a></li>
+  <li><a href="#teste-de-hipótese" id="toc-teste-de-hipótese" class="nav-link" data-scroll-target="#teste-de-hipótese"><span class="header-section-number">10.1.2</span> Teste de hipótese</a></li>
+  <li><a href="#o-erro-padrão-da-média" id="toc-o-erro-padrão-da-média" class="nav-link" data-scroll-target="#o-erro-padrão-da-média"><span class="header-section-number">10.1.3</span> O erro-padrão da média</a></li>
+  </ul></li>
+  <li><a href="#shmueli-g.-2010.-to-explain-or-to-predict" id="toc-shmueli-g.-2010.-to-explain-or-to-predict" class="nav-link" data-scroll-target="#shmueli-g.-2010.-to-explain-or-to-predict"><span class="header-section-number">10.2</span> Shmueli, G. (2010). To explain or to predict?</a></li>
   </ul>
 </nav>
     </div>
@@ -421,9 +426,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Efeitos causais em experimentos</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-11.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Efeitos causais em experimentos</span></h1>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></h1>
 </div>
 
 
@@ -440,66 +445,182 @@ window.Quarto = {
 </header>
 
 
-<section id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-2-estimating-causal-effects-with-randomized-experiments." class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-2-estimating-causal-effects-with-randomized-experiments."><span class="header-section-number">5.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 2: Estimating Causal Effects with Randomized Experiments.</h2>
+<section id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-7-quantifying-uncertainty." class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-7-quantifying-uncertainty."><span class="header-section-number">10.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 7: Quantifying Uncertainty.</h2>
 <blockquote class="blockquote">
-<p>In mathematical notation, we represent the treatment variable as X and the outcome variable as Y. We represent the causal relationship between them visually with an arrow from X to Y. The direction of the arrow indicates that changes in X may produce changes in Y but not the other way around:</p>
-<p><span class="math inline">\(X \rightarrow Y\)</span> (p.&nbsp;28).</p>
+<p>We call the unknown quantity of interest the <strong>parameter</strong>. We call the statistic we compute using the sample data the <strong>estimate</strong>, and the formula that produces it, an <strong>estimator</strong>. Formally, an estimator is a function of observed data used to produce an estimate of a parameter. (p.&nbsp;196)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>In this book, for the sake of simplicity, we focus on treatment variables that are binary, that is, that indicate whether the treatment is present or absent. We define the treatment variable for each individual <span class="math inline">\(i\)</span> as:</p>
+<p>In technical terms, our estimates have some uncertainty due to sampling variability. (p.&nbsp;197)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>To quantify the variation around the population-level parameter, we need to measure the spread of the sampling distribution of the estimator. […]. Unfortunately, in most cases we cannot compute the standard deviation of the sampling distribution of an estimator directly. Doing so would require drawing multiple samples from the target population, but we rarely have access to more than one sample. Instead, we estimate the standard deviation based on the one sample we draw. We refer to the estimated standard deviation of the sampling distribution of an estimator as the <strong>standard error</strong> of the estimator. (p.&nbsp;198)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>It [the standard error of the sampling distribution of an estimator] measures the amount of variation of the estimator around the true value of the population-level parameter. (p.&nbsp;198)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The estimation error is the difference between the estimate and the true value of the parameter. The average estimation error, also known as bias, is the average difference between the estimate and the true value of the parameter over multiple hypothetical samples. An estimator is said to be unbiased if the average estimation error over multiple hypothetical samples is zero. The standard error is an estimate of the average size of the estimation error over multiple hypothetical samples. (p.&nbsp;199)</p>
+</blockquote>
+<p>In mathematical notation, the average estimation error (bias) is:</p>
 <p><span class="math display">\[
-X_i = \begin{cases}
-\text{1 if individual } i \text{ receives the treatment} \\
-\text{0 if individual } i \text{ does not receive the treatment}
-\end{cases}
+\text{average estimation error} = \mathbb{E}(\text{estimate}_i - \text{true value})
 \]</span></p>
-<p>Based on whether the individual receives the treatment, we speak of two different conditions: - <strong>treatment</strong> is the condition with the treatment (<span class="math inline">\(X_i = 1\)</span>); - <strong>control</strong> is the condition without the treatment (<span class="math inline">\(X_i = 0\)</span>) (p.&nbsp;28).</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Note that when estimating a causal effect, we are trying to measure a change in Y, specifically the change in Y caused by a change in X. In mathematical notation, we represent change with <span class="math inline">\(\Delta\)</span>, and, thus, we represent a change in the outcome variable as <span class="math inline">\(\Delta Y\)</span>. (p.&nbsp;30)</p>
-</blockquote>
-<p>If we could observe both potential outcomes for each individual, we could estimate the causal effect of the treatment on the outcome just by taking the difference between the two potential outcomes. That is, we could estimate the causal effect of the treatment on the outcome as:</p>
+<p>The standard error (or the average size of the estimation error over multiple samples) is calculated as:</p>
 <p><span class="math display">\[
-\text{Individual Effect}_i = \Delta Y_i = Y_i(X_i = 1) - Y_i(X_i = 0)
-\]</span></p>
-<blockquote class="blockquote">
-<p>Unfortunately, this kind of analysis is not possible. In the real world, we never observe both potential outcomes for the same individual. Instead, we observe only the <strong>factual outcome</strong>, which is the potential outcome under whichever condition (treatment or control) was received in reality. We can never observe the <strong>conterfactual outcome</strong>, which is the potential outcome that would have occurred under whichever condition (treatment or control) was not received in reality. As a result, we cannot compute causal effects at the individual level. (p.&nbsp;32)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p><strong>FUNDAMENTAL PROBLEM OF CAUSAL INFERENCE:</strong> To measure causal effects, we need to compare the factual outcome with the counterfactual outcome, but we can never observe the counterfactual outcome.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>To get around the fundamental problem of causal inference, we must find good approximations for the counterfactual outcomes. To accomplish this, we move away from individual-level effecs and focus on the <em>average</em> causal effect <em>accross a group of individuals</em>.</p>
-<p>The <strong>average causal effect</strong> of the treatment X on the outcome Y, also known as the average treatment effect, is the average of all individual causal effects of X on Y within a group. Since each individual causal effects is the change in Y caused by a change in X for a particular individual, the average causal effect of X on Y is the <em>average</em> change in Y caused by a change in X <em>for a group of individuals</em>. (p.&nbsp;33)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In a <strong>randomized experiment</strong>, also known as a randomized controlled trial (RCT), researchers decide who receives the treatment based on a random process. (p.&nbsp;35)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>When treatment assignment is randomized, the only thing that distinguishes the treatment group from the control group, besides the reception of the treatment, is chance. This means that although the treatment and control groups consist of different individuals, the two groups are comparable to each other, <em>on average</em>, in all respects other than whether or not they received the treatment. (p.&nbsp;36)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>If the treatment and control groups were comparable before the treatment was administered, however, then we can use the factual outcome of one group as an approximation for the counterfactual outcome of the other. In other words, we can assume that the average outcome of the treatment group is a good estimate of the average outcome of the control group, had the control group received the treatment. Similarly, we can assume that the average outcome of the control group is a good estimate of the average of the treatment group, had the treatment group not received the treatment. As a result, we can approximate the average treatment effect by computing the difference in the average outcomes between the treatment and control groups. (p.&nbsp;37)</p>
-</blockquote>
-<p>In fact, we can now compute:</p>
-<p><span class="math display">\[
-\hat{\text{average effect}} = \bar{Y}_\text{treatment group} - \bar{Y}_\text{control group}
+\begin{align*}
+\text{standard error} &amp;= \sqrt{\mathbb{V}(\text{estimator})} \\
+&amp;= \sqrt{\mathbb{E}[(\text{estimate}_i - \mathbb{E}(\text{estimator}))^2]} \\
+&amp;= \sqrt{\mathbb{E}[(\text{estimate}_i - \text{true value})^2]} \\
+\end{align*}
 \]</span></p>
 <blockquote class="blockquote">
-<p>It is worth repeating that the difference-in-means is a valid estimator of the average causal effect of a treatment on an outcome only when the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. […]. The randomization of treatment assignment enables researchers to isolate the effect of the treatment from the effects of other factors. (p.&nbsp;38)</p>
+<p>For each of the estimators, then, if we drew multiple samples from the same target population and computed the standardized estimate for each sample, the resulting statistic would approximately follow the standard normal distribution. (p.&nbsp;201)</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>Given that we cannot always run experiments, we need to learn how to estimate causal effects in non-experimental settings, using what is called <strong>observational data</strong>. Unlike <strong>experimental data</strong>, which refers to data collected from a randomized experiment, observational data are collected about naturally occuring events. Treatment assignment is out of the control of the researchers and is often the result of individual choices.</p>
-</blockquote>
-</section>
-<section id="other-nice-readings" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="other-nice-readings"><span class="header-section-number">5.2</span> Other nice readings</h2>
+<p>Com isso, podemos:</p>
 <ol type="1">
-<li><p>How research affects policy: experimental evidence from 2.150 Brazilian municipalities <a href="https://gautam-rao.com/pdf/HMRS.pdf">[paper]</a> <a href="https://pp.nexojornal.com.br/academico/2020/12/10/como-evidencia-empirica-afeta-decisoes-sobre-politicas-publicas">[Nexo]</a></p></li>
-<li><p>Expected discrimination and job search <a href="https://deivisangeli.github.io/assets/pdfs/Angeli-JMP-MatavelliSecco.pdf">[paper]</a></p></li>
-<li><p>Does Artificial Intelligence help or hurt gender diversity? Evidence from two field experiments on recruitment in tech <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4370805">[paper]</a></p></li>
+<li>Computar intervalos de confiança</li>
+<li>Fazer testes de hipótese, que indicam o quão provável é que o parâmetro populacional assuma um determinado valor sob determinada distribuição</li>
 </ol>
+<section id="intervalos-de-confiança" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="intervalos-de-confiança"><span class="header-section-number">10.1.1</span> Intervalos de confiança</h3>
+<blockquote class="blockquote">
+<p>Three levels of confidence are conventionally used in the social sciences to construct confidence intervals: 90%, 95%, and 99%. The level of confidence indicates the probability, over multiple samples, that the true value lies within the interval. With higher levels of confidence, the degree of uncertainty decreases, but the width of the confidence level increases. (p.&nbsp;202)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>As we say in chapter 6, about 95% of the observations in the standard normal random variable fall between -1.96 and 1.96. In mathematical notation, if <span class="math inline">\(Z\)</span> is the standard normal random variable, then:</p>
+<p><span class="math display">\[ P(-1.96 \leq Z \leq 1.96) \approx 0.95 \]</span></p>
+</blockquote>
+<p>O estimador padronizado segue uma distribuição normal padrão. Então, para múltiplas amostras, os estimadores padronizados ficam, 95% das vezes, entre -1.96 e 1.96.</p>
+<p>💡Na prática, para resumir: estamos utilizando a distribuição amostral dos estimadores para calcular intervalos de confiança sobre o parâmetro populacional. Em primeiro lugar, derivamos o erro médio do estimador; depois, sua variabilidade. Com isso, conseguimos padronizar essa distribuição para fazer inferências utilizando uma <span class="math inline">\(\mathcal{N}(0, 1)\)</span>. Em particular, vemos que:</p>
+<p><span class="math display">\[
+P \left( -1.96 \leq \dfrac{\text{estimator} - \text{true value}}{\text{standard error}} \leq 1.96 \right) \approx 0.95
+\]</span></p>
+<p>Apenas movendo os termos para isolar o <span class="math inline">\(\text{true value}\)</span>, concluímos:</p>
+<p><span class="math display">\[
+P \left( \text{estimator} -1.96 \times \text{standard error} \leq \text{true value} \leq \text{estimator} + 1.96 \times \text{standard error}  \right) \approx 0.95
+\]</span></p>
+<blockquote class="blockquote">
+<p>Thanks to the central limit theorem, we know that in 5% of the samples, the 95% confidence interval will <em>not</em> contain the true value of the parameter. Unfortunately, we have no way of knowing whether we happen to be analyzing one of those fringe samples. This is why it is so important to replicate scientific studies, that is, to arrive at similar conclusions when analyzing a different sample of the data from the same target population. (p.&nbsp;203)</p>
+</blockquote>
+<ol type="1">
+<li>Intervalo de confiança para a média amostral</li>
+</ol>
+<p><span class="math display">\[
+\left[ \ \bar{Y} - 1.96 \times \sqrt{\dfrac{\text{Var(Y)}}{n}}, \bar{Y} + 1.96 \times \sqrt{\dfrac{\text{Var(Y)}}{n}} \ \right]
+\]</span></p>
+<ol start="2" type="1">
+<li>Intervalo de confiança para o estimador <em>difference-in-means</em></li>
+</ol>
+<p>Pelas propriedades da variânca, sabemos que <span class="math inline">\(\text{Var}(A - B) = \text{Var}(A) + \text{Var}(B) - 2 \cdot \text{cov}(A, B)\)</span>. Como os grupos de tratamento e controle são independentes em desenhos experimentais, a covariância é zero. Com isso, é muito razoável que o intervalo de confiança para o estimador seja:</p>
+<p><span class="math display">\[
+\bar{Y}_\text{treatment} - \bar{Y}_\text{control} \pm 1.96 \times \sqrt{ \dfrac{\text{var}(Y_\text{treatment})}{n_\text{treatment}} + \dfrac{\text{var}(Y_\text{control})}{n_\text{control}} }
+\]</span></p>
+</section>
+<section id="teste-de-hipótese" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="teste-de-hipótese"><span class="header-section-number">10.1.2</span> Teste de hipótese</h3>
+<blockquote class="blockquote">
+<p>Hypothesis testing is a methodology that we use to determine whether the parameter is likely to equal a particular value. For example, we can use hypothesis testing to determine whether or not an average treatment effect is different from zero in the target population.</p>
+<p>Hypothesis testing is based on the idea of proof by contradiction. We start by assuming the contrary of what we would like to prove and show how its assumption leads to a logical contradiction. (p.&nbsp;211)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The null hypothesis, <span class="math inline">\(H_0\)</span>, is the hypothesis we would like to eventually refute […]. The alternative hypothesis, <span class="math inline">\(H_1\)</span>, is the hypothesis we test the null hypothesis against. (p.&nbsp;211)</p>
+</blockquote>
+<p>Assumindo que a hipótese nula é verdadeira e que o valor do parâmetro é <span class="math inline">\(\theta\)</span>, chegamos a:</p>
+<p><span class="math display">\[
+\text{z-statistic} = \dfrac{\text{estimator} - \theta}{\text{standard error}} \sim \mathcal{N}(0, 1)
+\]</span></p>
+<blockquote class="blockquote">
+<p>This random variable is known as the <strong>z-statistic</strong>. The z-statistic is an example of a <strong>test statistic</strong>, which is a function of observed data that can be used to test the null hypothesis.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Suppose we were to draw multiple samples from the same target population and compute the z-statistic for each sample. Then, thanks to the central limit theorem, we know that if the null hypothesis were true, the z-statistics would approximately follow the standard normal distribution. In reality, however, we usually draw only one sample. As a result, we can observe only one realization of the z-statistic. We denote the observed value of the z-statistic as z<span class="math inline">\(^\text{obs}\)</span>.</p>
+<p>Now we can gauge the degree of consistency between what we observe and the null hypothesis. Here is the general idea: if the observed value of the test statistic is extreme relative to the distribution of the test statistic under the null hypothesis […], then what we observe would be highly unlikely if the null hypothesis were true. We would, thus, conclude that the null hypothesis is likely to be false. In statistical terms, we would reject the null hypothesis. (p.&nbsp;213)</p>
+</blockquote>
+<p>O contrário de rejeitar é <em>falhar em rejeitar</em>.</p>
+<blockquote class="blockquote">
+<p>Because we know the distribution of the test statistic under the null hypothesis, we can compute the probability that we observe a value at least as extreme as the one we observe if indeed the null hypothesis is true. This probability is called the <strong>p-value</strong>. Here, because our alternative hypothesis is two-sided, we calculate what is known as the two-sided p-value.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In general, a smaller p-value provides stronger evidence against the null hypothesis. A very small p-value indicates that the observed value of the test statistic would be highly unlikely if the null hypothesis were true. Thus, when the p-value is very small, there are two possible scenarios: either (a) the null hypothesis is true and we observe something highly unlikely, or (b) the null hypothesis is not true. (p.&nbsp;214)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A result is said to be Statistically significant at the 5% level when we can reject the null hypothesis using the 5% rejection threshold and conclude that the corresponding parameter is distinguishable from zero. (p.&nbsp;215)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>A p-value of 5% does not rule out the possibility that the parameter is zero. In fact, thanks to the central limit theorem, we know that if the null hypothesis is true, in 5% of the samples drawn from the target population, we will wrongly reject the null hypothesis when using a significance level of 5%. Indeed, the significance level of a test characterizes the probability of false rejection of the null hypothesis (known as type I error). (p.&nbsp;215)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>RELATIONSHIP BETWEEN CONFIDENCE INTERVALS AND HYPOTHESIS TESTING: if the 95% confidence interval of an estimator does not include zero, we will reject the null hypothesis that the corresponding parameter equals zero at the 5% level. By the same logic, if it does include zero, we will fail to reject the null hypothesis. (p.&nbsp;220)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Compared to the standard normal distribution, the t-distribution [used in R] is also symmetric and bell-shaped, but has fatter tails. The p-values computed by R here are slightly larger and, as a result, lead to somewhat more conservative inferences. As long as the sample is not very small, however, the difference is typically negligible. (p.&nbsp;223)</p>
+</blockquote>
+<p>Para terminar, vale sempre lembrar que significância estatística não tem absolutamente nada a ver com “significância científica”. Isto é, não é porque um efeito é estatisticamente diferente de zero que ele é relevante.</p>
+<hr>
+</section>
+<section id="o-erro-padrão-da-média" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="o-erro-padrão-da-média"><span class="header-section-number">10.1.3</span> O erro-padrão da média</h3>
+<p>💡Frequentemente me pergunto de onde vem o <span class="math inline">\(\sqrt{n}\)</span> na fórmula do erro padrão. Vamos lá: suponha que queremos calcular a variância da soma de <span class="math inline">\(n\)</span> variáveis aleatórias, todas com variância <span class="math inline">\(\sigma^2\)</span>.</p>
+<p><span class="math display">\[
+\text{Var}(X_1 + X_2 + \cdots + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2
+\]</span></p>
+<p>A média é dada por <span class="math inline">\(\bar{X} = \dfrac{1}{n} \sum^n_{i=1} X_i\)</span>. Pelas propriedades da variância, <span class="math inline">\(\text{Var} \left(\dfrac{1}{n} \sum^n_{i=1} X_i \right) = \dfrac{1}{n^2} \cdot \text{Var} \left( \sum^n_{i=1} X_i \right)\)</span>.</p>
+<p>Com efeito:</p>
+<p><span class="math display">\[
+\text{Var}(\bar{X}) = \dfrac{1}{n^2} \cdot n \cdot \sigma^2 = \dfrac{\sigma^2}{n}
+\]</span></p>
+<p>Segue daí que o erro padrão da média amostral é <span class="math inline">\(\dfrac{\sigma}{\sqrt{n}}\)</span>.</p>
+<p><strong>Importante:</strong> note que a variância que aparece aqui, <span class="math inline">\(\text{Var}(\bar{X}) = \sigma^2 / n\)</span>, <strong>não é a mesma que a variância das variáveis originais</strong> <span class="math inline">\(X_i\)</span>, que é $^2 $. Enquanto <span class="math inline">\(\sigma^2\)</span> mede a dispersão dos dados individuais na população, <span class="math inline">\(\text{Var}(\bar{X})\)</span> mede o quanto a <span class="math inline">\(\bar{X}\)</span> tende a variar de uma amostra para outra. Ou seja, estamos falando da variância , e não de uma variável aleatória individual.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 29%">
+<col style="width: 39%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>O que mede</th>
+<th>Fórmula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Variância de <span class="math inline">\(X_i\)</span></td>
+<td>Variabilidade dos dados</td>
+<td><span class="math inline">\(\sigma^2\)</span></td>
+</tr>
+<tr class="even">
+<td>Variância de <span class="math inline">\(\bar{X}\)</span></td>
+<td>Variabilidade da média amostral</td>
+<td><span class="math inline">\(\dfrac{\sigma^2}{n}\)</span></td>
+</tr>
+<tr class="odd">
+<td>Erro padrão de <span class="math inline">\(\bar{X}\)</span></td>
+<td>Desvio padrão da média amostral</td>
+<td><span class="math inline">\(\dfrac{\sigma}{\sqrt{n}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="shmueli-g.-2010.-to-explain-or-to-predict" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="shmueli-g.-2010.-to-explain-or-to-predict"><span class="header-section-number">10.2</span> Shmueli, G. (2010). To explain or to predict?</h2>
+<blockquote class="blockquote">
+<p>The above decomposition [bias-variance tradeoff] reveals a source of the difference between explanatory and predictive modeling: In explanatory modeling the focus is on minimizing bias to obtain the most accurate representation of the underlying theory. In contrast, predictive modeling seeks to minimize the combination of bias and estimation variance, occasionally sacrificing theoretical accuracy for improved empirical precision. (p.&nbsp;293)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In explanatory modeling, where variables are seen as operationalized constructs, variable choice is based on the role of the construct in the theoretical causal structure and on the operationalization itself. (p.&nbsp;297)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>In predictive modeling, the focus on association rather than causation, the lack of <span class="math inline">\(\mathcal{F}\)</span>, and the prospective context, mean that there is no need to delve into the exact role of each variable in terms of an underlying causal structure. Instead, criteria for choosing predictors are quality of the association between the predictors and the response, data quality, and availability of the predictors at the time of prediction, known as ex-ante availability. (p.&nbsp;298)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Explanatory modeling requires interpretable statistical models <span class="math inline">\(f\)</span> that are easily linked to the underlying theoretical model <span class="math inline">\(\mathcal{F}\)</span>. Hence the popularity of statistical models, and especially regression-type methods, in many disciplines. Algorithmic methods such as neural networks or k-nearest-neighbors, and uninterpretable nonparametric models, are considered ill-suited for explanatory modeling.</p>
+<p>In predictive modeling, where the top priority is generating accurate predictions of new observations and f is often unknown, the range of plausible methods includes not only statistical models (interpretable and uninterpretable) but also data mining algorithms. (p.&nbsp;298)</p>
+</blockquote>
 
 
 </section>
@@ -919,13 +1040,13 @@ X_i = \begin{cases}
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../aulas/aula-5.html" class="pagination-link" aria-label="Indicadores e estatísticas descritivas">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Indicadores e estatísticas descritivas</span></span>
+      <a href="../aulas/aula-10.html" class="pagination-link" aria-label="Probabilidade">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Probabilidade</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../aulas/aula-7.html" class="pagination-link" aria-label="Inferência">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inferência</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../listas/nivelamento/lista-nivelamento.html" class="pagination-link" aria-label="Lista Nivelamento">
+        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
