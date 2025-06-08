@@ -23,6 +23,7 @@ book:
         - listas/nivelamento/lista-nivelamento.qmd
         - listas/lista-1/lista1.qmd
         - listas/lista-2/lista2.qmd
+        - listas/lista-3/lista3.qmd
 format:
   html:
     theme: 
