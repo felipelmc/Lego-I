@@ -1105,20 +1105,26 @@ window.Quarto = {
 </div>
 </div>
 <p>À medida que incrementamos o tamanho da amostra, nos aproximamos mais do parâmetro populacional. Vale notar, ainda, que a diferença mais substantiva é observada entre as amostras de tamanho <span class="math inline">\(800\)</span> e <span class="math inline">\(1200\)</span>, enquanto um aumento de <span class="math inline">\(1200\)</span> para <span class="math inline">\(2400\)</span> apresentou ganhos marginais. Isso se explica por dois motivos: o primeiro, pelo fato de que se trata de apenas uma única amostra aleatória – sujeita, é claro, à incerteza inerente ao processo de amostragem. Além disso, sabemos também que o erro-padrão da média decresce proporcionalmente à raiz quadrada do tamanho amostral. Isso significa dizer que aumentar muito o tamanho da amostra traz ganhos apenas marginalmente melhores em termos de erro-padrão, a menos que o aumento seja suficientemente expressivo.</p>
-<p>Suponha que extraímos <span class="math inline">\(n\)</span> amostras aleatórias de uma variável aleatória <span class="math inline">\(X\)</span>, todas com variância <span class="math inline">\(\sigma^2\)</span>. Como as amostras são independentes e identicamente distribuídas, sabemos o seguinte:</p>
+<p>Vamos explorar isso um pouco mais. Suponha que extraímos uma amostra aleatória de tamanho <span class="math inline">\(n\)</span> de uma variável aleatória <span class="math inline">\(X\)</span>, <span class="math inline">\(\{X_1, X_2, \dots, X_n\}\)</span>. Sabemos que <span class="math inline">\(\mathbb{E}[X] = \mu\)</span> e <span class="math inline">\(\text{Var}(X) = \sigma^2\)</span>. Antes de observarmos os dados, cada <span class="math inline">\(X_i\)</span> é uma variável aleatória que segue a mesma distribuição de <span class="math inline">\(X\)</span>. Essa é uma maneira de pensar na média amostral: como uma média de <span class="math inline">\(n\)</span> variáveis aleatórias iid. Cada ponto observado <span class="math inline">\(\{ x_1, x_2, \dots, x_n \}\)</span> é uma realização dessas variáveis aleatórias.</p>
+<blockquote class="blockquote">
+<p>When you observe a random sample (these are fixed numbers once they are observed) and find its average, you are effectively taking a realization from the sample mean random variable (make sense?) <a href="https://medium.com/@johnswyou/random-variable-or-observation-5aaddb7bc4a5">[link]</a>.</p>
+</blockquote>
+<p>A variância amostral é, portanto,</p>
 <p><span class="math display">\[
-\text{Var}(X_1 + X_2 + \cdot + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2.
-\]</span> A média amostral é <span class="math inline">\(\bar{X} = \frac{1}{n} \sum^n_{i=1} X_i\)</span>. Pelas propriedades da variância, portanto, a variância amostral da média amostral será:</p>
+\text{Var}(X_1 + X_2 + \dots + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2,
+\]</span> e a a média amostral é <span class="math inline">\(\bar{X} = \frac{1}{n} \sum^n_{i=1} X_i\)</span>. Pelas propriedades da variância, portanto, a variância amostral da média amostral será:</p>
 <p><span class="math display">\[
 \text{Var}\left( \dfrac{1}{n} \sum^n_{i=1} X_i \right) = \dfrac{1}{n^2} \ \text{Var} \left( \sum^n_{i=1} X_i \right) = \dfrac{n \cdot \sigma^2}{n^2} = \dfrac{\sigma^2}{n}.
-\]</span> Daí segue que o erro-padrão da média amostral é <span class="math inline">\(\dfrac{\sigma}{\sqrt{n}}\)</span>, decrescendo a uma proporção de <span class="math inline">\(\sqrt{n}\)</span>.</p>
+\]</span></p>
+<p>Daí segue que o erro-padrão da média amostral é <span class="math inline">\(\dfrac{\sigma}{\sqrt{n}}\)</span>, decrescendo a uma proporção de <span class="math inline">\(\sqrt{n}\)</span>.</p>
 </section>
 <section id="distribuição-amostral-da-média" class="level2" data-number="15.3">
 <h2 data-number="15.3" class="anchored" data-anchor-id="distribuição-amostral-da-média"><span class="header-section-number">15.3</span> Distribuição amostral da média</h2>
 <p>Neste ponto, vamos simular uma distribuição amostral da média da renda mensal da população de Belford Roxo. Nosso objetivo é extrair <span class="math inline">\(i\)</span> amostras aleatórias de tamanho <span class="math inline">\(n=800\)</span>. O que estamos fazendo, afinal, é testando o Teorema Central do Limite. Esse teorema afirma que, sob certas condições, a distribuição da média de um grande número de variáveis aleatórias i.i.d. tende a uma distribuição normal. Formalmente, à medida que extraímos mais amostras, esperamos que:</p>
 <p><span class="math display">\[
 \dfrac{\bar{X} - \mathbb{E}[X]}{\sqrt{{\text{Var}(X) / i}}} \sim \mathcal{N}(0, 1),
-\]</span> sendo <span class="math inline">\(i\)</span> o número de amostras, embora essa não seja a notação comum (durante o trabalho, a variável <span class="math inline">\(n\)</span> já está ocupada representando o tamanho da amostra). Em outras palavras, esperamos que a média amostral padronizada siga uma distribuição aproximadamente normal com média <span class="math inline">\(0\)</span> e variância <span class="math inline">\(1\)</span>.</p>
+\]</span></p>
+<p>sendo <span class="math inline">\(i\)</span> o número de amostras, embora essa não seja a notação comum (durante o trabalho, a variável <span class="math inline">\(n\)</span> já está ocupada representando o tamanho da amostra). Em outras palavras, esperamos que a média amostral padronizada siga uma distribuição aproximadamente normal com média <span class="math inline">\(0\)</span> e variância <span class="math inline">\(1\)</span>.</p>
 <p>Na prática, padronizar a distribuição para aproximá-la de uma <span class="math inline">\(\mathcal{N}(0, 1)\)</span> é muito útil, mas essa padronização não é necessária para observarmos o fato de que a distribuição da média amostral se aproximará de uma distribuição normal de todo modo – embora, é claro, centrada em outro ponto que não o <span class="math inline">\(0\)</span>. No nosso caso, em particular, esperamos que essa distribuição centrada em torno do parâmetro populacional, cujo valor é conhecido.</p>
 <p>Vejamos:</p>
 <div class="cell">

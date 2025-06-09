@@ -1,0 +1,63 @@
+# Teste de hipótese
+
+## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 7: Teste bivariado de hipótese.
+
+> Em cada um desses testes, seguimos uma mesma lógica: comparamos a real relação entre $X$ e $Y$ nos nossos dados amostrais com o que esperaríamos encontrar se $X$ e $Y$ _não fossem_ relacionados na população subjacente. Quanto mais diferente a relação empírica observada for do que esperaríamos encontrar se _não_ houvesse uma relação, mais confiantes ficamos em que $X$ e $Y$ estão relacionados na população. A lógica dessa inferência para a população a partir da amostra é a mesma que usamos no capítulo 6 para fazer inferências sobre a média da população a partir dos dados da amostra.
+>
+> A estatística que é comumente associada a esse tipo de exercício lógico é o **valor-p**. O valor-p, que varia entre 0 e 1, é a probabilidade de observarmos a relação que verificamos nos dados amostrais por acaso. Em outras palavras, o valor-p nos diz a probabilidade de encontrarmos a relação observada entre duas variáveis em nossa amostra se não existisse relação entre elas na população não observada. Assim, quanto menor o valor-p, maior é a confiança de que _existe_ uma relação sistemática entre as duas variáveis para as quais estimamos o p-valor. (p. 169-170)
+
+> Embora os valores-p sejam indicadores poderosos de se duas variáveis são ou não relacionadas, eles também são limitados. Nesta seção, revisamos algumas dessas limitações. Adicionalmente, é importante que você entenda o que um valor-p não é: a lógica do valor-p não é reversiva. Em outras palavras, $p = 0.001$ não significa que existe $0.999$ de chance de que algo ocorra sistematicamente. Também é importante que você entenda que, embora o valor-p nos diga algo sobre a confiança que podemos ter na relação entre duas variáveis, ele não nos diz se a relação é causal. (p. 170)
+
+> No capítulo 1, introduzimos o conceito de hipótese nula. Nossa definição foi "uma hipótese nula é também uma afirmação baseada na teoria, mas sobre o que esperaríamos observar se nossa teoria for incorreta". Assim, seguindo a lógica previamente sublinhada, se nossa hipótese derivada da teoria é que existe covariação entre $X$ e $Y$, então a hipótese nula correspondente é que não existe covariação entre $X$ e $Y$. Nesse contexto, outra interpretação do valor-p é que ele transmite o nível de confiança com o qual podemos rejeitar a hipótese nula. (p. 171-172)
+
+Suponha o caso em que queremos avaliar se o sexo está, de alguma maneira, associado a votar em um ou outro candidato. Levantar a hipótese nula é tarefa simples: se não existe efeito do sexo sobre o voto, então a proporção de mulheres e homens que votaram no candidato $x$ deve ser a mesma. Daí, podemos comparar isso com o valor observado. Para isso, utilizamos o teste qui-quadrado, $\mathcal{X}^2$.
+
+$$
+x^2 = \sum \dfrac{(\text{Observado} - \text{Esperado})^2}{\text{Esperado}}
+$$
+
+> Quanto mais os valores de O diferem dos valores de E, maior é o valor de $x^2$.
+
+> Então o valor do nosso $x^2$ para os nossos dados é 19.79. O que fazemos com isso? Comparamos o valor da nossa estatística, 19.79, com algum valor-padrão predeterminado, chamado valor crítico, de $x^2$. Se nosso valor é maior do que o valor crítico, então concluímos que existe relação entre as duas variáveis; e, se o valor calculado é menor que o valor crítico, não podemos chegar a essa conclusão. (p. 176-177)
+
+> Você pode encontrar uma tabela com os valores críticos de $x^2$ no Apêndice A. Se adotarmos o valor-p padrão de 0.05, observamos que o valor crítico do $x^2$ para 1 grau de liberdade é 3.841. Portanto, um $x^2$ com valor calculado de 19.79 está muito acima do valor mínimo requerido para obter um valor-p de 0.05. De fato, observando a tabela dos valores críticos, podemos ver que nossa estatística excede o valor crítico necessário para um valor-p de 0.001. (p. 177)
+
+> Para definir se as diferenças observadas nesses dois gráficos são estatisticamente significantes, podemos utilizar o teste de diferença de médias. Nesse teste comparamos o que observamos nos dois gráficos com o que esperaríamos encontrar se não existisse uma relação entre o tipo de governo e a duração do governo. Se não existisse nenhuma relação entre as duas variáveis, então a duração dos dois tipos de governo seria proveniente da mesma distribuição subjacente. Se fosse o caso, a média e o valor médio da duração do governo seriam iguais para governos de minoria e de maioria. (p. 179)
+
+Nesse caso, utilizamos o teste-t:
+
+$$
+t = \dfrac{\bar{Y}_1 - \bar{Y}_2}{\text{se}(\bar{Y}_1 - \bar{Y}_2)}
+$$
+
+O erro-padrão da diferença das duas médias é:
+
+$$
+\text{se}(\bar{Y}_1 - \bar{Y}_2) = \sqrt{ \left( \dfrac{ (n_1 - 1)s_1^2 + (n_2 - 1)s_2^2 }{n_1 + n_2 - 2} \right) } \times \sqrt{ \left( \dfrac{1}{n_1} + \dfrac{1}{n_2} \right) }
+$$
+
+> Os graus de liberdade refletem a ideia básica de que ganharemos confiança no padrão observado à medida que a quantidade de dados em que esse padrão é baseado cresce. Em outras palavras, à medida que o tamanho da nossa amostra aumenta, nos tornamos mais confiantes sobre nossa habilidade de afirmar coisas sobre a população subjacente. [...]. À medida que os graus de liberdade aumentam, a estatística-t necessária diminui. Calculamos os graus de liberdade para uma estatística-t de diferença de médias baseada na soma da amostra total menos dois. Assim, nosso grau de liberdade é $n_1 + n_2 - 2$. (p. 181)
+
+> A covariância é um modo estatístico de resumir um padrão de associação geral (ou a falta dele) entre duas variáveis contínuas. A fórmula da covariância para duas variáveis $X$ e $Y$ é
+>
+> $$
+> \text{cov}_{XY} = \dfrac{ \sum^n_{i=1} (X_i - \bar{X}) (Y_i - \bar{Y}) }{n}
+> $$
+>
+> Para entender melhor a intuição por detrás da fórmula da covariância, é útil pensar em termos de valores relativos dos casos individuais em relação à média de $X$ ($\bar{X}$) e a média de $Y$ ($\bar{Y}$). Se um caso individual tiver valor para a variável independente maior do que a média de X e o valor para a variável dependente maior que a média de Y, a contribuição desse caso ao numerador da equação será positiva. Se um caso individual tiver um valor para a variável independente menor do que a média de X e um valor para a variável dependente menor que a média de Y, a contribuição desse caso ao numerador da equação da covariância também será positiva, porque a multiplicação de dois números negativos gera um produto positivo. Se um caso tem uma combinação de um valor maior do que a média e outro menor do que a média, sua contribuição ao numerador da fórmula será negativa [...]. (p. 183-184)
+
+Correlação de Pearson:
+
+$$
+r = \dfrac{ \text{cov}_{XY} }{ \sqrt{\text{var}_X \text{var}_Y} }
+$$
+
+A estatística-t para o coeficiente de correlação é dada por:
+
+$$
+t_r = \dfrac{r \sqrt{n - 2}}{\sqrt{1 - r^2}}
+$$
+
+
+
+
