@@ -151,7 +151,3 @@ Segue daí que o erro padrão da média amostral é $\dfrac{\sigma}{\sqrt{n}}$.
 >
 > In predictive modeling, where the top priority is generating accurate predictions of new observations and f is often unknown, the range of plausible methods includes not only statistical models (interpretable and uninterpretable) but also data mining algorithms. (p. 298)
 
----
-
-## Anotações de aula
-

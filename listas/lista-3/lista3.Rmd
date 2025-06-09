@@ -140,16 +140,21 @@ tibble(
 
 À medida que incrementamos o tamanho da amostra, nos aproximamos mais do parâmetro populacional. Vale notar, ainda, que a diferença mais substantiva é observada entre as amostras de tamanho $800$ e $1200$, enquanto um aumento de $1200$ para $2400$ apresentou ganhos marginais. Isso se explica por dois motivos: o primeiro, pelo fato de que se trata de apenas uma única amostra aleatória -- sujeita, é claro, à incerteza inerente ao processo de amostragem. Além disso, sabemos também que o erro-padrão da média decresce proporcionalmente à raiz quadrada do tamanho amostral. Isso significa dizer que aumentar muito o tamanho da amostra traz ganhos apenas marginalmente melhores em termos de erro-padrão, a menos que o aumento seja suficientemente expressivo.
 
-Suponha que extraímos $n$ amostras aleatórias de uma variável aleatória $X$, todas com variância $\sigma^2$. Como as amostras são independentes e identicamente distribuídas, sabemos o seguinte:
+Vamos explorar isso um pouco mais. Suponha que extraímos uma amostra aleatória de tamanho $n$ de uma variável aleatória $X$, $\{X_1, X_2, \dots, X_n\}$. Sabemos que $\mathbb{E}[X] = \mu$ e $\text{Var}(X) = \sigma^2$. Antes de observarmos os dados, cada $X_i$ é uma variável aleatória que segue a mesma distribuição de $X$. Essa é uma maneira de pensar na média amostral: como uma média de $n$ variáveis aleatórias iid. Cada ponto observado $\{ x_1, x_2, \dots, x_n \}$ é uma realização dessas variáveis aleatórias. 
+
+> When you observe a random sample (these are fixed numbers once they are observed) and find its average, you are effectively taking a realization from the sample mean random variable (make sense?) [[link]](https://medium.com/@johnswyou/random-variable-or-observation-5aaddb7bc4a5).
+
+A variância amostral é, portanto,
 
 $$
-\text{Var}(X_1 + X_2 + \cdot + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2.
+\text{Var}(X_1 + X_2 + \dots + X_n) = \text{Var} \left( \sum^n_{i = 1} X_i \right) = n \cdot \sigma^2,
 $$
-A média amostral é $\bar{X} = \frac{1}{n} \sum^n_{i=1} X_i$. Pelas propriedades da variância, portanto, a variância amostral da média amostral será:
+e a a média amostral é $\bar{X} = \frac{1}{n} \sum^n_{i=1} X_i$. Pelas propriedades da variância, portanto, a variância amostral da média amostral será:
 
 $$
 \text{Var}\left( \dfrac{1}{n} \sum^n_{i=1} X_i \right) = \dfrac{1}{n^2} \ \text{Var} \left( \sum^n_{i=1} X_i \right) = \dfrac{n \cdot \sigma^2}{n^2} = \dfrac{\sigma^2}{n}.
 $$
+
 Daí segue que o erro-padrão da média amostral é $\dfrac{\sigma}{\sqrt{n}}$, decrescendo a uma proporção de $\sqrt{n}$.
 
 
@@ -160,6 +165,7 @@ Neste ponto, vamos simular uma distribuição amostral da média da renda mensal
 $$
 \dfrac{\bar{X} - \mathbb{E}[X]}{\sqrt{{\text{Var}(X) / i}}} \sim \mathcal{N}(0, 1),
 $$
+
 sendo $i$ o número de amostras, embora essa não seja a notação comum (durante o trabalho, a variável $n$ já está ocupada representando o tamanho da amostra). Em outras palavras, esperamos que a média amostral padronizada siga uma distribuição aproximadamente normal com média $0$ e variância $1$. 
 
 Na prática, padronizar a distribuição para aproximá-la de uma $\mathcal{N}(0, 1)$ é muito útil, mas essa padronização não é necessária para observarmos o fato de que a distribuição da média amostral se aproximará de uma distribuição normal de todo modo -- embora, é claro, centrada em outro ponto que não o $0$. No nosso caso, em particular, esperamos que essa distribuição centrada em torno do parâmetro populacional, cujo valor é conhecido.
