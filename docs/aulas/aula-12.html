@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Efeitos causais em dados observacionais – Lego I</title>
+<title>11&nbsp; Teste de hipótese – Lego I</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../aulas/aula-10.html" rel="next">
-<link href="../aulas/aula-8.html" rel="prev">
+<link href="../listas/nivelamento/lista-nivelamento.html" rel="next">
+<link href="../aulas/aula-11.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -309,7 +274,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Efeitos causais em dados observacionais</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-12.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Teste de hipótese</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -390,7 +355,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-9.html" class="sidebar-item-text sidebar-link active">
+  <a href="../aulas/aula-9.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Efeitos causais em dados observacionais</span></span></a>
   </div>
 </li>
@@ -408,7 +373,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../aulas/aula-12.html" class="sidebar-item-text sidebar-link">
+  <a href="../aulas/aula-12.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Teste de hipótese</span></span></a>
   </div>
 </li>
@@ -459,9 +424,7 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data." id="toc-llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data." class="nav-link active" data-scroll-target="#llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data."><span class="header-section-number">8.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 5: Estimating Causal Effects with Observational Data.</a></li>
-  <li><a href="#cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs." id="toc-cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs." class="nav-link" data-scroll-target="#cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs."><span class="header-section-number">8.2</span> Cunningham, S. (2022). <em>Causal Inference: the mixtape</em>. Yale University Press. Chapter 3: Directed Acyclic Graphs.</a></li>
-  <li><a href="#other-materials" id="toc-other-materials" class="nav-link" data-scroll-target="#other-materials"><span class="header-section-number">8.3</span> Other materials</a></li>
+  <li><a href="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-7-teste-bivariado-de-hipótese." id="toc-kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-7-teste-bivariado-de-hipótese." class="nav-link active" data-scroll-target="#kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-7-teste-bivariado-de-hipótese."><span class="header-section-number">11.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 7: Teste bivariado de hipótese.</a></li>
   </ul>
 </nav>
     </div>
@@ -469,9 +432,9 @@ window.Quarto = {
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Efeitos causais em dados observacionais</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../aulas/aula-1.html">Aulas</a></li><li class="breadcrumb-item"><a href="../aulas/aula-12.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Teste de hipótese</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Efeitos causais em dados observacionais</span></h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Teste de hipótese</span></h1>
 </div>
 
 
@@ -488,196 +451,60 @@ window.Quarto = {
 </header>
 
 
-<section id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data." class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="llaudet-e.-and-imai-k.-2022.-data-analysis-for-social-science-a-friendly-and-practical-introduction.-princeton-university-press.-chapter-5-estimating-causal-effects-with-observational-data."><span class="header-section-number">8.1</span> Llaudet, E. and Imai, K. (2022). <em>Data analysis for social science: A friendly and practical introduction</em>. Princeton University Press. Chapter 5: Estimating Causal Effects with Observational Data.</h2>
+<section id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-7-teste-bivariado-de-hipótese." class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="kellstedt-p.-m.-whitten-g.-d.-2018.-the-fundamentals-of-political-science-research.-cambridge-university-press.-cap.-7-teste-bivariado-de-hipótese."><span class="header-section-number">11.1</span> Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 7: Teste bivariado de hipótese.</h2>
 <blockquote class="blockquote">
-<p>[…] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p.&nbsp;130)</p>
+<p>Em cada um desses testes, seguimos uma mesma lógica: comparamos a real relação entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> nos nossos dados amostrais com o que esperaríamos encontrar se <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> <em>não fossem</em> relacionados na população subjacente. Quanto mais diferente a relação empírica observada for do que esperaríamos encontrar se <em>não</em> houvesse uma relação, mais confiantes ficamos em que <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> estão relacionados na população. A lógica dessa inferência para a população a partir da amostra é a mesma que usamos no capítulo 6 para fazer inferências sobre a média da população a partir dos dados da amostra.</p>
+<p>A estatística que é comumente associada a esse tipo de exercício lógico é o <strong>valor-p</strong>. O valor-p, que varia entre 0 e 1, é a probabilidade de observarmos a relação que verificamos nos dados amostrais por acaso. Em outras palavras, o valor-p nos diz a probabilidade de encontrarmos a relação observada entre duas variáveis em nossa amostra se não existisse relação entre elas na população não observada. Assim, quanto menor o valor-p, maior é a confiança de que <em>existe</em> uma relação sistemática entre as duas variáveis para as quais estimamos o p-valor. (p.&nbsp;169-170)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>To estimate causal effects using observational data, we have to first identify any relevant differences between treatment and control groups – known as confounding variables or confounders – and then statistically control for them so that we can make the two groups as comparable to each other as possible. (p.&nbsp;130)</p>
+<p>Embora os valores-p sejam indicadores poderosos de se duas variáveis são ou não relacionadas, eles também são limitados. Nesta seção, revisamos algumas dessas limitações. Adicionalmente, é importante que você entenda o que um valor-p não é: a lógica do valor-p não é reversiva. Em outras palavras, <span class="math inline">\(p = 0.001\)</span> não significa que existe <span class="math inline">\(0.999\)</span> de chance de que algo ocorra sistematicamente. Também é importante que você entenda que, embora o valor-p nos diga algo sobre a confiança que podemos ter na relação entre duas variáveis, ele não nos diz se a relação é causal. (p.&nbsp;170)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>The confounding variable, also known as a confounder, is a variable that affects both (i) the likelihood of receiving the treatment and (ii) the outcome <span class="math inline">\(Y\)</span>. (p.&nbsp;130)</p>
+<p>No capítulo 1, introduzimos o conceito de hipótese nula. Nossa definição foi “uma hipótese nula é também uma afirmação baseada na teoria, mas sobre o que esperaríamos observar se nossa teoria for incorreta”. Assim, seguindo a lógica previamente sublinhada, se nossa hipótese derivada da teoria é que existe covariação entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>, então a hipótese nula correspondente é que não existe covariação entre <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>. Nesse contexto, outra interpretação do valor-p é que ele transmite o nível de confiança com o qual podemos rejeitar a hipótese nula. (p.&nbsp;171-172)</p>
 </blockquote>
-<blockquote class="blockquote">
-<p>In the extreme, by affecting both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> at the same time, confounding variables might create a completely spurious relationship between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, misleading us into thinking that <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are causally related to each other when, in fact, there is no direct causal link between the two. (p.&nbsp;132)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>In short, when there is a confounding variable <span class="math inline">\(Z\)</span> affecting <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, we should not trust correlation as a measure of causation, and thus, we cannot use the difference-in-means estimator to estimate average causal effects. (p.&nbsp;132)</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Why don’t we have to worry about confounders in randomized experiments? Randomization of treatment assignment eliminates all potential confounders. It ensures that treatment and control groups are comparable by breaking the link between any potential confounder and the treatment. (p.&nbsp;133)</p>
-</blockquote>
-<p>Para controlar por outras variáveis, usamos regressões múltiplas:</p>
+<p>Suponha o caso em que queremos avaliar se o sexo está, de alguma maneira, associado a votar em um ou outro candidato. Levantar a hipótese nula é tarefa simples: se não existe efeito do sexo sobre o voto, então a proporção de mulheres e homens que votaram no candidato <span class="math inline">\(x\)</span> deve ser a mesma. Daí, podemos comparar isso com o valor observado. Para isso, utilizamos o teste qui-quadrado, <span class="math inline">\(\mathcal{X}^2\)</span>.</p>
 <p><span class="math display">\[
-Y_i = \alpha + \beta_1 X_{i \ 1} + \cdots + \beta_p X_{i \ p} + \epsilon_i
+x^2 = \sum \dfrac{(\text{Observado} - \text{Esperado})^2}{\text{Esperado}}
 \]</span></p>
-<p>Agora, ao invés de o ajuste do modelo aos dados resultar em uma reta, o ajuste do modelo aos dados resulta em um plano que minimiza a soma dos quadrados das distâncias entre os pontos e o plano. O modelo de regressão múltipla é uma extensão do modelo de regressão simples, onde temos mais de uma variável independente.</p>
-<p>Do ponto de vista de interpretação dos coeficientes, <span class="math inline">\(\hat{\alpha}\)</span> é a média de <span class="math inline">\(Y\)</span> quando todas as variáveis independentes são zero. O coeficiente <span class="math inline">\(\hat{\beta}_j\)</span> é a variação esperada em <span class="math inline">\(Y\)</span> quando <span class="math inline">\(X_j\)</span> aumenta uma unidade, mantendo todas as outras variáveis independentes constantes (<em>ceteris paribus</em>, como costumam dizer em economia).</p>
 <blockquote class="blockquote">
-<p>In other words, the difference in the average outcomes between the treatment and control groups that remain after holding all confounding variables constant can now be directly attributed to their difference with respect to the treatment (treated vs.&nbsp;untreated); no other differences between the two groups are in play. (p.&nbsp;145)</p>
-</blockquote>
-</section>
-<section id="cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs." class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="cunningham-s.-2022.-causal-inference-the-mixtape.-yale-university-press.-chapter-3-directed-acyclic-graphs."><span class="header-section-number">8.2</span> Cunningham, S. (2022). <em>Causal Inference: the mixtape</em>. Yale University Press. Chapter 3: Directed Acyclic Graphs.</h2>
-<blockquote class="blockquote">
-<p>Using directed acyclic graphical (DAG) notation requires some up-front statements. The first thing to notice is that a DAG notation, causality runs in one direction. […]. There are no cycles in a DAG. […]. Third, DAGs explain causality in terms of counterfactuals. That is, a causal effect is defined as a comparison between two states of the world – one state that actually happened when some intervention took on some value and another state that didn’t happen (the “counterfactual”) under some other intervention.</p>
+<p>Quanto mais os valores de O diferem dos valores de E, maior é o valor de <span class="math inline">\(x^2\)</span>.</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>Nodes represent random variables, and those random variables are assumed to be created by some data-generating process. Arrows represent a causal effect between two random variables moving in the intuitive direction of the arrow. The direction of the arrow captures the direction of causality.</p>
+<p>Então o valor do nosso <span class="math inline">\(x^2\)</span> para os nossos dados é 19.79. O que fazemos com isso? Comparamos o valor da nossa estatística, 19.79, com algum valor-padrão predeterminado, chamado valor crítico, de <span class="math inline">\(x^2\)</span>. Se nosso valor é maior do que o valor crítico, então concluímos que existe relação entre as duas variáveis; e, se o valor calculado é menor que o valor crítico, não podemos chegar a essa conclusão. (p.&nbsp;176-177)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>A DAG is meant to describe all causal relationships relevant to the effect of <span class="math inline">\(D\)</span> on <span class="math inline">\(Y\)</span>. What makes the DAG distinctive is both the explicit commitment to a causal effect pathway and the complete commitment to the lack of a causal pathway represented by missing arrows. […]. In other words, a DAG will contain both arrows connecting variables and choices to exclude arrows. And the lack of an arrow necessarily means that you think there is no such relationship in the data – this is one of the strongest beliefs you can hold. A complete DAG will have all direct causal effects among the variables in the graph as well as all common causes of any pair of variables in the graph.</p>
+<p>Você pode encontrar uma tabela com os valores críticos de <span class="math inline">\(x^2\)</span> no Apêndice A. Se adotarmos o valor-p padrão de 0.05, observamos que o valor crítico do <span class="math inline">\(x^2\)</span> para 1 grau de liberdade é 3.841. Portanto, um <span class="math inline">\(x^2\)</span> com valor calculado de 19.79 está muito acima do valor mínimo requerido para obter um valor-p de 0.05. De fato, observando a tabela dos valores críticos, podemos ver que nossa estatística excede o valor crítico necessário para um valor-p de 0.001. (p.&nbsp;177)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>Two, through concepts such as the backdoor criterion and collider bias, a well-designed DAG can help you develop a credible research design for identifying the causal effects of some intervention.</p>
+<p>Para definir se as diferenças observadas nesses dois gráficos são estatisticamente significantes, podemos utilizar o teste de diferença de médias. Nesse teste comparamos o que observamos nos dois gráficos com o que esperaríamos encontrar se não existisse uma relação entre o tipo de governo e a duração do governo. Se não existisse nenhuma relação entre as duas variáveis, então a duração dos dois tipos de governo seria proveniente da mesma distribuição subjacente. Se fosse o caso, a média e o valor médio da duração do governo seriam iguais para governos de minoria e de maioria. (p.&nbsp;179)</p>
+</blockquote>
+<p>Nesse caso, utilizamos o teste-t:</p>
+<p><span class="math display">\[
+t = \dfrac{\bar{Y}_1 - \bar{Y}_2}{\text{se}(\bar{Y}_1 - \bar{Y}_2)}
+\]</span></p>
+<p>O erro-padrão da diferença das duas médias é:</p>
+<p><span class="math display">\[
+\text{se}(\bar{Y}_1 - \bar{Y}_2) = \sqrt{ \left( \dfrac{ (n_1 - 1)s_1^2 + (n_2 - 1)s_2^2 }{n_1 + n_2 - 2} \right) } \times \sqrt{ \left( \dfrac{1}{n_1} + \dfrac{1}{n_2} \right) }
+\]</span></p>
+<blockquote class="blockquote">
+<p>Os graus de liberdade refletem a ideia básica de que ganharemos confiança no padrão observado à medida que a quantidade de dados em que esse padrão é baseado cresce. Em outras palavras, à medida que o tamanho da nossa amostra aumenta, nos tornamos mais confiantes sobre nossa habilidade de afirmar coisas sobre a população subjacente. […]. À medida que os graus de liberdade aumentam, a estatística-t necessária diminui. Calculamos os graus de liberdade para uma estatística-t de diferença de médias baseada na soma da amostra total menos dois. Assim, nosso grau de liberdade é <span class="math inline">\(n_1 + n_2 - 2\)</span>. (p.&nbsp;181)</p>
 </blockquote>
 <blockquote class="blockquote">
-<p>In this DAG, we have three random variables: <span class="math inline">\(X\)</span>, <span class="math inline">\(D\)</span>, and <span class="math inline">\(Y\)</span>. There is a direct <em>path</em> from <span class="math inline">\(D\)</span> to <span class="math inline">\(Y\)</span>, which represents a causal effect. That path is represented by <span class="math inline">\(D \rightarrow Y\)</span>. But there is also a second path from <span class="math inline">\(D\)</span> to <span class="math inline">\(Y\)</span> called the <em>backdoor path</em>. While the direct path is <span class="math inline">\(D \leftarrow X \rightarrow Y\)</span>. While the direct path is a causal effect, the backdoor path is not causal. Rather, it is a process that creates spurious correlations between <span class="math inline">\(D\)</span> and <span class="math inline">\(Y\)</span> that are driven solely by fluctuations in the <span class="math inline">\(X\)</span> random variable. […]. We therefore call <span class="math inline">\(X\)</span> a <em>confounder</em> because it jointly determines <span class="math inline">\(D\)</span> and <span class="math inline">\(Y\)</span>, and so confounds our ability to discern the effect of <span class="math inline">\(D\)</span> on <span class="math inline">\(Y\)</span> in naive comparisons.</p>
+<p>A covariância é um modo estatístico de resumir um padrão de associação geral (ou a falta dele) entre duas variáveis contínuas. A fórmula da covariância para duas variáveis <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> é</p>
+<p><span class="math display">\[
+\text{cov}_{XY} = \dfrac{ \sum^n_{i=1} (X_i - \bar{X}) (Y_i - \bar{Y}) }{n}
+\]</span></p>
+<p>Para entender melhor a intuição por detrás da fórmula da covariância, é útil pensar em termos de valores relativos dos casos individuais em relação à média de <span class="math inline">\(X\)</span> (<span class="math inline">\(\bar{X}\)</span>) e a média de <span class="math inline">\(Y\)</span> (<span class="math inline">\(\bar{Y}\)</span>). Se um caso individual tiver valor para a variável independente maior do que a média de X e o valor para a variável dependente maior que a média de Y, a contribuição desse caso ao numerador da equação será positiva. Se um caso individual tiver um valor para a variável independente menor do que a média de X e um valor para a variável dependente menor que a média de Y, a contribuição desse caso ao numerador da equação da covariância também será positiva, porque a multiplicação de dois números negativos gera um produto positivo. Se um caso tem uma combinação de um valor maior do que a média e outro menor do que a média, sua contribuição ao numerador da fórmula será negativa […]. (p.&nbsp;183-184)</p>
 </blockquote>
-<p>Um caso particular é quando a variável <span class="math inline">\(X\)</span> não é observada pelo pesquisador. Nesse caso, “the backdoor path is open” e, do ponto de vista de notação, as setas são “dashed”.</p>
-<blockquote class="blockquote">
-<p>This is a simple story to tell, and the DAG tells it well, but I want to alert your attention to some subtle points contained in this DAG. The DAG is actually telling two stories. It is telling what is happening, and it is telling what is <em>not</em> happening. For instance, notice that has no direct effect on the child’s earnings except through its effect on schooling. Is this realistic, though? Economists have long maintained that unobserved ability both determines how much schooling a child gets and directly affects the child’s future earnings, insofar as intelligence and motivation can influence careers. But in this DAG, there is no relationship between background and earnings, which is itself an assumption. And you are free to call foul on this assumption if you think that background factors affect both schooling and the child’s own productivity, which itself should affect wages. So what if you think there should be an arrow from <span class="math inline">\(B\)</span> to <span class="math inline">\(Y\)</span>? Then you would draw one and rewrite all the backdoor paths between <span class="math inline">\(D\)</span> and <span class="math inline">\(Y\)</span>.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>When two variables cause a third variable along some path, we call that third variable a “collider”. Put differently, <span class="math inline">\(X\)</span> is a collider along this backdoor path because <span class="math inline">\(D\)</span> and the causal effects of <span class="math inline">\(Y\)</span> collide at <span class="math inline">\(X\)</span>. But so what? What makes a collider so special? <strong>Colliders are special in part because when they appear along a backdoor path, that backdoor path is <em>closed</em> simply because of their presence.</strong> Colliders, when they are left alone, always close a specific backdoor path.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>We care about open backdoor paths because they create systematic, noncausal correlations between the causal variable of interest and the outcome you are trying to study. In regression terms, open backdoor paths introduce omitted variable bias, and for all you know, the bias is so bad that it flips the sign entirely. Our goal, then, is to close these backdoor paths. And if we can close all of the otherwise open backdoor paths, then we can isolate the causal effect of <span class="math inline">\(D\)</span> on <span class="math inline">\(Y\)</span> using one of the research designs and identification strategies discussed in this book. So how do we close a backdoor path?</p>
-<p>There are two ways to close a backdoor path. First, if you have a confounder that has created an open backdoor path, then you can close that path by conditioning on the confounder. Conditioning requires holding the variable fixed using something like subclassification, matching, regression, or another method. It is equivalent to “controlling for” the variable in a regression. The second way to close a backdoor path is the appearance of a collider along that backdoor path. Since colliders always close backdoor paths, and conditioning on a collider always opens a backdoor path, choosing to ignore the colliders is part of your overall strategy to estimate the causal effect itself. By not conditioning on a collider, you will have closed that backdoor path and that takes you closer to your larger ambition to isolate some causal effect.</p>
-<p>When all backdoor paths have been closed, we say that you have come up with a research design that satisfies the <em>backdoor criterion</em>. And if you have satisfied the backdoor criterion, then you have in effect isolated some causal effect. But let’s formalize this: a set of variables <span class="math inline">\(X\)</span> satisfies the backdoor criterion in a DAG if and only if <span class="math inline">\(X\)</span> blocks every path between confounders that contain an arrow from <span class="math inline">\(D\)</span> do <span class="math inline">\(Y\)</span>.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>The issue of conditioning on a collider is important, so how do we know if we have that problem or not? No data set comes with a flag saying “collider” and “confounder.” Rather, the only way to know whether you have satisfied the backdoor criterion is with a DAG, and a DAG requires a model. It requires in-depth knowledge of the data-generating process for the variables in your DAG, but it also requires ruling out pathways. And the only way to rule out pathways is through logic and models. There is no way to avoid it—all empirical work requires theory to guide it. Otherwise, how do you know if you’ve conditioned on a collider or a noncollider? Put differently, you cannot identify treatment effects without making assumptions.</p>
-</blockquote>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggdag)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: pacote 'ggdag' foi compilado no R versão 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Anexando pacote: 'ggdag'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>O seguinte objeto é mascarado por 'package:stats':
-
-    filter</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_dag</span>())</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dag <span class="ot">&lt;-</span> <span class="fu">dagify</span>(Y <span class="sc">~</span> D,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>              Y <span class="sc">~</span> A,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>              O <span class="sc">~</span> A,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>              D <span class="sc">~</span> F,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>              O <span class="sc">~</span> D,</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>              Y <span class="sc">~</span> O,</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">labels =</span> <span class="fu">c</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"D"</span> <span class="ot">=</span> <span class="st">"discrimination"</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"Y"</span> <span class="ot">=</span> <span class="st">"earnings"</span>,</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"O"</span> <span class="ot">=</span> <span class="st">"occupation"</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"F"</span> <span class="ot">=</span> <span class="st">"female"</span>,</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                  <span class="st">"A"</span> <span class="ot">=</span> <span class="st">"ability"</span>),</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">latent =</span> <span class="st">"A"</span>)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">ggdag</span>(dag, <span class="at">text =</span> <span class="cn">FALSE</span>, <span class="at">use_labels =</span> <span class="st">"label"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="aula-9_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>But in this example, we aren’t interested in estimating the causal effect of being female on earnings; we are interested in estimating the effect of discrimination itself. New, you can see several noticeable paths between discrimination and earnings. They are as follows:</p>
-<ol type="1">
-<li><p><span class="math inline">\(D \rightarrow O \rightarrow Y\)</span></p></li>
-<li><p><span class="math inline">\(D \rightarrow O \leftarrow A \rightarrow Y\)</span></p></li>
-</ol>
-<p>The first path is not a backdoor path; rather, it is a path whereby discrimination is mediated by occupation before discrimination has an effect on earnings. This would imply that women are discriminated against, which in turn affects which jobs they hold, and as a result of holding marginally worse jobs, women are paid less. The second path relates to that channel but is slightly more complicated. In this path, unorbserved ability affects both which jobs people get and their earnings.</p>
-<p>So let’s say we regress <span class="math inline">\(Y\)</span> onto <span class="math inline">\(D\)</span>, our discrimination variable. This yields the total effect of discrimination as the weighted sum of both the direct effect of discrimination on earnings and the mediated effect of discrimination on earnings through occupational sorting. But say that we want to control for occupation because we want to compare men and women in similar jobs. Well, controlling for occupation in the regression closes down the mediation channel, but it then opens up the second channel. Why? Because <span class="math inline">\(D \rightarrow O \leftarrow A \rightarrow Y\)</span> has a collider <span class="math inline">\(O\)</span>. So when we control for occupation, we open up this second path. It had been closed because colliders close backdoor paths, but since we conditioned on it, we actually opened it instead. This is the reason we cannot merely control for occupation. Such a control ironically introduces new patterns of bias.</p>
-<p>What is needed is to control for occupation and ability, but since ability is unobserved, we cannot do that, and therefore we do not possess an identification strategy that satisfies the backdoor criterion. Let’s now look at code to illustrate this DAG.</p>
-</blockquote>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ lubridate 1.9.3     ✔ tibble    3.2.1
-✔ purrr     1.0.2     ✔ tidyr     1.3.1
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks ggdag::filter(), stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stargazer)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Please cite as: 
-
- Hlavac, Marek (2022). stargazer: Well-Formatted Regression and Summary Statistics Tables.
- R package version 5.2.3. https://CRAN.R-project.org/package=stargazer </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">female =</span> <span class="fu">ifelse</span>(<span class="fu">runif</span>(<span class="dv">10000</span>)<span class="sc">&gt;=</span><span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dv">0</span>),</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">ability =</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>),</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">discrimination =</span> female,</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">occupation =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="dv">0</span><span class="sc">*</span>female <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>),</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">wage =</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="dv">1</span><span class="sc">*</span>occupation <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>) </span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>lm_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female, tb)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female <span class="sc">+</span> occupation, tb)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>lm_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female <span class="sc">+</span> occupation <span class="sc">+</span> ability, tb)</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(lm_1,lm_2,lm_3, <span class="at">type =</span> <span class="st">"text"</span>, </span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>          <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"Biased Unconditional"</span>, </span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"Biased"</span>,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                            <span class="st">"Unbiased Conditional"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-=========================================================================================================
-                                                     Dependent variable:                                 
-                    -------------------------------------------------------------------------------------
-                                                            wage                                         
-                       Biased Unconditional                Biased                Unbiased Conditional    
-                                (1)                         (2)                          (3)             
----------------------------------------------------------------------------------------------------------
-female                       -2.992***                    0.595***                    -0.997***          
-                              (0.085)                     (0.030)                      (0.028)           
-                                                                                                         
-occupation                                                1.796***                     0.994***          
-                                                          (0.006)                      (0.010)           
-                                                                                                         
-ability                                                                                2.015***          
-                                                                                       (0.022)           
-                                                                                                         
-Constant                     1.996***                     0.200***                     0.987***          
-                              (0.060)                     (0.020)                      (0.017)           
-                                                                                                         
----------------------------------------------------------------------------------------------------------
-Observations                  10,000                       10,000                       10,000           
-R2                             0.111                       0.909                        0.950            
-Adjusted R2                    0.111                       0.909                        0.950            
-Residual Std. Error      4.226 (df = 9998)           1.353 (df = 9997)            0.999 (df = 9996)      
-F Statistic         1,253.087*** (df = 1; 9998) 49,859.860*** (df = 2; 9997) 63,817.270*** (df = 3; 9996)
-=========================================================================================================
-Note:                                                                         *p&lt;0.1; **p&lt;0.05; ***p&lt;0.01</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>[…] if we run the regression that Google and others recommend wherein we control for occupation, the sign on gender changes. It becomes positive! We know this is wrong because we hard-coded the effect of gender to be <span class="math inline">\(-1\)</span>! The problem is that occupation is a collider. It is caused by ability and discrimination. If we control for occupation, we open up a backdoor path between discrimination and earnings that is spurious and so strong that it perverts the entire relationship. So only when we control for occupation and ability can we isolate the direct causal effect of gender on wages.</p>
-</blockquote>
-</section>
-<section id="other-materials" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="other-materials"><span class="header-section-number">8.3</span> Other materials</h2>
-<ul>
-<li>An introduction to DAGs and <code>ggdag</code> by Malcolm Barrett <a href="https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html">[link]</a></li>
-<li>Papers published by Carolina Caetano, an Assistant Professor of Economics at the University of Georgia <a href="http://www.carolinacaetano.net/">[link]</a></li>
-</ul>
+<p>Correlação de Pearson:</p>
+<p><span class="math display">\[
+r = \dfrac{ \text{cov}_{XY} }{ \sqrt{\text{var}_X \text{var}_Y} }
+\]</span></p>
+<p>A estatística-t para o coeficiente de correlação é dada por:</p>
+<p><span class="math display">\[
+t_r = \dfrac{r \sqrt{n - 2}}{\sqrt{1 - r^2}}
+\]</span></p>
 
 
 </section>
@@ -1097,13 +924,13 @@ Note:                                                                         *p
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../aulas/aula-8.html" class="pagination-link" aria-label="Predição">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Predição</span></span>
+      <a href="../aulas/aula-11.html" class="pagination-link" aria-label="Quantificação de incerteza">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Quantificação de incerteza</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../aulas/aula-10.html" class="pagination-link" aria-label="Probabilidade">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Probabilidade</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../listas/nivelamento/lista-nivelamento.html" class="pagination-link" aria-label="Lista Nivelamento">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Lista Nivelamento</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
