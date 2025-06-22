@@ -5,7 +5,7 @@ biblio-style: apsr
 title: "Lista 1"
 subtitle: "Desenho de Pesquisa"
 abstract: "Todas as questões requerem explicações por escrito. Você deverá entregar via Classroom um arquivo em PDF, criado a partir deste documento, com as suas respostas. As respostas devem ser dissertativas e devem apresentar o código utilizado (quando solicitado)"
-date: "11/04/2025"
+date: "04/11/2025"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt

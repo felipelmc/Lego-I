@@ -5,7 +5,7 @@ biblio-style: apsr
 title: "Lista Nivelamento"
 subtitle: "R Básico"
 abstract: "Todas as questões requerem explicações por escrito. Você deverá entregar via Classroom um arquivo em PDF, criado a partir deste documento, com as suas respostas. As respostas devem ser dissertativas e devem apresentar o código utilizado"
-date: "31/03/2025"
+date: "03/31/2025"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt

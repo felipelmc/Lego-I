@@ -5,7 +5,7 @@ biblio-style: apsr
 title: "Lista II"
 subtitle: "Análise de dados"
 abstract: "Neste exercício, analiso a produção de teses e dissertações de programas dos pós-graduação na Capes das áreas de Sociologia ou Ciência Política e Relações Internacionais, entre os anos de 1987 e 2022. Em particular, foco nas teses e dissertações que citam, no resumo, pelo menos um dos seguintes termos: 'polarização', 'text as data' e 'proposições legislativas', totalizando $n = 187$."
-date: "30/04/2025"
+date: "04/30/2025"
 geometry: margin=1in
 fontfamily: mathpazo
 fontsize: 11pt
