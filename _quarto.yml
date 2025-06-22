@@ -19,12 +19,14 @@ book:
         - aulas/aula-10.qmd
         - aulas/aula-11.qmd
         - aulas/aula-12.qmd
+        - aulas/aula-13.qmd
     - part: Listas
       chapters:
         - listas/nivelamento/lista-nivelamento.qmd
         - listas/lista-1/lista1.qmd
         - listas/lista-2/lista2.qmd
         - listas/lista-3/lista3.qmd
+        - listas/lista-4/lista4.qmd
 format:
   html:
     theme: 

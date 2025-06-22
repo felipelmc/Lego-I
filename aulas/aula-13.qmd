@@ -1,0 +1,168 @@
+# Regressão
+
+## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 8: Modelo de regressão bivariado.
+
+> A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. (p. 194)
+
+$$
+Y_i = \alpha + \beta X_i + u_i
+$$
+
+> Esse [$u_i$] é o termo estocástico ou componente randômico da nossa variável dependente. Temos esse termo porque não esperamos que todos os pontos dos nossos dados se alinhem perfeitamente em uma reta. Isso se relaciona diretamente à nossa discussão nos capítulos anteriores sobre a natureza probabilística (em oposição a determinística) das teorias causais sobre fenômenos políticos. (p. 194)
+
+> [...] conseguimos observar que o componente estocástico estimado ($\hat{u}_i$) é igual à diferença entre o valor real da variável dependente ($Y_i$) e o valor da variável dependente predito pelo nosso modelo de regressão bivariado. O componente estocástico estimado também é conhecido como **resíduo**. (p. 196)
+
+> Esse método de estimação dos parâmetros da regressão é conhecido por regressão dos mínimos quadrados ordinários (MQO). (p. 198)
+
+No caso bivariado, as fórmulas são:
+
+$$
+\hat{\beta} = \dfrac{ \sum^n_{i = 1} (X_i - \bar{X}) (Y_i - \bar{Y}) }{ \sum_n^{i = 1} (X_i - \bar{X})^2 }
+$$
+
+$$
+\hat{\alpha} = \bar{Y} - \hat{\beta} \bar{X}
+$$
+
+> Medidas da qualidade geral do ajuste entre um modelo de regressão e a variável dependente são chamadas de medida de qualidade de ajuste. Uma das medidas mais intuitivas (apesar do nome) é a raiz do erro quadrático médio (_root mean-squared error -- root MSE_). Essa estatística é algumas vezes referida como o erro-padrão do modelo de regressão. (p. 201)
+
+$$
+\text{RMSE} = \sqrt{ \dfrac{\sum^n_{i=1} \hat{u}_i^2 }{n} }
+$$
+
+> Vale enfatizar que o _root MSE_ sempre é expresso na métrica [unidade de medida] em que a variável dependente está mensurada. (p. 201)
+
+Também podemos usar o $R^2$, que indica a proporção da variação da variável dependente que é explicada pelo modelo. Em particular, temos a variação total que é propriamente a variância das observações em relação à média:
+
+$$
+\text{TSS} = \sum^n_{i = 1} (Y_i - \bar{Y})^2
+$$
+
+Depois, temos a variação residual de $Y$ depois de controlarmos por $X$ -- na prática, a soma quadrática dos resíduos, que representa a variação não explicada pelo modelo:
+
+$$
+\text{RSS} = \sum^n_{i = 1} \hat{u}_i^2
+$$
+
+E, por fim, o $R^2$ é a variação explicada. Portanto, é calculada por $1 - \dfrac{\text{RSS}}{\text{TSS}}$.
+
+> Uma medida que é utilizada para estimação da incerteza de cada um dos parâmetros populacionais é a variância estimada do componente estocástico populacional, $u_i$. Essa variância não observada, $\sigma^2$, é estimada a partir dos resíduos, utilizando a fórmula abaixo, após os parâmetros da regressão com os dados da amostra terem sido estimados:
+>
+> $$ 
+>\hat{\sigma}^2 = \dfrac{\sum^n_{i = 1} \hat{u}_i^2 }{ n- 2 } 
+> $$
+
+> Uma vez que tenhamos estimado $\hat{\sigma}^2$, a variância e os erros-padrão para o parâmetro de inclinação estimados ($\hat{\beta}$) são estimados utilizando as seguintes fórmulas:
+> $$
+> \text{var}(\hat{\beta}) = \dfrac{ \hat{\sigma}^2 }{ \sum^n_{i = 1} (X_i - \bar{X}) }
+> $$
+
+Quanto ao intercepto:
+
+$$
+\text{var}(\hat{\alpha}) = \dfrac{ \hat{\sigma}^2 \sum^n_{i = 1} X^2 }{ n \sum^n_{i = 1} (X_i - \bar{X}) }
+$$
+
+> Em particular, normalmente estamos preocupados com o teste de que o parâmetro de inclinação para a população é igual a zero. [...]. Primeiro, observamos o parâmetro de inclinação da amostra, que consiste em uma estimativa do parâmetro de inclinação da população. A partir do valor desse parâmetro, do intervalo de confiança e do tamanho da nossa amostra, avaliamos quão provável é observarmos o valor da inclinação para a amostra se o valor for verdadeiro, mas não observado na população, for igual a zero. (p. 206)
+
+Um teste de hipótese para o parâmetro é dado por:
+
+$$
+\begin{align*}
+H_0: \beta = 0, \\
+H_1: \beta \neq 0,
+\end{align*}
+$$
+
+> em que $H_0$ é a hipótese nula e $H_1$ é a hipótese alternativa. Note que essas duas hipóteses rivais são expressas em termos do parâmetro de inclinação para o modelo de regressão populacional. Para examinar qual dessas hipóteses tem apoio nos dados, calculamos a razão-t, na qual $\beta$ é definido a partir do valor especificado para a hipótese nula, que é representado como $\beta^*$. (p. 207)
+
+$$
+t_{n - k} = \dfrac{\hat{\beta} - \beta^*}{ \text{se}(\hat{\beta}) }
+$$
+
+Se o teste fosse unicaudal (isto é, estamos interessados em verificar se o parâmetro é positivo ou negativo), utilizamos a coluna nomeada como "0.05" em vez da coluna nomeada como "0.025" para avaliarmos se nosso valor-p é tal que temos $p < 0.05$.
+
+### Pressupostos matemáticos da regressão linear
+
+Os resíduos precisam ser normalmente distribuídos. Isto é:
+
+$$
+u_i \sim \mathcal{N}(0, \sigma^2)
+$$
+
+> O pressuposto de que $u_i$ tem média ou valor esperado igual a zero é também conhecido como pressuposto do viés zero. Considere o que aconteceria se $\mathbb{E}[u_i] \neq 0$. Em outras palavras, nesse caso esperaríamos que nosso modelo de regressão não fosse preciso. [...]. Se $\mathbb{E}[u_i] \neq 0$, então deve existir algum componente não randômico nesse termo. (p. 212)
+
+> O pressuposto de que $u_i$ tem variância igual $\sigma^2$ parece bastante simples. Mas, como essa noção de variância não contém o subscrito $i$, significa que assumimos que a variância para cada caso em uma população subjacente é a mesma. A palavra para descrever essa situação é a "homocedasticidade", que significa "a variância do erro é constante". [...]. Quando temos heterocedasticidade, nosso modelo de regressão ajusta alguns casos dos casos da população melhor do que outros. Essa pode ser uma causa potencial de problemas quando estamos estimando intervalos de confiança e testando hipóteses. (p. 212)
+
+> Assumindo que $X$ é mensurado sem erro, aceitamos que qualquer variabilidade da nossa reta de regressão é devida ao componente estocástico $u_i$, e não a modelos de mensuração em $X$. Colocando de outro modo, se $X$ também tem um componente estocástico, necessitamos modelar $X$ antes de modelar $Y$, e isto complicaria substancialmente o processo de estimação de $Y$. (p. 213)
+
+> O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. (p. 214)
+
+## Mesquita, E. B. de, e Fowler, A. (2021). Thinking clearly with data: A guide to quantitative reasoning and analysis. Princeton University Press., Cap. 5: Regression for Describing and Forecasting
+
+> A regression equation expresses a linear relationship between a _dependent_ (or _outcome_) variable on the left-hand side of the equation and an _independent_ (or _explanatory_) variable on the right-hand side of the equation. The dependent variable corresponds to the outcome we are trying to describe, predict, or explain. An independent variable corresponds to something we are using to try to describe, predict, or explain the dependent variable.
+
+> The line we are looking for is the one with the smallest sum of squared errors. That is, we find the values of the parameters $\alpha$ and $\beta$ that minimize the sum of squared errors. This process is called _ordinary least squares_ (OLS) regression. (p. 77)
+
+> What do we do when we want to use linear regression but our data is not well described by a line? (p. 79)
+
+> A second approach is to keep fitting regression lines, but use a different line for different parts of the data. For instance, we could find a line that minimizes the sum of squared errors for the data on people between 16 and 68, a second line that minimizes the sum of squared errors for the data on peoples ages 69-78, and a third line for that data on people ages 79-88. This would not be parsimonious or easily communicated as running a single regression [but it pays off]. (p. 83)
+
+> We hinted at a third way to deal with non-linearity back in chapter 2. There's no reason that our regression equation has to have only one explanatory variable. If we know there's a non-linear relationship between turnout and age, maybe we want to consider transforming the age variable into age-squared, age-cubed, and so on. (p. 83)
+
+$$
+\text{Predicted Turnout} = \alpha + \beta_1 \cdot \text{Age} + \beta_2 \cdot \text{Age}^2
+$$
+
+> The example we just saw, where the tenth-order polynomial performed worse than the fourth-order polynomial at out-of-sample prediction, is an instance of a more general phenomenon called _overfitting_. If we test enough explanatory variables, we're bound to find some that correlate with the outcome in our data just by chance. The tenth-order polynomial regression was using meaningless correlations between high-order transformations of the age variable and voter turnout among one set of voters to try to predict turnout among another set of voters. Unsurprisingly, those meaningless correlations did not continue to hold. (p. 87)
+
+## Anotações de aula
+
+### Teste ANOVA
+
+O teste ANOVA é um método estatístico usado para comparar as medias de dois ou mais grupos independentes, determinando se há diferenças significativas entre eles. Em essência, a ANOVA examina a variabilidade dentro e entre os grupos para determinar se as diferenças entre as médias são estatisticamente significativas.
+
+> Suppose the one-way ANOVA type, in which we have one categorical independent variable with multiple levels. In that case, we first calculate the total sum of squares:
+>
+> $$
+> \text{SST} = \sum^N_{i = 1}(X_i - \bar{X})^2,
+> $$
+>
+> where $X_i$ is each observation, $\bar{X}$ is the overall mean of all observations, and $N$ is the total number of observations.
+> 
+> In practice, the total sum of squares can be decomposed in the between-group variability and the within-group variability. We need this relationship to understand the ANOVA test. Let's start by calculating the between-group variability. It is given by:
+> 
+> $$
+> \text{SSB} = \sum^k_{j = 1} n_j (\bar{X}_j - \bar{X}),
+> $$
+> 
+> where $n_j$ is the number of observations in group $j$, $\bar{X}_j$ is the mean of group $j$ and $k$ is the number of groups.
+> 
+> Then, we can calculate the within-group variability:
+> 
+> $$
+> \text{SSB} = \sum^k_{j = 1} \sum^{n_j}_{i = 1} (X_{ij} - \bar{X}_j)^2,
+> $$
+> 
+> where $X_{ij}$ is the observation $i$ in group $j$.
+> 
+> The relationship is given by $\text{SST} = \text{SSB} + \text{SSW}$.
+> 
+> We can then compute the mean square between (MSB) and the mean square within (MSW):
+> 
+> $$
+> \begin{align*}
+> \text{MSB} = \dfrac{\text{SSB}}{k - 1} \\
+> \text{MSW} = \dfrac{\text{SSW}}{N - k}
+> \end{align*}
+> $$
+> 
+> Finally, we compute the $F$-value to the critical value from the $F$-distribution table (with $k - 1$ and $N - k$ degrees of freedom) or compute the $p$-value.
+> 
+> $$
+> F = \dfrac{\text{MSB}}{\text{MSW}}
+> $$
+> 
+> A nice way to compute this whole thing graphically is using the `ggstatsplot` package.
+
+
