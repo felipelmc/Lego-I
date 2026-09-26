@@ -1,6 +1,6 @@
 title: Course Notes
 author: Felipe Lamarca
-version: 0.2.2
+version: 0.2.4
 quarto-required: ">=1.9.0"
 contributes:
   # Tipo de projeto: `project: type: course-notes` no _quarto.yml do curso.

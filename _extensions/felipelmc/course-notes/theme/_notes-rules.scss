@@ -616,6 +616,55 @@ form[class^="oi-"] button:hover { border-color: $cn-accent; color: $cn-accent; }
 .cn-readout strong, .cn-readout b { color: $cn-accent; font-weight: 500; }
 .observablehq svg, .cell-output-display svg { max-width: 100%; }
 .cn-sim svg text { fill: currentColor; }
+// legendas contínuas do Observable Plot vêm com fundo branco embutido
+.cn-sim svg, .cn-sim figure svg, .cn-sim [class^="plot-"] { background: transparent !important; color: $cn-ink-2; }
+
+// ------------------------------------------------------------------ formulários navegáveis (ex.: questionário)
+.cn-form { margin: 1.25rem 0 2rem; }
+.cn-form-card {
+  padding: 1.1rem 1.25rem 0.4rem;
+  background: $cn-surface;
+  border: 1px solid $cn-line;
+  border-radius: 12px;
+}
+.cn-form-intro { font-size: 0.97rem; color: $cn-ink-2; }
+.cn-form-q {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.1rem;
+}
+.cn-form-q legend {
+  @include cn-ui;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  float: none;
+}
+.cn-form-q label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  @include cn-ui;
+  font-size: 0.93rem;
+  color: $cn-ink-2;
+  padding: 0.2rem 0;
+  cursor: pointer;
+}
+.cn-form-q input[type="radio"] { accent-color: $cn-accent; }
+.cn-form-aviso { @include cn-ui; font-size: 0.85rem; color: $cn-danger; }
+.cn-form button {
+  @include cn-ui;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.35rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid $cn-accent;
+  background: $cn-accent;
+  color: $cn-accent-ink;
+  cursor: pointer;
+}
+.cn-form button:hover { opacity: 0.9; }
 
 // ------------------------------------------------------------------ trabalhos (listing)
 .cn-works {
