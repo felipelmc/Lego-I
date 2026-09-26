@@ -19,7 +19,7 @@ Problemas de mensuração podem vir de:
 - **Viés de mensuração e confiabilidade** (sobre-estimação ou subestimação de modo sistemático dos valores para uma variável)
     - É preferível uma estatística enviesada do que uma não confiável: no primeiro caso, pelo menos, a direção da relação entre as variáveis não se altera
 
-[Polity IV](https://www.systemicpeace.org/polity/polity4.htm) é uma iniciativa de medir democracia. Incorpora apenas algumas variáveis definidas por Dahl -- a parte de "contestação" -- e não considera a parte de "participação".
+[Polity IV](https://www.systemicpeace.org/polity/polity4.htm) é uma iniciativa de medir democracia. Incorpora apenas algumas variáveis definidas por Dahl (a parte de "contestação") e não considera a parte de "participação".
 
 Sobre o fato de que não fazemos cálculos com variáveis categóricas (ou ordinais):
 

@@ -76,7 +76,7 @@ O capítulo começa com uma introdução ao debate entre pesquisa quantitativa, 
 >
 > 4. The content is the method [@king1994designing, pp. 7-9]
 
-O argumento é que "boa pesquisa" (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser _inferência descritiva_ ou _inferência causal_. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita -- portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.
+O argumento é que "boa pesquisa" (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser _inferência descritiva_ ou _inferência causal_. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita; portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.
 
 ### @figueiredofilho2012levando
 

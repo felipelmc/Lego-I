@@ -44,7 +44,7 @@ $$
 \text{TSS} = \sum^n_{i = 1} (Y_i - \bar{Y})^2
 $$
 
-Depois, temos a variação residual de $Y$ depois de controlarmos por $X$ -- na prática, a soma quadrática dos resíduos, que representa a variação não explicada pelo modelo:
+Depois, temos a variação residual de $Y$ depois de controlarmos por $X$ (na prática, a soma quadrática dos resíduos, que representa a variação não explicada pelo modelo):
 
 $$
 \text{RSS} = \sum^n_{i = 1} \hat{u}_i^2

@@ -74,13 +74,13 @@ Nas ciências sociais, passamos por uma série de dificuldades na produção de 
 
 Nas ciências sociais, nos diferenciamos de várias maneiras. Temos uma definição própria do que é sociedade (ou política); usamos uma linguagem "especial"; e usamos o método científico.
 
-Mas, no fim das contas, o que é método científico? No caso Popperiano, literatura e teoria $\rightarrow$ hipótese $\rightarrow$ observação $\rightarrow$ rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência -- em particular, a Antropologia, várias áreas da Sociologia etc[^1].
+Mas, no fim das contas, o que é método científico? No caso Popperiano, literatura e teoria $\rightarrow$ hipótese $\rightarrow$ observação $\rightarrow$ rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência: em particular, a Antropologia, várias áreas da Sociologia etc[^1].
 
 ### Metodologia quantitativa
 
-A pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista[^2]) de que eu consigo extrair um "pedaço" do mundo político e fazer testes, formular hipóteses etc -- isto é, existem uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.
+A pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista[^2]) de que eu consigo extrair um "pedaço" do mundo político e fazer testes, formular hipóteses etc.; isto é, existem uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.
 
-Pesquisa quantitativa e qualitativa alongam um enorme debate sobre a maneira de abordar objetos nas ciências sociais. Mas, no fim das contas, uma resposta para essa discussão é que a integração dos métodos é um bom caminho -- por exemplo, a partir da triangulação de evidências.
+Pesquisa quantitativa e qualitativa alongam um enorme debate sobre a maneira de abordar objetos nas ciências sociais. Mas, no fim das contas, uma resposta para essa discussão é que a integração dos métodos é um bom caminho (por exemplo, a partir da triangulação de evidências).
 
 Através de alguma estratégia de identificação, tentamos, na pesquisa quantitativa, isolar potenciais explicações para um determinado fenômeno. Nesse caso, queremos entender "o efeito de $x$ sobre $y$". Naturalmente, isso acaba sendo diferente de previsão, que também é um dos objetivos da pesquisa quantitativa, embora seja um objetivo preterido e meio adormecido na ciência social moderna.
 
