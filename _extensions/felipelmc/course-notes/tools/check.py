@@ -152,9 +152,16 @@ def check_pre() -> None:
             continue
         with open(p, encoding="utf-8", errors="replace") as f:
             linhas = f.read().splitlines()
+        em_codigo = p.endswith(".R")
         for i, l in enumerate(linhas, 1):
-            if p.endswith(".qmd") and re.search(r"^:::+\s*\{\s*#refs\b", l.strip()):
-                erro(f"{p}:{i}: `::: {{#refs}}` não é permitido (as referências saem no fim de cada página)")
+            if p.endswith(".qmd"):
+                if re.search(r"^:::+\s*\{\s*#refs\b", l.strip()):
+                    erro(f"{p}:{i}: `::: {{#refs}}` não é permitido (as referências saem no fim de cada página)")
+                if l.lstrip().startswith("```"):
+                    em_codigo = not em_codigo and bool(re.match(r"\s*```+\s*\{r", l))
+                    continue
+            if not em_codigo or l.lstrip().startswith("#"):
+                continue  # caminhos só importam em código que roda; comentários ficam de fora
             if win.search(l) or "/Users/" in l or "OneDrive" in l or "C:\\" in l:
                 erro(f"{p}:{i}: caminho absoluto ou do Windows: {l.strip()[:90]}")
 

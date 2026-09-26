@@ -500,7 +500,9 @@ mjx-container[display="true"], .math.display {
 #quarto-sidebar .sidebar-item-section > .sidebar-item-container .sidebar-item-text,
 #quarto-sidebar .sidebar-section-item .sidebar-item-text {
   @include cn-eyebrow;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
 }
 #quarto-sidebar .sidebar-item-section {
   margin-top: 0.9rem;
@@ -713,6 +715,19 @@ form[class^="oi-"] button:hover { border-color: $cn-accent; color: $cn-accent; }
   border: 0;
 }
 .cn-slides figcaption { margin-top: 0.5rem; }
+
+// ------------------------------------------------------------------ listas de definição (ex.: Professores, Período)
+main.content dl > dt {
+  @include cn-eyebrow;
+  font-size: 0.72rem;
+  margin-top: 1rem;
+  margin-bottom: 0.15rem;
+}
+main.content dl > dt:first-child { margin-top: 0; }
+main.content dl > dd {
+  margin-left: 0;
+  margin-bottom: 0.25rem;
+}
 
 // ------------------------------------------------------------------ página inicial do curso
 .cn-course-meta {

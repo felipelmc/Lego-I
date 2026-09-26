@@ -270,3 +270,81 @@ $$
               &= \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \\
 \end{align*}
 $$
+
+## Simulação
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+Cada linha é uma pesquisa com $n$ entrevistados sobre o apoio a um candidato cujo apoio verdadeiro é $p$. Para cada pesquisa, calculamos o intervalo $\bar{X} \pm z \sqrt{\bar{X}(1-\bar{X})/n}$. O "95%" não diz respeito a um intervalo em particular: diz que, repetindo o procedimento muitas vezes, cerca de 95% dos intervalos contêm $p$. Os intervalos que erram aparecem destacados.
+:::
+
+::: {.panel-tabset}
+
+### Interativo
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, rng, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof p = Inputs.range([0.05, 0.95], {value: 0.6, step: 0.01, label: "Apoio verdadeiro (p)"})
+viewof n = Inputs.range([10, 2000], {value: 1000, step: 10, label: "Entrevistados por pesquisa (n)"})
+viewof nivel = Inputs.radio(new Map([["90%", 1.645], ["95%", 1.96], ["99%", 2.576]]), {value: 1.96, label: "Nível de confiança"})
+viewof sorteio = Inputs.button("Novo sorteio", {value: 1, reduce: (v) => v + 1})
+```
+
+```{ojs}
+//| echo: false
+ics = {
+  const r = rng(5 * sorteio), out = [];
+  for (let k = 0; k < 100; k++) {
+    let s = 0;
+    for (let i = 0; i < n; i++) s += r.bernoulli(p);
+    const m = s / n, ep = Math.sqrt(m * (1 - m) / n);
+    const inf = m - nivel * ep, sup = m + nivel * ep;
+    out.push({k: k + 1, m, inf, sup, acerta: inf <= p && p <= sup});
+  }
+  return out;
+}
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 380, style: plotStyle, marginLeft: 36,
+  x: {label: "Apoio estimado →", domain: [Math.max(0, p - 0.25), Math.min(1, p + 0.25)], tickFormat: ".0%"},
+  y: {label: "↑ Pesquisa", domain: [0, 101]},
+  marks: [
+    Plot.ruleX([p], {stroke: pal.ink, strokeDasharray: "4,3"}),
+    Plot.link(ics, {x1: "inf", x2: "sup", y1: "k", y2: "k", stroke: (d) => d.acerta ? pal.lineStrong : pal.award, strokeWidth: (d) => d.acerta ? 1.2 : 2}),
+    Plot.dot(ics, {x: "m", y: "k", r: 1.6, fill: (d) => d.acerta ? pal.ink3 : pal.award})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Intervalos que contêm p: <b>${ics.filter((d) => d.acerta).length} de 100</b></p>`
+```
+
+:::
+
+### Em R
+
+```{r}
+#| eval: false
+set.seed(5)
+p <- 0.6; n <- 1000; z <- qnorm(0.975)
+ic <- t(replicate(100, {
+  m <- mean(rbinom(n, 1, p)); ep <- sqrt(m * (1 - m) / n)
+  c(inf = m - z * ep, sup = m + z * ep)
+}))
+mean(ic[, "inf"] <= p & p <= ic[, "sup"])    # proporção de intervalos que contêm p
+```
+
+:::

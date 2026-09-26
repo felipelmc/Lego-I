@@ -283,3 +283,103 @@ Podemos utilizar _bootstrap_ para, usando a própria amostra, nos aproximar do p
 
 > Do ponto de vista frequentista, dizemos que, com 100 amostras e sob um intervalo de confiança de 95%, o parâmetro populacional estará no intervalo em 95% das vezes. Mas, na prática, não conseguimos obter 100 amostras, então isso não é particularmente intuitivo. Então, o _bootstrap_ nos permite produzir uma distribuição amostral da nossa quantidade de interesse.
 
+## Simulação
+
+::: {.nota-ia collapse="false" title="Simulação e texto preparados com auxílio do Claude"}
+A simulação separa as duas coisas que costumam se confundir: o tamanho de cada amostra ($n$) e o número de amostras sorteadas ($R$). O painel de cima segue uma única amostra que cresce, e mostra a média amostral se aproximando de $\mathbb{E}(X)$ (lei dos grandes números). O de baixo sorteia $R$ amostras de tamanho $n$, padroniza cada média e compara o histograma com a normal padrão (teorema central do limite). Aumentar $R$ só deixa o histograma mais nítido; é $n$ que faz a distribuição ficar normal, mesmo quando $X$ é muito assimétrica.
+:::
+
+::: {.panel-tabset}
+
+### Interativo
+
+```{ojs}
+//| echo: false
+import {scheme, palette, plotStyle, rng, mean, sd, fmt} from "/_extensions/felipelmc/course-notes/ojs/notes.js"
+mode = scheme()
+pal = palette(mode)
+```
+
+::: cn-sim
+
+```{ojs}
+//| echo: false
+viewof dist = Inputs.select(new Map([
+  ["Bernoulli (p = 0,6)", {nome: "bern", media: 0.6, var: 0.24}],
+  ["Exponencial (taxa 1)", {nome: "exp", media: 1, var: 1}],
+  ["Uniforme (0, 1)", {nome: "unif", media: 0.5, var: 1 / 12}]
+]), {label: "Distribuição de X"})
+viewof n = Inputs.range([1, 500], {value: 30, step: 1, label: "Tamanho de cada amostra (n)"})
+viewof R = Inputs.range([10, 5000], {value: 1000, step: 10, label: "Número de amostras (R)"})
+viewof sorteio = Inputs.button("Novo sorteio", {value: 1, reduce: (v) => v + 1})
+```
+
+```{ojs}
+//| echo: false
+sorteia = (r) => dist.nome === "bern" ? r.bernoulli(0.6) : dist.nome === "exp" ? r.exponential(1) : r.unif()
+trajetoria = {
+  const r = rng(11 * sorteio), out = [];
+  let soma = 0;
+  for (let i = 1; i <= 2000; i++) {
+    soma += sorteia(r);
+    if (i <= 50 || i % 10 === 0) out.push({n: i, media: soma / i});
+  }
+  return out;
+}
+padronizadas = {
+  const r = rng(97 * sorteio), z = [];
+  for (let k = 0; k < R; k++) {
+    let s = 0;
+    for (let i = 0; i < n; i++) s += sorteia(r);
+    z.push((s / n - dist.media) / Math.sqrt(dist.var / n));
+  }
+  return z;
+}
+normal = d3.range(-4, 4.01, 0.05).map((x) => ({x, y: Math.exp(-x * x / 2) / Math.sqrt(2 * Math.PI)}))
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 200, style: plotStyle, marginLeft: 44,
+  x: {label: "Tamanho da amostra →", type: "log"}, y: {label: "↑ Média amostral", grid: true},
+  marks: [
+    Plot.ruleY([dist.media], {stroke: pal.award, strokeDasharray: "4,3"}),
+    Plot.line(trajetoria, {x: "n", y: "media", stroke: pal.accent, strokeWidth: 1.5})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width, height: 230, style: plotStyle, marginLeft: 44,
+  x: {label: "Média padronizada →", domain: [-4, 4]}, y: {label: "↑ Densidade", grid: true},
+  marks: [
+    Plot.rectY(padronizadas.filter((z) => Math.abs(z) < 4), Plot.binX({y: (bin, {x1, x2}) => bin.length / (padronizadas.length * (x2 - x1))}, {x: (d) => d, fill: pal.accent, fillOpacity: 0.35, thresholds: d3.range(-4, 4.01, 0.25)})),
+    Plot.line(normal, {x: "x", y: "y", stroke: pal.award, strokeWidth: 1.5}),
+    Plot.ruleY([0], {stroke: pal.lineStrong})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+html`<p class="cn-readout">Desvio-padrão das médias padronizadas: <b>${fmt(sd(padronizadas))}</b> (a normal padrão tem 1) · média <b>${fmt(mean(padronizadas))}</b></p>`
+```
+
+:::
+
+### Em R
+
+```{r}
+#| eval: false
+set.seed(97)
+n <- 30; R <- 1000; p <- 0.6
+medias <- replicate(R, mean(rbinom(n, 1, p)))
+padronizadas <- (medias - p) / sqrt(p * (1 - p) / n)
+hist(padronizadas, freq = FALSE, breaks = 30)
+curve(dnorm(x), add = TRUE)
+```
+
+:::

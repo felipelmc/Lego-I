@@ -1,6 +1,6 @@
 title: Course Notes
 author: Felipe Lamarca
-version: 0.1.0
+version: 0.2.2
 quarto-required: ">=1.9.0"
 contributes:
   # Tipo de projeto: `project: type: course-notes` no _quarto.yml do curso.
@@ -10,14 +10,14 @@ contributes:
     project:
       type: book
       resources:
-        - "trabalhos/**/*.pdf"
-        - "trabalhos/**/*.png"
-        - "trabalhos/**/*.jpg"
-        - "trabalhos/**/*.csv"
-        - "trabalhos/**/*.json"
-        - "listas/**/*.pdf"
-        - "aulas/**/*.pdf"
-        - "dados-sim/**"
+        - "/trabalhos/**/*.pdf"
+        - "/trabalhos/**/*.png"
+        - "/trabalhos/**/*.jpg"
+        - "/trabalhos/**/interativo/**"
+        - "/trabalhos/**/slides/index.html"
+        - "/listas/**/*.pdf"
+        - "/aulas/**/*.pdf"
+        - "/dados-sim/**"
     lang: pt-BR
     number-sections: false
     crossref:
@@ -79,6 +79,7 @@ contributes:
       toc: true
       toc-depth: 3
       toc-title: "Nesta página"
+      code-fold: true
       code-overflow: wrap
       code-summary: "Código"
       code-copy: hover
