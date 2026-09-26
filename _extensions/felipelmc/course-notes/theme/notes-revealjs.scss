@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+// Course Notes · tema revealjs (slides) com os tokens do Plenário, modo claro.
+// Uso num subprojeto de slides:
+//   format:
+//     revealjs:
+//       theme: [default, <caminho>/_extensions/felipelmc/course-notes/theme/notes-revealjs.scss]
+//       include-in-header:
+//         - text: '<link rel="stylesheet" href="<caminho>/_extensions/felipelmc/course-notes/fonts/fonts.css">'
+$cn-bg: #F6F6F3;
+$cn-ink: #0E1116;
+$cn-ink-2: #444A54;
+$cn-ink-3: #5F656E;
+$cn-line: #DEDED8;
+$cn-sunken: #EDEDE8;
+$cn-accent: #0A6F69;
+
+$body-bg: $cn-bg;
+$body-color: $cn-ink;
+$link-color: $cn-accent;
+$text-muted: $cn-ink-3;
+$font-family-sans-serif: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$font-family-monospace: "Geist Mono", ui-monospace, Menlo, monospace;
+$presentation-heading-font: "Geist", system-ui, sans-serif;
+$presentation-heading-color: $cn-ink;
+$presentation-heading-font-weight: 600;
+$presentation-heading-letter-spacing: -0.02em;
+$presentation-font-size-root: 36px;
+$presentation-h1-font-size: 2.2em;
+$presentation-h2-font-size: 1.5em;
+$presentation-h3-font-size: 1.15em;
+$code-block-bg: #FFFFFF;
+$code-color: $cn-ink;
+$selection-bg: rgba($cn-accent, 0.2);
+$callout-color-note: $cn-accent;
+$callout-color-tip: #187970;
+$callout-color-warning: #8A5A00;
+$callout-color-important: #A63D32;
+
+/*-- scss:rules --*/
+.reveal .slide-number, .reveal .footer { font-family: $font-family-monospace; color: $cn-ink-3; font-size: 0.45em; }
+.reveal .title-slide .title { letter-spacing: -0.03em; }
+.reveal .title-slide .subtitle { font-family: "Newsreader", Georgia, serif; font-style: italic; color: $cn-ink-2; }
+.reveal .quarto-title-author-name, .reveal .date { font-family: $font-family-monospace; font-size: 0.6em; color: $cn-ink-3; }
+.reveal h2 { border-bottom: 0; }
+.reveal .slides section .eyebrow, .reveal .eyebrow {
+  font-family: $font-family-monospace; font-size: 0.45em; text-transform: uppercase;
+  letter-spacing: 0.08em; color: $cn-accent; margin-bottom: 0.3em;
+}
+.reveal blockquote {
+  width: 100%; box-shadow: none; background: none; font-style: normal;
+  border-left: 3px solid $cn-line; padding-left: 0.8em; color: $cn-ink-2;
+  font-family: "Newsreader", Georgia, serif;
+}
+.reveal table { font-size: 0.7em; font-variant-numeric: tabular-nums; }
+.reveal table th { border-bottom: 1px solid #C9C9C1; }
+.reveal .progress { color: $cn-accent; }

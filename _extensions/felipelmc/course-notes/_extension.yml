@@ -1,0 +1,93 @@
+title: Course Notes
+author: Felipe Lamarca
+version: 0.1.0
+quarto-required: ">=1.9.0"
+contributes:
+  # Tipo de projeto: `project: type: course-notes` no _quarto.yml do curso.
+  # Tudo aqui é mesclado *por baixo* da configuração do curso: valores do curso vencem,
+  # listas (ex.: itens da navbar) são concatenadas.
+  project:
+    project:
+      type: book
+      resources:
+        - "trabalhos/**/*.pdf"
+        - "trabalhos/**/*.png"
+        - "trabalhos/**/*.jpg"
+        - "trabalhos/**/*.csv"
+        - "trabalhos/**/*.json"
+        - "listas/**/*.pdf"
+        - "aulas/**/*.pdf"
+        - "dados-sim/**"
+    lang: pt-BR
+    number-sections: false
+    crossref:
+      chapters: false
+    date-format: "DD/MM/YYYY"
+    execute:
+      freeze: auto
+      warning: false
+      message: false
+    knitr:
+      opts_chunk:
+        dev.args:
+          bg: transparent
+    fig-dpi: 150
+    language:
+      environment-proof-title: "Prova"
+      toc-title-document: "Nesta página"
+      toc-title-website: "Nesta página"
+      code-summary: "Código"
+      section-title-footnotes: "Notas"
+      section-title-references: "Referências"
+    book:
+      search: true
+      favicon: _extensions/felipelmc/course-notes/assets/favicon.svg
+      sidebar:
+        style: docked
+      navbar:
+        title: false
+        logo:
+          light: _extensions/felipelmc/course-notes/assets/mark-light.svg
+          dark: _extensions/felipelmc/course-notes/assets/mark-dark.svg
+        logo-alt: "felipelamarca.com"
+        logo-href: https://felipelamarca.com/
+        left:
+          - text: felipelamarca.com
+            href: https://felipelamarca.com/
+      page-footer:
+        left: "Felipe Lamarca · [felipelamarca.com](https://felipelamarca.com/)"
+        right: "Feito com o [Course Notes](https://felipelamarca.com/Course-Notes-Template/)"
+    format:
+      course-notes-html: default
+
+  # Formato HTML (tema, fontes, bloco de título, componentes).
+  formats:
+    html:
+      theme:
+        light: [theme/notes-light.scss]
+        dark: [theme/notes-dark.scss]
+      respect-user-color-scheme: true
+      template-partials:
+        - partials/title-block.html
+      include-in-header:
+        - html/theme-bridge.html
+      filters:
+        - path: course-notes.lua
+          at: pre-ast
+      shortcodes:
+        - slides.lua
+      toc: true
+      toc-depth: 3
+      toc-title: "Nesta página"
+      code-overflow: wrap
+      code-summary: "Código"
+      code-copy: hover
+      syntax-highlighting: a11y
+      html-math-method: mathjax
+      link-external-newwindow: true
+      fig-align: center
+      anchor-sections: true
+      smooth-scroll: true
+      citations-hover: true
+      footnotes-hover: true
+      reference-location: document

@@ -1,0 +1,752 @@
+// Regras visuais do Course Notes. Valem para o tema claro e o escuro (os tokens mudam).
+
+// ------------------------------------------------------------------ tokens para JS/OJS
+:root {
+  --cn-bg: #{$cn-bg};
+  --cn-surface: #{$cn-surface};
+  --cn-sunken: #{$cn-sunken};
+  --cn-line: #{$cn-line};
+  --cn-line-strong: #{$cn-line-strong};
+  --cn-ink: #{$cn-ink};
+  --cn-ink-2: #{$cn-ink-2};
+  --cn-ink-3: #{$cn-ink-3};
+  --cn-accent: #{$cn-accent};
+  --cn-link: #{$cn-link};
+  --cn-award: #{$cn-award};
+  --cn-danger: #{$cn-danger};
+  --cn-d1: #{$cn-d1};
+  --cn-d2: #{$cn-d2};
+  --cn-d3: #{$cn-d3};
+  --cn-d4: #{$cn-d4};
+  --cn-d5: #{$cn-d5};
+  --cn-sans: #{$cn-sans};
+  --cn-mono: #{$cn-mono};
+  --cn-serif: #{$cn-serif};
+  color-scheme: #{$cn-mode};
+}
+
+@mixin cn-eyebrow {
+  font-family: $cn-mono;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $cn-ink-3;
+  line-height: 1.4;
+}
+
+@mixin cn-ui {
+  font-family: $cn-sans;
+}
+
+// ------------------------------------------------------------------ base
+body {
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+main.content {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphenate-limit-chars: 8 4 4;
+  overflow-wrap: break-word;
+}
+main.content h1, main.content h2, main.content h3, main.content h4, main.content table,
+main.content .cn-eyebrow, main.content figcaption { hyphens: manual; -webkit-hyphens: manual; }
+
+::selection {
+  background: rgba($cn-accent, 0.18);
+  color: $cn-ink;
+}
+
+a {
+  text-decoration-color: rgba($cn-link, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms, text-decoration-thickness 150ms;
+}
+a:hover {
+  text-decoration-color: $cn-link;
+  text-decoration-thickness: 2px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $cn-sans;
+  color: $cn-ink;
+}
+h1, .h1 { letter-spacing: -0.03em; }
+h2, .h2 { letter-spacing: -0.02em; }
+h3, .h3 { letter-spacing: -0.015em; }
+h4, .h4, h5, .h5, h6, .h6 { letter-spacing: -0.005em; }
+
+main.content h2 { margin-top: 3rem; margin-bottom: 1.1rem; }
+main.content h3 { margin-top: 2.2rem; margin-bottom: 0.8rem; }
+main.content h4 { margin-top: 1.8rem; margin-bottom: 0.6rem; }
+main.content h5, main.content h6 { margin-top: 1.4rem; margin-bottom: 0.5rem; color: $cn-ink-2; }
+
+// Seções de nível 2 no padrão do site: "01  Título ─────"
+main.content {
+  counter-reset: cn-sec;
+}
+main.content > section.level2:not(.unnumbered) > h2 {
+  counter-increment: cn-sec;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+main.content > section.level2:not(.unnumbered) > h2::before {
+  content: counter(cn-sec, decimal-leading-zero);
+  font-family: $cn-mono;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: $cn-accent;
+  flex: none;
+  transform: translateY(-0.12em);
+}
+main.content > section.level2:not(.unnumbered) > h2::after {
+  content: "";
+  flex: 1 1 auto;
+  min-width: 2rem;
+  border-top: 1px solid $cn-line;
+  transform: translateY(-0.3em);
+}
+main.content > section.level2.unnumbered > h2 {
+  border-bottom: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $cn-line;
+  opacity: 1;
+  margin: 2.5rem 0;
+}
+
+// ------------------------------------------------------------------ título da página
+#title-block-header.cn-title {
+  margin-bottom: 2.25rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid $cn-line;
+}
+#title-block-header.cn-title .quarto-title .title {
+  font-family: $cn-sans;
+  font-size: clamp(2rem, 4.2vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 0.4rem;
+  text-wrap: balance;
+}
+#title-block-header.cn-title .quarto-title .subtitle {
+  font-family: $cn-serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: $cn-ink-2;
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+  text-wrap: pretty;
+}
+.cn-eyebrow {
+  @include cn-eyebrow;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.6rem;
+  margin-bottom: 0.9rem;
+}
+.cn-eyebrow .cn-num {
+  color: $cn-accent;
+}
+.cn-eyebrow .cn-sep {
+  color: $cn-line-strong;
+}
+.cn-byline {
+  @include cn-ui;
+  font-size: 0.9375rem;
+  color: $cn-ink-3;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.cn-byline a { color: $cn-ink-2; }
+.cn-abstract {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.3rem 0.3rem;
+  background: $cn-surface;
+  border: 1px solid $cn-line;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.cn-abstract .cn-eyebrow { margin-bottom: 0.5rem; }
+.cn-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.cn-actions a {
+  @include cn-ui;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid $cn-line-strong;
+  border-radius: 8px;
+  color: $cn-ink;
+  text-decoration: none;
+  background: $cn-surface;
+  transition: border-color 150ms, color 150ms;
+}
+.cn-actions a:hover {
+  border-color: $cn-accent;
+  color: $cn-accent;
+}
+.cn-actions a.cn-primary {
+  background: $cn-accent;
+  border-color: $cn-accent;
+  color: $cn-accent-ink;
+}
+.cn-actions a.cn-primary:hover { opacity: 0.9; color: $cn-accent-ink; }
+.cn-hero {
+  margin: 1.75rem 0 0;
+}
+.cn-hero img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid $cn-line;
+  background: #F6F6F3;
+}
+
+// ------------------------------------------------------------------ chips
+.cn-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: $cn-mono;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  line-height: 1.5;
+  padding: 0.05rem 0.5rem;
+  border: 1px solid $cn-line;
+  border-radius: 6px;
+  color: $cn-ink-3;
+  background: transparent;
+}
+.cn-chip-accent {
+  border-color: transparent;
+  background: rgba($cn-accent, 0.1);
+  color: $cn-accent;
+}
+.cn-chip-data {
+  border-style: dashed;
+}
+
+// ------------------------------------------------------------------ citações literais e leituras
+blockquote, .blockquote {
+  font-size: 1em;
+  color: $cn-ink-2;
+  margin: 1.25rem 0 1.25rem 0;
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  border-left: 2px solid $cn-line-strong;
+  background: none;
+  font-style: normal;
+}
+blockquote p:last-child { margin-bottom: 0; }
+blockquote .citation,
+blockquote span.citation {
+  font-family: $cn-mono;
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  color: $cn-ink-3;
+  white-space: nowrap;
+}
+blockquote .citation a { color: inherit; text-decoration: none; }
+
+h3.leitura::before,
+h4.leitura::before {
+  content: "Leitura";
+  display: block;
+  @include cn-eyebrow;
+  color: $cn-accent;
+  margin-bottom: 0.3rem;
+}
+h3.leitura .citation a,
+h4.leitura .citation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.comentario {
+  margin: 1.25rem 0;
+  padding: 0.1rem 0 0.1rem 1.1rem;
+  border-left: 2px solid $cn-accent;
+}
+.comentario::before {
+  content: "Comentário";
+  display: block;
+  @include cn-eyebrow;
+  color: $cn-accent;
+  margin-bottom: 0.35rem;
+}
+.comentario > :last-child { margin-bottom: 0; }
+
+// citações no corpo do texto: discretas
+a.citation, .citation a {
+  text-decoration-style: dotted;
+}
+
+// ------------------------------------------------------------------ callouts
+div.callout {
+  border: 1px solid $cn-line;
+  border-left-width: 3px;
+  border-radius: 8px;
+  background: $cn-surface;
+  box-shadow: none;
+}
+div.callout .callout-header {
+  @include cn-ui;
+  background-color: transparent !important;
+  border-bottom: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+div.callout .callout-body-container {
+  font-size: 1rem;
+}
+div.callout.callout-titled .callout-body > :first-child { margin-top: 0.25rem; }
+
+// Nota gerada por IA: neutra, para não se confundir com a voz do autor
+div.callout.nota-ia {
+  border-left-color: $cn-ink-3 !important;
+  background: $cn-sunken;
+  border-color: $cn-line;
+}
+div.callout.nota-ia .callout-header {
+  @include cn-eyebrow;
+  font-size: 0.72rem;
+  color: $cn-ink-3;
+}
+div.callout.nota-ia .callout-title-container { color: $cn-ink-3; }
+div.callout.nota-ia .callout-body-container { color: $cn-ink-2; }
+
+// Principais resultados (trabalhos)
+div.callout.achados {
+  border-left-color: $cn-accent !important;
+}
+
+// ------------------------------------------------------------------ definições, teoremas, provas
+div.theorem, div.lemma, div.corollary, div.proposition, div.conjecture,
+div.definition, div.example, div.exercise {
+  margin: 1.5rem 0;
+  padding: 0.9rem 1.1rem 0.15rem;
+  background: $cn-surface;
+  border: 1px solid $cn-line;
+  border-left: 3px solid $cn-accent;
+  border-radius: 8px;
+}
+div.definition { border-left-color: $cn-d2; }
+div.example, div.exercise { border-left-color: $cn-line-strong; }
+.theorem-title, .definition-title, .proof-title {
+  @include cn-ui;
+  font-size: 0.9375rem;
+}
+.theorem-title strong, .definition-title strong { font-weight: 600; }
+
+details.cn-prova {
+  margin: 1rem 0 1.5rem;
+  padding: 0 1.1rem;
+  border: 1px dashed $cn-line-strong;
+  border-radius: 8px;
+}
+details.cn-prova > summary {
+  @include cn-ui;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: $cn-ink-2;
+  cursor: pointer;
+  padding: 0.6rem 0;
+  list-style-position: inside;
+}
+details.cn-prova[open] > summary { border-bottom: 1px solid $cn-line; margin-bottom: 0.9rem; }
+details.cn-prova > :last-child { margin-bottom: 1rem; }
+.cn-qed { float: right; color: $cn-ink-3; }
+
+// ------------------------------------------------------------------ código
+code {
+  font-family: $cn-mono;
+  border-radius: 4px;
+  padding: 0.08em 0.3em;
+}
+div.sourceCode, pre.sourceCode {
+  border-radius: 8px;
+}
+div.sourceCode {
+  border: 1px solid $cn-line;
+  background-color: $cn-surface;
+}
+div.sourceCode pre.sourceCode { border: 0; }
+pre code { padding: 0; }
+details.code-fold > summary, .code-fold summary {
+  @include cn-ui;
+  font-size: 0.8125rem;
+  color: $cn-ink-3;
+}
+.cell-output pre, .cell-output-stdout pre {
+  font-size: 0.8rem;
+  color: $cn-ink-2;
+  background: transparent;
+}
+
+// ------------------------------------------------------------------ tabelas e figuras
+main.content table {
+  @include cn-ui;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+main.content table > thead {
+  border-bottom: 1px solid $cn-line-strong;
+}
+main.content table th {
+  font-weight: 600;
+  color: $cn-ink;
+}
+main.content table td, main.content table th {
+  border-color: $cn-line;
+}
+figcaption, .figure-caption, .quarto-float-caption, caption {
+  @include cn-ui;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: $cn-ink-3;
+}
+.quarto-figure img, .cell-output-display img {
+  border-radius: 6px;
+}
+
+// ------------------------------------------------------------------ matemática
+mjx-container[display="true"], .math.display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+// ------------------------------------------------------------------ interface (sans)
+.sidebar, #quarto-sidebar, #TOC, nav#TOC, .navbar, .nav-page, .page-navigation,
+.breadcrumb, .quarto-title-meta, .quarto-listing, .nav-footer, .nav-tabs,
+.panel-tabset .nav, .quarto-search, .aa-DetachedContainer, .aa-Panel,
+.dropdown-menu, .popover, .tippy-box, .quarto-alternate-formats, .quarto-other-links,
+.quarto-code-links, .toc-actions, .footnotes, #refs, .csl-bib-body {
+  font-family: $cn-sans;
+}
+.footnotes, #refs, .csl-bib-body { font-size: 0.9rem; }
+.csl-entry { margin-bottom: 0.5rem; }
+.csl-entry a { word-break: break-all; }
+
+// navbar translúcida, como o cabeçalho do site
+.navbar {
+  background-color: rgba($cn-bg, 0.85) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid $cn-line;
+  box-shadow: none;
+  min-height: 56px;
+}
+.navbar .navbar-brand .navbar-logo {
+  height: 22px;
+  width: 22px;
+  max-height: none;
+}
+.navbar .nav-link {
+  font-size: 0.9rem;
+  color: $cn-ink-2;
+}
+.navbar .nav-link:hover { color: $cn-accent; }
+.navbar-nav .nav-item.cn-crumb .nav-link,
+#navbarCollapse .navbar-nav:first-child .nav-item:first-child .nav-link {
+  font-family: $cn-mono;
+  font-size: 0.82rem;
+  color: $cn-ink-3;
+}
+#navbarCollapse .navbar-nav:first-child .nav-item + .nav-item .nav-link::before {
+  content: "/";
+  color: $cn-line-strong;
+  margin-right: 0.6rem;
+}
+#navbarCollapse .navbar-nav:first-child .nav-item + .nav-item .nav-link {
+  color: $cn-ink;
+  font-weight: 600;
+}
+
+// sidebar: partes como eyebrows, item ativo marcado por filete (como o PageIndex do site)
+#quarto-sidebar {
+  font-size: 0.9rem;
+}
+#quarto-sidebar .sidebar-title {
+  font-family: $cn-sans;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: $cn-ink;
+}
+#quarto-sidebar .sidebar-item-section > .sidebar-item-container .sidebar-item-text,
+#quarto-sidebar .sidebar-section-item .sidebar-item-text {
+  @include cn-eyebrow;
+  font-size: 0.7rem;
+}
+#quarto-sidebar .sidebar-item-section {
+  margin-top: 0.9rem;
+}
+#quarto-sidebar .sidebar-link {
+  color: $cn-ink-2;
+  border-left: 2px solid transparent;
+  padding-left: 0.6rem;
+  margin-left: -0.6rem;
+}
+#quarto-sidebar .sidebar-link:hover { color: $cn-accent; }
+#quarto-sidebar .sidebar-link.active {
+  color: $cn-ink;
+  font-weight: 600;
+  border-left-color: $cn-accent;
+}
+#quarto-sidebar .cn-sidenum, .cn-sidenum {
+  font-family: $cn-mono;
+  font-size: 0.75rem;
+  color: $cn-ink-3;
+  margin-right: 0.4rem;
+}
+
+// TOC à direita
+#TOC, nav#TOC {
+  font-size: 0.85rem;
+}
+#TOC h2, nav#TOC h2, #toc-title {
+  @include cn-eyebrow;
+  font-size: 0.7rem;
+  border: 0;
+  margin-bottom: 0.6rem;
+}
+#TOC .nav-link.active, nav#TOC .nav-link.active { color: $cn-ink; }
+
+// navegação anterior/próxima
+.page-navigation .nav-page a { color: $cn-ink-2; text-decoration: none; }
+.page-navigation .nav-page a:hover { color: $cn-accent; }
+.page-navigation { border-top: 1px solid $cn-line; padding-top: 1.25rem; margin-top: 3rem; }
+
+// rodapé
+.nav-footer {
+  border-top: 1px solid $cn-line;
+  font-size: 0.85rem;
+  color: $cn-ink-3;
+}
+.nav-footer a { color: $cn-ink-2; }
+
+// busca
+.aa-DetachedContainer, .aa-Panel { background: $cn-surface; }
+
+// abas (Interativo / Em R)
+.panel-tabset .nav-tabs {
+  border-bottom: 1px solid $cn-line;
+  font-size: 0.875rem;
+}
+.panel-tabset .nav-tabs .nav-link {
+  color: $cn-ink-3;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: 0.45rem 0.9rem;
+}
+.panel-tabset .nav-tabs .nav-link.active {
+  color: $cn-ink;
+  font-weight: 600;
+  border-bottom-color: $cn-accent;
+  background: transparent;
+}
+.panel-tabset .tab-content {
+  border: 0;
+  padding: 1rem 0 0;
+}
+
+// ------------------------------------------------------------------ OJS / simulações
+.cn-sim {
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem 1.2rem 0.6rem;
+  background: $cn-surface;
+  border: 1px solid $cn-line;
+  border-radius: 12px;
+}
+.cn-sim .cn-eyebrow { margin-bottom: 0.4rem; }
+form[class^="oi-"], form[class*=" oi-"], .observablehq form {
+  font-family: $cn-sans;
+  font-size: 0.875rem;
+  accent-color: $cn-accent;
+  --label-width: 11rem;
+}
+form[class^="oi-"] label { color: $cn-ink-2; }
+form[class^="oi-"] input[type="number"], form[class^="oi-"] select {
+  background: $cn-bg;
+  color: $cn-ink;
+  border: 1px solid $cn-line-strong;
+  border-radius: 6px;
+}
+form[class^="oi-"] button {
+  font-family: $cn-sans;
+  background: $cn-surface;
+  color: $cn-ink;
+  border: 1px solid $cn-line-strong;
+  border-radius: 8px;
+  padding: 0.25rem 0.8rem;
+}
+form[class^="oi-"] button:hover { border-color: $cn-accent; color: $cn-accent; }
+.cn-readout {
+  font-family: $cn-mono;
+  font-size: 0.85rem;
+  color: $cn-ink-2;
+}
+.cn-readout strong, .cn-readout b { color: $cn-accent; font-weight: 500; }
+.observablehq svg, .cell-output-display svg { max-width: 100%; }
+.cn-sim svg text { fill: currentColor; }
+
+// ------------------------------------------------------------------ trabalhos (listing)
+.cn-works {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.cn-work {
+  display: flex;
+  flex-direction: column;
+  background: $cn-surface;
+  border: 1px solid $cn-line;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 150ms, box-shadow 150ms, transform 150ms;
+}
+.cn-work:hover {
+  border-color: $cn-line-strong;
+  box-shadow: 0 14px 30px -14px rgba(0, 0, 0, if($cn-mode == dark, 0.6, 0.18));
+}
+.cn-work-thumb {
+  display: block;
+  aspect-ratio: 16 / 9;
+  background: #F6F6F3;
+  border-bottom: 1px solid $cn-line;
+  overflow: hidden;
+}
+.cn-work-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 300ms;
+}
+.cn-work:hover .cn-work-thumb img { transform: scale(1.02); }
+.cn-work-thumb.cn-empty {
+  display: grid;
+  place-items: center;
+  background: $cn-sunken;
+}
+.cn-work-thumb.cn-empty svg { width: 48px; height: 48px; opacity: 0.9; }
+.cn-work-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem 1.15rem 1.1rem;
+  flex: 1;
+}
+.cn-work-body .cn-eyebrow { margin: 0; }
+.cn-work-title {
+  font-family: $cn-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 0 !important;
+  text-wrap: balance;
+}
+.cn-work-title a { color: $cn-ink; text-decoration: none; }
+.cn-work-title a:hover { color: $cn-accent; }
+.cn-work-teaser {
+  font-size: 0.975rem;
+  line-height: 1.55;
+  color: $cn-ink-2;
+  margin: 0;
+}
+.cn-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.cn-work .cn-actions { margin-top: auto; padding-top: 0.4rem; }
+.cn-work .cn-actions a { font-size: 0.8rem; padding: 0.25rem 0.65rem; }
+.cn-work .cn-actions a:not(.cn-primary) { background: transparent; }
+
+// ------------------------------------------------------------------ slides embutidos
+.cn-slides {
+  margin: 1.5rem 0;
+}
+.cn-slides .cn-slides-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid $cn-line;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #FFFFFF;
+}
+.cn-slides iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.cn-slides figcaption { margin-top: 0.5rem; }
+
+// ------------------------------------------------------------------ página inicial do curso
+.cn-course-meta {
+  @include cn-ui;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.25rem;
+  font-size: 0.9375rem;
+  margin: 1.5rem 0;
+}
+.cn-course-meta dt {
+  @include cn-eyebrow;
+  font-size: 0.7rem;
+  padding-top: 0.2rem;
+}
+.cn-course-meta dd { margin: 0; color: $cn-ink; }
+
+// ------------------------------------------------------------------ modo escuro: figuras em "papel"
+@if $cn-mode == dark {
+  .cell-output-display img:not(.cn-no-paper),
+  .quarto-figure img:not(.cn-no-paper) {
+    background: #F6F6F3;
+    padding: 0.4rem;
+    border-radius: 8px;
+  }
+  .cn-work-thumb img { filter: brightness(0.92); }
+}
+
+// ------------------------------------------------------------------ impressão
+@media print {
+  .navbar, #quarto-sidebar, #quarto-margin-sidebar, .page-navigation, .nav-footer { display: none !important; }
+  details.cn-prova { border: 0; padding: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}

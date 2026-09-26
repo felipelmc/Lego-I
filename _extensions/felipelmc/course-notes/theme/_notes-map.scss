@@ -1,0 +1,99 @@
+// Mapeia os tokens do Plenário nas variáveis do Bootstrap e do Quarto.
+// Tudo com !default: um tema local do curso (listado depois no _quarto.yml) pode sobrescrever.
+
+$cn-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif !default;
+$cn-sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$cn-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace !default;
+
+// Cores de base
+$body-bg: $cn-bg !default;
+$body-color: $cn-ink !default;
+$body-secondary-color: $cn-ink-2 !default;
+$body-tertiary-color: $cn-ink-3 !default;
+$primary: $cn-accent !default;
+$secondary: $cn-ink-3 !default;
+$success: $cn-d3 !default;
+$info: $cn-accent !default;
+$warning: $cn-award !default;
+$danger: $cn-danger !default;
+$light: $cn-sunken !default;
+$dark: $cn-ink !default;
+$link-color: $cn-link !default;
+$link-decoration: underline !default;
+$link-hover-color: $cn-accent !default;
+$border-color: $cn-line !default;
+$text-muted: $cn-ink-3 !default;
+$headings-color: $cn-ink !default;
+$hr-border-color: $cn-line !default;
+$input-bg: $cn-surface !default;
+$input-border-color: $cn-line-strong !default;
+$popover-bg: $cn-surface !default;
+$dropdown-bg: $cn-surface !default;
+$dropdown-link-color: $cn-ink !default;
+$dropdown-link-hover-bg: $cn-sunken !default;
+$list-group-bg: $cn-surface !default;
+$card-bg: $cn-surface !default;
+$modal-content-bg: $cn-surface !default;
+
+// Tipografia: corpo serifado, títulos e interface em Geist, código em Geist Mono
+$font-family-base: $cn-serif !default;
+$font-family-sans-serif: $cn-sans !default;
+$font-family-monospace: $cn-mono !default;
+$headings-font-family: $cn-sans !default;
+$headings-font-weight: 600 !default;
+$h1h2h3-font-weight: 600 !default;
+$font-size-base: 1.0625rem !default; // 17px
+$line-height-base: 1.65 !default;
+$headings-line-height: 1.25 !default;
+$h1-font-size: 2.25rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.1875rem !default;
+$h4-font-size: 1.0625rem !default;
+$h5-font-size: 1rem !default;
+$h6-font-size: 0.9375rem !default;
+$small-font-size: 0.875em !default;
+
+// Formas
+$border-radius: 8px !default;
+$border-radius-sm: 6px !default;
+$border-radius-lg: 12px !default;
+
+// Código
+$code-color: $cn-ink !default;
+$code-bg: $cn-sunken !default;
+$code-block-bg: $cn-surface !default;
+$code-block-border-left: $cn-line-strong !default;
+$code-block-font-size: 0.84rem !default;
+$code-inline-font-size: 0.86em !default;
+
+// Layout: coluna de leitura com ~70 caracteres
+$grid-body-width: 680px !default;
+$grid-docked-body-width: 670px !default; // o layout "docked" somaria 200px ao grid-body-width
+$grid-sidebar-width: 270px !default;
+$grid-margin-width: 250px !default;
+
+// Sidebar, navbar, TOC, rodapé
+$sidebar-bg: $cn-bg !default;
+$sidebar-fg: $cn-ink-2 !default;
+$sidebar-hl: $cn-accent !default;
+$sidebar-border: true !default;
+$navbar-bg: $cn-bg !default;
+$navbar-fg: $cn-ink-2 !default;
+$navbar-hl: $cn-accent !default;
+$navbar-brand: $cn-ink !default;
+$toc-color: $cn-ink-3 !default;
+$toc-active-border: $cn-accent !default;
+$toc-inactive-border: $cn-line !default;
+$footer-bg: $cn-bg !default;
+$footer-fg: $cn-ink-3 !default;
+$table-border-color: $cn-line !default;
+$table-color: $cn-ink !default;
+$title-block-color: $cn-ink !default;
+
+// Callouts
+$callout-border-width: 2px !default;
+$callout-color-note: $cn-accent !default;
+$callout-color-tip: $cn-d3 !default;
+$callout-color-warning: $cn-award !default;
+$callout-color-caution: $cn-award !default;
+$callout-color-important: $cn-danger !default;

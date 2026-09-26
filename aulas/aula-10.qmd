@@ -1,6 +1,12 @@
-# Probabilidade
+---
+title: "Probabilidade"
+aula: 10
+date: 2025-05-20
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 6: Probability.
+## Leituras
+
+### @llaudet2022data, cap. 6: *Probability*
 
 > Real-world data, however, contain a nontrivial amount of noise, or irrelevant variation, which adds uncertainty to our conclusions. 
 
@@ -40,7 +46,7 @@
 >
 > $$ P(X = x) = p $$
 
-### The Bernoulli distribution
+#### The Bernoulli distribution
 
 > The Bernoulli distribution is the probability distribution of a binary variable. Since binary variables can take only two values (1 or 0), the Bernoulli distribution characterizes two probabilities: the probability that the variable equals 1 and the probability that the variable equals 0.
 >
@@ -57,7 +63,7 @@ flip <- sample(
 prop.table(table(flip))
 ```
 
-### The Normal distribution
+#### The Normal distribution
 
 > The normal distribution is a well-known symmetric, bell-shaped distribution, commonly used as an approximation for the distribution of many non-binary variables. (p. 169)
 
@@ -90,7 +96,7 @@ var(X)
 
 > How can we use a probability density function to compute probabilities? We can use the area underneath the curve of the probability density function to compute what are often referred to as _cumulative_ probabilities, that is, the probability that a normal random variable takes a value within a given range. For example, the area under the curve between $x_1$ and $x_2$ equals the probability that the normal random variable takes a value between $x_1$ and $x_2$. (Since all probabilities in a distribution must add up to 1, the total area underneath the curve of a probability density function equals 1.)
 
-### The Standard Normal distribution
+#### The Standard Normal distribution
 
 > The standard normal distribution is the normal distribution with mean 0 ($\mu = 0$) and variance 1 ($\sigma^2 = 1$).
 
@@ -151,13 +157,13 @@ $$
 \end{align*}
 $$
 
-### Population parameter vs. sample statistics
+#### Population parameter vs. sample statistics
 
 > To distinguish the sample statistics from the corresponding parameters at the population level, we use different terms to refer to them. The sample mean of $X$, denoted as $\bar{X}$, refers to the average value of $X$ in a particular sample, while the expectation of X, denoted as $\mathbb{E}(X)$, refers to the population mean of the random variable X. The sample variance of X, denoted as $var(X)$, refers to the variance of X in a particular sample, while the population variance of X, denoted as $\mathbb{V}(X)$, refers to the population variance of the random variable X. (p. 179-180)
 
 > The sample statistics differ from the population parameters because the sample contains noise. The noise comes from **sampling variability**. (p. 180)
 
-### The Law of Large Numbers
+#### The Law of Large Numbers
 
 > The **law of large numbers** states that as the sample size increases, the sample mean of X approximates the population mean of X, also known as the expectation of X. (p 180)
 
@@ -198,7 +204,7 @@ mean(support_sample_3)
 
 À medida que aumentamos o tamanho da amostra (o que nem sempre é viável, naturalmente), a estimativa da variável de interesse melhora. Em particular, chegamos cada vez mais perto do valor "verdadeiro" do parâmetro.
 
-### The Central Limit Theorem
+#### The Central Limit Theorem
 
 > The central limit theorem states that as the sample size increases, the standardized sample mean of $X$ can be approximated by the standard normal distribution. (p. 183)
 
@@ -239,7 +245,7 @@ hist(sd_sample_means, freq=FALSE)
 
 > The distribution above is known as the sampling distribution of the sample mean. It characterizes how much the sample means vary from one sample to another due to sampling variability.
 
-## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Chapter. 6 -- Probabilidade e inferência estatística.
+### @kellstedt2018fundamentals, cap. 6: *Probabilidade e inferência estatística*
 
 > O segundo tipo de dados consiste em uma amostra. Em razão da proliferação de pesquisas de opinião pública, muitos de vocês podem assumir que a palavra "amostra" implica uma "**amostra aleatória**". Mas este não é o caso. Pesquisadores podem produzir uma amostra por meio da aleatoriedade -- isto é, cada membro da população tem uma probabilidade igual de ser selecionado para a amostra. Porém, as amostras podem também ser não aleatórias; quando isso ocorre, as denominamos de amostra de conveniência. (p. 152)
 

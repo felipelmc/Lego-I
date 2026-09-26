@@ -1,39 +1,63 @@
+# Lego I · anotações de aula.
+# Tema, fontes, navbar, idioma e congelamento vêm da extensão Course Notes
+# (_extensions/felipelmc/course-notes). Aqui ficam só os dados da disciplina.
 project:
-  type: book
-  output-dir: docs
+  type: course-notes
+  render:
+    - index.qmd
+    - aulas/*.qmd
+    - trabalhos/index.qmd
+    - trabalhos/*/index.qmd
+    - referencias.qmd
 
 book:
   title: "Lego I"
-  author: Felipe Lamarca
+  subtitle: "Introdução à pesquisa social quantitativa"
+  author: "Felipe Lamarca"
+  date: last-modified
+  site-url: https://felipelamarca.com/Lego-I/
+  repo-url: https://github.com/felipelmc/Lego-I
+  repo-actions: [source, issue]
+  navbar:
+    left:
+      - text: "Lego I"
+        href: index.qmd
   chapters:
     - index.qmd
-    - part: Aulas
+    - part: "Desenho de pesquisa"
       chapters:
-        - aulas/aula-1.qmd
-        - aulas/aula-2.qmd
-        - aulas/aula-5.qmd
-        - aulas/aula-6.qmd
-        - aulas/aula-7.qmd
-        - aulas/aula-8.qmd
-        - aulas/aula-9.qmd
-        - aulas/aula-10.qmd
-        - aulas/aula-11.qmd
-        - aulas/aula-12.qmd
-        - aulas/aula-13.qmd
-    - part: Listas
+        - href: aulas/aula-01.qmd
+          text: "01 · Fundamentos da pesquisa quantitativa"
+        - href: aulas/aula-02.qmd
+          text: "02 · Desenho de pesquisa e mensuração"
+        - href: aulas/aula-05.qmd
+          text: "05 · Indicadores e estatísticas descritivas"
+    - part: "Estatística"
       chapters:
-        - listas/nivelamento/lista-nivelamento.qmd
-        - listas/lista-1/lista1.qmd
-        - listas/lista-2/lista2.qmd
-        - listas/lista-3/lista3.qmd
-        - listas/lista-4/lista4.qmd
-format:
-  html:
-    theme: 
-      light: cosmo
-      dark: [cosmo, theme-dark.scss]
-    css: styles.css
-    toc: true
+        - href: aulas/aula-06.qmd
+          text: "06 · Efeitos causais em experimentos"
+        - href: aulas/aula-07.qmd
+          text: "07 · Inferência"
+        - href: aulas/aula-08.qmd
+          text: "08 · Predição"
+        - href: aulas/aula-09.qmd
+          text: "09 · Efeitos causais em dados observacionais"
+        - href: aulas/aula-10.qmd
+          text: "10 · Probabilidade"
+        - href: aulas/aula-11.qmd
+          text: "11 · Quantificação de incerteza"
+        - href: aulas/aula-12.qmd
+          text: "12 · Teste de hipótese"
+        - href: aulas/aula-13.qmd
+          text: "13 · Regressão"
+    - part: "Trabalhos"
+      chapters:
+        - trabalhos/index.qmd
+        - trabalhos/nivelamento/index.qmd
+        - trabalhos/lista-1/index.qmd
+        - trabalhos/lista-2/index.qmd
+        - trabalhos/lista-3/index.qmd
+        - trabalhos/lista-4/index.qmd
+    - referencias.qmd
 
-
-
+bibliography: [references.bib]

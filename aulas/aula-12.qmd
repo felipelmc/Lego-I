@@ -1,6 +1,12 @@
-# Teste de hipótese
+---
+title: "Teste de hipótese"
+aula: 12
+date: 2025-06-03
+---
 
-## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 7: Teste bivariado de hipótese.
+## Leituras
+
+### @kellstedt2018fundamentals, cap. 7: *Teste bivariado de hipótese*
 
 > Em cada um desses testes, seguimos uma mesma lógica: comparamos a real relação entre $X$ e $Y$ nos nossos dados amostrais com o que esperaríamos encontrar se $X$ e $Y$ _não fossem_ relacionados na população subjacente. Quanto mais diferente a relação empírica observada for do que esperaríamos encontrar se _não_ houvesse uma relação, mais confiantes ficamos em que $X$ e $Y$ estão relacionados na população. A lógica dessa inferência para a população a partir da amostra é a mesma que usamos no capítulo 6 para fazer inferências sobre a média da população a partir dos dados da amostra.
 >

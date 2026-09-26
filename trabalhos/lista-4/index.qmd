@@ -1,27 +1,31 @@
 ---
-title: "Lista IV"
-author: "Felipe Marques Esteves Lamarca"
-date: "06/22/2025"
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
+title: "Bolsas da Capes no exterior (2012): duração, região e valor"
+subtitle: "Lista 4 · Regressão linear"
+tipo: Lista
+date: 2025-06-22
+description: "Regressões lineares com os dados de bolsas internacionais financiadas pela Capes em 2012: o valor recebido em função da duração da estadia, da região da instituição de origem e das duas juntas."
+image: destaque.png
+image-alt: "Valor total recebido em função da estadia em meses, com a reta de regressão e o coeficiente de correlação de 0,46."
+metodos: [Regressão linear, MQO, Variáveis categóricas, Correlação]
+dados: ["Bolsas internacionais da Capes (2012)"]
+materiais:
+  - {text: PDF, href: lista-4.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/lista-4"}
 abstract: Nesta lista, trabalho especificamente com regressões lineares utilizando os dados de bolsas internacionais financiadas pela Capes no ano de 2012. Estimo, primeiro, dois modelos lineares simples, com apenas uma covariável -- uma contínua, no primeiro caso, e uma categórica, no segundo caso. Observou-se, em particular, que a melhor estimativa no caso categórico corresponde exatamente à média de cada nível da covariável. Depois, estimo um modelo com as duas covaríáveis e apresento as estimativas graficamente.
-subtitle: Regressão linear
-geometry: margin=1in
-fontfamily: mathpazo
-fontsize: 11pt
-biblio-style: apsr
-endnote: false
+format:
+  pdf:
+    geometry: margin=1in
+    fontfamily: mathpazo
+    fontsize: 11pt
 ---
-```{r setup, include=FALSE}
 
-knitr::opts_chunk$set(cache=TRUE,
-                      message=FALSE, warning=FALSE,
-                      fig.path='figs/',
-                      cache.path = '_cache/')
-
-```
+::: {.callout-tip .achados}
+## Principais resultados
+- A duração da estadia e o valor total da bolsa têm correlação de 0,46. Cada mês a mais de estadia se associa, em média, a R$ 508 a mais no valor recebido (IC 95%: 494 a 522).
+- Com a região como único preditor, os coeficientes reproduzem as médias de cada região. Só o Norte difere do Centro-Oeste, a categoria de referência, ao nível de 5% (-832, p = 0,037).
+- Controlando pela estadia, nenhuma região difere significativamente do Centro-Oeste (Norte: -566, p = 0,11), e o efeito da estadia praticamente não muda (509).
+:::
 
 ```{r}
 
@@ -31,7 +35,7 @@ library(gtsummary)
 library(modelsummary)
 
 # leitura dos dados
-df <- readxl::read_excel("bolsas_internacionais_capes_2012.xlsx")
+df <- readxl::read_excel(here::here("trabalhos/lista-4/bolsas_internacionais_capes_2012.xlsx"))
 
 ```
 
@@ -75,6 +79,11 @@ df %>%
     axis.text = element_text(size = 10)
   )
 
+```
+
+```{r}
+#| include: false
+ggsave(here::here("trabalhos/lista-4/destaque.png"), width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
 ```
 
 A análise visual da distribuição das variáveis já indica uma relação positiva entre as duas variáveis: quanto maior o tempo de estadia, maior é o valor da bolsa recebido. A reta de regressão confirma isso -- afinal, observamos um $\beta$ positivo; ao mesmo tempo, observamos o coeficiente de correlação de $0.46$. 

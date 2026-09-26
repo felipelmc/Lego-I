@@ -1,0 +1,26 @@
+/*-- scss:defaults --*/
+// Course Notes · tema escuro. Tokens do design system "Plenário" (classe .dark do site).
+$cn-mode: dark !default;
+$cn-bg: #0B0D10 !default;
+$cn-surface: #12151A !default;
+$cn-sunken: #181C22 !default;
+$cn-line: #242A32 !default;
+$cn-line-strong: #343C46 !default;
+$cn-ink: #ECEEF1 !default;
+$cn-ink-2: #B3BAC4 !default;
+$cn-ink-3: #8A929D !default;
+$cn-accent: #3FD0BE !default;
+$cn-accent-ink: #04201D !default;
+$cn-link: #5EBEB2 !default;
+$cn-award: #F2C14E !default;
+$cn-danger: #F08A7E !default;
+$cn-d1: #22514C !default;
+$cn-d2: #26776F !default;
+$cn-d3: #2FA395 !default;
+$cn-d4: #3FD0BE !default;
+$cn-d5: #A8EFE4 !default;
+
+@import "notes-map";
+
+/*-- scss:rules --*/
+@import "notes-rules";

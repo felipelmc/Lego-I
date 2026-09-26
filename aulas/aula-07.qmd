@@ -1,6 +1,12 @@
-# Inferência
+---
+title: "Inferência"
+aula: 7
+date: 2025-04-29
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 3: Inferring Population Characteristics via Survey Research.
+## Leituras
+
+### @llaudet2022data, cap. 3: *Inferring Population Characteristics via Survey Research*
 
 > In survey research, we collect data from a subset of observations in order to understand the target population as a whole. The subset of individuals chosen for study is called a `sample`. The number of observations in the sample is represented by $n$, and the number of observations in the target population is represented by $N$. (p. 52)
 
@@ -63,7 +69,7 @@ $$
 > [...] **if two variables have a correlation coefficient of zero, it does not necessarily mean that there is no relationship between them. Is just means that there is no linear relationship between them.** For example, the two variables depicted in the figure in the margin have a strong parabolic relationship. Their correlation is approximately zero, however, because there is no line that would summarize the relationship well. (p. 88)
 
 
-## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 6: Probabilidade e inferência estatística.
+### @kellstedt2018fundamentals, cap. 6: *Probabilidade e inferência estatística*
 
 > Um **evento** é o resultado de uma observação aleatória. Dois ou mais eventos podem ser chamados de **eventos independentes** se a realização de um dos eventos não afeta a realização dos demais. Por exemplo, o lançamento de dois dados representa eventos independentes, porque o lançamento do primeiro dado não afeta o resultado do lançamento do segundo.
 >
@@ -115,7 +121,7 @@ Então a taxa de aprovação do Obama, estimada a partir dos dados do survey, fi
 >
 > Amostras grandes reduzirão o tamanho dos erros-padrão e amostras menores aumentarão o tamanho dos erros-padrão.
 
-## Meireles, F., e Russo, G. (2022). Pesquisas eleitorais no Brasil: tendências e desempenho. Estudos Avançados, 36, 117-131.
+### @meireles2022pesquisas
 
 > Este artigo analisa as estimativas de mais de 2 mil pesquisas eleitorais com os resultados de cinco eleições municipais e nacionais no Brasil entre 2012 e 2020. Em particular, examinamos como fatores previstos nos planos amostrais, como tamanho da amostra e modo de aplicação de entrevistas, e outros como a distância temporal da data de realização das pesquisas até o dia do pleito, predizem diferenças entre estimativas e resultados oficiais. Entre outros, mostramos que pesquisas de véspera com amostras maiores tiveram resultados mais próximos dos apurados nas urnas no período, assim como pesquisas conduzidas perto do dia dos pleitos. Também documentamos que estimativas de pesquisas em eleições nacionais, especialmente para a Presidência e Governos estaduais em segundo turno, tendem a ser mais próximas dos resultados do que em outras disputas. No geral, portanto, os achados indicam que as pesquisas eleitorais no Brasil têm desempenho similar às realizadas em outros contextos. (Resumo, p. 130)
 

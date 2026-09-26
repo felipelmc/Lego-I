@@ -1,10 +1,14 @@
-# Fundamentos da pesquisa quantitativa
+---
+title: "Fundamentos da pesquisa quantitativa"
+aula: 1
+date: 2025-03-18
+---
 
-## Anotações das leituras
+## Leituras
 
-### Kellstedt, P. M., & Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 1 e 2.
+### @kellstedt2018fundamentals, caps. 1 e 2
 
-**Capítulo 1: O estudo científico da política**
+#### Capítulo 1: O estudo científico da política
 
 > Então, o que fazem os cientistas políticos e o que faz deles cientistas? Uma resposta simples para essa questão é que, como outros cientistas, cientistas políticos desenvolvem e testam teorias. Uma **teoria** é uma tentativa de conjeturar sobre as causas de um fenômeno de interesse. O desenvolvimento de teorias causais sobre o mundo político requer pensar em fenômenos familiares de modo novo. Assim, a construção de uma teoria é em parte arte e em parte ciência.
 
@@ -14,7 +18,7 @@
 
 > O ponto essencial é que modelos são simplificações. Se eles são ou não úteis para nós depende do que estamos tentando alcançar com um determinado modelo. Um dos aspectos mais marcantes dos modelos é que eles frequentemente são mais úteis para nós quando são imprecisos do que quando são precisos. O processo de pensar sobre as falhas de um modelo para explicar um ou mais casos pode gerar novas teorias causais. Encontrar imprecisões, frequentemente, nos aponta a direção do progresso teórico frutífero. (p. 41)
 
-**Capítulo 2: A arte da construção de teorias**
+#### Capítulo 2: A arte da construção de teorias
 
 > [...] uma boa teoria científica não explica apenas o resultado das eleições presidenciais de 2012, mas das eleições presidenciais americanas em geral. Isto é, em vez de perguntar "Por que Obama venceu Romney em 2012?", devemos perguntar "O que faz o partido do presidente vencer ou perder uma eleição presidencial nos EUA?" ou "O que faz com que candidatos do Partido Republicano se saiam melhor ou pior que candidatos do Partido Democrata nas eleições presidenciais americanas?". (p. 56)
 
@@ -32,7 +36,7 @@ $$
 
 > Outro aspecto potencialmente problemático do pressuposto do ator racional maximizador de utilidade que você tem que considerar é o pressuposto da **informação completa**. Em outras palavras, e se não soubermos exatamente quais são os custos e benefícios de uma ação específica? [...]. Quando relaxamos esse pressuposto, deslocamos nossa discussão da utilidade para a utilidade esperada. (p. 62)
 
-### Chen, Yunsong, et al. "Social prediction: a new research paradigm based on machine learning". The Journal of Chinese Sociology 8 (2021): 1-21.
+### @chen2021social
 
 > Thus, sociologists have considered it their duty to describe and explain social processes and phenomena, seek the meaning and interpretation of society and social actions, or verify social hypothesis and theories. Consequently, description, interpretation, and statistical testing are traditional and mainstream approaches in sociological research. (p. 1)
 

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- The site mark: Fig. 1's colour ramp along the diagonal (see src/components/ui/Mark.astro). -->
+  <style>
+    .d1 { fill: #5AC0AB; } .d2 { fill: #2E9D8E; } .d3 { fill: #187970; } .d4 { fill: #0E5652; } .d5 { fill: #053535; }
+    @media (prefers-color-scheme: dark) {
+      .d1 { fill: #22514C; } .d2 { fill: #26776F; } .d3 { fill: #2FA395; } .d4 { fill: #3FD0BE; } .d5 { fill: #A8EFE4; }
+    }
+  </style>
+  <circle class="d1" cx="4" cy="4" r="3.3"/><circle class="d2" cx="12" cy="4" r="3.3"/><circle class="d3" cx="20" cy="4" r="3.3"/>
+  <circle class="d2" cx="4" cy="12" r="3.3"/><circle class="d3" cx="12" cy="12" r="3.3"/><circle class="d4" cx="20" cy="12" r="3.3"/>
+  <circle class="d3" cx="4" cy="20" r="3.3"/><circle class="d4" cx="12" cy="20" r="3.3"/><circle class="d5" cx="20" cy="20" r="3.3"/>
+</svg>

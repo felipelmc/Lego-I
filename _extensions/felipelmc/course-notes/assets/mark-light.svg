@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <circle fill="#5AC0AB" cx="4" cy="4" r="3.3"/><circle fill="#2E9D8E" cx="12" cy="4" r="3.3"/><circle fill="#187970" cx="20" cy="4" r="3.3"/>
+  <circle fill="#2E9D8E" cx="4" cy="12" r="3.3"/><circle fill="#187970" cx="12" cy="12" r="3.3"/><circle fill="#0E5652" cx="20" cy="12" r="3.3"/>
+  <circle fill="#187970" cx="4" cy="20" r="3.3"/><circle fill="#0E5652" cx="12" cy="20" r="3.3"/><circle fill="#053535" cx="20" cy="20" r="3.3"/>
+</svg>

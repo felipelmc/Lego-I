@@ -1,25 +1,30 @@
 ---
-output: pdf_document
+title: "Dinheiro e sucesso eleitoral: um desenho de pesquisa para eleições municipais"
+subtitle: "Lista 1 · Desenho de pesquisa"
+tipo: Lista
+date: 2025-04-11
+description: "Um desenho de pesquisa quantitativo sobre o efeito das despesas de campanha na eleição de vereadores no Brasil: problema, conceitos, variáveis, teoria causal, hipóteses e uma curva logística simulada."
+image: destaque.png
+image-alt: "Probabilidade de eleição em função da despesa de campanha, para 1.000 candidatos simulados, com a curva logística ajustada."
+metodos: [Desenho de pesquisa, Hipóteses, Regressão logística, Simulação]
+dados: ["Dados simulados"]
+materiais:
+  - {text: PDF, href: lista-1.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/lista-1"}
 bibliography: references.bib
-biblio-style: apsr
-title: "Lista 1"
-subtitle: "Desenho de Pesquisa"
-abstract: "Todas as questões requerem explicações por escrito. Você deverá entregar via Classroom um arquivo em PDF, criado a partir deste documento, com as suas respostas. As respostas devem ser dissertativas e devem apresentar o código utilizado (quando solicitado)"
-date: "04/11/2025"
-geometry: margin=1in
-fontfamily: mathpazo
-fontsize: 11pt
-author: Felipe Marques Esteves Lamarca
-# spacing: double
-endnote: no
+format:
+  pdf:
+    geometry: margin=1in
+    fontfamily: mathpazo
+    fontsize: 11pt
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=TRUE,
-                      message=FALSE, warning=FALSE,
-                      fig.path='figs/',
-                      cache.path = '_cache/')
-```
+::: {.callout-tip .achados}
+## Principais resultados
+- A pergunta de pesquisa é "Qual é o efeito do dinheiro no sucesso eleitoral em eleições legislativas municipais no Brasil?", com o sucesso eleitoral medido como variável binária (eleito ou não) e o dinheiro como as despesas de campanha declaradas ao TSE.
+- A hipótese principal é não linear: quanto maior a despesa, maior a probabilidade de eleição, que se aproxima de 1. A curva logística é ilustrada com 1.000 candidatos simulados, com despesas de média R$ 30 mil.
+- O mecanismo proposto é a visibilidade: candidatos que gastam mais seriam mais conhecidos, o que se testaria com as taxas de desconhecimento em pesquisas de intenção de voto.
+:::
 
 # Materiais de apoio
 
@@ -161,6 +166,11 @@ ggplot(dados, aes(x = despesas, y = prob_eleito)) +
     y = "Probabilidade de eleição"
   ) +
   theme_bw()
+```
+
+```{r}
+#| include: false
+ggsave(here::here("trabalhos/lista-1/destaque.png"), width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
 ```
 
 ## 8) Implicações testáveis (mecanismo)

@@ -1,6 +1,12 @@
-# Regressão
+---
+title: "Regressão"
+aula: 13
+date: 2025-06-10
+---
 
-## Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 8: Modelo de regressão bivariado.
+## Leituras
+
+### @kellstedt2018fundamentals, cap. 8: *Modelo de regressão bivariado*
 
 > A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. (p. 194)
 
@@ -82,7 +88,7 @@ $$
 
 Se o teste fosse unicaudal (isto é, estamos interessados em verificar se o parâmetro é positivo ou negativo), utilizamos a coluna nomeada como "0.05" em vez da coluna nomeada como "0.025" para avaliarmos se nosso valor-p é tal que temos $p < 0.05$.
 
-### Pressupostos matemáticos da regressão linear
+#### Pressupostos matemáticos da regressão linear
 
 Os resíduos precisam ser normalmente distribuídos. Isto é:
 
@@ -98,7 +104,7 @@ $$
 
 > O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. (p. 214)
 
-## Mesquita, E. B. de, e Fowler, A. (2021). Thinking clearly with data: A guide to quantitative reasoning and analysis. Princeton University Press., Cap. 5: Regression for Describing and Forecasting
+### @buenodemesquita2021thinking, cap. 5: *Regression for Describing and Forecasting*
 
 > A regression equation expresses a linear relationship between a _dependent_ (or _outcome_) variable on the left-hand side of the equation and an _independent_ (or _explanatory_) variable on the right-hand side of the equation. The dependent variable corresponds to the outcome we are trying to describe, predict, or explain. An independent variable corresponds to something we are using to try to describe, predict, or explain the dependent variable.
 

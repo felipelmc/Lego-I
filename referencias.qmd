@@ -1,0 +1,7 @@
+---
+title: "Referências"
+nocite: |
+  @*
+---
+
+Todas as obras citadas nas anotações.

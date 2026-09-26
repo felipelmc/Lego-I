@@ -1,6 +1,12 @@
-# Predição
+---
+title: "Predição"
+aula: 8
+date: 2025-05-06
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 4: Predicting outcomes using linear regression.
+## Leituras
+
+### @llaudet2022data, cap. 4: *Predicting outcomes using linear regression*
 
 > In the social sciences, we often are unable to observe the value of a particular variable of interest, $Y$, either because it hasn't occurred yet or because it is difficult to measure. In these situations, we typically observe the values of the other variable that, if correlated with $Y$, can be used to predict $Y$. (p. 99)
 
@@ -47,12 +53,12 @@ $$
 
 Desejamos sempre encontrar a reta que minimiza a soma dos quadrados dos erros.
 
-### Os coeficientes
+#### Os coeficientes
 
 - o **intercepto** especifica a posição da reta no eixo vertical. Mais especificamente, o intercepto é o valor de $Y$ quando $X = 0$;
 - o **coeficiente angular** especifica a inclinação da reta. Mais especificamente, o coeficiente angular é a variação média de $Y$ associada a uma variação unitária de $X$. Quando $\delta X = 1$, a variação média de $Y$ é $\hat{\beta}$.
 
-### OLS: Ordinary Least Squares
+#### OLS: Ordinary Least Squares
 
 > Formally, to choose the line of best fit, we use the "least squares" method, which identifies the line that minimizes the "sum of the squared residuals", known as SSR. 
 
@@ -80,7 +86,7 @@ $$
 \hat{\text{gdp}}_{\text{BR}} = 0.72 + 1.61 \cdot 400 = 644.72
 $$
 
-### With natural logarithm transformations
+#### With natural logarithm transformations
 
 > When a variable contains a handful of either extremely large or extremely small values, the distribution of the variable will be skewed. (Recall that a distribution is considered skewed when it is not symmetric because one of its tails is longer than the other.) Under these circumstances, it is often a good idea to transform the variable by taking its natural logarithm. This transformation will make the variable of interest more normally distributed and, in turn, improve the fit of the line to the data. In the example at hand, we will transform both variables of interest by taking the natural logarithm, and then we will re-fit the line. (p. 113)
 
@@ -135,7 +141,7 @@ $$
 \end{align*}
 $$
 
-### Measuring how well the model fits the data with the coefficient of determination, $R^2$
+#### Measuring how well the model fits the data with the coefficient of determination, $R^2$
 
 > The value of $R^2$ ranges from 0 to 1 and represents the proportion of the variation of Y explained by the model. [...]. Therefore, the higher the $R^2$, the better the model fits the data. (p. 120)
 
@@ -157,7 +163,7 @@ No fim das contas, TSS é simplesmente o numerador da variância.
 
 💡A interpretação de que o SSR é a variação não explicada é simples: como se trata da diferença entre o que o modelo diz e o que de fato é o valor observado, entendemos que o modelo falhou em explicar essa variação. Além disso, como o TSS representa a variação total em relação à média, podemos usá-lo como denominador.
 
-## Verhagen, M. D. (2022) A pragmatist's guide to using prediction in the social sciences. _Socius_, 8, 23780231221081702
+### @verhagen2022pragmatist
 
 > The current lack of prediction in the social sciences stems from a seeming incompatibility between wanting to explain and wanting to predict, effectively forcing researchers to choose between the two approaches. A case in point is the much-cited article by Galit Shmueli (2010), aptly titled "To Predict or to Explain", which outlines how a social scientist's empirical work flow differs in terms of data processing, modeling, and postestimation diagnostics when choosing to either predict or explain. Naturally, Shmueli assumes that a researcher would not normally attempt to do both. This is an accurate reflection of social science research. The apparent need to dogmatically choose between either approach means that, in practice, social scientists tend to stick to explanation almost exclusively. (p. 1)
 

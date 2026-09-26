@@ -1,8 +1,12 @@
-# Desenho de pesquisa e mensuração
+---
+title: "Desenho de pesquisa e mensuração"
+aula: 2
+date: 2025-03-25
+---
 
-## Anotações das leituras
+## Leituras
 
-### Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Caps. 3 e 4
+### @kellstedt2018fundamentals, caps. 3 e 4
 
 #### Capítulo 3: avaliando relações causais
 
@@ -54,7 +58,7 @@
 >
 > Como os exemplos anteriores demonstraram, quando precisamos controlar outras possíveis causas de $Y$ para superar o quarto obstáculo causal, precisamos controlar por _todas elas_, não por apenas uma. Mas como sabemos se controlamos por todas as possíveis causas de $Y$? Em muitos casos, não sabemos com certeza. (p. 110)
 
-### King, G., Keohane, R. O., Verba, S. (1994). Designing social inquiry: Scientific inference in qualitative research. Princeton university press., Cap. 1
+### @king1994designing, cap. 1
 
 O capítulo começa com uma introdução ao debate entre pesquisa quantitativa, mais fortemente associada a medidas, estatísticas e matemática de maneira geral, e a pesquisa qualitativa, focada em análises contextuais e mais profundas. Na prática, o autor argumenta que as diferenças entre as duas abordagens são meramente estilísticas e, portanto, pouco importantes do ponto de vista científico.
 
@@ -74,7 +78,7 @@ O capítulo começa com uma introdução ao debate entre pesquisa quantitativa, 
 
 O argumento é que "boa pesquisa" (pesquisa científica) é aquela que segue 4 princípios básicos. O primeiro deles diz respeito ao objetivo, que, afinal, deve ser a inferência. A inferência nesse caso é pensada de maneira mais ampla, podendo ser _inferência descritiva_ ou _inferência causal_. O segundo princípio diz respeito à publicização dos procedimentos, ou seja, a pesquisa deve ser replicável. O terceiro princípio diz respeito à incerteza das conclusões: inferência é um processo imperfeito, afinal, a coleta de dados propriamente dita já é imperfeita -- portanto, inferências precisam ser acompanhadas de medidas de incerteza. Por fim, o quarto princípio afirma que a ciência é, essencialmente, um conjunto de regras e métodos que podem ser utilizados para estudar qualquer assunto.
 
-### Figueiredo Filho, D. B., Paranhos, R., Rocha, E. C., Silva Jr, J., e Santos, M. D. (2012). Levando Gary King a sério: desenhos de pesquisa em Ciência Política. Revista Eletrônica de Ciência Política, 3(1-2), 86-117.
+### @figueiredofilho2012levando
 
 Pelo menos até o ponto de escrita do artigo, o cenário da formação em métodos de pesquisa (quantitativa e qualitativa) era o "calcanhar de Aquiles" da formação em ciência política no Brasil. Em particular, o artigo começa com uma série de evidências dessa formação deficitária e discute os efeitos disso na produção científica e no mercado de trabalho. 
 
@@ -94,9 +98,4 @@ Os autores fazem uma série de recomendações:
 9. **Ser criticado antes de publicar:** "Em síntese, o crivo da comunidade acadêmica é uma das formas mais eficientes de aprimorar desenhos de pesquisa e, posteriormente, resultados de pesquisa. Apenas depois de submeter seu trabalho às críticas, o pesquisador deve submetê-lo aos periódicos especializados." (p. 111)
 10. **Escolher adequadamente os meios de divulgação**
 
-
-## Anotações de aula
-
-## Notas de rodapé
-    
 [^1]: Variável colinear é simplesmente uma variável que está correlacionada com a variável dependente e com a independente de maneira a alterar a relação entre elas.

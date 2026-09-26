@@ -1,27 +1,36 @@
 ---
-title: "Lista III"
-author: "Felipe Marques Esteves Lamarca"
-date: "06/07/2025"
-output:
-  pdf_document: default
-  html_document:
-    df_print: paged
+title: "Amostragem em Belford Roxo e desmatamento versus capacidade adaptativa"
+subtitle: "Lista 3 · Estatística, amostragem e causalidade"
+tipo: Lista
+date: 2025-06-07
+description: "Amostras aleatórias da população de Belford Roxo (Censo 2010), a distribuição amostral da média, inferência randomizada para a renda de brancos e pretos e um desenho de pesquisa sobre desmatamento e capacidade de adaptação dos municípios."
+image: destaque.png
+image-alt: "Distribuição simulada da diferença de renda média entre brancos e pretos sob a hipótese nula, com a diferença observada marcada por uma linha tracejada."
+metodos: [Amostragem aleatória simples, Teorema central do limite, Inferência randomizada, DAG, Regressão com interação]
+dados: ["Censo 2010 (Belford Roxo)", "Base de municípios brasileiros (MAPE/IESP-UERJ)"]
+materiais:
+  - {text: PDF, href: lista-3.pdf}
+  - {text: Enunciado, href: enunciado.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/lista-3"}
 abstract: Nesta lição, exploramos conceitos fundamentais de amostragem, estatística descritiva e inferência causal. Iniciamos com simulações de amostragem aleatória simples, analisando a variabilidade da média e do desvio padrão da renda mensal em Belford Roxo, ilustrando o Teorema Central do Limite. Em seguida, usamos inferência randomizada para avaliar a diferença de renda entre brancos e pretos, simulando a distribuição da diferença sob a hipótese nula. Na segunda parte, construímos um desenho de pesquisa para testar se municípios mais desmatados apresentam menor capacidade adaptativa a desastres, formalizando o modelo com um DAG, descrevendo as variáveis, visualizando associações e ajustando um modelo de regressão com interação, revelando que o impacto do desmatamento sobre a capacidade adaptativa depende do nível de investimento municipal.
-subtitle: Estatística, amostragem e causalidade
-geometry: margin=1in
-fontfamily: mathpazo
-fontsize: 11pt
-biblio-style: apsr
-endnote: false
+format:
+  pdf:
+    geometry: margin=1in
+    fontfamily: mathpazo
+    fontsize: 11pt
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=TRUE,
-                      message=FALSE, warning=FALSE,
-                      fig.path='figs/',
-                      cache.path = '_cache/')
+::: {.callout-tip .achados}
+## Principais resultados
+- A base de Belford Roxo tem 469.313 pessoas. Uma amostra aleatória simples de 800 pessoas superestima a renda média (R$ 374,9, contra R$ 345,3 na população) e o desvio padrão (1.173,7, contra 663,0); com 2.400 pessoas, a média amostral cai para R$ 352,5.
+- Numa amostra de 2.000 pessoas brancas e pretas, a inferência randomizada dá um p-valor empírico de 0,16: a diferença de renda observada pode ter ocorrido por acaso.
+- Controlando por população, área e capacidade de investimento, o coeficiente do desmatamento sobre o índice de capacidade adaptativa é positivo (0,03), ao contrário da hipótese. A interação com a capacidade de investimento é negativa (-0,15, p = 0,0503).
+:::
 
-load("data/belford_roxo.Rda")
+```{r}
+#| label: setup
+#| include: false
+load(here::here("trabalhos/lista-3/data/belford_roxo.Rda"))
 ```
 
 Antes de iniciar o exercício, vamos importar as bibliotecas necessárias e definir uma `seed` -- arbitrariamente escolhida -- para garantir reprodutibilidade.
@@ -385,6 +394,11 @@ p_valor_unilateral <- mean(dif_simulada >= dif_observada)
 print(glue::glue("p-valor empírico: {round(p_valor_unilateral, 2)}"))
 
 ```
+
+```{r}
+#| include: false
+ggsave(here::here("trabalhos/lista-3/destaque.png"), width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
+```
 Gerando uma distribuição sob a hipótese nula de que a raça não tem efeito sobre a renda, obtivemos um p-valor relativamente alto. Isso indica que a diferença observada na amostra pode ter ocorrido por acaso, e portanto não há evidência estatística suficiente, neste teste, para afirmar que a raça influencia a renda.
 
 Isso não significa, é claro, que não haja desigualdade associada à raça — apenas que, com os dados e o método utilizados, não foi possível atribuir estatisticamente essa diferença à raça de forma isolada.
@@ -423,7 +437,7 @@ Abaixo, filtramos a base para manter apenas as colunas desejadas. Além disso, a
 
 ```{r}
 
-load("data/base_municipios_brasileiros.Rda")
+load(here::here("trabalhos/lista-3/data/base_municipios_brasileiros.RDa"))
 
 base_municipios_brasileiros <- base_municipios_brasileiros %>%
   select(

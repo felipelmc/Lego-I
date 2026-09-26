@@ -1,7 +1,52 @@
-# Apresentação do curso
+---
+title: "Lego I"
+subtitle: "Introdução à pesquisa social quantitativa"
+eyebrow: "IESP-UERJ · 2025.1"
+byline: "Anotações de Felipe Lamarca"
+---
+
+Este site reúne minhas anotações das aulas de Lego I, disciplina do programa de pós-graduação do [IESP-UERJ](https://iesp.uerj.br), e as listas de exercícios que entreguei no curso.
+
+## Apresentação do curso
 
 > Lego I é uma introdução à Ciência Social quantitativa. O curso apresenta os fundamentos da análise de dados, incluindo noções sobre desenho de pesquisa, probabilidade e inferência, testes de hipóteses e modelos de regressão linear. Complementarmente, o curso também introduz o uso de programação em `R`, um ambiente amplamente utilizado para análise de dados e Data Science dentro e fora da academia. A dinâmica do curso combinará tutoriais e sessões guiadas de monitoria nas quais resolveremos problemas aplicados de pesquisa social de forma reprodutível. [[ementa]](ementa.pdf)
 
-**Professor:** Bruno Marques Schaefer (IESP-UERJ) [[homepage]](https://sites.google.com/view/brunomschaefer/in%C3%ADcio?authuser=0)
+Professor
+: Bruno Marques Schaefer (IESP-UERJ) [[homepage]](https://sites.google.com/view/brunomschaefer/in%C3%ADcio?authuser=0)
 
-**Semestre:** 2025.1
+Monitoria
+: Carlos Freitas
+
+Período
+: 1º semestre de 2025 (2025.1), com aulas às terças-feiras
+
+## Aulas
+
+| Aula | Data | Tema | |
+|:--|:--|:--|:--|
+| 01 | 18/03 | Fundamentos da pesquisa quantitativa | [notas](aulas/aula-01.qmd) |
+| 02 | 25/03 | Desenho de pesquisa e mensuração | [notas](aulas/aula-02.qmd) |
+| 03 | 01/04 | Importação, combinação e tratamento de dados | sem anotações |
+| 04 | 08/04 | Visualização de dados | sem anotações |
+| 05 | 15/04 | Indicadores e estatísticas descritivas | [notas](aulas/aula-05.qmd) |
+| 06 | 22/04 | Efeitos causais em experimentos | [notas](aulas/aula-06.qmd) |
+| 07 | 29/04 | Inferência | [notas](aulas/aula-07.qmd) |
+| 08 | 06/05 | Predição | [notas](aulas/aula-08.qmd) |
+| 09 | 13/05 | Efeitos causais em dados observacionais | [notas](aulas/aula-09.qmd) |
+| 10 | 20/05 | Probabilidade | [notas](aulas/aula-10.qmd) |
+| 11 | 27/05 | Quantificação de incerteza | [notas](aulas/aula-11.qmd) |
+| 12 | 03/06 | Teste de hipótese | [notas](aulas/aula-12.qmd) |
+| 13 | 10/06 | Regressão | [notas](aulas/aula-13.qmd) |
+| 14 | 17/06 | Regressão com mais de uma variável | sem anotações |
+| 15 | 24/06 | Auxílio nos projetos finais | sem anotações |
+
+: As aulas 03 e 04 foram sessões práticas de `R`. Datas e temas conforme a [ementa](ementa.pdf).
+
+## Como usar estas notas
+
+As anotações estão organizadas por aula na barra lateral à esquerda, agrupadas pelas partes da ementa. Cada página corresponde a uma aula e reúne as notas das leituras e, quando houver, as anotações de aula. A parte [Trabalhos](trabalhos/index.qmd) reúne a lista de nivelamento e as quatro listas de exercícios entregues.
+
+::: {.callout-note}
+## Anotações pessoais
+Estas são anotações pessoais e podem conter imprecisões. Use-as como complemento, não como substituto do material oficial da disciplina. Citações literais ficam como no original, com a página, e explicações escritas com auxílio de IA aparecem em caixas identificadas.
+:::

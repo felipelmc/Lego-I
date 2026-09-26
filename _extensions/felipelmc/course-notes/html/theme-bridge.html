@@ -1,0 +1,30 @@
+<script>
+/* Course Notes: sincroniza o modo claro/escuro com felipelamarca.com.
+   O site guarda a escolha em localStorage.theme ("dark" | "light"); o Quarto usa
+   localStorage["quarto-color-scheme"] ("alternate" = escuro | "default" = claro).
+   Todos os sites de notas vivem na mesma origem, então a preferência vale em todos. */
+(function () {
+  try {
+    var s = localStorage.getItem("theme");
+    if (s === "dark" || s === "light") {
+      localStorage.setItem("quarto-color-scheme", s === "dark" ? "alternate" : "default");
+    } else {
+      localStorage.removeItem("quarto-color-scheme");
+    }
+  } catch (e) {}
+  function isDark() { return document.body && document.body.classList.contains("quarto-dark"); }
+  document.addEventListener("DOMContentLoaded", function () {
+    var t = window.quartoToggleColorScheme;
+    if (typeof t !== "function") return;
+    window.quartoToggleColorScheme = function () {
+      t();
+      try { localStorage.setItem("theme", isDark() ? "dark" : "light"); } catch (e) {}
+    };
+  });
+  window.addEventListener("storage", function (e) {
+    if (e.key === "theme" && (e.newValue === "dark") !== isDark() && window.quartoToggleColorScheme) {
+      window.quartoToggleColorScheme();
+    }
+  });
+})();
+</script>

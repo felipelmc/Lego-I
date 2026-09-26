@@ -1,6 +1,12 @@
-# Efeitos causais em experimentos
+---
+title: "Efeitos causais em experimentos"
+aula: 6
+date: 2025-04-22
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 2: Estimating Causal Effects with Randomized Experiments.
+## Leituras
+
+### @llaudet2022data, cap. 2: *Estimating Causal Effects with Randomized Experiments*
 
 > In mathematical notation, we represent the treatment variable as X and the outcome variable as Y. We represent the causal relationship between them visually with an arrow from X to Y. The direction of the arrow indicates that changes in X may produce changes in Y but not the other way around:
 >
@@ -51,7 +57,7 @@ $$
 
 > Given that we cannot always run experiments, we need to learn how to estimate causal effects in non-experimental settings, using what is called **observational data**. Unlike **experimental data**, which refers to data collected from a randomized experiment, observational data are collected about naturally occuring events. Treatment assignment is out of the control of the researchers and is often the result of individual choices.
 
-## Other nice readings
+### Materiais complementares
 
 1. How research affects policy: experimental evidence from 2.150 Brazilian municipalities [[paper]](https://gautam-rao.com/pdf/HMRS.pdf) [[Nexo]](https://pp.nexojornal.com.br/academico/2020/12/10/como-evidencia-empirica-afeta-decisoes-sobre-politicas-publicas)
 

@@ -1,0 +1,32 @@
+<header id="title-block-header" class="quarto-title-block default cn-title">
+<div class="quarto-title">
+$if(eyebrow)$
+<p class="cn-eyebrow">$eyebrow$</p>
+$elseif(aula)$
+<p class="cn-eyebrow"><span class="cn-num">Aula $aula-label$</span>$if(date)$<span class="cn-sep">·</span><time>$date$</time>$endif$</p>
+$elseif(tipo)$
+<p class="cn-eyebrow"><span class="cn-num">$tipo$</span>$if(curso-nome)$<span class="cn-sep">·</span><span>$curso-nome$</span>$endif$$if(date)$<span class="cn-sep">·</span><time>$date$</time>$endif$</p>
+$endif$
+$if(title)$
+<h1 class="title">$title$</h1>
+$endif$
+$if(subtitle)$
+<p class="subtitle lead">$subtitle$</p>
+$endif$
+$if(byline)$
+<p class="cn-byline">$byline$</p>
+$endif$
+</div>
+$if(abstract)$
+<div class="cn-abstract">
+<div class="cn-eyebrow">$labels.abstract$</div>
+$abstract$
+</div>
+$endif$
+$if(materiais)$
+<p class="cn-actions">$for(materiais)$<a href="$it.href$"$if(it.primary)$ class="cn-primary"$endif$>$it.text$</a>$endfor$</p>
+$endif$
+$if(tipo)$$if(image)$$if(hero)$
+<figure class="cn-hero"><img src="$image$" alt="$if(image-alt)$$image-alt$$endif$"></figure>
+$endif$$endif$$endif$
+</header>

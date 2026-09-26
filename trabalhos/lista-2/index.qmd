@@ -1,25 +1,30 @@
 ---
-output: pdf_document
-#bibliography: master.bib
-biblio-style: apsr
-title: "Lista II"
-subtitle: "Análise de dados"
+title: "Polarização, proposições legislativas e text as data em teses da Capes (1987–2022)"
+subtitle: "Lista 2 · Análise de dados"
+tipo: Lista
+date: 2025-04-30
+description: "Teses e dissertações de Sociologia, Ciência Política e Relações Internacionais que citam 'polarização', 'text as data' ou 'proposições legislativas' no resumo: evolução no tempo, distribuição por região e estado e produção por programa."
+image: destaque.png
+image-alt: "Número anual de teses e dissertações que citam polarização, text as data ou proposições legislativas no resumo, de 1987 a 2022."
+metodos: [Junção de bases, Busca de termos, Séries temporais, Mapas]
+dados: ["Teses e dissertações da Capes (1987–2022)", "Programas de pós-graduação da Capes"]
+materiais:
+  - {text: PDF, href: lista-2.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/lista-2"}
 abstract: "Neste exercício, analiso a produção de teses e dissertações de programas dos pós-graduação na Capes das áreas de Sociologia ou Ciência Política e Relações Internacionais, entre os anos de 1987 e 2022. Em particular, foco nas teses e dissertações que citam, no resumo, pelo menos um dos seguintes termos: 'polarização', 'text as data' e 'proposições legislativas', totalizando $n = 187$."
-date: "04/30/2025"
-geometry: margin=1in
-fontfamily: mathpazo
-fontsize: 11pt
-author: Felipe Marques Esteves Lamarca
-# spacing: double
-endnote: no
+format:
+  pdf:
+    geometry: margin=1in
+    fontfamily: mathpazo
+    fontsize: 11pt
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=TRUE,
-                      message=FALSE, warning=FALSE,
-                      fig.path='figs/',
-                      cache.path = '_cache/')
-```
+::: {.callout-tip .achados}
+## Principais resultados
+- 187 teses e dissertações defendidas entre 1987 e 2022 citam no resumo pelo menos um dos três termos. "Polarização" domina, com 141 ocorrências, e o número de trabalhos cresce ao longo do tempo.
+- Os programas de Ciência Política da UFRGS (7 teses), da UFMG (5) e da UFSCar (5) são os que mais defenderam teses sobre esses temas.
+- A produção se concentra no Sul e no Sudeste, sobretudo em São Paulo, e a maior parte das teses foi defendida em programas com conceito 5 na Capes.
+:::
 
 ```{r}
 library(tidyverse)
@@ -36,15 +41,15 @@ Vamos começar importando os dados. Mais especificamente, primeiro vamos ler os 
 
 ```{r}
 # listando os arquivos
-list.files(path="data", patter="^capes")
+list.files(path=here::here("trabalhos/lista-2/data"), patter="^capes")
 ```
 
 ```{r}
-paths_list <- list.files(path="data", pattern="^capes")
+paths_list <- list.files(path=here::here("trabalhos/lista-2/data"), pattern="^capes")
 datasets <- list()
 
 for (i in 1:length(paths_list)) {
-  datasets[[i]] <- read.csv(file = file.path("data", paths_list[i]))
+  datasets[[i]] <- read.csv(file = file.path(here::here("trabalhos/lista-2/data"), paths_list[i]))
 }
 
 teses_dissertacoes <- datasets %>%
@@ -55,7 +60,7 @@ teses_dissertacoes <- datasets %>%
 Agora, vamos ler o arquivo `programas.csv`:
 
 ```{r}
-programas <- read.csv("data/programas.csv")
+programas <- read.csv(here::here("trabalhos/lista-2/data/programas.csv"))
 head(programas)
 ```
 Felizmente, as bases compartilham a coluna `CD_PROGRAMA` (ou `codigo_programa`), identificando o código do programa de pós-graduação. Isso facilita bastante a junção das bases.
@@ -141,6 +146,11 @@ teses_dissertacoes_flt %>%
   ) +
   scale_x_continuous(breaks = seq(min(teses_dissertacoes_flt$ano), 
                                   max(teses_dissertacoes_flt$ano), by = 1))
+```
+
+```{r}
+#| include: false
+ggsave(here::here("trabalhos/lista-2/destaque.png"), width = 8, height = 4.5, dpi = 150, bg = "#F6F6F3")
 ```
 
 
@@ -373,9 +383,10 @@ producao %>%
 Finalmente, exportamos a base para análises futuras.
 
 ```{r}
+#| eval: false
 teses_dissertacoes_flt %>%
   select(ano, UF, codigo_programa, nome_programa_ies, titulo, resumo, autor) %>%
-  writexl::write_xlsx("data/teses_dissertacoes_flt.xlsx")
+  writexl::write_xlsx(here::here("trabalhos/lista-2/data/teses_dissertacoes_flt.xlsx"))
 ```
 
 

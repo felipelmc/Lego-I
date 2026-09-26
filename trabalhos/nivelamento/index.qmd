@@ -1,24 +1,34 @@
 ---
-output: pdf_document
-#bibliography: master.bib
-biblio-style: apsr
-title: "Lista Nivelamento"
-subtitle: "R Básico"
-abstract: "Todas as questões requerem explicações por escrito. Você deverá entregar via Classroom um arquivo em PDF, criado a partir deste documento, com as suas respostas. As respostas devem ser dissertativas e devem apresentar o código utilizado"
-date: "03/31/2025"
-geometry: margin=1in
-fontfamily: mathpazo
-fontsize: 11pt
-author: Felipe Lamarca
-endnote: no
+title: "Nivelamento em R com dados públicos"
+subtitle: "Lista de nivelamento · R básico"
+tipo: Lista
+date: 2025-03-31
+description: "Exercícios de R básico: objetos e vetores, importação de arquivos CSV, Stata e microdados do INEP, manipulação e junção de bases com dplyr e gráficos com ggplot2 e geobr."
+image: figs/unnamed-chunk-16-1.png
+image-alt: "Mortes por intervenção policial no município do Rio de Janeiro, por ano, de 2016 a 2021."
+metodos: [R básico, Importação de dados, dplyr, ggplot2, Mapas]
+dados: ["World Values Survey (onda 7)", "Censo da Educação Superior 2022 (INEP)", "Municípios brasileiros", "Instituto de Segurança Pública (RJ)"]
+materiais:
+  - {text: PDF, href: lista-nivelamento.pdf}
+  - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/nivelamento"}
+format:
+  pdf:
+    geometry: margin=1in
+    fontfamily: mathpazo
+    fontsize: 11pt
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(cache=TRUE,
-                      message=FALSE, warning=FALSE,
-                      fig.path='figs/',
-                      cache.path = '_cache/')
-```
+::: {.callout-tip .achados}
+## Principais resultados
+- Em 2022, o 50º município mais populoso do país era Porto Velho, com 461.748 habitantes.
+- A esmagadora maioria dos municípios brasileiros tem menos de 50 mil habitantes.
+- No município do Rio de Janeiro, as mortes por intervenção policial chegam ao pico em 2019, na série de 2016 a 2021.
+:::
+
+::: {.callout-note}
+## Dados fora do repositório
+Os dados desta lista não estão no repositório. Os blocos de código que dependem deles aparecem sem ser executados, e as figuras são as da versão renderizada em 2025. Os resultados completos estão no [PDF entregue](lista-nivelamento.pdf).
+:::
 
 # Material de apoio
 
@@ -106,6 +116,7 @@ Carregue o arquivo governadores.csv, que contém informações de algumas pessoa
 Primeiro, importamos os dados usando a função `read_csv2`, encontrada na internet a partir de uma rápida busca: https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html. A função é útil no caso em que desejamos der arquivos `.csv` separados por ";". É claro, poderíamos ter utilizando também a função `read_delim`. Depois é só aplicar a função `head` para observar as primeiras 5 linhas.
 
 ```{r}
+#| eval: false
 # https://livro.curso-r.com/13-2-importa%C3%A7%C3%A3o.html
 pessoas <- read_csv2("datasets/governadores.csv")
 head(pessoas)
@@ -122,6 +133,7 @@ Link para os dados: https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp
 Para ler bancos de dados `.dta`, basta instalar o pacote haven e importar o arquivo usando a função abaixo:
 
 ```{r}
+#| eval: false
 wvs_stata <- haven::read_dta("datasets/WVS_Cross-National_Wave_7_stata_v6_0.dta")
 ```
 
@@ -149,6 +161,7 @@ Link para os dados: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-aber
 Neste caso usamos a função `read_delim` para fazer a leitura dos dados. Além disso, foi importante especificar o encoding do dataset. Os nomes das colunas podem ser obtidos pela função `colnames`, enquanto número de linhas e colunas podem ser obtidos usando as funções `nrow` e `ncol`, respectivamente.
 
 ```{r}
+#| eval: false
 alunos <- read_delim("datasets/MICRODADOS_ED_SUP_IES_2022.CSV", 
                      delim=";", 
                      locale=locale(encoding = "latin1"))
@@ -177,6 +190,7 @@ No Google Classroom (Aula 2 Mural - https://classroom.google.com/c/NzQ4Mzk4MTMyM
 Infelizmente o arquivo `.xlsx` continha algum problema de formato, o que impediu que eu conseguisse abri-lo mesmo localmente no Excel. Por isso, utilizou-se o arquivo `.csv`. A seleção das colunas foi feita utilizando a função `select`.
 
 ```{r}
+#| eval: false
 base_municipios_brasileiros <- read_csv("datasets/base_municipios_brasileiros.csv")
 
 base_municipios_brasileiros <- base_municipios_brasileiros %>%
@@ -193,6 +207,7 @@ Utilize o banco de dados do exercício anterior para criar um novo objeto/data.f
 Primeiro, filtramos apenas a população de 2022 usando a função `filter`. Depois, bastou ordenar os municípios em ordem decrescente compondo as funções `arrange` e `desc`, e tomar as 50 primeiras linhas. Depois utilizamos a função `tail` para mostrar a última linha -- isto é, a linha correspondente ao 50º município mais populoso.
 
 ```{r}
+#| eval: false
 populacao <-base_municipios_brasileiros %>%
               filter(ano == 2022)
 
@@ -213,6 +228,7 @@ Usando o objeto populacao, criado no exercício anterior, adicione a ele uma nov
 Combinando as funções `mutate` e `case_when`, conseguimos criar a coluna pequeno_porte.
 
 ```{r}
+#| eval: false
 populacao <- populacao %>%
   mutate(pequeno_porte = case_when(
     populacao < 50000 ~ "Pequeno porte",
@@ -232,6 +248,7 @@ Carregue a base de dados banco_violencia.xlsx. A partir da função left_join, c
 Podemos facilmente cruzar os dois bancos de dados utilizando a coluna `id_municipio`, presente nos dois datasets. Por se tratar de uma coluna padronizada, a variável de `id` é muito útil para realizar conexões entre os bancos de dados.
 
 ```{r}
+#| eval: false
 banco_violencia <- read_excel("datasets/banco_violencia.xlsx")
 banco_violencia$id_municipio <- as.double(banco_violencia$id_municipio) 
 populacao_violencia <- left_join(x=populacao, y=banco_violencia, by=c("id_municipio"))
@@ -256,16 +273,23 @@ Dica: consulte o livro Usando o R para identificar os geoms mais adequados
 ## Resposta
 
 ```{r}
+#| eval: false
 hist(populacao_violencia$populacao.x)
 ```
 
+![](figs/unnamed-chunk-12-1.png){fig-alt="Histograma da população dos municípios brasileiros."}
+
 ```{r}
+#| eval: false
 populacao_violencia %>%
   group_by(pequeno_porte) %>%
   summarise(n_municipios = n()) %>%
   ggplot(aes(x = pequeno_porte, y = n_municipios)) +
   geom_col()
 ```
+
+![](figs/unnamed-chunk-13-1.png){fig-alt="Número de municípios de pequeno porte e dos demais."}
+
 Os dois gráficos plotados nos mostram que a esmagadora maioria dos municípios brasileiros são de pequeno porte -- isto é, possuem menos de 50 mil habitantes.
 
 ## Questão 13
@@ -282,6 +306,7 @@ Dica 2: verifique se a classe das variáveis utilizadas é numérica. Caso não 
 Após filtrar os dados para o município do Rio de Janeiro, podemos usar a coluna `quantidade_mortes_intervencao_policial` (transformada em uma variável numérica através da função mutate) para plotar um gráfico de série temporal.
 
 ```{r}
+#| eval: false
 banco_violencia %>%
   filter(id_municipio_nome == 'Rio de Janeiro') %>%
   mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %>%
@@ -289,6 +314,8 @@ banco_violencia %>%
   geom_line() +
   geom_point()
 ```
+
+![](figs/unnamed-chunk-14-1.png){fig-alt="Mortes por intervenção policial no município do Rio de Janeiro, por ano."}
 
 ## Questão 14
 
@@ -304,6 +331,7 @@ Dica 2: para a elaboração do mapa, será necessário utilizar os pacotes geobr
 Começamos lendo os dados de geometria dos estados brasileiros utilizando o geobr. Daí, basta agrupar os dados por unidade da federação, somando o total da população, e cruzar as bases pela sigla do estado. O gráfico é plotado utilizando a geometria `sf`.
 
 ```{r}
+#| eval: false
 library(geobr)
 library(sf)
 
@@ -318,6 +346,8 @@ populacao_violencia %>%
   geom_sf()
 ```
 
+![](figs/unnamed-chunk-15-1.png){fig-alt="Mapa da população por estado."}
+
 ## Questão 15
 
 Selecione um dos gráficos elaborados nos exercícios anteriores e faça customizações nele. Você pode mudar cores, temas, acrescentar títulos, mudar nomes de variáveis... deixe sua criatividade fluir, mas sempre priorizando a clareza e a melhor forma de comunicar as informações contidas no gráfico.
@@ -328,6 +358,7 @@ Selecione um dos gráficos elaborados nos exercícios anteriores e faça customi
 Faço algumas modificações ao gráfico de linha anterior. Em especial, ajusto o eixo $y$ para começar no 0, o que ajusta a analisar de maneira mais adequada a variação no número de mortes ao longo do tempo. Além disso, incluo também título, subtítulo e caption, além de alguns ajustes mais residuais no tamanho e estilo da fonte. Alterei também o titulo dos eixos para facilitar a compreensão das variáveis.
 
 ```{r}
+#| eval: false
 banco_violencia %>%
   filter(id_municipio_nome == 'Rio de Janeiro') %>%
   mutate(quantidade_mortes_intervencao_policial = as.numeric(quantidade_mortes_intervencao_policial)) %>%
@@ -352,6 +383,8 @@ banco_violencia %>%
   )
 
 ```
+
+![](figs/unnamed-chunk-16-1.png){fig-alt="Versão customizada do gráfico de mortes por intervenção policial no Rio de Janeiro."}
 
 
 

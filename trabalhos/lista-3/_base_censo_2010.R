@@ -43,4 +43,4 @@ belford_roxo <- belford_roxo %>%
 
 
 # Salva a base
-save(belford_roxo, file = "lista-3/data/belford_roxo.Rda")
+save(belford_roxo, file = here("trabalhos/lista-3/data/belford_roxo.Rda"))

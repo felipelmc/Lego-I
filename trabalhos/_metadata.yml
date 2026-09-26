@@ -1,0 +1,4 @@
+# Opções comuns às páginas de trabalho (não afetam o PDF, que é renderizado fora do livro).
+shift-heading-level-by: 1
+code-fold: true
+curso-nome: "Lego I"

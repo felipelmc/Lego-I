@@ -1,8 +1,12 @@
-# Indicadores e estatísticas descritivas
+---
+title: "Indicadores e estatísticas descritivas"
+aula: 5
+date: 2025-04-15
+---
 
-## Anotações das leituras
+## Leituras
 
-### Kellstedt, P. M.,; Whitten, G. D. (2018). The fundamentals of political science research. Cambridge University Press., Cap. 5.
+### @kellstedt2018fundamentals, cap. 5
 
 > Uma teoria, como dissemos, é meramente uma conjectura sobre a possível relação causal entre dois ou mais conceitos. Como cientistas, devemos sempre resistir à tentação de ver nossas teorias como suportadas de alguma forma antes que tenhamos avaliado evidências do mundo real e até tenhamos feito tudo que podemos com as evidências empíricas para avaliar o quão bem nossa teoria se sai ao tentar superar os quatro obstáculos causais que identificamos no capítulo 3. (p. 116)
 

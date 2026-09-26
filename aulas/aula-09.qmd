@@ -1,6 +1,12 @@
-# Efeitos causais em dados observacionais
+---
+title: "Efeitos causais em dados observacionais"
+aula: 9
+date: 2025-05-13
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 5: Estimating Causal Effects with Observational Data.
+## Leituras
+
+### @llaudet2022data, cap. 5: *Estimating Causal Effects with Observational Data*
 
 > [...] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p. 130)
 
@@ -26,7 +32,7 @@ Do ponto de vista de interpretação dos coeficientes, $\hat{\alpha}$ é a médi
 
 > In other words, the difference in the average outcomes between the treatment and control groups that remain after holding all confounding variables constant can now be directly attributed to their difference with respect to the treatment (treated vs. untreated); no other differences between the two groups are in play. (p. 145)
 
-## Cunningham, S. (2022). _Causal Inference: the mixtape_. Yale University Press. Chapter 3: Directed Acyclic Graphs.
+### @cunningham2021mixtape, cap. 3: *Directed Acyclic Graphs*
 
 > Using directed acyclic graphical (DAG) notation requires some up-front statements. The first thing to notice is that a DAG notation, causality runs in one direction. [...]. There are no cycles in a DAG. [...]. Third, DAGs explain causality in terms of counterfactuals. That is, a causal effect is defined as a comparison between two states of the world -- one state that actually happened when some intervention took on some value and another state that didn't happen (the "counterfactual") under some other intervention.
 
@@ -115,7 +121,7 @@ stargazer(lm_1,lm_2,lm_3, type = "text",
 
 > [...] if we run the regression that Google and others recommend wherein we control for occupation, the sign on gender changes. It becomes positive! We know this is wrong because we hard-coded the effect of gender to be $-1$! The problem is that occupation is a collider. It is caused by ability and discrimination. If we control for occupation, we open up a backdoor path between discrimination and earnings that is spurious and so strong that it perverts the entire relationship. So only when we control for occupation and ability can we isolate the direct causal effect of gender on wages.
 
-## Other materials
+### Materiais complementares
 
 - An introduction to DAGs and `ggdag` by Malcolm Barrett [[link]](https://cran.r-project.org/web/packages/ggdag/vignettes/intro-to-dags.html)
 - Papers published by Carolina Caetano, an Assistant Professor of Economics at the University of Georgia [[link]](http://www.carolinacaetano.net/)

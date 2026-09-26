@@ -1,6 +1,12 @@
-# Quantificação de incerteza
+---
+title: "Quantificação de incerteza"
+aula: 11
+date: 2025-05-27
+---
 
-## Llaudet, E. and Imai, K. (2022). _Data analysis for social science: A friendly and practical introduction_. Princeton University Press. Chapter 7: Quantifying Uncertainty.
+## Leituras
+
+### @llaudet2022data, cap. 7: *Quantifying Uncertainty*
 
 > We call the unknown quantity of interest the **parameter**. We call the statistic we compute using the sample data the **estimate**, and the formula that produces it, an **estimator**. Formally, an estimator is a function of observed data used to produce an estimate of a parameter. (p. 196)
 
@@ -35,7 +41,7 @@ Com isso, podemos:
 1. Computar intervalos de confiança
 2. Fazer testes de hipótese, que indicam o quão provável é que o parâmetro populacional assuma um determinado valor sob determinada distribuição
 
-### Intervalos de confiança
+#### Intervalos de confiança
 
 > Three levels of confidence are conventionally used in the social sciences to construct confidence intervals: 90%, 95%, and 99%. The level of confidence indicates the probability, over multiple samples, that the true value lies within the interval. With higher levels of confidence, the degree of uncertainty decreases, but the width of the confidence level increases. (p. 202)
 
@@ -73,7 +79,7 @@ $$
 \bar{Y}_\text{treatment} - \bar{Y}_\text{control} \pm 1.96 \times \sqrt{ \dfrac{\text{var}(Y_\text{treatment})}{n_\text{treatment}} + \dfrac{\text{var}(Y_\text{control})}{n_\text{control}} }
 $$
 
-### Teste de hipótese
+#### Teste de hipótese
 
 > Hypothesis testing is a methodology that we use to determine whether the parameter is likely to equal a particular value. For example, we can use hypothesis testing to determine whether or not an average treatment effect is different from zero in the target population. 
 >
@@ -111,7 +117,7 @@ Para terminar, vale sempre lembrar que significância estatística não tem abso
 
 ---
 
-### O erro-padrão da média
+#### O erro-padrão da média
 
 💡Frequentemente me pergunto de onde vem o $\sqrt{n}$ na fórmula do erro padrão. Vamos lá: suponha que queremos calcular a variância da soma de $n$ variáveis aleatórias, todas com variância $\sigma^2$. 
 
@@ -139,7 +145,7 @@ Segue daí que o erro padrão da média amostral é $\dfrac{\sigma}{\sqrt{n}}$.
 
 ---
 
-## Shmueli, G. (2010). To explain or to predict?
+### @shmueli2010explain
 
 > The above decomposition [bias-variance tradeoff] reveals a source of the difference between explanatory and predictive modeling: In explanatory modeling the focus is on minimizing bias to obtain the most accurate representation of the underlying theory. In contrast, predictive modeling seeks to minimize the combination of bias and estimation variance, occasionally sacrificing theoretical accuracy for improved empirical precision. (p. 293)
 

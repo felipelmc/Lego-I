@@ -1,0 +1,27 @@
+/*-- scss:defaults --*/
+// Course Notes · tema claro. Tokens do design system "Plenário" de felipelamarca.com
+// (src/styles/global.css). Mantenha os valores em sincronia com o site.
+$cn-mode: light !default;
+$cn-bg: #F6F6F3 !default;
+$cn-surface: #FFFFFF !default;
+$cn-sunken: #EDEDE8 !default;
+$cn-line: #DEDED8 !default;
+$cn-line-strong: #C9C9C1 !default;
+$cn-ink: #0E1116 !default;
+$cn-ink-2: #444A54 !default;
+$cn-ink-3: #5F656E !default;
+$cn-accent: #0A6F69 !default;
+$cn-accent-ink: #FFFFFF !default;
+$cn-link: #0A6F69 !default;
+$cn-award: #8A5A00 !default;
+$cn-danger: #A63D32 !default;
+$cn-d1: #5AC0AB !default;
+$cn-d2: #2E9D8E !default;
+$cn-d3: #187970 !default;
+$cn-d4: #0E5652 !default;
+$cn-d5: #053535 !default;
+
+@import "notes-map";
+
+/*-- scss:rules --*/
+@import "notes-rules";
