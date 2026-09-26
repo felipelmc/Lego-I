@@ -23,7 +23,7 @@ $$
 No caso bivariado, as fórmulas são:
 
 $$
-\hat{\beta} = \dfrac{ \sum^n_{i = 1} (X_i - \bar{X}) (Y_i - \bar{Y}) }{ \sum_n^{i = 1} (X_i - \bar{X})^2 }
+\hat{\beta} = \dfrac{ \sum^n_{i = 1} (X_i - \bar{X}) (Y_i - \bar{Y}) }{ \sum^n_{i = 1} (X_i - \bar{X})^2 }
 $$
 
 $$

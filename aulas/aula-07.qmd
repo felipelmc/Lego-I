@@ -173,9 +173,9 @@ medias <- apply(bolinhas, 2, mean)
 
 # plota a distribuição das médias
 ggplot(data.frame(medias), aes(x = medias)) +
-  geom_histogram(aes(y = ..density..), bins = 30, fill = "blue", alpha = 0.5) +
+  geom_histogram(aes(y = after_stat(density)), bins = 30, fill = "blue", alpha = 0.5) +
   # inclui a linha da média amostral (media das medias)
-  geom_vline(aes(xintercept = mean(medias)), color = "red", linetype = "dashed", size = 1) +
+  geom_vline(aes(xintercept = mean(medias)), color = "red", linetype = "dashed", linewidth = 1) +
   stat_function(fun = dnorm, args = list(mean = mean(medias), sd = sd(medias)), color = "red") +
   labs(title = "Distribuição das Médias Amostrais",
        x = "Média Amostral",

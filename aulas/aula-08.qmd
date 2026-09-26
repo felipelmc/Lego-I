@@ -29,7 +29,7 @@ onde:
 - $\epsilon_i$ é o erro aleatório (ou resíduo) associado à observação $i$.
 - $i$ é o índice da observação.
 
-> Unfortunately, we do not know the values of $alpha$, $\beta$, and $\epsilon_i$. We need to estimate them based on data. We start by estimating the intercept ($\alpha$) and the slope ($\beta$), the two coefficients that define the line. This is equivalent to fitting a line to the data, that is, finding the line that best summarizes the relationship between $X$ and $Y$. [@llaudet2022data, p. 102]
+> Unfortunately, we do not know the values of $\alpha$, $\beta$, and $\epsilon_i$. We need to estimate them based on data. We start by estimating the intercept ($\alpha$) and the slope ($\beta$), the two coefficients that define the line. This is equivalent to fitting a line to the data, that is, finding the line that best summarizes the relationship between $X$ and $Y$. [@llaudet2022data, p. 102]
 
 A reta ajustada é dada por:
 
@@ -63,7 +63,7 @@ Desejamos sempre encontrar a reta que minimiza a soma dos quadrados dos erros.
 > Formally, to choose the line of best fit, we use the "least squares" method, which identifies the line that minimizes the "sum of the squared residuals", known as SSR. 
 
 $$
-\text{SSR} = \sum_{i=1}^{n} = \hat{\epsilon}_i^2 = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 = \sum_{i=1}^{n} (Y_i - (\hat{\alpha} + \hat{\beta} X_i))^2
+\text{SSR} = \sum_{i=1}^{n} \hat{\epsilon}_i^2 = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 = \sum_{i=1}^{n} (Y_i - (\hat{\alpha} + \hat{\beta} X_i))^2
 $$
 
 > Why do we want to minimize the sum of the _squared_ residuals rather than the sum of the residuals? Because in the minimization process we want to avoid having positive prediction errors cancel out negative prediction errors. By squaring the residuals, we convert them all to positive numbers. [@llaudet2022data, p. 107]
@@ -71,13 +71,13 @@ $$
 No exemplo do livro, os autores ajustam um modelo para prever o GDP dos países a partir da emissão de luzes noturnas. Mas, antes, podemos simplesmente ajustar um modelo que estima o GDP (2005-2006) atual a partir do GDP "anterior" (1992-1993):
 
 $$
-\hat{\text{gdp}}_{i} = \hat{\alpha} + \hat{\beta} \cdot \text{prior_gdp}_{i}
+\hat{\text{gdp}}_{i} = \hat{\alpha} + \hat{\beta} \cdot \text{prior\_gdp}_{i}
 $$
 
 Estimado o modelo, teríamos os coeficientes:
 
 $$
-\hat{\text{gdp}}_{i} = 0.72 + 1.61 \cdot \text{prior_gdp}_{i}
+\hat{\text{gdp}}_{i} = 0.72 + 1.61 \cdot \text{prior\_gdp}_{i}
 $$
 
 Suponha que, há alguns anos atrás, o GDP do Brasil era de 400 trihões de dólares. O GPD estimado seria:

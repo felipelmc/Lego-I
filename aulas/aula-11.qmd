@@ -135,7 +135,7 @@ $$
 
 Segue daí que o erro padrão da média amostral é $\dfrac{\sigma}{\sqrt{n}}$.
 
-**Importante:** note que a variância que aparece aqui, $\text{Var}(\bar{X}) = \sigma^2 / n$, **não é a mesma que a variância das variáveis originais** $X_i$, que é $\sigma^2 $. Enquanto $\sigma^2$ mede a dispersão dos dados individuais na população, $\text{Var}(\bar{X})$ mede o quanto a \textbf{média amostral} $\bar{X}$ tende a variar de uma amostra para outra. Ou seja, estamos falando da variância \textit{de um estimador}, e não de uma variável aleatória individual.
+**Importante:** note que a variância que aparece aqui, $\text{Var}(\bar{X}) = \sigma^2 / n$, **não é a mesma que a variância das variáveis originais** $X_i$, que é $\sigma^2 $. Enquanto $\sigma^2$ mede a dispersão dos dados individuais na população, $\text{Var}(\bar{X})$ mede o quanto a **média amostral** $\bar{X}$ tende a variar de uma amostra para outra. Ou seja, estamos falando da variância *de um estimador*, e não de uma variável aleatória individual.
 
 | Conceito                      | O que mede                             | Fórmula                        |
 |------------------------------|----------------------------------------|--------------------------------|

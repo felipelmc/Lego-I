@@ -50,7 +50,7 @@ date: 2025-05-20
 
 > The Bernoulli distribution is the probability distribution of a binary variable. Since binary variables can take only two values (1 or 0), the Bernoulli distribution characterizes two probabilities: the probability that the variable equals 1 and the probability that the variable equals 0.
 >
-> By definition, the sum of all probabilities in a Bernoulli distribution must equal 1. If we use $p$ to denote the probability that the binary variable equals 1, the probability of the binary values equals 0 is $1-p$ (notice that $p+(1-p) = 1). [@llaudet2022data, p. 166]
+> By definition, the sum of all probabilities in a Bernoulli distribution must equal 1. If we use $p$ to denote the probability that the binary variable equals 1, the probability of the binary values equals 0 is $1-p$ (notice that $p+(1-p) = 1$). [@llaudet2022data, p. 166]
 
 ```{r}
 flip <- sample(
@@ -67,7 +67,7 @@ prop.table(table(flip))
 
 > The normal distribution is a well-known symmetric, bell-shaped distribution, commonly used as an approximation for the distribution of many non-binary variables. [@llaudet2022data, p. 169]
 
-> The normal distribution is the distribution of a normal random variable. It is characterized by two parameters: mean ($\mu$) and variance ($\sigma^2$). $X \sim \mathcal{N}(\mu, sigma^2)$.
+> The normal distribution is the distribution of a normal random variable. It is characterized by two parameters: mean ($\mu$) and variance ($\sigma^2$). $X \sim \mathcal{N}(\mu, \sigma^2)$.
 
 > The probability density function of a normal probability distribution is determined by the following formula:
 >
@@ -79,7 +79,7 @@ prop.table(table(flip))
 
 A distribuição de uma variável aleatória que segue uma distribuição normal depende de dois parâmetros: a média e a variância, $\mu$ e $\sigma^2$, respectivamente. Se $X$ segue uma distribuição normal, escrevemos $X \sim \mathcal{N}(\mu, \sigma^2)$.
 
-Vamos supor $X \sim \mathcal{3, 4}$:
+Vamos supor $X \sim \mathcal{N}(3, 4)$:
 
 ```{r}
 X <- rnorm(
@@ -101,7 +101,7 @@ var(X)
 > The standard normal distribution is the normal distribution with mean 0 ($\mu = 0$) and variance 1 ($\sigma^2 = 1$).
 
 $$
-Z \sim \mathcal{0, 1}
+Z \sim \mathcal{N}(0, 1)
 $$
 
 > The properties of the standard normal distribution are particularly useful. First, because the distribution is symmetric and centered at 0, the probability that Z takes a value less or equal to -z is the same as the probability that Z takes a value greater than or equal to z. 
@@ -171,7 +171,7 @@ $$
 \text{as n increases, } \bar{X} = \dfrac{\sum_{i = 1}^n X_i}{n} \approx \mathbb{E}(X) 
 $$
 
-Vamos supor que conhecemos $mathbb{E}(X)$ de uma variável aleatória $X$, Bernoulli. Sendo $mathbb{E}(X) = 0.6$, temos:
+Vamos supor que conhecemos $\mathbb{E}(X)$ de uma variável aleatória $X$, Bernoulli. Sendo $\mathbb{E}(X) = 0.6$, temos:
 
 ```{r}
 
@@ -215,12 +215,12 @@ $$
 Propriedades do valor esperado:
 
 - $\mathbb{E}(aX) = a\mathbb{E}(X)$, where $a$ is a constant and $X$ is a random variable
-- $\mathbb{E}(X_1 + X_2) = \mathbb{E}(X_1) = \mathbb{E}(X_2)$, where $X_1$ and $X_2$ are random variables
+- $\mathbb{E}(X_1 + X_2) = \mathbb{E}(X_1) + \mathbb{E}(X_2)$, where $X_1$ and $X_2$ are random variables
 
 Propriedades da variância:
 
 - $\mathbb{V}(aX) = a^2\mathbb{V}(X)$, where $a$ is a constant and $X$ is a random variable
-- $\mathbb{V}(X_1 + X_2) = \mathbb{V}(X_1) = \mathbb{V}(X_2)$, where $X_1$ and $X_2$ are random variables that are independent of each other (that is, the values of one variable cannot be used to infer the values of the other)
+- $\mathbb{V}(X_1 + X_2) = \mathbb{V}(X_1) + \mathbb{V}(X_2)$, where $X_1$ and $X_2$ are random variables that are independent of each other (that is, the values of one variable cannot be used to infer the values of the other)
 
 Given those properties, one can prove that $\mathbb{E}(\bar{X}) = \mathbb{E}(X)$ and that $\mathbb{V}(\bar{X}) = \frac{\mathbb{V}(X)}{n}$.
 
