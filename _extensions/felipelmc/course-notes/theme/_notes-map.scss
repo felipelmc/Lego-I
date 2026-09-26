@@ -66,9 +66,10 @@ $code-block-border-left: $cn-line-strong !default;
 $code-block-font-size: 0.84rem !default;
 $code-inline-font-size: 0.86em !default;
 
-// Layout: coluna de leitura com ~70 caracteres
-$grid-body-width: 680px !default;
-$grid-docked-body-width: 670px !default; // o layout "docked" somaria 200px ao grid-body-width
+// Layout: coluna de leitura de 900px (cerca de 110 caracteres por linha na fonte
+// do corpo), larga o bastante para formulas, tabelas e blocos de codigo
+$grid-body-width: 900px !default;
+$grid-docked-body-width: 900px !default; // o layout "docked" usa esta, e nao a de cima
 $grid-sidebar-width: 270px !default;
 $grid-margin-width: 250px !default;
 
