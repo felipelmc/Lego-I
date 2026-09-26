@@ -53,3 +53,11 @@ rsconnect/
 datasets
 
 literatura
+**/*.quarto_ipynb
+
+# Course Notes
+/_book/
+/docs/
+**/.quarto/
+render.log
+/.claude/

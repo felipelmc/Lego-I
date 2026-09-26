@@ -1,0 +1,28 @@
+Package: lego1notes
+Title: Pacotes de R usados nas anotações de Lego I
+Version: 0.0.1
+Description: Não é um pacote de verdade. Lista as dependências de R para instalar
+    localmente com `pak::local_install_deps()` antes de `quarto render`.
+Imports:
+    broom.helpers,
+    geobr,
+    ggdag,
+    ggplot2,
+    glue,
+    gridExtra,
+    gt,
+    gtsummary,
+    haven,
+    here,
+    knitr,
+    modelsummary,
+    readxl,
+    rmarkdown,
+    sf,
+    stargazer,
+    stringi,
+    tidyverse,
+    writexl
+Suggests:
+    censobr,
+    dbplyr
