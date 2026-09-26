@@ -8,17 +8,17 @@ date: 2025-06-10
 
 ### @kellstedt2018fundamentals, cap. 8: *Modelo de regressão bivariado*
 
-> A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. (p. 194)
+> A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. [@kellstedt2018fundamentals, p. 194]
 
 $$
 Y_i = \alpha + \beta X_i + u_i
 $$
 
-> Esse [$u_i$] é o termo estocástico ou componente randômico da nossa variável dependente. Temos esse termo porque não esperamos que todos os pontos dos nossos dados se alinhem perfeitamente em uma reta. Isso se relaciona diretamente à nossa discussão nos capítulos anteriores sobre a natureza probabilística (em oposição a determinística) das teorias causais sobre fenômenos políticos. (p. 194)
+> Esse [$u_i$] é o termo estocástico ou componente randômico da nossa variável dependente. Temos esse termo porque não esperamos que todos os pontos dos nossos dados se alinhem perfeitamente em uma reta. Isso se relaciona diretamente à nossa discussão nos capítulos anteriores sobre a natureza probabilística (em oposição a determinística) das teorias causais sobre fenômenos políticos. [@kellstedt2018fundamentals, p. 194]
 
-> [...] conseguimos observar que o componente estocástico estimado ($\hat{u}_i$) é igual à diferença entre o valor real da variável dependente ($Y_i$) e o valor da variável dependente predito pelo nosso modelo de regressão bivariado. O componente estocástico estimado também é conhecido como **resíduo**. (p. 196)
+> [...] conseguimos observar que o componente estocástico estimado ($\hat{u}_i$) é igual à diferença entre o valor real da variável dependente ($Y_i$) e o valor da variável dependente predito pelo nosso modelo de regressão bivariado. O componente estocástico estimado também é conhecido como **resíduo**. [@kellstedt2018fundamentals, p. 196]
 
-> Esse método de estimação dos parâmetros da regressão é conhecido por regressão dos mínimos quadrados ordinários (MQO). (p. 198)
+> Esse método de estimação dos parâmetros da regressão é conhecido por regressão dos mínimos quadrados ordinários (MQO). [@kellstedt2018fundamentals, p. 198]
 
 No caso bivariado, as fórmulas são:
 
@@ -30,13 +30,13 @@ $$
 \hat{\alpha} = \bar{Y} - \hat{\beta} \bar{X}
 $$
 
-> Medidas da qualidade geral do ajuste entre um modelo de regressão e a variável dependente são chamadas de medida de qualidade de ajuste. Uma das medidas mais intuitivas (apesar do nome) é a raiz do erro quadrático médio (_root mean-squared error -- root MSE_). Essa estatística é algumas vezes referida como o erro-padrão do modelo de regressão. (p. 201)
+> Medidas da qualidade geral do ajuste entre um modelo de regressão e a variável dependente são chamadas de medida de qualidade de ajuste. Uma das medidas mais intuitivas (apesar do nome) é a raiz do erro quadrático médio (_root mean-squared error -- root MSE_). Essa estatística é algumas vezes referida como o erro-padrão do modelo de regressão. [@kellstedt2018fundamentals, p. 201]
 
 $$
 \text{RMSE} = \sqrt{ \dfrac{\sum^n_{i=1} \hat{u}_i^2 }{n} }
 $$
 
-> Vale enfatizar que o _root MSE_ sempre é expresso na métrica [unidade de medida] em que a variável dependente está mensurada. (p. 201)
+> Vale enfatizar que o _root MSE_ sempre é expresso na métrica [unidade de medida] em que a variável dependente está mensurada. [@kellstedt2018fundamentals, p. 201]
 
 Também podemos usar o $R^2$, que indica a proporção da variação da variável dependente que é explicada pelo modelo. Em particular, temos a variação total que é propriamente a variância das observações em relação à média:
 
@@ -69,7 +69,7 @@ $$
 \text{var}(\hat{\alpha}) = \dfrac{ \hat{\sigma}^2 \sum^n_{i = 1} X^2 }{ n \sum^n_{i = 1} (X_i - \bar{X}) }
 $$
 
-> Em particular, normalmente estamos preocupados com o teste de que o parâmetro de inclinação para a população é igual a zero. [...]. Primeiro, observamos o parâmetro de inclinação da amostra, que consiste em uma estimativa do parâmetro de inclinação da população. A partir do valor desse parâmetro, do intervalo de confiança e do tamanho da nossa amostra, avaliamos quão provável é observarmos o valor da inclinação para a amostra se o valor for verdadeiro, mas não observado na população, for igual a zero. (p. 206)
+> Em particular, normalmente estamos preocupados com o teste de que o parâmetro de inclinação para a população é igual a zero. [...]. Primeiro, observamos o parâmetro de inclinação da amostra, que consiste em uma estimativa do parâmetro de inclinação da população. A partir do valor desse parâmetro, do intervalo de confiança e do tamanho da nossa amostra, avaliamos quão provável é observarmos o valor da inclinação para a amostra se o valor for verdadeiro, mas não observado na população, for igual a zero. [@kellstedt2018fundamentals, p. 206]
 
 Um teste de hipótese para o parâmetro é dado por:
 
@@ -80,7 +80,7 @@ H_1: \beta \neq 0,
 \end{align*}
 $$
 
-> em que $H_0$ é a hipótese nula e $H_1$ é a hipótese alternativa. Note que essas duas hipóteses rivais são expressas em termos do parâmetro de inclinação para o modelo de regressão populacional. Para examinar qual dessas hipóteses tem apoio nos dados, calculamos a razão-t, na qual $\beta$ é definido a partir do valor especificado para a hipótese nula, que é representado como $\beta^*$. (p. 207)
+> em que $H_0$ é a hipótese nula e $H_1$ é a hipótese alternativa. Note que essas duas hipóteses rivais são expressas em termos do parâmetro de inclinação para o modelo de regressão populacional. Para examinar qual dessas hipóteses tem apoio nos dados, calculamos a razão-t, na qual $\beta$ é definido a partir do valor especificado para a hipótese nula, que é representado como $\beta^*$. [@kellstedt2018fundamentals, p. 207]
 
 $$
 t_{n - k} = \dfrac{\hat{\beta} - \beta^*}{ \text{se}(\hat{\beta}) }
@@ -96,31 +96,31 @@ $$
 u_i \sim \mathcal{N}(0, \sigma^2)
 $$
 
-> O pressuposto de que $u_i$ tem média ou valor esperado igual a zero é também conhecido como pressuposto do viés zero. Considere o que aconteceria se $\mathbb{E}[u_i] \neq 0$. Em outras palavras, nesse caso esperaríamos que nosso modelo de regressão não fosse preciso. [...]. Se $\mathbb{E}[u_i] \neq 0$, então deve existir algum componente não randômico nesse termo. (p. 212)
+> O pressuposto de que $u_i$ tem média ou valor esperado igual a zero é também conhecido como pressuposto do viés zero. Considere o que aconteceria se $\mathbb{E}[u_i] \neq 0$. Em outras palavras, nesse caso esperaríamos que nosso modelo de regressão não fosse preciso. [...]. Se $\mathbb{E}[u_i] \neq 0$, então deve existir algum componente não randômico nesse termo. [@kellstedt2018fundamentals, p. 212]
 
-> O pressuposto de que $u_i$ tem variância igual $\sigma^2$ parece bastante simples. Mas, como essa noção de variância não contém o subscrito $i$, significa que assumimos que a variância para cada caso em uma população subjacente é a mesma. A palavra para descrever essa situação é a "homocedasticidade", que significa "a variância do erro é constante". [...]. Quando temos heterocedasticidade, nosso modelo de regressão ajusta alguns casos dos casos da população melhor do que outros. Essa pode ser uma causa potencial de problemas quando estamos estimando intervalos de confiança e testando hipóteses. (p. 212)
+> O pressuposto de que $u_i$ tem variância igual $\sigma^2$ parece bastante simples. Mas, como essa noção de variância não contém o subscrito $i$, significa que assumimos que a variância para cada caso em uma população subjacente é a mesma. A palavra para descrever essa situação é a "homocedasticidade", que significa "a variância do erro é constante". [...]. Quando temos heterocedasticidade, nosso modelo de regressão ajusta alguns casos dos casos da população melhor do que outros. Essa pode ser uma causa potencial de problemas quando estamos estimando intervalos de confiança e testando hipóteses. [@kellstedt2018fundamentals, p. 212]
 
-> Assumindo que $X$ é mensurado sem erro, aceitamos que qualquer variabilidade da nossa reta de regressão é devida ao componente estocástico $u_i$, e não a modelos de mensuração em $X$. Colocando de outro modo, se $X$ também tem um componente estocástico, necessitamos modelar $X$ antes de modelar $Y$, e isto complicaria substancialmente o processo de estimação de $Y$. (p. 213)
+> Assumindo que $X$ é mensurado sem erro, aceitamos que qualquer variabilidade da nossa reta de regressão é devida ao componente estocástico $u_i$, e não a modelos de mensuração em $X$. Colocando de outro modo, se $X$ também tem um componente estocástico, necessitamos modelar $X$ antes de modelar $Y$, e isto complicaria substancialmente o processo de estimação de $Y$. [@kellstedt2018fundamentals, p. 213]
 
-> O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. (p. 214)
+> O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. [@kellstedt2018fundamentals, p. 214]
 
 ### @buenodemesquita2021thinking, cap. 5: *Regression for Describing and Forecasting*
 
 > A regression equation expresses a linear relationship between a _dependent_ (or _outcome_) variable on the left-hand side of the equation and an _independent_ (or _explanatory_) variable on the right-hand side of the equation. The dependent variable corresponds to the outcome we are trying to describe, predict, or explain. An independent variable corresponds to something we are using to try to describe, predict, or explain the dependent variable.
 
-> The line we are looking for is the one with the smallest sum of squared errors. That is, we find the values of the parameters $\alpha$ and $\beta$ that minimize the sum of squared errors. This process is called _ordinary least squares_ (OLS) regression. (p. 77)
+> The line we are looking for is the one with the smallest sum of squared errors. That is, we find the values of the parameters $\alpha$ and $\beta$ that minimize the sum of squared errors. This process is called _ordinary least squares_ (OLS) regression. [@buenodemesquita2021thinking, p. 77]
 
-> What do we do when we want to use linear regression but our data is not well described by a line? (p. 79)
+> What do we do when we want to use linear regression but our data is not well described by a line? [@buenodemesquita2021thinking, p. 79]
 
-> A second approach is to keep fitting regression lines, but use a different line for different parts of the data. For instance, we could find a line that minimizes the sum of squared errors for the data on people between 16 and 68, a second line that minimizes the sum of squared errors for the data on peoples ages 69-78, and a third line for that data on people ages 79-88. This would not be parsimonious or easily communicated as running a single regression [but it pays off]. (p. 83)
+> A second approach is to keep fitting regression lines, but use a different line for different parts of the data. For instance, we could find a line that minimizes the sum of squared errors for the data on people between 16 and 68, a second line that minimizes the sum of squared errors for the data on peoples ages 69-78, and a third line for that data on people ages 79-88. This would not be parsimonious or easily communicated as running a single regression [but it pays off]. [@buenodemesquita2021thinking, p. 83]
 
-> We hinted at a third way to deal with non-linearity back in chapter 2. There's no reason that our regression equation has to have only one explanatory variable. If we know there's a non-linear relationship between turnout and age, maybe we want to consider transforming the age variable into age-squared, age-cubed, and so on. (p. 83)
+> We hinted at a third way to deal with non-linearity back in chapter 2. There's no reason that our regression equation has to have only one explanatory variable. If we know there's a non-linear relationship between turnout and age, maybe we want to consider transforming the age variable into age-squared, age-cubed, and so on. [@buenodemesquita2021thinking, p. 83]
 
 $$
 \text{Predicted Turnout} = \alpha + \beta_1 \cdot \text{Age} + \beta_2 \cdot \text{Age}^2
 $$
 
-> The example we just saw, where the tenth-order polynomial performed worse than the fourth-order polynomial at out-of-sample prediction, is an instance of a more general phenomenon called _overfitting_. If we test enough explanatory variables, we're bound to find some that correlate with the outcome in our data just by chance. The tenth-order polynomial regression was using meaningless correlations between high-order transformations of the age variable and voter turnout among one set of voters to try to predict turnout among another set of voters. Unsurprisingly, those meaningless correlations did not continue to hold. (p. 87)
+> The example we just saw, where the tenth-order polynomial performed worse than the fourth-order polynomial at out-of-sample prediction, is an instance of a more general phenomenon called _overfitting_. If we test enough explanatory variables, we're bound to find some that correlate with the outcome in our data just by chance. The tenth-order polynomial regression was using meaningless correlations between high-order transformations of the age variable and voter turnout among one set of voters to try to predict turnout among another set of voters. Unsurprisingly, those meaningless correlations did not continue to hold. [@buenodemesquita2021thinking, p. 87]
 
 ## Anotações de aula
 

@@ -8,17 +8,17 @@ date: 2025-05-13
 
 ### @llaudet2022data, cap. 5: *Estimating Causal Effects with Observational Data*
 
-> [...] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. (p. 130)
+> [...] to estimate causal effects, we must find or create a situation in which the treatment and control groups are comparable with respect to all the variables that might affect the outcome other than the treatment variable itself. Only when this assumption is satisfied can we use the average factual or observed outcome of one group as a good estimate of the average counterfactual outcome of the other group. [@llaudet2022data, p. 130]
 
-> To estimate causal effects using observational data, we have to first identify any relevant differences between treatment and control groups -- known as confounding variables or confounders -- and then statistically control for them so that we can make the two groups as comparable to each other as possible. (p. 130)
+> To estimate causal effects using observational data, we have to first identify any relevant differences between treatment and control groups -- known as confounding variables or confounders -- and then statistically control for them so that we can make the two groups as comparable to each other as possible. [@llaudet2022data, p. 130]
 
-> The confounding variable, also known as a confounder, is a variable that affects both (i) the likelihood of receiving the treatment and (ii) the outcome $Y$. (p. 130)
+> The confounding variable, also known as a confounder, is a variable that affects both (i) the likelihood of receiving the treatment and (ii) the outcome $Y$. [@llaudet2022data, p. 130]
 
-> In the extreme, by affecting both $X$ and $Y$ at the same time, confounding variables might create a completely spurious relationship between $X$ and $Y$, misleading us into thinking that $X$ and $Y$ are causally related to each other when, in fact, there is no direct causal link between the two. (p. 132)
+> In the extreme, by affecting both $X$ and $Y$ at the same time, confounding variables might create a completely spurious relationship between $X$ and $Y$, misleading us into thinking that $X$ and $Y$ are causally related to each other when, in fact, there is no direct causal link between the two. [@llaudet2022data, p. 132]
 
-> In short, when there is a confounding variable $Z$ affecting $X$ and $Y$, we should not trust correlation as a measure of causation, and thus, we cannot use the difference-in-means estimator to estimate average causal effects. (p. 132)
+> In short, when there is a confounding variable $Z$ affecting $X$ and $Y$, we should not trust correlation as a measure of causation, and thus, we cannot use the difference-in-means estimator to estimate average causal effects. [@llaudet2022data, p. 132]
 
-> Why don't we have to worry about confounders in randomized experiments? Randomization of treatment assignment eliminates all potential confounders. It ensures that treatment and control groups are comparable by breaking the link between any potential confounder and the treatment. (p. 133)
+> Why don't we have to worry about confounders in randomized experiments? Randomization of treatment assignment eliminates all potential confounders. It ensures that treatment and control groups are comparable by breaking the link between any potential confounder and the treatment. [@llaudet2022data, p. 133]
 
 Para controlar por outras variáveis, usamos regressões múltiplas:
 
@@ -30,7 +30,7 @@ Agora, ao invés de o ajuste do modelo aos dados resultar em uma reta, o ajuste 
 
 Do ponto de vista de interpretação dos coeficientes, $\hat{\alpha}$ é a média de $Y$ quando todas as variáveis independentes são zero. O coeficiente $\hat{\beta}_j$ é a variação esperada em $Y$ quando $X_j$ aumenta uma unidade, mantendo todas as outras variáveis independentes constantes (_ceteris paribus_, como costumam dizer em economia).
 
-> In other words, the difference in the average outcomes between the treatment and control groups that remain after holding all confounding variables constant can now be directly attributed to their difference with respect to the treatment (treated vs. untreated); no other differences between the two groups are in play. (p. 145)
+> In other words, the difference in the average outcomes between the treatment and control groups that remain after holding all confounding variables constant can now be directly attributed to their difference with respect to the treatment (treated vs. untreated); no other differences between the two groups are in play. [@llaudet2022data, p. 145]
 
 ### @cunningham2021mixtape, cap. 3: *Directed Acyclic Graphs*
 

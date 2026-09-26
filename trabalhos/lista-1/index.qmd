@@ -11,7 +11,6 @@ dados: ["Dados simulados"]
 materiais:
   - {text: PDF, href: lista-1.pdf}
   - {text: Código, href: "https://github.com/felipelmc/Lego-I/tree/main/trabalhos/lista-1"}
-bibliography: references.bib
 format:
   pdf:
     geometry: margin=1in

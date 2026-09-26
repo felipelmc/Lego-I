@@ -8,15 +8,15 @@ date: 2025-04-29
 
 ### @llaudet2022data, cap. 3: *Inferring Population Characteristics via Survey Research*
 
-> In survey research, we collect data from a subset of observations in order to understand the target population as a whole. The subset of individuals chosen for study is called a `sample`. The number of observations in the sample is represented by $n$, and the number of observations in the target population is represented by $N$. (p. 52)
+> In survey research, we collect data from a subset of observations in order to understand the target population as a whole. The subset of individuals chosen for study is called a `sample`. The number of observations in the sample is represented by $n$, and the number of observations in the target population is represented by $N$. [@llaudet2022data, p. 52]
 
-> A `representative sample` accurately reflects the characteristics of the population from which it is drawn. Characteristics appear in the sample at similar rates as in the population as whole. (p. 52)
+> A `representative sample` accurately reflects the characteristics of the population from which it is drawn. Characteristics appear in the sample at similar rates as in the population as whole. [@llaudet2022data, p. 52]
 
-> [...] the random selection of individuals from the population makes the sample and the target population identical to each other, on average, in both observed and unobserved traits. (p. 53)
+> [...] the random selection of individuals from the population makes the sample and the target population identical to each other, on average, in both observed and unobserved traits. [@llaudet2022data, p. 53]
 
-> [On potential challenges] First, to implement random sampling, we need the complete list of observations in the target population. This list is known as the sampling frame. In practice, the sampling frame of a population can be difficult to obtain. Lists of residential addresses, emails, or phone numbers often do not include the entire population of interest. More problematically, the individuals missing tend to be systematically different from those included. (p. 54)
+> [On potential challenges] First, to implement random sampling, we need the complete list of observations in the target population. This list is known as the sampling frame. In practice, the sampling frame of a population can be difficult to obtain. Lists of residential addresses, emails, or phone numbers often do not include the entire population of interest. More problematically, the individuals missing tend to be systematically different from those included. [@llaudet2022data, p. 54]
 
-> Before continuing with the analysis, it is worth noting that removing observations with missing values from a dataset might make the remaining sample of observations unrepresentative of the target population, thereby rendering our inferences about the population characteristics invalid. Here, for example, if respondents who refused to prove their level of education were all in favor of Brexit, our analysis of the new dataframe, `bes1`, would undermine the level of support for Brexit. (p. 62)
+> Before continuing with the analysis, it is worth noting that removing observations with missing values from a dataset might make the remaining sample of observations unrepresentative of the target population, thereby rendering our inferences about the population characteristics invalid. Here, for example, if respondents who refused to prove their level of education were all in favor of Brexit, our analysis of the new dataframe, `bes1`, would undermine the level of support for Brexit. [@llaudet2022data, p. 62]
 
 On `prop.tables`, we can use the `margin` argument to make set the reference group (that is, if the values will add up to 1 at the column level or the row level): `prop.table(table(dataset$var1, dataset$var2), margin = 1)`.
 
@@ -25,7 +25,7 @@ On `prop.tables`, we can use the `margin` argument to make set the reference gro
 > We can use two different types of descriptive statistics:
 > 
 > - Measures of centrality, such as the mean and the median, summarize the center of the distribution.
-> - Measures of spread, such as the standard deviation and the variance, summarize the amount of variation of the distribution relative to its center. (p. 71-72)
+> - Measures of spread, such as the standard deviation and the variance, summarize the amount of variation of the distribution relative to its center. [@llaudet2022data, pp. 71-72]
 
 The mathematical formulation of the standard deviation:
 
@@ -33,9 +33,9 @@ $$
 \text{sd}(X) = \sqrt{ \frac{ \sum_{i=1}^{n} (X_i - \bar{X})^2 }{n} }
 $$
 
-> Roughly speaking, the standard deviation of a variable provides the average distance between the observations and the mean (in the same unit of measurement as the variable). (p. 73)
+> Roughly speaking, the standard deviation of a variable provides the average distance between the observations and the mean (in the same unit of measurement as the variable). [@llaudet2022data, p. 73]
 
-> As we will see in detail later in the book, one of the distinct characteristics of normal distributions is that about 95% of the observations fall within two standard deviations from the mean [...]. (p. 75)
+> As we will see in detail later in the book, one of the distinct characteristics of normal distributions is that about 95% of the observations fall within two standard deviations from the mean [...]. [@llaudet2022data, p. 75]
 
 💡When plotting scatterplots, a nice way to analyze the data is to divide the plot in 4 quadrants, according to the mean (or maybe the median) of each variable. As a result, each quadrant will have an objective interpretation (above both means, below both means and so on).
 
@@ -43,9 +43,9 @@ $$
 > 
 > - the direction of their linear association, that is, the sign of the slope of the line of best fit (which is the line that best summarizes the data)
 > 
-> - the strength of their association, that is, the degree to which the two variables are linearly associated with each other (p. 82)
+> - the strength of their association, that is, the degree to which the two variables are linearly associated with each other [@llaudet2022data, p. 82]
 
-> The correlation is positive whenever the two variables move in the same direction relative to their respective means, that is, when high values in one variable are likely to be associated with high values in the other, and low values in one variable are likely to be associated with low values in the other. (p. 82)
+> The correlation is positive whenever the two variables move in the same direction relative to their respective means, that is, when high values in one variable are likely to be associated with high values in the other, and low values in one variable are likely to be associated with low values in the other. [@llaudet2022data, p. 82]
 
 Understanding the correlation formula: first, the z-score, which is the **number of standard deviations the observation is above or below the mean**:
 
@@ -64,9 +64,9 @@ $$
 
 > As a result, the sign of the correlation coefficient will be:
 >
-> - positive when the two variables tend to move in the same direction relative to their respective means, that is, when above-average values in one variable are usually associated with above-average in the other [...], and when below-average values in one variable are usually associated with below-average values in the other. (p. 86)
+> - positive when the two variables tend to move in the same direction relative to their respective means, that is, when above-average values in one variable are usually associated with above-average in the other [...], and when below-average values in one variable are usually associated with below-average values in the other. [@llaudet2022data, p. 86]
 
-> [...] **if two variables have a correlation coefficient of zero, it does not necessarily mean that there is no relationship between them. Is just means that there is no linear relationship between them.** For example, the two variables depicted in the figure in the margin have a strong parabolic relationship. Their correlation is approximately zero, however, because there is no line that would summarize the relationship well. (p. 88)
+> [...] **if two variables have a correlation coefficient of zero, it does not necessarily mean that there is no relationship between them. Is just means that there is no linear relationship between them.** For example, the two variables depicted in the figure in the margin have a strong parabolic relationship. Their correlation is approximately zero, however, because there is no line that would summarize the relationship well. [@llaudet2022data, p. 88]
 
 
 ### @kellstedt2018fundamentals, cap. 6: *Probabilidade e inferência estatística*
@@ -77,7 +77,7 @@ $$
 > 
 > Segundo, a soma de todos os eventos possíveis deve ser exatamente 1. Ou seja, sempre que fazemos uma observação aleatória de um conjunto de eventos possíveis, devemos observar um desses eventos. Por exemplo, se você jogar uma moeda para cima, a probabilidade de o resultado ser cada é de $1/2$, a probabilidade de ser coroa é de $1/2$ e a probabilidade de ser cara ou coroa é de $1$, porque $1/2 + 1/2 = 1$.
 >
-> Terceiro, se (mas somente se!) dois eventos forem independentes, então a probabilidade de esses dois eventos ocorrerem é igual ao produto das chances individuais. Então, se você tem uma moeda não viciada e lançá-la três vezes -- tenha em mente que cada lançamento é um evento independente --, a chance de o resultado dos três lançamentos ser igual a coroa é de $1/2 \times 1/2 \times 1/2 = 1/8$. (p. 154)
+> Terceiro, se (mas somente se!) dois eventos forem independentes, então a probabilidade de esses dois eventos ocorrerem é igual ao produto das chances individuais. Então, se você tem uma moeda não viciada e lançá-la três vezes -- tenha em mente que cada lançamento é um evento independente --, a chance de o resultado dos três lançamentos ser igual a coroa é de $1/2 \times 1/2 \times 1/2 = 1/8$. [@kellstedt2018fundamentals, p. 154]
 
 > A distribuição normal [...]. Primeiro, ela é simétrica em torno da sua média, de tal modo que a moda, a mediana e a média são iguais. Segundo, a distribuição normal possui áreas abaixo da curva com distâncias específicadas definidas a partir da média. Começando da média e adicionando um desvio padrão para cada uma das direções, temos uma cobertura de 68% de toda a área abaixo da curva. Adicionando mais um desvio padrão, passamos a ter 95% do total da área. Adicionando um terceiro desviopadrão em cada direção, temos 99% da área total da curva capturada.
 
@@ -85,7 +85,7 @@ $$
 >
 > Se seguirmos esse procedimento, podemos obter a média das amostras e as expor graficamente. Algumas estariam acima de 3,50, outras abaixo e algumas seriam exatamente 3,50. Porém, é nesse ponto que temos o resultado-chave: a distribuição amostral terá distribuição normal, embora a distribuição de frequência subjacente, claramente, não seja normal. 
 >
-> Esse é o _insight_ do teorema do limite central. Se pudéssemos imaginar um número infinito de amostras aleatórias e plotássemos a média de cada uma dessas amostras aleatórias em um gráfico, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população. (p. 158-159)
+> Esse é o _insight_ do teorema do limite central. Se pudéssemos imaginar um número infinito de amostras aleatórias e plotássemos a média de cada uma dessas amostras aleatórias em um gráfico, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população. [@kellstedt2018fundamentals, pp. 158-159]
 
 > Mas sabemos que nossa amostra de seinscentos lançamentos pode ser ligeiramente diferente da média verdadeira da população, podendo ser tanto um pouco maior quanto um pouco menor. O que podemos fazer, portanto, é usar nosso conhecimento de que a distribuição amostral é normal e invocar a regra 68-95-99 para criar um **intervalo de confiança** sobre a provável localização da média da população.
 
@@ -123,13 +123,13 @@ Então a taxa de aprovação do Obama, estimada a partir dos dados do survey, fi
 
 ### @meireles2022pesquisas
 
-> Este artigo analisa as estimativas de mais de 2 mil pesquisas eleitorais com os resultados de cinco eleições municipais e nacionais no Brasil entre 2012 e 2020. Em particular, examinamos como fatores previstos nos planos amostrais, como tamanho da amostra e modo de aplicação de entrevistas, e outros como a distância temporal da data de realização das pesquisas até o dia do pleito, predizem diferenças entre estimativas e resultados oficiais. Entre outros, mostramos que pesquisas de véspera com amostras maiores tiveram resultados mais próximos dos apurados nas urnas no período, assim como pesquisas conduzidas perto do dia dos pleitos. Também documentamos que estimativas de pesquisas em eleições nacionais, especialmente para a Presidência e Governos estaduais em segundo turno, tendem a ser mais próximas dos resultados do que em outras disputas. No geral, portanto, os achados indicam que as pesquisas eleitorais no Brasil têm desempenho similar às realizadas em outros contextos. (Resumo, p. 130)
+> Este artigo analisa as estimativas de mais de 2 mil pesquisas eleitorais com os resultados de cinco eleições municipais e nacionais no Brasil entre 2012 e 2020. Em particular, examinamos como fatores previstos nos planos amostrais, como tamanho da amostra e modo de aplicação de entrevistas, e outros como a distância temporal da data de realização das pesquisas até o dia do pleito, predizem diferenças entre estimativas e resultados oficiais. Entre outros, mostramos que pesquisas de véspera com amostras maiores tiveram resultados mais próximos dos apurados nas urnas no período, assim como pesquisas conduzidas perto do dia dos pleitos. Também documentamos que estimativas de pesquisas em eleições nacionais, especialmente para a Presidência e Governos estaduais em segundo turno, tendem a ser mais próximas dos resultados do que em outras disputas. No geral, portanto, os achados indicam que as pesquisas eleitorais no Brasil têm desempenho similar às realizadas em outros contextos. [@meireles2022pesquisas, p. 130, resumo]
 
-> Não obstante a existência de fatores relacionados aos erros em _surveys_ eleitorais, a evidência sistemática de diferentes países mostra que pesquisas nas semanas que antecedem um pleito fornecem, em média, estimativas razoavelmente precisas do que a apuração dos votos revelará -- erros têm, ao contrário, apenas diminuído ao longo dos anos (Jennings; Wlezien, 2018). Em certo sentido, dadas as dificuldades envolvidas de se desenhar planos amostrais com informações nem sempre atualizadas e em meio a diferentes fontes não aleatórias de erro, é surpreendente o desempenho das pesquisas eleitorais ao antecipar tendências e resultados, ainda que esse não seja o objetivo ou a função das pesquisas (Gelman, 2021). (p. 118)
+> Não obstante a existência de fatores relacionados aos erros em _surveys_ eleitorais, a evidência sistemática de diferentes países mostra que pesquisas nas semanas que antecedem um pleito fornecem, em média, estimativas razoavelmente precisas do que a apuração dos votos revelará -- erros têm, ao contrário, apenas diminuído ao longo dos anos (Jennings; Wlezien, 2018). Em certo sentido, dadas as dificuldades envolvidas de se desenhar planos amostrais com informações nem sempre atualizadas e em meio a diferentes fontes não aleatórias de erro, é surpreendente o desempenho das pesquisas eleitorais ao antecipar tendências e resultados, ainda que esse não seja o objetivo ou a função das pesquisas (Gelman, 2021). [@meireles2022pesquisas, p. 118]
 
-> Nossos dados revelam padrões importantes sobre as pesquisas eleitorais no país. Em primeiro lugar, documentamos uma crescente no uso de abordagens telefônicas no período, bem como ligeiro aumento no tamanho das amostras utilizadas ao longo do tempo em eleições nacionais e estaduais. Quanto aos seus resultados, as estimativas eleitorais indicam que o erro médio das nossas pesquisas de véspera é certa de 1.8 ponto percentual (pp), o que pode ser traduzido em uma margem de erro de 6.8 pp, maior do que o convencionalmente reportado por institutos. Isso dito, tal taxa é comparável à de outros países e, mais, há grande variação entre pesquisas: as de presidentes e de governo do estado no segundo turno cometem, em média, erros menores, assim como pesquisas com maiores amostras e em pleitos com menores taxas de eleitores indecisos. (p. 119)
+> Nossos dados revelam padrões importantes sobre as pesquisas eleitorais no país. Em primeiro lugar, documentamos uma crescente no uso de abordagens telefônicas no período, bem como ligeiro aumento no tamanho das amostras utilizadas ao longo do tempo em eleições nacionais e estaduais. Quanto aos seus resultados, as estimativas eleitorais indicam que o erro médio das nossas pesquisas de véspera é certa de 1.8 ponto percentual (pp), o que pode ser traduzido em uma margem de erro de 6.8 pp, maior do que o convencionalmente reportado por institutos. Isso dito, tal taxa é comparável à de outros países e, mais, há grande variação entre pesquisas: as de presidentes e de governo do estado no segundo turno cometem, em média, erros menores, assim como pesquisas com maiores amostras e em pleitos com menores taxas de eleitores indecisos. [@meireles2022pesquisas, p. 119]
 
-> Vale notar que as pesquisas eleitorais no Brasil têm alguns de seus aspectos regulados pela legislação eleitoral. Entre outros, institutos de pesquisa que queiram divulgar suas estimativas precisam fazer o registro do plano amostral a ser implementado com antecedência, reportando as datas em que a coleta dos dados será feita, a data de divulgação dos resultados, o tamanho da amostra e detalhes de metodologia como uso de quotas e discriminação dos locais onde entrevistas são aplicadas. Em razão disso, por exemplo, margens de erro divulgadas no momento do registro das pesquisas não podem contemplar o efeito do uso de pós-estratificação para corrigir desvios nas amostras, uma vez que o efeito de tais procedimentos só podem ser quantificados após o encerramento da coleta de dados -- o que contribui para subestimar possíveis erros aleatórios e não aleatórios, isto é, erros totais (Gramacho, 2013). (p. 121)
+> Vale notar que as pesquisas eleitorais no Brasil têm alguns de seus aspectos regulados pela legislação eleitoral. Entre outros, institutos de pesquisa que queiram divulgar suas estimativas precisam fazer o registro do plano amostral a ser implementado com antecedência, reportando as datas em que a coleta dos dados será feita, a data de divulgação dos resultados, o tamanho da amostra e detalhes de metodologia como uso de quotas e discriminação dos locais onde entrevistas são aplicadas. Em razão disso, por exemplo, margens de erro divulgadas no momento do registro das pesquisas não podem contemplar o efeito do uso de pós-estratificação para corrigir desvios nas amostras, uma vez que o efeito de tais procedimentos só podem ser quantificados após o encerramento da coleta de dados -- o que contribui para subestimar possíveis erros aleatórios e não aleatórios, isto é, erros totais (Gramacho, 2013). [@meireles2022pesquisas, p. 121]
 
 ---
 

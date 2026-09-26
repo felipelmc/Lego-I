@@ -8,9 +8,9 @@ date: 2025-05-06
 
 ### @llaudet2022data, cap. 4: *Predicting outcomes using linear regression*
 
-> In the social sciences, we often are unable to observe the value of a particular variable of interest, $Y$, either because it hasn't occurred yet or because it is difficult to measure. In these situations, we typically observe the values of the other variable that, if correlated with $Y$, can be used to predict $Y$. (p. 99)
+> In the social sciences, we often are unable to observe the value of a particular variable of interest, $Y$, either because it hasn't occurred yet or because it is difficult to measure. In these situations, we typically observe the values of the other variable that, if correlated with $Y$, can be used to predict $Y$. [@llaudet2022data, p. 99]
 
-> When analyzing data for predictive purposes, then, we do not assume that there is a causal relationship between $X$ and $Y$; we simply rely on a high degree of correlation between them and use one variable to estimate the value of the other. (p. 99)
+> When analyzing data for predictive purposes, then, we do not assume that there is a causal relationship between $X$ and $Y$; we simply rely on a high degree of correlation between them and use one variable to estimate the value of the other. [@llaudet2022data, p. 99]
 
 Primeiro usamos os dados disponíveis para ajustar (_fit_) um modelo aos dados. Depois, quando não podemos mais observar os valores da variável dependente (ou variável resposta), usamos o modelo ajustado para estimar os valores de $\hat{Y}$.
 
@@ -29,7 +29,7 @@ onde:
 - $\epsilon_i$ é o erro aleatório (ou resíduo) associado à observação $i$.
 - $i$ é o índice da observação.
 
-> Unfortunately, we do not know the values of $alpha$, $\beta$, and $\epsilon_i$. We need to estimate them based on data. We start by estimating the intercept ($\alpha$) and the slope ($\beta$), the two coefficients that define the line. This is equivalent to fitting a line to the data, that is, finding the line that best summarizes the relationship between $X$ and $Y$. (p. 102)
+> Unfortunately, we do not know the values of $alpha$, $\beta$, and $\epsilon_i$. We need to estimate them based on data. We start by estimating the intercept ($\alpha$) and the slope ($\beta$), the two coefficients that define the line. This is equivalent to fitting a line to the data, that is, finding the line that best summarizes the relationship between $X$ and $Y$. [@llaudet2022data, p. 102]
 
 A reta ajustada é dada por:
 
@@ -66,7 +66,7 @@ $$
 \text{SSR} = \sum_{i=1}^{n} = \hat{\epsilon}_i^2 = \sum_{i=1}^{n} (Y_i - \hat{Y}_i)^2 = \sum_{i=1}^{n} (Y_i - (\hat{\alpha} + \hat{\beta} X_i))^2
 $$
 
-> Why do we want to minimize the sum of the _squared_ residuals rather than the sum of the residuals? Because in the minimization process we want to avoid having positive prediction errors cancel out negative prediction errors. By squaring the residuals, we convert them all to positive numbers. (p. 107)
+> Why do we want to minimize the sum of the _squared_ residuals rather than the sum of the residuals? Because in the minimization process we want to avoid having positive prediction errors cancel out negative prediction errors. By squaring the residuals, we convert them all to positive numbers. [@llaudet2022data, p. 107]
 
 No exemplo do livro, os autores ajustam um modelo para prever o GDP dos países a partir da emissão de luzes noturnas. Mas, antes, podemos simplesmente ajustar um modelo que estima o GDP (2005-2006) atual a partir do GDP "anterior" (1992-1993):
 
@@ -88,11 +88,11 @@ $$
 
 #### With natural logarithm transformations
 
-> When a variable contains a handful of either extremely large or extremely small values, the distribution of the variable will be skewed. (Recall that a distribution is considered skewed when it is not symmetric because one of its tails is longer than the other.) Under these circumstances, it is often a good idea to transform the variable by taking its natural logarithm. This transformation will make the variable of interest more normally distributed and, in turn, improve the fit of the line to the data. In the example at hand, we will transform both variables of interest by taking the natural logarithm, and then we will re-fit the line. (p. 113)
+> When a variable contains a handful of either extremely large or extremely small values, the distribution of the variable will be skewed. (Recall that a distribution is considered skewed when it is not symmetric because one of its tails is longer than the other.) Under these circumstances, it is often a good idea to transform the variable by taking its natural logarithm. This transformation will make the variable of interest more normally distributed and, in turn, improve the fit of the line to the data. In the example at hand, we will transform both variables of interest by taking the natural logarithm, and then we will re-fit the line. [@llaudet2022data, p. 113]
 
-> This type of model, in which both the outcome and the predictor have been log-transformed, is called the log-log linear model. While we could interpret the coefficients the same way as in the normal linear model, in practice, we use an approximation to avoid dealing with the logarithms, especially when interpreting $\hat{\beta}$. (p. 116)
+> This type of model, in which both the outcome and the predictor have been log-transformed, is called the log-log linear model. While we could interpret the coefficients the same way as in the normal linear model, in practice, we use an approximation to avoid dealing with the logarithms, especially when interpreting $\hat{\beta}$. [@llaudet2022data, p. 116]
 >
-> As shownn in the apprendix near the end of this chapter, we interpret $\hat{\beta}$ as the predicted percentage change in the outcome associated with an increase in the predictor of 1 percent. Since here $\hat{\beta} = 1.01$, an increase of prior GPD of 1 percent is associated with an increase in GPD of 1.01% on average. Note that in this interpretation of $\hat{\beta}$, both the change in $X$ and the change in $\hat{Y}$ are measured in percentages, instead of in units, as is the case in the standard linear model. In other words, in the log-log model, we estimate change in relative rather than in absolute terms. (p. 116)
+> As shownn in the apprendix near the end of this chapter, we interpret $\hat{\beta}$ as the predicted percentage change in the outcome associated with an increase in the predictor of 1 percent. Since here $\hat{\beta} = 1.01$, an increase of prior GPD of 1 percent is associated with an increase in GPD of 1.01% on average. Note that in this interpretation of $\hat{\beta}$, both the change in $X$ and the change in $\hat{Y}$ are measured in percentages, instead of in units, as is the case in the standard linear model. In other words, in the log-log model, we estimate change in relative rather than in absolute terms. [@llaudet2022data, p. 116]
 
 No apêndice do capítulo, os autores discutem matematicamente a interpretação de $\hat{\beta}$ no modelo log-log. A fórmula para a variação percentual de $Y$ associada a uma variação percentual de $X$ é dada por:
 
@@ -143,7 +143,7 @@ $$
 
 #### Measuring how well the model fits the data with the coefficient of determination, $R^2$
 
-> The value of $R^2$ ranges from 0 to 1 and represents the proportion of the variation of Y explained by the model. [...]. Therefore, the higher the $R^2$, the better the model fits the data. (p. 120)
+> The value of $R^2$ ranges from 0 to 1 and represents the proportion of the variation of Y explained by the model. [...]. Therefore, the higher the $R^2$, the better the model fits the data. [@llaudet2022data, p. 120]
 
 $$
 R^2 = 1 - \frac{\text{SSR}}{\text{TSS}}
@@ -159,15 +159,15 @@ $$
 
 No fim das contas, TSS é simplesmente o numerador da variância.
 
-> Given the definitions above, we can interpret SSR/TSS as the proportion of the variation of $Y$ not explained by the model. Therefore, 1-SSR/TSS is the proportion of the variation of $Y$ that is explained by the model. (p. 121)
+> Given the definitions above, we can interpret SSR/TSS as the proportion of the variation of $Y$ not explained by the model. Therefore, 1-SSR/TSS is the proportion of the variation of $Y$ that is explained by the model. [@llaudet2022data, p. 121]
 
 💡A interpretação de que o SSR é a variação não explicada é simples: como se trata da diferença entre o que o modelo diz e o que de fato é o valor observado, entendemos que o modelo falhou em explicar essa variação. Além disso, como o TSS representa a variação total em relação à média, podemos usá-lo como denominador.
 
 ### @verhagen2022pragmatist
 
-> The current lack of prediction in the social sciences stems from a seeming incompatibility between wanting to explain and wanting to predict, effectively forcing researchers to choose between the two approaches. A case in point is the much-cited article by Galit Shmueli (2010), aptly titled "To Predict or to Explain", which outlines how a social scientist's empirical work flow differs in terms of data processing, modeling, and postestimation diagnostics when choosing to either predict or explain. Naturally, Shmueli assumes that a researcher would not normally attempt to do both. This is an accurate reflection of social science research. The apparent need to dogmatically choose between either approach means that, in practice, social scientists tend to stick to explanation almost exclusively. (p. 1)
+> The current lack of prediction in the social sciences stems from a seeming incompatibility between wanting to explain and wanting to predict, effectively forcing researchers to choose between the two approaches. A case in point is the much-cited article by Galit Shmueli (2010), aptly titled "To Predict or to Explain", which outlines how a social scientist's empirical work flow differs in terms of data processing, modeling, and postestimation diagnostics when choosing to either predict or explain. Naturally, Shmueli assumes that a researcher would not normally attempt to do both. This is an accurate reflection of social science research. The apparent need to dogmatically choose between either approach means that, in practice, social scientists tend to stick to explanation almost exclusively. [@verhagen2022pragmatist, p. 1]
 
-> When viewing prediction as a simple tool to evaluate a model's ability to approximate the outcome of interest, it can be applied without exception to most social science questions, rendering a dogmatic choice between prediction or explanation unnecessary. (p. 2)
+> When viewing prediction as a simple tool to evaluate a model's ability to approximate the outcome of interest, it can be applied without exception to most social science questions, rendering a dogmatic choice between prediction or explanation unnecessary. [@verhagen2022pragmatist, p. 2]
 
 O autor faz uma discussão sobre possíveis approaches para a predição -- in-sample evaluation, k-fold cross validation, e external evaluation.
 
