@@ -8,7 +8,7 @@ date: 2025-03-18
 
 ### @kellstedt2018fundamentals, caps. 1 e 2
 
-#### Capítulo 1: O estudo científico da política
+#### Capítulo 1: o estudo científico da política
 
 > Então, o que fazem os cientistas políticos e o que faz deles cientistas? Uma resposta simples para essa questão é que, como outros cientistas, cientistas políticos desenvolvem e testam teorias. Uma **teoria** é uma tentativa de conjeturar sobre as causas de um fenômeno de interesse. O desenvolvimento de teorias causais sobre o mundo político requer pensar em fenômenos familiares de modo novo. Assim, a construção de uma teoria é em parte arte e em parte ciência.
 
@@ -18,7 +18,7 @@ date: 2025-03-18
 
 > O ponto essencial é que modelos são simplificações. Se eles são ou não úteis para nós depende do que estamos tentando alcançar com um determinado modelo. Um dos aspectos mais marcantes dos modelos é que eles frequentemente são mais úteis para nós quando são imprecisos do que quando são precisos. O processo de pensar sobre as falhas de um modelo para explicar um ou mais casos pode gerar novas teorias causais. Encontrar imprecisões, frequentemente, nos aponta a direção do progresso teórico frutífero. [@kellstedt2018fundamentals, p. 41]
 
-#### Capítulo 2: A arte da construção de teorias
+#### Capítulo 2: a arte da construção de teorias
 
 > [...] uma boa teoria científica não explica apenas o resultado das eleições presidenciais de 2012, mas das eleições presidenciais americanas em geral. Isto é, em vez de perguntar "Por que Obama venceu Romney em 2012?", devemos perguntar "O que faz o partido do presidente vencer ou perder uma eleição presidencial nos EUA?" ou "O que faz com que candidatos do Partido Republicano se saiam melhor ou pior que candidatos do Partido Democrata nas eleições presidenciais americanas?". [@kellstedt2018fundamentals, p. 56]
 
@@ -74,11 +74,11 @@ Nas ciências sociais, passamos por uma série de dificuldades na produção de 
 
 Nas ciências sociais, nos diferenciamos de várias maneiras. Temos uma definição própria do que é sociedade (ou política); usamos uma linguagem "especial"; e usamos o método científico.
 
-Mas, no fim das contas, o que é método científico? No caso Popperiano, literatura e teoria $\rightarrow$ hipótese $\rightarrow$ observação $\rightarrow$ rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência: em particular, a Antropologia, várias áreas da Sociologia etc[^1].
+Mas, no fim das contas, o que é método científico? No caso popperiano, literatura e teoria $\rightarrow$ hipótese $\rightarrow$ observação $\rightarrow$ rejeitar ou falhar em rejeitar a hipótese. Por outro lado, sob esse paradigma de ciência, várias coisas que fazemos nas ciências sociais não são consideradas ciência: em particular, a Antropologia, várias áreas da Sociologia etc.[^1]
 
 ### Metodologia quantitativa
 
-A pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista[^2]) de que eu consigo extrair um "pedaço" do mundo político e fazer testes, formular hipóteses etc.; isto é, existem uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.
+A pesquisa quantitativa e a qualitativa partem de pressupostos epistemológicos diferentes. A pesquisa quantitativa parte de uma visão mais naturalista (ou positivista[^2]) de que eu consigo extrair um "pedaço" do mundo político e fazer testes, formular hipóteses etc.; isto é, existe uma série de componentes objetivos que podem ser extraídos e estudados. Já a pesquisa qualitativa parte de uma perspectiva epistemológica construtivista: o mundo social e político não se desassocia do pesquisador e, portanto, o mundo social é construído a partir da experiência. De certa forma, essas abordagens informam como fazemos pesquisa.
 
 Pesquisa quantitativa e qualitativa alongam um enorme debate sobre a maneira de abordar objetos nas ciências sociais. Mas, no fim das contas, uma resposta para essa discussão é que a integração dos métodos é um bom caminho (por exemplo, a partir da triangulação de evidências).
 

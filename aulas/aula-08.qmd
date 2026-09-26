@@ -80,7 +80,7 @@ $$
 \hat{\text{gdp}}_{i} = 0.72 + 1.61 \cdot \text{prior\_gdp}_{i}
 $$
 
-Suponha que, há alguns anos atrás, o GDP do Brasil era de 400 trihões de dólares. O GPD estimado seria:
+Suponha que, há alguns anos atrás, o GDP do Brasil era de 400 trilhões de dólares. O GDP estimado seria:
 
 $$
 \hat{\text{gdp}}_{\text{BR}} = 0.72 + 1.61 \cdot 400 = 644.72
@@ -115,7 +115,7 @@ $$
 \log(Y + \Delta Y) - \log(Y) \approx \frac{\Delta Y}{Y}
 $$
 
-No caso acima, estamos reescrevendo $\log(Y_\text{final})$ como $\log(Y + \Delta Y)$ Essa é uma propriedade do logaritmo natural derivada da expansão em série de Taylor:
+No caso acima, estamos reescrevendo $\log(Y_\text{final})$ como $\log(Y + \Delta Y)$. Essa é uma propriedade do logaritmo natural derivada da expansão em série de Taylor:
 
 $$
 \log (1+\epsilon) \approx \epsilon - \frac{\epsilon^2}{2} + \frac{\epsilon^3}{3} - \cdots \approx \epsilon
@@ -169,7 +169,7 @@ No fim das contas, TSS é simplesmente o numerador da variância.
 
 > When viewing prediction as a simple tool to evaluate a model's ability to approximate the outcome of interest, it can be applied without exception to most social science questions, rendering a dogmatic choice between prediction or explanation unnecessary. [@verhagen2022pragmatist, p. 2]
 
-O autor faz uma discussão sobre possíveis approaches para a predição: in-sample evaluation, k-fold cross validation, e external evaluation.
+O autor faz uma discussão sobre possíveis *approaches* para a predição: *in-sample evaluation*, *k-fold cross validation* e *external evaluation*.
 
 Além disso, discute também a importância da predição em relação às informações que ela pode trazer sobre os modelos ajustados. Em particular, há 3 virtudes principais:
 

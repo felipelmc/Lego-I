@@ -18,7 +18,7 @@ date: 2025-04-29
 
 > Before continuing with the analysis, it is worth noting that removing observations with missing values from a dataset might make the remaining sample of observations unrepresentative of the target population, thereby rendering our inferences about the population characteristics invalid. Here, for example, if respondents who refused to prove their level of education were all in favor of Brexit, our analysis of the new dataframe, `bes1`, would undermine the level of support for Brexit. [@llaudet2022data, p. 62]
 
-On `prop.tables`, we can use the `margin` argument to make set the reference group (that is, if the values will add up to 1 at the column level or the row level): `prop.table(table(dataset$var1, dataset$var2), margin = 1)`.
+On `prop.tables`, we can use the `margin` argument to set the reference group (that is, if the values will add up to 1 at the column level or the row level): `prop.table(table(dataset$var1, dataset$var2), margin = 1)`.
 
 > Another option [other than histograms and tables] for measuring the differences between Brexit supporters and non-supporters in terms of age distribution is to compute and compare `descriptive statistics`. Descriptive statistics numerically summarize the main traits of the distribution of a variable.
 >
@@ -91,7 +91,7 @@ $$
 
 > É possível que estejamos errados e que a média da população esteja fora do intervalo? Sim, e ainda sabemos quão provável é que ela esteja fora do intervalo. Existem 2,5% de chance de que a média da população seja menor que 3,33 e 2,5% de chance de que a média da população seja maior que 3,61, em um total de 5% de chance de que a média da população não esteja no intervalo de 3,33 a 3,61.
 
-O exemplo da aprovação do Obama, explorada por uma pesquisa da NBC News e o _Wall Street Journal_ com mil americanos:
+O exemplo da aprovação do Obama, explorada por uma pesquisa da NBC News e do _Wall Street Journal_ com mil americanos:
 
 $$
 \bar{Y} = \dfrac{\sum (470 \times 1) + (530 \times 0)}{1000} = 0.47
@@ -113,7 +113,7 @@ $$
 \bar{Y} \pm 2 \times \sigma_\bar{Y} = 0.47 \pm 0.032
 $$
 
-Então a taxa de aprovação do Obama, estimada a partir dos dados do survey, fica entre 43,8% e 50,2%.
+Então a taxa de aprovação do Obama, estimada a partir dos dados do *survey*, fica entre 43,8% e 50,2%.
 
 > Se estivermos interessados em estimar valores populacionais, nos baseando em nossas amostras, com a maior precisão possível, então é desejável ter um intervalo de confiança mais estreito do que alargado.
 >
@@ -144,15 +144,15 @@ A seleção aleatória de elementos da população é a chave da amostragem prob
 - Ausência de viés: amostragem probabilística garante que cada membro da população tenha uma chance de ser incluído na amostra.
 - Convergência: a variabilidade natural das amostras se equilibra à medida que $N$ aumenta, levando a média amostral a se aproximar da verdadeira média da população.
 
-### Lei dos Grandes Números
+### Lei dos grandes números
 
 LGN é um princípio da teoria da probabilidade que descreve o comportamento da média de uma amostra à medida que ela aumenta. À medida que aumento a amostra, vou me aproximando da média "verdadeira", i.e., a média da população.
 
-Em uma amostra pequena, um único sorteio pode distorcer a média amostral. Em uma amostra maior, sorteios extremos se equilibram e levam a média amostram a se aproximar da média da população. Para fins práticos, $N \geq 100$ reduz bastante a influência de outliers na estimativa da média.
+Em uma amostra pequena, um único sorteio pode distorcer a média amostral. Em uma amostra maior, sorteios extremos se equilibram e levam a média amostral a se aproximar da média da população. Para fins práticos, $N \geq 100$ reduz bastante a influência de *outliers* na estimativa da média.
 
 > Podemos pensar em 100 retiradas de 10 bolinhas, ou 1000 retiradas de 10 bolinhas. Neste caso, nossa amostra tem o mesmo tamanho, mas expandimos o número de amostras e calculamos a média de cada uma delas. Então, a amostra tem o mesmo tamanho: $n = 10$. A média dessas médias é a média amostral.
 
-### Teorema Central do Limite
+### Teorema central do limite
 
 À medida que extraímos mais amostras, a distribuição da estimativa começa a assumir a forma de uma distribuição normal. 
 
@@ -182,7 +182,7 @@ ggplot(data.frame(medias), aes(x = medias)) +
        y = "Densidade")
 ```
 
-Esse é o insight do teorema central do limite. Se pudéssemos imaginar um número infinito de amostras e plotássemos a média de cada uma dessas amostras, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população.
+Esse é o *insight* do teorema central do limite. Se pudéssemos imaginar um número infinito de amostras e plotássemos a média de cada uma dessas amostras, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população.
 
 De fato, outra propriedade interessante é a dispersão da média amostral. A média amostral tende a ser menos dispersa do que a média populacional. Isso é chamado de erro padrão da média (EPM). O EPM é a medida da variabilidade das médias amostrais em torno da média populacional.
 O EPM é calculado como o desvio padrão da população dividido pela raiz quadrada do tamanho da amostra:
@@ -194,7 +194,7 @@ $$
 onde $\sigma$ é o desvio padrão da população e $n$ é o tamanho da amostra.
 O EPM diminui à medida que o tamanho da amostra aumenta. Isso significa que, quanto maior a amostra, mais precisa será a estimativa da média populacional. Isso é importante porque nos permite fazer inferências sobre a população com base em uma amostra.
 
-### Intervalo de Confiança
+### Intervalo de confiança
 Um intervalo de confiança é uma faixa de valores que, com um certo nível de confiança, contém o valor verdadeiro de um parâmetro populacional. O intervalo de confiança é calculado a partir da média amostral e do erro padrão da média.
 
 O intervalo de confiança é calculado como:
@@ -241,7 +241,7 @@ $$
 \text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2
 $$
 
-No entanto, sabemos que, como as observações de $X$ só assume valores em $\{0, 1\}$, vale que $\mathbb{E}[X^2] = \mathbb{E}[X] = p$ e que $(\mathbb{E}[X])^2 = p^2$. Com efeito:
+No entanto, sabemos que, como as observações de $X$ só assumem valores em $\{0, 1\}$, vale que $\mathbb{E}[X^2] = \mathbb{E}[X] = p$ e que $(\mathbb{E}[X])^2 = p^2$. Com efeito:
 
 $$
 \begin{align*}

@@ -87,7 +87,7 @@ Os autores fazem uma série de recomendações:
 #### Substantivas
 1. **Explicitar e justificar a questão de pesquisa:** "De forma mais séria, quando a questão de pesquisa é nebulosa, fica difícil, inclusive, de avaliar em que medida os resultados observados respondem satisfatoriamente a indagação proposta pelo trabalho." [@figueiredofilho2012levando, p. 89]
 2. **Descrever os métodos e as técnicas:** "Uma pesquisa que não descreve exatamente como os dados foram coletados torna-se irreplicável e, consequentemente, não falsificável." [@figueiredofilho2012levando, p. 91]
-3. **Simplificar a hipótese de trabalho:** "Uma hipótese clara tem três componentes básicos: (1) uma relação esperada; (2) uma variável independente e (3) uma variável dependente." [@figueiredofilho2012levando, p. 92]. Hipóteses não parcimoniosas apresentam elementos denecessários.
+3. **Simplificar a hipótese de trabalho:** "Uma hipótese clara tem três componentes básicos: (1) uma relação esperada; (2) uma variável independente e (3) uma variável dependente." [@figueiredofilho2012levando, p. 92]. Hipóteses não parcimoniosas apresentam elementos desnecessários.
 4. **Produzir inferências causais falsificáveis**
 5. Apresentar as limitações do desenho de pesquisa: "As limitações devem ser listadas de forma explícita e pormenorizadas para que a comunidade acadêmica possa avaliar a confiabilidade dos resultados apresentados." [@figueiredofilho2012levando, p. 103]
 

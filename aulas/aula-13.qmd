@@ -50,7 +50,7 @@ $$
 \text{RSS} = \sum^n_{i = 1} \hat{u}_i^2
 $$
 
-E, por fim, o $R^2$ é a variação explicada. Portanto, é calculada por $1 - \dfrac{\text{RSS}}{\text{TSS}}$.
+E, por fim, o $R^2$ é a variação explicada. Portanto, é calculado por $1 - \dfrac{\text{RSS}}{\text{TSS}}$.
 
 > Uma medida que é utilizada para estimação da incerteza de cada um dos parâmetros populacionais é a variância estimada do componente estocástico populacional, $u_i$. Essa variância não observada, $\sigma^2$, é estimada a partir dos resíduos, utilizando a fórmula abaixo, após os parâmetros da regressão com os dados da amostra terem sido estimados:
 >
@@ -126,7 +126,7 @@ $$
 
 ### Teste ANOVA
 
-O teste ANOVA é um método estatístico usado para comparar as medias de dois ou mais grupos independentes, determinando se há diferenças significativas entre eles. Em essência, a ANOVA examina a variabilidade dentro e entre os grupos para determinar se as diferenças entre as médias são estatisticamente significativas.
+O teste ANOVA é um método estatístico usado para comparar as médias de dois ou mais grupos independentes, determinando se há diferenças significativas entre eles. Em essência, a ANOVA examina a variabilidade dentro e entre os grupos para determinar se as diferenças entre as médias são estatisticamente significativas.
 
 > Suppose the one-way ANOVA type, in which we have one categorical independent variable with multiple levels. In that case, we first calculate the total sum of squares:
 >

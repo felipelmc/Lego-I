@@ -63,7 +63,7 @@ flip <- sample(
 prop.table(table(flip))
 ```
 
-#### The Normal distribution
+#### The normal distribution
 
 > The normal distribution is a well-known symmetric, bell-shaped distribution, commonly used as an approximation for the distribution of many non-binary variables. [@llaudet2022data, p. 169]
 
@@ -96,7 +96,7 @@ var(X)
 
 > How can we use a probability density function to compute probabilities? We can use the area underneath the curve of the probability density function to compute what are often referred to as _cumulative_ probabilities, that is, the probability that a normal random variable takes a value within a given range. For example, the area under the curve between $x_1$ and $x_2$ equals the probability that the normal random variable takes a value between $x_1$ and $x_2$. (Since all probabilities in a distribution must add up to 1, the total area underneath the curve of a probability density function equals 1.)
 
-#### The Standard Normal distribution
+#### The standard normal distribution
 
 > The standard normal distribution is the normal distribution with mean 0 ($\mu = 0$) and variance 1 ($\sigma^2 = 1$).
 
@@ -163,7 +163,7 @@ $$
 
 > The sample statistics differ from the population parameters because the sample contains noise. The noise comes from **sampling variability**. [@llaudet2022data, p. 180]
 
-#### The Law of Large Numbers
+#### The law of large numbers
 
 > The **law of large numbers** states that as the sample size increases, the sample mean of X approximates the population mean of X, also known as the expectation of X. [@llaudet2022data, p. 180]
 
@@ -204,7 +204,7 @@ mean(support_sample_3)
 
 À medida que aumentamos o tamanho da amostra (o que nem sempre é viável, naturalmente), a estimativa da variável de interesse melhora. Em particular, chegamos cada vez mais perto do valor "verdadeiro" do parâmetro.
 
-#### The Central Limit Theorem
+#### The central limit theorem
 
 > The central limit theorem states that as the sample size increases, the standardized sample mean of $X$ can be approximated by the standard normal distribution. [@llaudet2022data, p. 183]
 
@@ -279,7 +279,7 @@ Vale notar, além disso, que essas propriedades se aplicam apenas aos casos em q
 
 ## Anotações de aula
 
-Podemos utilizar _bootstrap_ para, usando a própria amostra, nos aproximar do parâmetro populacional. Amostramos várias vezes um subset da amostra coletada, com reposição, e computamos a estatística amostral. Com isso, podemos ter uma ideia de como a média varia se pudéssemos ter várias amostras. 
+Podemos utilizar _bootstrap_ para, usando a própria amostra, nos aproximar do parâmetro populacional. Amostramos várias vezes um *subset* da amostra coletada, com reposição, e computamos a estatística amostral. Com isso, podemos ter uma ideia de como a média varia se pudéssemos ter várias amostras. 
 
 > Do ponto de vista frequentista, dizemos que, com 100 amostras e sob um intervalo de confiança de 95%, o parâmetro populacional estará no intervalo em 95% das vezes. Mas, na prática, não conseguimos obter 100 amostras, então isso não é particularmente intuitivo. Então, o _bootstrap_ nos permite produzir uma distribuição amostral da nossa quantidade de interesse.
 
