@@ -67,7 +67,7 @@ quarto update extension felipelmc/Course-Notes-Template     # atualizar o templa
 Lego I: introdução à pesquisa social quantitativa (IESP-UERJ, 2025.1), com Bruno Marques Schaefer. As aulas estão agrupadas em duas partes do `_quarto.yml`, como na ementa (`ementa.pdf`): desenho de pesquisa (aulas 01 a 05) e estatística (06 a 13).
 
 - As aulas 03 e 04 foram sessões práticas de `R` e não têm anotações; as aulas 14 e 15 também não. Todas aparecem na tabela do `index.qmd` como "sem anotações".
-- As leituras principais são Llaudet e Imai (2022), em inglês, e Kellstedt e Whitten (`kellstedt2018fundamentals`). As citações de Kellstedt e Whitten estão em português e as páginas parecem ser da tradução brasileira (Blucher), embora a chave aponte para a edição de 2018 da Cambridge. Não mude sem conferir.
+- As leituras principais são Llaudet e Imai (2022), em inglês, e Kellstedt e Whitten na tradução brasileira (`kellstedt2021fundamentos`, Blucher, 2021, a edição listada na ementa). As citações de Kellstedt e Whitten estão em português, e as páginas são dessa tradução.
 - As notas de leitura de Llaudet e Imai, Cunningham e Shmueli estão em inglês; o resto está em português. Mantenha cada trecho na língua em que foi escrito.
 - Trabalhos: `trabalhos/nivelamento` e `trabalhos/lista-1` a `lista-4`. Os dados das listas 2 a 4 estão no git (`data/` e o `.xlsx` da lista 4); os do nivelamento (`datasets/`, fora do git) não existem mais, por isso os blocos que dependem deles têm `eval: false` e as figuras vêm de `trabalhos/nivelamento/figs/`.
 - `trabalhos/lista-3/_base_censo_2010.R` recria `belford_roxo.Rda` a partir do Censo 2010 (pacote `censobr`); não é executado no render.

@@ -326,7 +326,7 @@ ggplot(df_diferencas, aes(x = diferenca)) +
   geom_histogram(aes(y = ..density..), fill = "grey80", color = "black", alpha = 0.6) +
   geom_density(color = "darkblue", size = 1.2) +
   labs(
-    title = "Distribuição das diferenças médias entre a renda de brancos e pretos \n(n = 2.000, i = 100)",
+    title = "Distribuição das diferenças médias entre a renda de brancos e pretos \n(n = 2.000, i = 1.000)",
     subtitle = "Valores acima de zero indicam rendas médias mais altas para brancos",
     x = "Diferença das rendas mensais médias",
     y = "Densidade"

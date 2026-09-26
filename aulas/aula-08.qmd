@@ -106,7 +106,7 @@ $$
 Devemos usar a seguinte aproximação:
 
 $$
-\log(Y_\text{final}) - \log(Y_\text{inicial}) = \log \left( \frac{Y_\text{final} - Y_\text{inicial}}{Y_\text{inicial}} \right) \approx \frac{\Delta Y}{Y_\text{inicial}}
+\log(Y_\text{final}) - \log(Y_\text{inicial}) = \log \left( \frac{Y_\text{final}}{Y_\text{inicial}} \right) \approx \frac{\Delta Y}{Y_\text{inicial}}
 $$
 
 Isso é verdade porque, para pequenas variações, a diferença entre o logaritmo de dois números é aproximadamente igual à razão entre a diferença e o número inicial. Em particular, a seguinte afirmação é válida:
@@ -121,7 +121,7 @@ $$
 \log (1+\epsilon) \approx \epsilon - \frac{\epsilon^2}{2} + \frac{\epsilon^3}{3} - \cdots \approx \epsilon
 $$
 
-onde $\epsilon$ é um número pequeno. Portanto, podemos usar a seguinte aproximação:
+onde $\epsilon$ é um número pequeno.
 
 Entendemos, com isso, que a variação percentual de $Y$ associada a uma variação percentual de $X$ é dada por:
 

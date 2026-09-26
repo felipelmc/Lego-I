@@ -69,7 +69,7 @@ $$
 > [...] **if two variables have a correlation coefficient of zero, it does not necessarily mean that there is no relationship between them. Is just means that there is no linear relationship between them.** For example, the two variables depicted in the figure in the margin have a strong parabolic relationship. Their correlation is approximately zero, however, because there is no line that would summarize the relationship well. [@llaudet2022data, p. 88]
 
 
-### @kellstedt2018fundamentals, cap. 6: *Probabilidade e inferência estatística*
+### @kellstedt2021fundamentos, cap. 6: *Probabilidade e inferência estatística*
 
 > Um **evento** é o resultado de uma observação aleatória. Dois ou mais eventos podem ser chamados de **eventos independentes** se a realização de um dos eventos não afeta a realização dos demais. Por exemplo, o lançamento de dois dados representa eventos independentes, porque o lançamento do primeiro dado não afeta o resultado do lançamento do segundo.
 >
@@ -77,7 +77,7 @@ $$
 > 
 > Segundo, a soma de todos os eventos possíveis deve ser exatamente 1. Ou seja, sempre que fazemos uma observação aleatória de um conjunto de eventos possíveis, devemos observar um desses eventos. Por exemplo, se você jogar uma moeda para cima, a probabilidade de o resultado ser cada é de $1/2$, a probabilidade de ser coroa é de $1/2$ e a probabilidade de ser cara ou coroa é de $1$, porque $1/2 + 1/2 = 1$.
 >
-> Terceiro, se (mas somente se!) dois eventos forem independentes, então a probabilidade de esses dois eventos ocorrerem é igual ao produto das chances individuais. Então, se você tem uma moeda não viciada e lançá-la três vezes -- tenha em mente que cada lançamento é um evento independente --, a chance de o resultado dos três lançamentos ser igual a coroa é de $1/2 \times 1/2 \times 1/2 = 1/8$. [@kellstedt2018fundamentals, p. 154]
+> Terceiro, se (mas somente se!) dois eventos forem independentes, então a probabilidade de esses dois eventos ocorrerem é igual ao produto das chances individuais. Então, se você tem uma moeda não viciada e lançá-la três vezes -- tenha em mente que cada lançamento é um evento independente --, a chance de o resultado dos três lançamentos ser igual a coroa é de $1/2 \times 1/2 \times 1/2 = 1/8$. [@kellstedt2021fundamentos, p. 154]
 
 > A distribuição normal [...]. Primeiro, ela é simétrica em torno da sua média, de tal modo que a moda, a mediana e a média são iguais. Segundo, a distribuição normal possui áreas abaixo da curva com distâncias específicadas definidas a partir da média. Começando da média e adicionando um desvio padrão para cada uma das direções, temos uma cobertura de 68% de toda a área abaixo da curva. Adicionando mais um desvio padrão, passamos a ter 95% do total da área. Adicionando um terceiro desviopadrão em cada direção, temos 99% da área total da curva capturada.
 
@@ -85,7 +85,7 @@ $$
 >
 > Se seguirmos esse procedimento, podemos obter a média das amostras e as expor graficamente. Algumas estariam acima de 3,50, outras abaixo e algumas seriam exatamente 3,50. Porém, é nesse ponto que temos o resultado-chave: a distribuição amostral terá distribuição normal, embora a distribuição de frequência subjacente, claramente, não seja normal. 
 >
-> Esse é o _insight_ do teorema do limite central. Se pudéssemos imaginar um número infinito de amostras aleatórias e plotássemos a média de cada uma dessas amostras aleatórias em um gráfico, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população. [@kellstedt2018fundamentals, pp. 158-159]
+> Esse é o _insight_ do teorema do limite central. Se pudéssemos imaginar um número infinito de amostras aleatórias e plotássemos a média de cada uma dessas amostras aleatórias em um gráfico, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população. [@kellstedt2021fundamentos, pp. 158-159]
 
 > Mas sabemos que nossa amostra de seinscentos lançamentos pode ser ligeiramente diferente da média verdadeira da população, podendo ser tanto um pouco maior quanto um pouco menor. O que podemos fazer, portanto, é usar nosso conhecimento de que a distribuição amostral é normal e invocar a regra 68-95-99 para criar um **intervalo de confiança** sobre a provável localização da média da população.
 
@@ -184,7 +184,7 @@ ggplot(data.frame(medias), aes(x = medias)) +
 
 Esse é o *insight* do teorema central do limite. Se pudéssemos imaginar um número infinito de amostras e plotássemos a média de cada uma dessas amostras, essas médias amostrais seriam normalmente distribuídas. Adicionalmente, a média da distribuição amostral seria igual à média da verdadeira população.
 
-De fato, outra propriedade interessante é a dispersão da média amostral. A média amostral tende a ser menos dispersa do que a média populacional. Isso é chamado de erro padrão da média (EPM). O EPM é a medida da variabilidade das médias amostrais em torno da média populacional.
+De fato, outra propriedade interessante é a dispersão da média amostral. A média amostral tende a ser menos dispersa do que os valores individuais da população. Isso é chamado de erro padrão da média (EPM). O EPM é a medida da variabilidade das médias amostrais em torno da média populacional.
 O EPM é calculado como o desvio padrão da população dividido pela raiz quadrada do tamanho da amostra:
 
 $$
@@ -208,7 +208,7 @@ O intervalo de confiança fornece uma estimativa da incerteza associada à médi
 
 > O valor de 1.96 é o valor crítico da distribuição normal padrão que corresponde a um nível de confiança de 95%. Isso significa que, se repetirmos o processo de amostragem muitas vezes, aproximadamente 95% dos intervalos de confiança calculados conterão a média populacional verdadeira. Além disso, o intervalo de 95% é arbitrário: por exemplo, 68% de confiança corresponde a 1 desvio padrão, 99% de confiança corresponde a 2.58 desvios padrão, e assim por diante.
 
-Vamos supor o caso em que queremos estimar a aprovação do Lula. Pegamos 1000 amostras e estimamos uma média de aprovação de 32%. O desvio padrão, portanto, será calculado como:
+Vamos supor o caso em que queremos estimar a aprovação do Lula. Pegamos uma amostra de 1000 pessoas e estimamos uma média de aprovação de 32%. O desvio padrão, portanto, será calculado como:
 
 $$
 s = \sqrt{ 0.32 \cdot (1 - 0.32) } = 0.47,

@@ -6,19 +6,19 @@ date: 2025-06-10
 
 ## Leituras
 
-### @kellstedt2018fundamentals, cap. 8: *Modelo de regressão bivariado*
+### @kellstedt2021fundamentos, cap. 8: *Modelo de regressão bivariado*
 
-> A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. [@kellstedt2018fundamentals, p. 194]
+> A ideia básica da regressão bivariada é que ajustamos a "melhor" reta para o gráfico de dispersão dos nossos dados. Essa reta, que é definida pela sua inclinação e seu intercepto-$y$, serve como um **modelo estatístico** da realidade. [@kellstedt2021fundamentos, p. 194]
 
 $$
 Y_i = \alpha + \beta X_i + u_i
 $$
 
-> Esse [$u_i$] é o termo estocástico ou componente randômico da nossa variável dependente. Temos esse termo porque não esperamos que todos os pontos dos nossos dados se alinhem perfeitamente em uma reta. Isso se relaciona diretamente à nossa discussão nos capítulos anteriores sobre a natureza probabilística (em oposição a determinística) das teorias causais sobre fenômenos políticos. [@kellstedt2018fundamentals, p. 194]
+> Esse [$u_i$] é o termo estocástico ou componente randômico da nossa variável dependente. Temos esse termo porque não esperamos que todos os pontos dos nossos dados se alinhem perfeitamente em uma reta. Isso se relaciona diretamente à nossa discussão nos capítulos anteriores sobre a natureza probabilística (em oposição a determinística) das teorias causais sobre fenômenos políticos. [@kellstedt2021fundamentos, p. 194]
 
-> [...] conseguimos observar que o componente estocástico estimado ($\hat{u}_i$) é igual à diferença entre o valor real da variável dependente ($Y_i$) e o valor da variável dependente predito pelo nosso modelo de regressão bivariado. O componente estocástico estimado também é conhecido como **resíduo**. [@kellstedt2018fundamentals, p. 196]
+> [...] conseguimos observar que o componente estocástico estimado ($\hat{u}_i$) é igual à diferença entre o valor real da variável dependente ($Y_i$) e o valor da variável dependente predito pelo nosso modelo de regressão bivariado. O componente estocástico estimado também é conhecido como **resíduo**. [@kellstedt2021fundamentos, p. 196]
 
-> Esse método de estimação dos parâmetros da regressão é conhecido por regressão dos mínimos quadrados ordinários (MQO). [@kellstedt2018fundamentals, p. 198]
+> Esse método de estimação dos parâmetros da regressão é conhecido por regressão dos mínimos quadrados ordinários (MQO). [@kellstedt2021fundamentos, p. 198]
 
 No caso bivariado, as fórmulas são:
 
@@ -30,13 +30,13 @@ $$
 \hat{\alpha} = \bar{Y} - \hat{\beta} \bar{X}
 $$
 
-> Medidas da qualidade geral do ajuste entre um modelo de regressão e a variável dependente são chamadas de medida de qualidade de ajuste. Uma das medidas mais intuitivas (apesar do nome) é a raiz do erro quadrático médio (_root mean-squared error -- root MSE_). Essa estatística é algumas vezes referida como o erro-padrão do modelo de regressão. [@kellstedt2018fundamentals, p. 201]
+> Medidas da qualidade geral do ajuste entre um modelo de regressão e a variável dependente são chamadas de medida de qualidade de ajuste. Uma das medidas mais intuitivas (apesar do nome) é a raiz do erro quadrático médio (_root mean-squared error -- root MSE_). Essa estatística é algumas vezes referida como o erro-padrão do modelo de regressão. [@kellstedt2021fundamentos, p. 201]
 
 $$
 \text{RMSE} = \sqrt{ \dfrac{\sum^n_{i=1} \hat{u}_i^2 }{n} }
 $$
 
-> Vale enfatizar que o _root MSE_ sempre é expresso na métrica [unidade de medida] em que a variável dependente está mensurada. [@kellstedt2018fundamentals, p. 201]
+> Vale enfatizar que o _root MSE_ sempre é expresso na métrica [unidade de medida] em que a variável dependente está mensurada. [@kellstedt2021fundamentos, p. 201]
 
 Também podemos usar o $R^2$, que indica a proporção da variação da variável dependente que é explicada pelo modelo. Em particular, temos a variação total que é propriamente a variância das observações em relação à média:
 
@@ -66,10 +66,10 @@ E, por fim, o $R^2$ é a variação explicada. Portanto, é calculado por $1 - \
 Quanto ao intercepto:
 
 $$
-\text{var}(\hat{\alpha}) = \dfrac{ \hat{\sigma}^2 \sum^n_{i = 1} X^2 }{ n \sum^n_{i = 1} (X_i - \bar{X}) }
+\text{var}(\hat{\alpha}) = \dfrac{ \hat{\sigma}^2 \sum^n_{i = 1} X_i^2 }{ n \sum^n_{i = 1} (X_i - \bar{X})^2 }
 $$
 
-> Em particular, normalmente estamos preocupados com o teste de que o parâmetro de inclinação para a população é igual a zero. [...]. Primeiro, observamos o parâmetro de inclinação da amostra, que consiste em uma estimativa do parâmetro de inclinação da população. A partir do valor desse parâmetro, do intervalo de confiança e do tamanho da nossa amostra, avaliamos quão provável é observarmos o valor da inclinação para a amostra se o valor for verdadeiro, mas não observado na população, for igual a zero. [@kellstedt2018fundamentals, p. 206]
+> Em particular, normalmente estamos preocupados com o teste de que o parâmetro de inclinação para a população é igual a zero. [...]. Primeiro, observamos o parâmetro de inclinação da amostra, que consiste em uma estimativa do parâmetro de inclinação da população. A partir do valor desse parâmetro, do intervalo de confiança e do tamanho da nossa amostra, avaliamos quão provável é observarmos o valor da inclinação para a amostra se o valor for verdadeiro, mas não observado na população, for igual a zero. [@kellstedt2021fundamentos, p. 206]
 
 Um teste de hipótese para o parâmetro é dado por:
 
@@ -80,7 +80,7 @@ H_1: \beta \neq 0,
 \end{align*}
 $$
 
-> em que $H_0$ é a hipótese nula e $H_1$ é a hipótese alternativa. Note que essas duas hipóteses rivais são expressas em termos do parâmetro de inclinação para o modelo de regressão populacional. Para examinar qual dessas hipóteses tem apoio nos dados, calculamos a razão-t, na qual $\beta$ é definido a partir do valor especificado para a hipótese nula, que é representado como $\beta^*$. [@kellstedt2018fundamentals, p. 207]
+> em que $H_0$ é a hipótese nula e $H_1$ é a hipótese alternativa. Note que essas duas hipóteses rivais são expressas em termos do parâmetro de inclinação para o modelo de regressão populacional. Para examinar qual dessas hipóteses tem apoio nos dados, calculamos a razão-t, na qual $\beta$ é definido a partir do valor especificado para a hipótese nula, que é representado como $\beta^*$. [@kellstedt2021fundamentos, p. 207]
 
 $$
 t_{n - k} = \dfrac{\hat{\beta} - \beta^*}{ \text{se}(\hat{\beta}) }
@@ -96,13 +96,13 @@ $$
 u_i \sim \mathcal{N}(0, \sigma^2)
 $$
 
-> O pressuposto de que $u_i$ tem média ou valor esperado igual a zero é também conhecido como pressuposto do viés zero. Considere o que aconteceria se $\mathbb{E}[u_i] \neq 0$. Em outras palavras, nesse caso esperaríamos que nosso modelo de regressão não fosse preciso. [...]. Se $\mathbb{E}[u_i] \neq 0$, então deve existir algum componente não randômico nesse termo. [@kellstedt2018fundamentals, p. 212]
+> O pressuposto de que $u_i$ tem média ou valor esperado igual a zero é também conhecido como pressuposto do viés zero. Considere o que aconteceria se $\mathbb{E}[u_i] \neq 0$. Em outras palavras, nesse caso esperaríamos que nosso modelo de regressão não fosse preciso. [...]. Se $\mathbb{E}[u_i] \neq 0$, então deve existir algum componente não randômico nesse termo. [@kellstedt2021fundamentos, p. 212]
 
-> O pressuposto de que $u_i$ tem variância igual $\sigma^2$ parece bastante simples. Mas, como essa noção de variância não contém o subscrito $i$, significa que assumimos que a variância para cada caso em uma população subjacente é a mesma. A palavra para descrever essa situação é a "homocedasticidade", que significa "a variância do erro é constante". [...]. Quando temos heterocedasticidade, nosso modelo de regressão ajusta alguns casos dos casos da população melhor do que outros. Essa pode ser uma causa potencial de problemas quando estamos estimando intervalos de confiança e testando hipóteses. [@kellstedt2018fundamentals, p. 212]
+> O pressuposto de que $u_i$ tem variância igual $\sigma^2$ parece bastante simples. Mas, como essa noção de variância não contém o subscrito $i$, significa que assumimos que a variância para cada caso em uma população subjacente é a mesma. A palavra para descrever essa situação é a "homocedasticidade", que significa "a variância do erro é constante". [...]. Quando temos heterocedasticidade, nosso modelo de regressão ajusta alguns casos dos casos da população melhor do que outros. Essa pode ser uma causa potencial de problemas quando estamos estimando intervalos de confiança e testando hipóteses. [@kellstedt2021fundamentos, p. 212]
 
-> Assumindo que $X$ é mensurado sem erro, aceitamos que qualquer variabilidade da nossa reta de regressão é devida ao componente estocástico $u_i$, e não a modelos de mensuração em $X$. Colocando de outro modo, se $X$ também tem um componente estocástico, necessitamos modelar $X$ antes de modelar $Y$, e isto complicaria substancialmente o processo de estimação de $Y$. [@kellstedt2018fundamentals, p. 213]
+> Assumindo que $X$ é mensurado sem erro, aceitamos que qualquer variabilidade da nossa reta de regressão é devida ao componente estocástico $u_i$, e não a modelos de mensuração em $X$. Colocando de outro modo, se $X$ também tem um componente estocástico, necessitamos modelar $X$ antes de modelar $Y$, e isto complicaria substancialmente o processo de estimação de $Y$. [@kellstedt2021fundamentos, p. 213]
 
-> O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. [@kellstedt2018fundamentals, p. 214]
+> O pressuposto da linearidade dos parâmetros é uma maneira sofisticada de dizer que nosso parâmetro $\beta$ da população para a relação entre $X$ e $Y$ não varia. Em outras palavras, a relação entre $X$ e $Y$ é a mesma para todos os valores de $X$. [@kellstedt2021fundamentos, p. 214]
 
 ### @buenodemesquita2021thinking, cap. 5: *Regression for Describing and Forecasting*
 
@@ -139,7 +139,7 @@ O teste ANOVA é um método estatístico usado para comparar as médias de dois 
 > In practice, the total sum of squares can be decomposed in the between-group variability and the within-group variability. We need this relationship to understand the ANOVA test. Let's start by calculating the between-group variability. It is given by:
 > 
 > $$
-> \text{SSB} = \sum^k_{j = 1} n_j (\bar{X}_j - \bar{X}),
+> \text{SSB} = \sum^k_{j = 1} n_j (\bar{X}_j - \bar{X})^2,
 > $$
 > 
 > where $n_j$ is the number of observations in group $j$, $\bar{X}_j$ is the mean of group $j$ and $k$ is the number of groups.
@@ -147,7 +147,7 @@ O teste ANOVA é um método estatístico usado para comparar as médias de dois 
 > Then, we can calculate the within-group variability:
 > 
 > $$
-> \text{SSB} = \sum^k_{j = 1} \sum^{n_j}_{i = 1} (X_{ij} - \bar{X}_j)^2,
+> \text{SSW} = \sum^k_{j = 1} \sum^{n_j}_{i = 1} (X_{ij} - \bar{X}_j)^2,
 > $$
 > 
 > where $X_{ij}$ is the observation $i$ in group $j$.
@@ -163,7 +163,7 @@ O teste ANOVA é um método estatístico usado para comparar as médias de dois 
 > \end{align*}
 > $$
 > 
-> Finally, we compute the $F$-value to the critical value from the $F$-distribution table (with $k - 1$ and $N - k$ degrees of freedom) or compute the $p$-value.
+> Finally, we compute the $F$-value and compare it to the critical value from the $F$-distribution table (with $k - 1$ and $N - k$ degrees of freedom) or compute the $p$-value.
 > 
 > $$
 > F = \dfrac{\text{MSB}}{\text{MSW}}
