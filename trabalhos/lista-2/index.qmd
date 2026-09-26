@@ -21,9 +21,9 @@ format:
 
 ::: {.callout-tip .achados}
 ## Principais resultados
-- 187 teses e dissertações defendidas entre 1987 e 2022 citam no resumo pelo menos um dos três termos. "Polarização" domina, com 141 ocorrências, e o número de trabalhos cresce ao longo do tempo.
+- Das teses e dissertações da base (1987 a 2022), 187 citam no resumo pelo menos um dos três termos. "Polarização" domina, com 141 ocorrências, e o número de trabalhos cresce ao longo do tempo.
 - Os programas de Ciência Política da UFRGS (7 teses), da UFMG (5) e da UFSCar (5) são os que mais defenderam teses sobre esses temas.
-- A produção se concentra no Sul e no Sudeste, sobretudo em São Paulo, e a maior parte das teses foi defendida em programas com conceito 5 na Capes.
+- A produção se concentra no Sul e no Sudeste, sobretudo em São Paulo, e os programas com conceito 5 na Capes são os que reúnem mais teses sobre esses temas.
 :::
 
 ```{r}

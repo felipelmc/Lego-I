@@ -23,7 +23,7 @@ format:
 ::: {.callout-tip .achados}
 ## Principais resultados
 - A base de Belford Roxo tem 469.313 pessoas. Uma amostra aleatória simples de 800 pessoas superestima a renda média (R$ 374,9, contra R$ 345,3 na população) e o desvio padrão (1.173,7, contra 663,0); com 2.400 pessoas, a média amostral cai para R$ 352,5.
-- Numa amostra de 2.000 pessoas brancas e pretas, a inferência randomizada dá um p-valor empírico de 0,16: a diferença de renda observada pode ter ocorrido por acaso.
+- Numa amostra de 2.000 pessoas brancas e pretas, a inferência randomizada dá um p-valor empírico alto (0,16 no PDF entregue; 0,31 nesta página, que sorteia outra amostra): a diferença de renda observada pode ter ocorrido por acaso.
 - Controlando por população, área e capacidade de investimento, o coeficiente do desmatamento sobre o índice de capacidade adaptativa é positivo (0,03), ao contrário da hipótese. A interação com a capacidade de investimento é negativa (-0,15, p = 0,0503).
 :::
 
